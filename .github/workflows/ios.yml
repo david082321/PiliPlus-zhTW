@@ -1,14 +1,14 @@
 name: Build for iOS
 
+# Standalone unsigned iOS test build for manual runs in forks.
 on:
-  workflow_call:
+  workflow_dispatch:
     inputs:
       tag:
         description: "tag"
         required: false
         default: ""
         type: string
-  workflow_dispatch:
 
 jobs:
   build-macos-app:
@@ -44,11 +44,11 @@ jobs:
           zip -r9 PiliPlus_ios_${{env.version}}.ipa Payload/Runner.app
 
       - name: Release
-        if: ${{ github.event.inputs.tag != '' }}
+        if: ${{ inputs.tag != '' }}
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: ${{ github.event.inputs.tag }}
-          name: ${{ github.event.inputs.tag }}
+          tag_name: ${{ inputs.tag }}
+          name: ${{ inputs.tag }}
           files: |
             PiliPlus_ios_*.ipa
 
