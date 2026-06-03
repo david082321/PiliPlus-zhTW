@@ -41,6 +41,11 @@ jobs:
           Copy-Item "windows/packaging/exe/ChineseSimplified.isl" "C:\Program Files (x86)\Inno Setup 6\Languages\ChineseSimplified.isl"
         shell: pwsh
 
+      - name: Add Traditional Chinese language file for Inno Setup
+        run: |
+          Copy-Item "windows/packaging/exe/ChineseTraditional.isl" "C:\Program Files (x86)\Inno Setup 6\Languages\ChineseTraditional.isl"
+        shell: pwsh
+
       - name: Set and Extract version
         shell: pwsh
         run: lib/scripts/build.ps1
@@ -62,11 +67,11 @@ jobs:
         shell: pwsh
 
       - name: Release
-        if: ${{ github.event.inputs.tag != '' }}
+        if: ${{ inputs.tag != '' }}
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: ${{ github.event.inputs.tag }}
-          name: ${{ github.event.inputs.tag }}
+          tag_name: ${{ inputs.tag }}
+          name: ${{ inputs.tag }}
           files: |
             PiliPlus_windows_*.zip
             PiliPlus-Win-Setup/PiliPlus_windows_*.exe
