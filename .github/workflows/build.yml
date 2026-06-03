@@ -44,6 +44,7 @@ jobs:
             - name: 代码迁出
               uses: actions/checkout@v6
               with:
+                  ref: tw
                   fetch-depth: 0
 
             - name: 构建Java环境
