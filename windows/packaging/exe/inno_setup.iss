@@ -33,6 +33,7 @@ end;
 
 [Languages]
 Name: "english"; MessagesFile: "compiler:Default.isl"
+Name: "chinesetraditional"; MessagesFile: "compiler:Languages\ChineseTraditional.isl"
 Name: "chinesesimplified"; MessagesFile: "compiler:Languages\ChineseSimplified.isl"
 
 [Tasks]
