@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:get/get.dart';
 
-const _reason = ['头像违规', '昵称违规', '签名违规'];
+const _reason = ['大頭貼違規', '暱稱違規', '簽名違規'];
 
-const _reasonV2 = ['色情低俗', '不实信息', '违禁', '人身攻击', '赌博诈骗', '违规引流外链'];
+const _reasonV2 = ['色情低俗', '不實資訊', '違禁', '人身攻擊', '賭博詐騙', '違規引流外鏈'];
 
 Future<void> showMemberReportDialog(
   BuildContext context, {
@@ -28,7 +28,7 @@ Future<void> showMemberReportDialog(
           crossAxisAlignment: .start,
           children: [
             Text(
-              '举报: $name',
+              '檢舉: $name',
               style: const TextStyle(fontSize: 18),
             ),
             Text('uid: $mid'),
@@ -41,7 +41,7 @@ Future<void> showMemberReportDialog(
             children: [
               const Padding(
                 padding: .only(left: 18),
-                child: Text('举报内容（必选，可多选）'),
+                child: Text('檢舉內容（必選，可多選）'),
               ),
               ...List.generate(
                 3,
@@ -87,7 +87,7 @@ Future<void> showMemberReportDialog(
               ),
               const Padding(
                 padding: .only(left: 18),
-                child: Text('举报理由（单选，非必选）'),
+                child: Text('檢舉理由（單選，非必選）'),
               ),
               Builder(
                 builder: (context) => Column(
@@ -148,7 +148,7 @@ Future<void> showMemberReportDialog(
           TextButton(
             onPressed: () {
               if (reason.isEmpty) {
-                SmartDialog.showToast('至少选择一项作为举报内容');
+                SmartDialog.showToast('至少選擇一項作為檢舉內容');
               } else {
                 Get.back();
                 MemberHttp.reportMember(
@@ -158,7 +158,7 @@ Future<void> showMemberReportDialog(
                 );
               }
             },
-            child: const Text('确定'),
+            child: const Text('確定'),
           ),
         ],
       );

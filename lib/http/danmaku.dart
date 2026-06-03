@@ -7,28 +7,28 @@ import 'package:dio/dio.dart';
 
 abstract final class DanmakuHttp {
   static Future<LoadingState<DanmakuPost>> shootDanmaku({
-    int type = 1, //弹幕类选择(1：视频弹幕 2：漫画弹幕)
-    required int oid, // 视频cid
-    required String msg, //弹幕文本(长度小于 100 字符)
-    // 弹幕类型(1：滚动弹幕 4：底端弹幕 5：顶端弹幕 6：逆向弹幕(不能使用） 7：高级弹幕 8：代码弹幕（不能使用） 9：BAS弹幕（pool必须为2）)
+    int type = 1, //彈幕類選擇(1：影片彈幕 2：漫畫彈幕)
+    required int oid, // 影片cid
+    required String msg, //彈幕文字(長度小於 100 字元)
+    // 彈幕類型(1：滾動彈幕 4：底端彈幕 5：頂端彈幕 6：逆向彈幕(不能使用） 7：進階彈幕 8：程式碼彈幕（不能使用） 9：BAS彈幕（pool必須為2）)
     int mode = 1,
     // String? aid,// 稿件avid
-    // String? bvid,// bvid与aid必须有一个
+    // String? bvid,// bvid與aid必須有一個
     required String bvid,
-    int? progress, // 弹幕出现在视频内的时间（单位为毫秒，默认为0）
-    int? color, // 弹幕颜色(默认白色，16777215）
-    int? fontSize, // 弹幕字号（默认25）
-    int? pool, // 弹幕池选择（0：普通池 1：字幕池 2：特殊池（代码/BAS弹幕）默认普通池，0）
-    //int? rnd,// 当前时间戳*1000000（若无此项，则发送弹幕冷却时间限制为90s；若有此项，则发送弹幕冷却时间限制为5s）
-    bool colorful = false, //60001：专属渐变彩色（需要会员）
-    int? checkboxType, //是否带 UP 身份标识（0：普通；4：带有标识）
-    // String? csrf,//CSRF Token（位于 Cookie）	Cookie 方式必要
-    // String? access_key,//	APP 登录 Token		APP 方式必要
+    int? progress, // 彈幕出現在影片內的時間（單位為毫秒，預設為0）
+    int? color, // 彈幕顏色(預設白色，16777215）
+    int? fontSize, // 彈幕字號（預設25）
+    int? pool, // 彈幕池選擇（0：普通池 1：字幕池 2：特殊池（程式碼/BAS彈幕）預設普通池，0）
+    //int? rnd,// 目前時間戳*1000000（若無此項，則發送彈幕冷卻時間限制為90s；若有此項，則發送彈幕冷卻時間限制為5s）
+    bool colorful = false, //60001：專屬漸變彩色（需要會員）
+    int? checkboxType, //是否帶 UP 身份標識（0：普通；4：帶有標識）
+    // String? csrf,//CSRF Token（位於 Cookie）	Cookie 方式必要
+    // String? access_key,//	APP 登入 Token		APP 方式必要
   }) async {
-    // 构建参数对象
+    // 構建參數物件
     // assert(aid != null || bvid != null);
     // assert(csrf != null || access_key != null);
-    // 构建参数对象
+    // 構建參數物件
     final data = <String, Object>{
       'type': type,
       'oid': oid,
@@ -124,13 +124,13 @@ abstract final class DanmakuHttp {
 
     /// res.data['data']['block']
     /// {
-    ///       0: "举报已提交",
-    ///       "-1": "举报失败，请先激活账号。",
-    ///       "-2": "举报失败，系统拒绝受理您的举报请求。",
-    ///       "-3": "举报失败，您已经被禁言。",
-    ///       "-4": "您的操作过于频繁，请稍后再试。",
-    ///       "-5": "您已经举报过这条弹幕了。",
-    ///       "-6": "举报失败，系统错误。"
+    ///       0: "檢舉已提交",
+    ///       "-1": "檢舉失敗，請先啟用帳號。",
+    ///       "-2": "檢舉失敗，系統拒絕受理您的檢舉請求。",
+    ///       "-3": "檢舉失敗，您已經被禁言。",
+    ///       "-4": "您的操作過於頻繁，請稍後再試。",
+    ///       "-5": "您已經檢舉過這條彈幕了。",
+    ///       "-6": "檢舉失敗，系統錯誤。"
     /// }
   }
 
@@ -161,10 +161,10 @@ abstract final class DanmakuHttp {
     required Iterable<int> ids,
     required int state,
   }) async {
-    /// 0: 取消删除
-    /// 1：删除弹幕
-    /// 2：弹幕保护
-    /// 3：取消保护
+    /// 0: 取消刪除
+    /// 1：刪除彈幕
+    /// 2：彈幕保護
+    /// 3：取消保護
     final data = {
       'dmids': ids.join(','),
       'oid': oid,

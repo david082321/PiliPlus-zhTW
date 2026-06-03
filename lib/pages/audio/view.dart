@@ -69,7 +69,7 @@ class AudioPage extends StatefulWidget {
 }
 
 extension _ListOrderExt on ListOrder {
-  String get title => const ['无序', '正序', '倒序', '随机'][value];
+  String get title => const ['無序', '正序', '倒序', '隨機'][value];
 }
 
 class _AudioPageState extends State<AudioPage> {
@@ -97,7 +97,7 @@ class _AudioPageState extends State<AudioPage> {
             Obx(() {
               if (_controller.segmentProgressList.isNotEmpty) {
                 return IconButton(
-                  tooltip: '片段信息',
+                  tooltip: '片段資訊',
                   onPressed: _controller.showSBDetail,
                   icon: const Icon(MdiIcons.advertisements, size: 22),
                 );
@@ -121,7 +121,7 @@ class _AudioPageState extends State<AudioPage> {
             },
           ),
           IconButton(
-            tooltip: '定时关闭',
+            tooltip: '定時關閉',
             onPressed: () => shutdownTimerService
               ..onPause ??= _controller.onPause
               ..isPlaying ??= _controller.isPlaying
@@ -432,7 +432,7 @@ class _AudioPageState extends State<AudioPage> {
                       height: 45,
                       child: Center(
                         child: Text(
-                          '关闭',
+                          '關閉',
                           style: TextStyle(color: colorScheme.outline),
                         ),
                       ),
@@ -618,7 +618,7 @@ class _AudioPageState extends State<AudioPage> {
               // ListTile(
               //   dense: true,
               //   title: const Text(
-              //     '定时关闭',
+              //     '定時關閉',
               //     style: TextStyle(fontSize: 14),
               //   ),
               //   onTap: () {
@@ -629,7 +629,7 @@ class _AudioPageState extends State<AudioPage> {
               ListTile(
                 dense: true,
                 title: const Text(
-                  '举报',
+                  '檢舉',
                   style: TextStyle(fontSize: 14),
                 ),
                 onTap: () {
@@ -658,7 +658,7 @@ class _AudioPageState extends State<AudioPage> {
                 FontAwesomeIcons.solidThumbsUp,
               ),
               selectStatus: _controller.hasLike.value,
-              semanticsLabel: '点赞',
+              semanticsLabel: '按讚',
               text: NumUtils.numFormat(audioItem.stat.like),
               onStartTriple: _controller.onStartTriple,
               onCancelTriple: _controller.onCancelTriple,
@@ -671,7 +671,7 @@ class _AudioPageState extends State<AudioPage> {
               selectIcon: const Icon(FontAwesomeIcons.b),
               onTap: _controller.actionCoinVideo,
               selectStatus: _controller.hasCoin,
-              semanticsLabel: '投币',
+              semanticsLabel: '投幣',
               text: NumUtils.numFormat(
                 audioItem.stat.coin,
               ),
@@ -699,7 +699,7 @@ class _AudioPageState extends State<AudioPage> {
           ActionItem(
             icon: const Icon(FontAwesomeIcons.comment),
             onTap: _controller.showReply,
-            semanticsLabel: '评论',
+            semanticsLabel: '評論',
             text: NumUtils.numFormat(
               audioItem.stat.reply,
             ),

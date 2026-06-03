@@ -1,4 +1,4 @@
-// 视频or合集
+// 影片or合集
 import 'package:PiliPlus/common/assets.dart';
 import 'package:PiliPlus/common/style.dart';
 import 'package:PiliPlus/common/widgets/badge.dart';
@@ -18,8 +18,8 @@ Widget videoSeasonWidget(
   required bool isDetail,
 }) {
   // type archive  ugcSeason
-  // archive 视频/显示发布人
-  // ugcSeason 合集/不显示发布人
+  // archive 影片/顯示發布人
+  // ugcSeason 合集/不顯示發布人
 
   DynamicArchiveModel? video = switch (item.type) {
     'DYNAMIC_TYPE_AV' => item.modules.moduleDynamic?.major?.archive,
@@ -66,7 +66,7 @@ Widget videoSeasonWidget(
                   bottom: null,
                   left: null,
                   type: switch (badge) {
-                    '充电专属' => PBadgeType.error,
+                    '充電專屬' => PBadgeType.error,
                     _ => PBadgeType.primary,
                   },
                 ),
@@ -110,7 +110,7 @@ Widget videoSeasonWidget(
                         if (video.stat case final stat?) ...[
                           Text('${NumUtils.numFormat(stat.play)}播放'),
                           const SizedBox(width: 6),
-                          Text('${NumUtils.numFormat(stat.danmu)}弹幕'),
+                          Text('${NumUtils.numFormat(stat.danmu)}彈幕'),
                         ],
                         const Spacer(),
                         Image.asset(

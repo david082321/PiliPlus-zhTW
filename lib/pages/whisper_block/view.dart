@@ -28,7 +28,7 @@ class _WhisperBlockPageState extends State<WhisperBlockPage> {
     final ThemeData theme = Theme.of(context);
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      appBar: AppBar(title: const Text('消息屏蔽词')),
+      appBar: AppBar(title: const Text('消息封鎖詞')),
       body: Obx(() => _buildBody(theme, _controller.loadingState.value)),
     );
   }
@@ -50,7 +50,7 @@ class _WhisperBlockPageState extends State<WhisperBlockPage> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          '点击屏蔽词即可删除',
+                          '點擊封鎖詞即可刪除',
                           style: TextStyle(
                             fontSize: 13,
                             color: theme.colorScheme.outline,
@@ -82,8 +82,8 @@ class _WhisperBlockPageState extends State<WhisperBlockPage> {
                                 onTap: (keyword) {
                                   showConfirmDialog(
                                     context: context,
-                                    title: const Text('删除屏蔽词？'),
-                                    content: const Text('该屏蔽词将不再生效'),
+                                    title: const Text('刪除封鎖詞？'),
+                                    content: const Text('該封鎖詞將不再生效'),
                                     onConfirm: () => _controller.onRemove(e),
                                   );
                                 },
@@ -103,7 +103,7 @@ class _WhisperBlockPageState extends State<WhisperBlockPage> {
                       onPressed: _onAdd,
                       child: const Row(
                         mainAxisAlignment: MainAxisAlignment.center,
-                        children: [Icon(Icons.add, size: 22), Text('添加消息屏蔽词')],
+                        children: [Icon(Icons.add, size: 22), Text('新增消息封鎖詞')],
                       ),
                     ),
                   ),
@@ -117,13 +117,13 @@ class _WhisperBlockPageState extends State<WhisperBlockPage> {
                   children: [
                     SvgPicture.asset(Assets.error, height: 156),
                     const Text(
-                      '还未添加屏蔽词',
+                      '還未新增封鎖詞',
                       style: TextStyle(
                         fontSize: 15,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    const Text('添加后，将不再接受包含屏蔽词的消息'),
+                    const Text('新增後，將不再接受包含封鎖詞的消息'),
                     FilledButton.tonal(
                       onPressed: _onAdd,
                       style: FilledButton.styleFrom(
@@ -133,7 +133,7 @@ class _WhisperBlockPageState extends State<WhisperBlockPage> {
                         mainAxisSize: MainAxisSize.min,
                         children: [
                           Icon(Icons.add, size: 22),
-                          Text('添加'),
+                          Text('新增'),
                         ],
                       ),
                     ),
@@ -172,7 +172,7 @@ class _WhisperBlockPageState extends State<WhisperBlockPage> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   const Text(
-                    '添加消息屏蔽词',
+                    '新增消息封鎖詞',
                     style: TextStyle(
                       fontSize: 14,
                       fontWeight: FontWeight.bold,
@@ -194,7 +194,7 @@ class _WhisperBlockPageState extends State<WhisperBlockPage> {
                 maxLength: _controller.charLimit,
                 decoration: InputDecoration(
                   isDense: true,
-                  hintText: '请输入',
+                  hintText: '請輸入',
                   visualDensity: .standard,
                   hintStyle: const TextStyle(fontSize: 14),
                   contentPadding: const EdgeInsets.symmetric(
@@ -220,7 +220,7 @@ class _WhisperBlockPageState extends State<WhisperBlockPage> {
                 },
                 child: const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: [Icon(Icons.add, size: 22), Text('添加消息屏蔽词')],
+                  children: [Icon(Icons.add, size: 22), Text('新增消息封鎖詞')],
                 ),
               ),
             ],

@@ -81,7 +81,7 @@ abstract final class LoginHttp {
     }
   }
 
-  // 获取salt与PubKey
+  // 取得salt與PubKey
   static Future getWebKey() async {
     final res = await Request().get(Api.getWebKey);
     //data: {'disable_rcmd': 0, 'local_id': LoginUtils.generateBuvid()});
@@ -188,7 +188,7 @@ abstract final class LoginHttp {
   //   }
   // }
 
-  // app端密码登录
+  // app端密碼登入
   static Future loginByPwd({
     required String username,
     required String password,
@@ -263,7 +263,7 @@ abstract final class LoginHttp {
     }
   }
 
-  // app端短信验证码登录
+  // app端簡訊驗證碼登入
   static Future loginBySms({
     required String captchaKey,
     required String tel,
@@ -325,7 +325,7 @@ abstract final class LoginHttp {
     }
   }
 
-  // 密码登录时风控验证手机
+  // 密碼登入時風控驗證手機
   static Future safeCenterGetInfo({
     required String tmpCode,
   }) async {
@@ -347,7 +347,7 @@ abstract final class LoginHttp {
     }
   }
 
-  // 风控验证手机前的极验验证码
+  // 風控驗證手機前的極驗驗證碼
   static Future preCapture() async {
     final res = await Request().post(Api.preCapture);
 
@@ -363,7 +363,7 @@ abstract final class LoginHttp {
     }
   }
 
-  // 风控验证手机：发送短信验证码
+  // 風控驗證手機：發送簡訊驗證碼
   static Future safeCenterSmsCode({
     String? smsType,
     required String tmpCode,
@@ -406,7 +406,7 @@ abstract final class LoginHttp {
     }
   }
 
-  // 风控验证手机：提交短信验证码
+  // 風控驗證手機：提交簡訊驗證碼
   static Future safeCenterSmsVerify({
     String? type,
     required String code,
@@ -448,7 +448,7 @@ abstract final class LoginHttp {
     }
   }
 
-  // 风控验证手机：用oauthCode换回accessToken
+  // 風控驗證手機：用oauthCode換回accessToken
   static Future oauth2AccessToken({
     required String code,
   }) async {

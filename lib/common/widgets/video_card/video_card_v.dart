@@ -20,7 +20,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:intl/intl.dart';
 
-// 视频卡片 - 垂直布局
+// 影片卡片 - 垂直布局
 class VideoCardV extends StatelessWidget {
   final BaseRcmdVideoItemModel videoItem;
   final VoidCallback? onRemove;
@@ -65,7 +65,7 @@ class VideoCardV extends StatelessWidget {
           );
         }
         break;
-      // 动态
+      // 動態
       case 'picture':
         try {
           PiliScheme.routePushFromUrl(videoItem.uri!);
@@ -189,7 +189,7 @@ class VideoCardV extends StatelessWidget {
                   ),
                 if (videoItem.goto == 'picture')
                   const PBadge(
-                    text: '动态',
+                    text: '動態',
                     isStack: false,
                     size: .small,
                     type: .line_primary,
@@ -197,7 +197,7 @@ class VideoCardV extends StatelessWidget {
                   ),
                 if (videoItem.isFollowed)
                   const PBadge(
-                    text: '已关注',
+                    text: '已關注',
                     isStack: false,
                     size: .small,
                     type: .secondary,

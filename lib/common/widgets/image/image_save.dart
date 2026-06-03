@@ -49,7 +49,7 @@ void imageSaveDialog({
                   width: 30,
                   height: 30,
                   child: IconButton(
-                    tooltip: '关闭',
+                    tooltip: '關閉',
                     style: IconButton.styleFrom(
                       padding: .zero,
                       backgroundColor: Colors.black.withValues(alpha: 0.3),
@@ -80,7 +80,7 @@ void imageSaveDialog({
                   if (aid != null || bvid != null)
                     iconButton(
                       iconSize: iconSize,
-                      tooltip: '稍后再看',
+                      tooltip: '稍後再看',
                       onPressed: () => {
                         SmartDialog.dismiss(),
                         UserHttp.toViewLater(aid: aid, bvid: bvid),
@@ -100,7 +100,7 @@ void imageSaveDialog({
                       ),
                     iconButton(
                       iconSize: iconSize,
-                      tooltip: '保存封面图',
+                      tooltip: '儲存封面圖',
                       onPressed: () async {
                         bool saveStatus = await ImageUtils.downloadImg([cover]);
                         if (saveStatus) {

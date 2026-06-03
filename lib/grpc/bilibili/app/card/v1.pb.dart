@@ -2003,9 +2003,9 @@ class EntranceItem extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   Bubble ensureBubble() => $_ensure(6);
 
-  /// 入口类型
+  /// 入口類型
   ///
-  /// - 1: 分品类热门
+  /// - 1: 分品類熱門
   @$pb.TagNumber(8)
   $core.int get entranceType => $_getIZ(7);
   @$pb.TagNumber(8)
@@ -4858,7 +4858,7 @@ class ReasonStyle extends $pb.GeneratedMessage {
   void clearLeftIconType() => $_clearField(16);
 }
 
-/// 新关注组件
+/// 新關注元件
 class Relation extends $pb.GeneratedMessage {
   factory Relation({
     $core.int? status,
@@ -4909,10 +4909,10 @@ class Relation extends $pb.GeneratedMessage {
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Relation>(create);
   static Relation? _defaultInstance;
 
-  /// - 1: 未关注
-  /// - 2: 已关注
-  /// - 3: 被关注
-  /// - 4: 互相关注
+  /// - 1: 未關注
+  /// - 2: 已關注
+  /// - 3: 被關注
+  /// - 4: 互相關注
   @$pb.TagNumber(1)
   $core.int get status => $_getIZ(0);
   @$pb.TagNumber(1)
@@ -4922,10 +4922,10 @@ class Relation extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearStatus() => $_clearField(1);
 
-  /// 用户关注 UP 主
+  /// 使用者關注 UP 主
   ///
-  /// - 0: 未关注
-  /// - 1: 已关注
+  /// - 0: 未關注
+  /// - 1: 已關注
   @$pb.TagNumber(2)
   $core.int get isFollow => $_getIZ(1);
   @$pb.TagNumber(2)
@@ -4935,10 +4935,10 @@ class Relation extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearIsFollow() => $_clearField(2);
 
-  ///   UP 主关注用户
+  ///   UP 主關注使用者
   ///
-  ///  - 0: 未被关注
-  ///  - 1: 已被关注
+  ///  - 0: 未被關注
+  ///  - 1: 已被關注
   @$pb.TagNumber(3)
   $core.int get isFollowed => $_getIZ(2);
   @$pb.TagNumber(3)
@@ -6353,7 +6353,7 @@ class SmallCoverV5 extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   HotwordEntrance ensureHotwordEntrance() => $_ensure(7);
 
-  /// 直播小卡角标
+  /// 直播小卡角標
   @$pb.TagNumber(9)
   ReasonStyle get cornerMarkStyle => $_getN(8);
   @$pb.TagNumber(9)

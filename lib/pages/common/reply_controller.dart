@@ -85,7 +85,7 @@ abstract class ReplyController<R> extends CommonListController<R, ReplyInfo> {
     return super.onRefresh();
   }
 
-  // 排序搜索评论
+  // 排序搜尋評論
   void queryBySort() {
     if (isLoading) return;
     switch (sortType.value) {
@@ -115,7 +115,7 @@ abstract class ReplyController<R> extends CommonListController<R, ReplyInfo> {
           if (inputDisable) {
             SmartDialog.showToast(rootText);
           }
-          if (rootText.contains('可发') || rootText.contains('可见')) {
+          if (rootText.contains('可發') || rootText.contains('可見')) {
             hint = rootText;
           }
         }
@@ -245,7 +245,7 @@ abstract class ReplyController<R> extends CommonListController<R, ReplyInfo> {
           ..insert(0, list.removeAt(index));
       }
       loadingState.refresh();
-      SmartDialog.showToast('${isUpTop ? '取消' : ''}置顶成功');
+      SmartDialog.showToast('${isUpTop ? '取消' : ''}置頂成功');
     } else {
       res.toast();
     }

@@ -48,21 +48,21 @@ abstract final class DownloadHttp {
         int targetVideoQa = curHighestVideoQa;
         if (response.acceptQuality?.isNotEmpty == true &&
             preferVideoQa <= curHighestVideoQa) {
-          // 如果预设的画质低于当前最高
+          // 如果預設的畫質低於目前最高
           targetVideoQa = response.acceptQuality!.findClosestTarget(
             (e) => e <= preferVideoQa,
             (a, b) => a > b ? a : b,
           );
         }
 
-        /// 取出符合当前画质的videoList
+        /// 取出符合目前畫質的videoList
         final List<VideoItem> videosList = videoList
             .where((e) => e.quality.code == targetVideoQa)
             .toList();
 
-        /// 优先顺序 设置中指定解码格式 -> 当前可选的首个解码格式
+        /// 優先順序 設定中指定解碼格式 -> 目前可選的首個解碼格式
         final List<FormatItem> supportFormats = response.supportFormats!;
-        // 根据画质选编码格式
+        // 根據畫質選編碼格式
         final FormatItem targetSupportFormats = supportFormats.firstWhere(
           (e) => e.quality == targetVideoQa,
           orElse: () => supportFormats.first,
@@ -80,12 +80,12 @@ abstract final class DownloadHttp {
         String preferDecode = Pref.defaultDecode; // def avc
         String preferSecondDecode = Pref.secondDecode; // def av1
 
-        // 默认从设置中取AV1
+        // 預設從設定中取AV1
         VideoDecodeFormatType currentDecodeFormats =
             VideoDecodeFormatType.fromString(preferDecode);
         VideoDecodeFormatType secondDecodeFormats =
             VideoDecodeFormatType.fromString(preferSecondDecode);
-        // 当前视频没有对应格式返回第一个
+        // 目前影片沒有對應格式返回第一個
         int flag = 0;
         for (final e in supportDecodeFormats) {
           if (currentDecodeFormats.codes.any(e.startsWith)) {
@@ -103,7 +103,7 @@ abstract final class DownloadHttp {
           );
         }
 
-        /// 取出符合当前解码格式的videoItem
+        /// 取出符合目前解碼格式的videoItem
         final videoDash = videosList.firstWhere(
           (e) => currentDecodeFormats.codes.any(e.codecs!.startsWith),
           orElse: () => videosList.first,

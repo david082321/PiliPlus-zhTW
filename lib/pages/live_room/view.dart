@@ -508,7 +508,7 @@ class _LiveRoomPageState extends State<LiveRoomPage>
     child: Obx(() {
       if (_liveRoomController.onlineCount.value case final onlineCount?) {
         return Text(
-          '高能观众($onlineCount)',
+          '高能觀眾($onlineCount)',
           style: const TextStyle(
             fontSize: 12,
             color: Colors.white,
@@ -611,7 +611,7 @@ class _LiveRoomPageState extends State<LiveRoomPage>
             ),
       actions: [
         // IconButton(
-        //   tooltip: '刷新',
+        //   tooltip: '重新整理',
         //   onPressed: _liveRoomController.queryLiveUrl,
         //   icon: const Icon(Icons.refresh, size: 20),
         // ),
@@ -632,7 +632,7 @@ class _LiveRoomPageState extends State<LiveRoomPage>
                       size: 19,
                       color: color,
                     ),
-                    const Text('复制链接'),
+                    const Text('複製連結'),
                   ],
                 ),
               ),
@@ -648,7 +648,7 @@ class _LiveRoomPageState extends State<LiveRoomPage>
                         size: 19,
                         color: color,
                       ),
-                      const Text('分享直播间'),
+                      const Text('分享直播間'),
                     ],
                   ),
                 ),
@@ -663,7 +663,7 @@ class _LiveRoomPageState extends State<LiveRoomPage>
                       size: 19,
                       color: color,
                     ),
-                    const Text('浏览器打开'),
+                    const Text('瀏覽器打開'),
                   ],
                 ),
               ),
@@ -860,7 +860,7 @@ class _LiveRoomPageState extends State<LiveRoomPage>
                 ),
                 const Expanded(
                   child: Text(
-                    '发送弹幕',
+                    '發送彈幕',
                     style: TextStyle(color: Color(0xFFEEEEEE)),
                   ),
                 ),

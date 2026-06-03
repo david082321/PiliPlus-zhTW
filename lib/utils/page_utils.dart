@@ -249,7 +249,7 @@ abstract final class PageUtils {
       }
     }
 
-    /// 点击评论action 直接查看评论
+    /// 點擊評論action 直接查看評論
     if (isPush) {
       push();
       return;
@@ -302,7 +302,7 @@ abstract final class PageUtils {
         }
         break;
 
-      /// 专栏文章查看
+      /// 專欄文章查看
       case 'DYNAMIC_TYPE_ARTICLE':
         toDupNamed(
           '/articlePage',
@@ -314,8 +314,8 @@ abstract final class PageUtils {
         break;
 
       case 'DYNAMIC_TYPE_PGC':
-        // if (kDebugMode) debugPrint('番剧');
-        SmartDialog.showToast('暂未支持的类型，请联系开发者');
+        // if (kDebugMode) debugPrint('番劇');
+        SmartDialog.showToast('暫未支援的類型，請聯絡開發者');
         break;
 
       case 'DYNAMIC_TYPE_LIVE':
@@ -361,9 +361,9 @@ abstract final class PageUtils {
         }
         break;
 
-      /// 番剧查看
+      /// 番劇查看
       case 'DYNAMIC_TYPE_PGC_UNION':
-        // if (kDebugMode) debugPrint('DYNAMIC_TYPE_PGC_UNION 番剧');
+        // if (kDebugMode) debugPrint('DYNAMIC_TYPE_PGC_UNION 番劇');
         DynamicArchiveModel pgc = item.modules.moduleDynamic!.major!.pgc!;
         if (pgc.epid != null) {
           viewPgc(epId: pgc.epid);
@@ -396,13 +396,13 @@ abstract final class PageUtils {
         );
         break;
 
-      // 纯文字动态查看
+      // 純文字動態查看
       // case 'DYNAMIC_TYPE_WORD':
-      // # 装扮/剧集点评/普通分享
+      // # 裝扮/劇集評論/普通分享
       // case 'DYNAMIC_TYPE_COMMON_SQUARE':
-      // 转发的动态
+      // 轉發的動態
       // case 'DYNAMIC_TYPE_FORWARD':
-      // 图文动态查看
+      // 圖文動態查看
       // case 'DYNAMIC_TYPE_DRAW':
       default:
         push();
@@ -662,7 +662,7 @@ abstract final class PageUtils {
     bool off = false,
   }) async {
     try {
-      SmartDialog.showLoading(msg: '资源获取中');
+      SmartDialog.showLoading(msg: '資源取得中');
       final res = await SearchHttp.pgcInfo(seasonId: seasonId, epId: epId);
       SmartDialog.dismiss();
       if (res case Success(:final response)) {
@@ -744,7 +744,7 @@ abstract final class PageUtils {
           }
         }
 
-        SmartDialog.showToast('资源加载失败');
+        SmartDialog.showToast('資源載入失敗');
       } else {
         res.toast();
       }
@@ -762,7 +762,7 @@ abstract final class PageUtils {
     bool off = false,
   }) async {
     try {
-      SmartDialog.showLoading(msg: '资源获取中');
+      SmartDialog.showLoading(msg: '資源取得中');
       final res = await SearchHttp.pugvInfo(seasonId: seasonId, epId: epId);
       SmartDialog.dismiss();
       if (res case Success(:final response)) {
@@ -790,7 +790,7 @@ abstract final class PageUtils {
             off: off,
           );
         } else {
-          SmartDialog.showToast('资源加载失败');
+          SmartDialog.showToast('資源載入失敗');
         }
       } else {
         res.toast();

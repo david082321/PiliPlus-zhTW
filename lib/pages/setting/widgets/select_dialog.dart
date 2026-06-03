@@ -135,7 +135,7 @@ class _CdnSelectDialogState extends State<CdnSelectDialog> {
       videoType: VideoType.ugc,
     );
     final item = result.dataOrNull?.dash?.video?.first;
-    if (item == null) throw Exception('无法获取视频流');
+    if (item == null) throw Exception('無法取得影片串流');
     return item;
   }
 
@@ -199,7 +199,7 @@ class _CdnSelectDialogState extends State<CdnSelectDialog> {
             _updateSpeedResult(index, downloaded, duration);
             downloaded = 0;
           } else {
-            throw TimeoutException('测速超时');
+            throw TimeoutException('測速超時');
           }
         } else if (downloaded >= maxSize) {
           onClose();
@@ -228,7 +228,7 @@ class _CdnSelectDialogState extends State<CdnSelectDialog> {
     if (error is DioException) {
       final statusCode = error.response?.statusCode;
       if (statusCode != null && 400 <= statusCode && statusCode < 500) {
-        message = '此视频可能无法替换为该CDN';
+        message = '此影片可能無法取代為該CDN';
       } else {
         message = error.toString();
       }
@@ -236,7 +236,7 @@ class _CdnSelectDialogState extends State<CdnSelectDialog> {
       message = error.toString();
     }
     if (message.isEmpty) {
-      message = '测速失败';
+      message = '測速失敗';
     }
     item.value = message;
   }
@@ -244,7 +244,7 @@ class _CdnSelectDialogState extends State<CdnSelectDialog> {
   @override
   Widget build(BuildContext context) {
     return SelectDialog<CDNService>(
-      title: 'CDN 设置',
+      title: 'CDN 設定',
       values: CDNService.values.map((i) => (i, i.desc)).toList(),
       value: VideoUtils.cdnService,
       subtitleBuilder: _cdnSpeedTest

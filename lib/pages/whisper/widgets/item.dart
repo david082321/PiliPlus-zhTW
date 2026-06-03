@@ -70,7 +70,7 @@ class WhisperSessionItem extends StatelessWidget {
                     Get.back();
                     onSetTop(item.isPinned, item.id);
                   },
-                  title: Text(item.isPinned ? '移除置顶' : '置顶'),
+                  title: Text(item.isPinned ? '移除置頂' : '置頂'),
                 ),
                 if (item.id.privateId.hasTalkerUid())
                   ListTile(
@@ -79,7 +79,7 @@ class WhisperSessionItem extends StatelessWidget {
                       Get.back();
                       onSetMute(item.isMuted, item.id.privateId.talkerUid);
                     },
-                    title: Text('${item.isMuted ? '关闭' : '开启'}免打扰'),
+                    title: Text('${item.isMuted ? '關閉' : '開啟'}免打擾'),
                   ),
                 if (item.id.privateId.hasTalkerUid())
                   ListTile(
@@ -88,12 +88,12 @@ class WhisperSessionItem extends StatelessWidget {
                       Get.back();
                       showConfirmDialog(
                         context: context,
-                        title: const Text('确定删除该对话？'),
+                        title: const Text('確定刪除該對話？'),
                         onConfirm: () =>
                             onRemove(item.id.privateId.talkerUid.toInt()),
                       );
                     },
-                    title: const Text('删除'),
+                    title: const Text('刪除'),
                   ),
               ],
             ),
@@ -108,25 +108,25 @@ class WhisperSessionItem extends StatelessWidget {
                 PopupMenuItem(
                   height: 42,
                   onTap: () => onSetTop(item.isPinned, item.id),
-                  child: Text(item.isPinned ? '移除置顶' : '置顶'),
+                  child: Text(item.isPinned ? '移除置頂' : '置頂'),
                 ),
                 if (item.id.privateId.hasTalkerUid())
                   PopupMenuItem(
                     height: 42,
                     onTap: () =>
                         onSetMute(item.isMuted, item.id.privateId.talkerUid),
-                    child: Text('${item.isMuted ? '关闭' : '开启'}免打扰'),
+                    child: Text('${item.isMuted ? '關閉' : '開啟'}免打擾'),
                   ),
                 if (item.id.privateId.hasTalkerUid())
                   PopupMenuItem(
                     height: 42,
                     onTap: () => showConfirmDialog(
                       context: context,
-                      title: const Text('确定删除该对话？'),
+                      title: const Text('確定刪除該對話？'),
                       onConfirm: () =>
                           onRemove(item.id.privateId.talkerUid.toInt()),
                     ),
-                    child: const Text('删除'),
+                    child: const Text('刪除'),
                   ),
               ],
             )

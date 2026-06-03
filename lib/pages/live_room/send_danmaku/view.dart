@@ -112,7 +112,7 @@ class _ReplyPageState extends CommonRichTextPubPageState<LiveSendDmPanel> {
               onSubmitted: onSubmitted,
               focusNode: focusNode,
               decoration: const InputDecoration(
-                hintText: "输入弹幕内容",
+                hintText: "輸入彈幕內容",
                 border: InputBorder.none,
                 hintStyle: TextStyle(fontSize: 14),
               ),
@@ -140,7 +140,7 @@ class _ReplyPageState extends CommonRichTextPubPageState<LiveSendDmPanel> {
                   visualDensity: .compact,
                   padding: const .symmetric(horizontal: 20, vertical: 10),
                 ),
-                child: const Text('发送'),
+                child: const Text('發送'),
               ),
             ),
           ],
@@ -184,7 +184,7 @@ class _ReplyPageState extends CommonRichTextPubPageState<LiveSendDmPanel> {
       liveRoomController
         ..savedDanmaku?.clear()
         ..savedDanmaku = null;
-      SmartDialog.showToast('发送成功');
+      SmartDialog.showToast('發送成功');
     } else {
       res.toast();
     }

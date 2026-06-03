@@ -641,7 +641,7 @@ class Button extends $pb.GeneratedMessage {
   void clearHasTitle_7() => $_clearField(7);
 }
 
-/// 专栏卡片
+/// 專欄卡片
 class CardArticle extends $pb.GeneratedMessage {
   factory CardArticle({
     $core.Iterable<$core.String>? covers,
@@ -707,7 +707,7 @@ class CardArticle extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $pb.PbList<$core.String> get covers => $_getList(0);
 
-  /// 标题
+  /// 標題
   @$pb.TagNumber(2)
   $core.String get name => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -727,7 +727,7 @@ class CardArticle extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearMid() => $_clearField(3);
 
-  /// 是否展示 "关注" 按钮
+  /// 是否展示 "關注" 按鈕
   @$pb.TagNumber(4)
   $core.bool get displayAttention => $_getBF(3);
   @$pb.TagNumber(4)
@@ -737,7 +737,7 @@ class CardArticle extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearDisplayAttention() => $_clearField(4);
 
-  /// 角标
+  /// 角標
   @$pb.TagNumber(5)
   $core.String get badge => $_getSZ(4);
   @$pb.TagNumber(5)
@@ -747,7 +747,7 @@ class CardArticle extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearBadge() => $_clearField(5);
 
-  /// 新关注组件
+  /// 新關注元件
   @$pb.TagNumber(6)
   Relation get relation => $_getN(5);
   @$pb.TagNumber(6)
@@ -760,7 +760,7 @@ class CardArticle extends $pb.GeneratedMessage {
   Relation ensureRelation() => $_ensure(5);
 }
 
-/// 付费课程卡片
+/// 付費課程卡片
 class CardCheese extends $pb.GeneratedMessage {
   factory CardCheese({
     $core.String? cover,
@@ -827,7 +827,7 @@ class CardCheese extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearCover() => $_clearField(1);
 
-  /// 观看进度
+  /// 觀看進度
   @$pb.TagNumber(2)
   $fixnum.Int64 get progress => $_getI64(1);
   @$pb.TagNumber(2)
@@ -837,7 +837,7 @@ class CardCheese extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearProgress() => $_clearField(2);
 
-  /// 时长
+  /// 時長
   @$pb.TagNumber(3)
   $fixnum.Int64 get duration => $_getI64(2);
   @$pb.TagNumber(3)
@@ -847,7 +847,7 @@ class CardCheese extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearDuration() => $_clearField(3);
 
-  /// 分集标题
+  /// 分集標題
   @$pb.TagNumber(4)
   $core.String get subtitle => $_getSZ(3);
   @$pb.TagNumber(4)
@@ -941,7 +941,7 @@ class CardLive extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearCover() => $_clearField(1);
 
-  /// UP 主昵称
+  /// UP 主暱稱
   @$pb.TagNumber(2)
   $core.String get name => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -961,7 +961,7 @@ class CardLive extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearMid() => $_clearField(3);
 
-  /// tag 名称
+  /// tag 名稱
   @$pb.TagNumber(4)
   $core.String get tag => $_getSZ(3);
   @$pb.TagNumber(4)
@@ -971,7 +971,7 @@ class CardLive extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearTag() => $_clearField(4);
 
-  /// 直播状态
+  /// 直播狀態
   @$pb.TagNumber(5)
   $core.int get status => $_getIZ(4);
   @$pb.TagNumber(5)
@@ -981,7 +981,7 @@ class CardLive extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearStatus() => $_clearField(5);
 
-  /// 是否展示 "关注" 按钮
+  /// 是否展示 "關注" 按鈕
   @$pb.TagNumber(6)
   $core.bool get displayAttention => $_getBF(5);
   @$pb.TagNumber(6)
@@ -991,7 +991,7 @@ class CardLive extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   void clearDisplayAttention() => $_clearField(6);
 
-  /// 新关注组件
+  /// 新關注元件
   @$pb.TagNumber(7)
   Relation get relation => $_getN(6);
   @$pb.TagNumber(7)
@@ -1074,7 +1074,7 @@ class CardOGV extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearCover() => $_clearField(1);
 
-  /// 观看进度
+  /// 觀看進度
   @$pb.TagNumber(2)
   $fixnum.Int64 get progress => $_getI64(1);
   @$pb.TagNumber(2)
@@ -1084,7 +1084,7 @@ class CardOGV extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearProgress() => $_clearField(2);
 
-  /// 总时长
+  /// 總時長
   @$pb.TagNumber(3)
   $fixnum.Int64 get duration => $_getI64(2);
   @$pb.TagNumber(3)
@@ -1094,7 +1094,7 @@ class CardOGV extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearDuration() => $_clearField(3);
 
-  /// 番剧卡分集标题
+  /// 番劇卡分集標題
   @$pb.TagNumber(4)
   $core.String get subtitle => $_getSZ(3);
   @$pb.TagNumber(4)
@@ -1104,7 +1104,7 @@ class CardOGV extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearSubtitle() => $_clearField(4);
 
-  /// 角标
+  /// 角標
   @$pb.TagNumber(5)
   $core.String get badge => $_getSZ(4);
   @$pb.TagNumber(5)
@@ -1231,7 +1231,7 @@ class CardUGC extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearCover() => $_clearField(1);
 
-  /// 观看进度
+  /// 觀看進度
   @$pb.TagNumber(2)
   $fixnum.Int64 get progress => $_getI64(1);
   @$pb.TagNumber(2)
@@ -1241,7 +1241,7 @@ class CardUGC extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearProgress() => $_clearField(2);
 
-  /// 时长
+  /// 時長
   @$pb.TagNumber(3)
   $fixnum.Int64 get duration => $_getI64(2);
   @$pb.TagNumber(3)
@@ -1251,7 +1251,7 @@ class CardUGC extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearDuration() => $_clearField(3);
 
-  /// UP 昵称
+  /// UP 暱稱
   @$pb.TagNumber(4)
   $core.String get name => $_getSZ(3);
   @$pb.TagNumber(4)
@@ -1271,7 +1271,7 @@ class CardUGC extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearMid() => $_clearField(5);
 
-  /// 是否展示 "关注" 按钮
+  /// 是否展示 "關注" 按鈕
   @$pb.TagNumber(6)
   $core.bool get displayAttention => $_getBF(5);
   @$pb.TagNumber(6)
@@ -1301,7 +1301,7 @@ class CardUGC extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   void clearPage() => $_clearField(8);
 
-  /// 分 P 的标题
+  /// 分 P 的標題
   @$pb.TagNumber(9)
   $core.String get subtitle => $_getSZ(8);
   @$pb.TagNumber(9)
@@ -1311,7 +1311,7 @@ class CardUGC extends $pb.GeneratedMessage {
   @$pb.TagNumber(9)
   void clearSubtitle() => $_clearField(9);
 
-  /// 新关注组件
+  /// 新關注元件
   @$pb.TagNumber(10)
   Relation get relation => $_getN(9);
   @$pb.TagNumber(10)
@@ -1333,7 +1333,7 @@ class CardUGC extends $pb.GeneratedMessage {
   @$pb.TagNumber(11)
   void clearBvid() => $_clearField(11);
 
-  /// ? 分 P 总数
+  /// ? 分 P 總數
   @$pb.TagNumber(12)
   $fixnum.Int64 get videos => $_getI64(11);
   @$pb.TagNumber(12)
@@ -1343,7 +1343,7 @@ class CardUGC extends $pb.GeneratedMessage {
   @$pb.TagNumber(12)
   void clearVideos() => $_clearField(12);
 
-  /// ? 短链接
+  /// ? 短連結
   @$pb.TagNumber(13)
   $core.String get shortLink => $_getSZ(12);
   @$pb.TagNumber(13)
@@ -1353,7 +1353,7 @@ class CardUGC extends $pb.GeneratedMessage {
   @$pb.TagNumber(13)
   void clearShortLink() => $_clearField(13);
 
-  /// ? 分享标题
+  /// ? 分享標題
   @$pb.TagNumber(14)
   $core.String get shareSubtitle => $_getSZ(13);
   @$pb.TagNumber(14)
@@ -1382,7 +1382,7 @@ class CardUGC extends $pb.GeneratedMessage {
   @$pb.TagNumber(16)
   void clearState() => $_clearField(16);
 
-  /// ? 角标
+  /// ? 角標
   @$pb.TagNumber(17)
   $core.String get badge => $_getSZ(16);
   @$pb.TagNumber(17)
@@ -1392,7 +1392,7 @@ class CardUGC extends $pb.GeneratedMessage {
   @$pb.TagNumber(17)
   void clearBadge() => $_clearField(17);
 
-  /// ? 角标
+  /// ? 角標
   @$pb.TagNumber(18)
   Badge get badgeV2 => $_getN(17);
   @$pb.TagNumber(18)
@@ -1703,7 +1703,7 @@ class CommentItem extends $pb.GeneratedMessage {
   void clearId() => $_clearField(6);
 }
 
-/// 历史记录游标
+/// 歷史記錄游標
 class Cursor extends $pb.GeneratedMessage {
   factory Cursor({
     $fixnum.Int64? max,
@@ -1751,7 +1751,7 @@ class Cursor extends $pb.GeneratedMessage {
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Cursor>(create);
   static Cursor? _defaultInstance;
 
-  /// 本页最大值游标值
+  /// 本頁最大值游標值
   @$pb.TagNumber(1)
   $fixnum.Int64 get max => $_getI64(0);
   @$pb.TagNumber(1)
@@ -1761,7 +1761,7 @@ class Cursor extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearMax() => $_clearField(1);
 
-  /// 本页最大值游标类型
+  /// 本頁最大值游標類型
   @$pb.TagNumber(2)
   $core.int get maxTp => $_getIZ(1);
   @$pb.TagNumber(2)
@@ -1781,7 +1781,7 @@ enum CursorItem_CardItem {
   notSet
 }
 
-/// 历史记录卡片内容
+/// 歷史記錄卡片內容
 class CursorItem extends $pb.GeneratedMessage {
   factory CursorItem({
     CardUGC? cardUgc,
@@ -1898,7 +1898,7 @@ class CursorItem extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearCardItem() => $_clearField($_whichOneof(0));
 
-  /// 参见 [`CardUGC`]
+  /// 參見 [`CardUGC`]
   @$pb.TagNumber(1)
   CardUGC get cardUgc => $_getN(0);
   @$pb.TagNumber(1)
@@ -1910,7 +1910,7 @@ class CursorItem extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   CardUGC ensureCardUgc() => $_ensure(0);
 
-  /// 参见 [`CardOGV`]
+  /// 參見 [`CardOGV`]
   @$pb.TagNumber(2)
   CardOGV get cardOgv => $_getN(1);
   @$pb.TagNumber(2)
@@ -1922,7 +1922,7 @@ class CursorItem extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   CardOGV ensureCardOgv() => $_ensure(1);
 
-  /// 参见 [`CardArticle`]
+  /// 參見 [`CardArticle`]
   @$pb.TagNumber(3)
   CardArticle get cardArticle => $_getN(2);
   @$pb.TagNumber(3)
@@ -1934,7 +1934,7 @@ class CursorItem extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   CardArticle ensureCardArticle() => $_ensure(2);
 
-  /// 参见 [`CardLive`]
+  /// 參見 [`CardLive`]
   @$pb.TagNumber(4)
   CardLive get cardLive => $_getN(3);
   @$pb.TagNumber(4)
@@ -1946,7 +1946,7 @@ class CursorItem extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   CardLive ensureCardLive() => $_ensure(3);
 
-  /// 参见 [`CardCheese`]
+  /// 參見 [`CardCheese`]
   @$pb.TagNumber(5)
   CardCheese get cardCheese => $_getN(4);
   @$pb.TagNumber(5)
@@ -1958,7 +1958,7 @@ class CursorItem extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   CardCheese ensureCardCheese() => $_ensure(4);
 
-  /// 标题
+  /// 標題
   @$pb.TagNumber(6)
   $core.String get title => $_getSZ(5);
   @$pb.TagNumber(6)
@@ -1968,7 +1968,7 @@ class CursorItem extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   void clearTitle() => $_clearField(6);
 
-  /// 跳转链接
+  /// 跳轉連結
   @$pb.TagNumber(7)
   $core.String get uri => $_getSZ(6);
   @$pb.TagNumber(7)
@@ -1978,7 +1978,7 @@ class CursorItem extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   void clearUri() => $_clearField(7);
 
-  /// 观看时间
+  /// 觀看時間
   @$pb.TagNumber(8)
   $fixnum.Int64 get viewAt => $_getI64(7);
   @$pb.TagNumber(8)
@@ -1988,7 +1988,7 @@ class CursorItem extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   void clearViewAt() => $_clearField(8);
 
-  /// 历史记录主键
+  /// 歷史記錄主鍵
   @$pb.TagNumber(9)
   $fixnum.Int64 get kid => $_getI64(8);
   @$pb.TagNumber(9)
@@ -1998,7 +1998,7 @@ class CursorItem extends $pb.GeneratedMessage {
   @$pb.TagNumber(9)
   void clearKid() => $_clearField(9);
 
-  /// 业务 ID (如稿件 avid 或直播间 room_id 等)
+  /// 業務 ID (如稿件 avid 或直播間 room_id 等)
   @$pb.TagNumber(10)
   $fixnum.Int64 get oid => $_getI64(9);
   @$pb.TagNumber(10)
@@ -2008,7 +2008,7 @@ class CursorItem extends $pb.GeneratedMessage {
   @$pb.TagNumber(10)
   void clearOid() => $_clearField(10);
 
-  /// 业务类型
+  /// 業務類型
   @$pb.TagNumber(11)
   $core.String get business => $_getSZ(10);
   @$pb.TagNumber(11)
@@ -2018,7 +2018,7 @@ class CursorItem extends $pb.GeneratedMessage {
   @$pb.TagNumber(11)
   void clearBusiness() => $_clearField(11);
 
-  /// 业务类型
+  /// 業務類型
   @$pb.TagNumber(12)
   $core.int get tp => $_getIZ(11);
   @$pb.TagNumber(12)
@@ -2028,7 +2028,7 @@ class CursorItem extends $pb.GeneratedMessage {
   @$pb.TagNumber(12)
   void clearTp() => $_clearField(12);
 
-  /// 播放设备
+  /// 播放裝置
   @$pb.TagNumber(13)
   DeviceType get dt => $_getN(12);
   @$pb.TagNumber(13)
@@ -2040,7 +2040,7 @@ class CursorItem extends $pb.GeneratedMessage {
   @$pb.TagNumber(13)
   DeviceType ensureDt() => $_ensure(12);
 
-  /// ? 是否带分享按钮
+  /// ? 是否帶分享按鈕
   @$pb.TagNumber(14)
   $core.bool get hasShare => $_getBF(13);
   @$pb.TagNumber(14)
@@ -2050,7 +2050,7 @@ class CursorItem extends $pb.GeneratedMessage {
   @$pb.TagNumber(14)
   void clearHasShare() => $_clearField(14);
 
-  /// ? 埋点上报参数
+  /// ? 埋點上報參數
   @$pb.TagNumber(15)
   $core.String get report => $_getSZ(14);
   @$pb.TagNumber(15)
@@ -2061,7 +2061,7 @@ class CursorItem extends $pb.GeneratedMessage {
   void clearReport() => $_clearField(15);
 }
 
-/// 历史记录列表请求返回值
+/// 歷史記錄列表請求返回值
 class CursorReply extends $pb.GeneratedMessage {
   factory CursorReply({
     $core.Iterable<CursorItem>? items,
@@ -2118,15 +2118,15 @@ class CursorReply extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<CursorReply>(create);
   static CursorReply? _defaultInstance;
 
-  /// 参见 [`CursorItem`]
+  /// 參見 [`CursorItem`]
   @$pb.TagNumber(1)
   $pb.PbList<CursorItem> get items => $_getList(0);
 
-  /// 参见 [`CursorTab`]
+  /// 參見 [`CursorTab`]
   @$pb.TagNumber(2)
   $pb.PbList<CursorTab> get tab => $_getList(1);
 
-  /// 当前偏移
+  /// 目前偏移
   @$pb.TagNumber(3)
   Cursor get cursor => $_getN(2);
   @$pb.TagNumber(3)
@@ -2138,7 +2138,7 @@ class CursorReply extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   Cursor ensureCursor() => $_ensure(2);
 
-  /// 是否还有更多数据
+  /// 是否還有更多資料
   @$pb.TagNumber(4)
   $core.bool get hasMore => $_getBF(3);
   @$pb.TagNumber(4)
@@ -2149,7 +2149,7 @@ class CursorReply extends $pb.GeneratedMessage {
   void clearHasMore() => $_clearField(4);
 }
 
-/// 历史记录列表请求参数
+/// 歷史記錄列表請求參數
 class CursorReq extends $pb.GeneratedMessage {
   factory CursorReq({
     Cursor? cursor,
@@ -2205,7 +2205,7 @@ class CursorReq extends $pb.GeneratedMessage {
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CursorReq>(create);
   static CursorReq? _defaultInstance;
 
-  /// 翻页游标 (透传上一页的游标)
+  /// 翻頁游標 (透傳上一頁的游標)
   @$pb.TagNumber(1)
   Cursor get cursor => $_getN(0);
   @$pb.TagNumber(1)
@@ -2217,12 +2217,12 @@ class CursorReq extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   Cursor ensureCursor() => $_ensure(0);
 
-  /// 业务类型
+  /// 業務類型
   ///
   /// - 全部: `all`
-  /// - 视频: `archive`
+  /// - 影片: `archive`
   /// - 直播: `live`
-  /// - 专栏: `article`
+  /// - 專欄: `article`
   @$pb.TagNumber(2)
   $core.String get business => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -2232,7 +2232,7 @@ class CursorReq extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearBusiness() => $_clearField(2);
 
-  /// 秒开参数
+  /// 秒開參數
   @$pb.TagNumber(3)
   PlayerPreloadParams get playerPreload => $_getN(2);
   @$pb.TagNumber(3)
@@ -2244,7 +2244,7 @@ class CursorReq extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   PlayerPreloadParams ensurePlayerPreload() => $_ensure(2);
 
-  /// 秒开参数
+  /// 秒開參數
   @$pb.TagNumber(4)
   $3.PlayerArgs get playerArgs => $_getN(3);
   @$pb.TagNumber(4)
@@ -2257,7 +2257,7 @@ class CursorReq extends $pb.GeneratedMessage {
   $3.PlayerArgs ensurePlayerArgs() => $_ensure(3);
 }
 
-/// 历史记录顶部 tab
+/// 歷史記錄頂部 tab
 class CursorTab extends $pb.GeneratedMessage {
   factory CursorTab({
     $core.String? business,
@@ -2311,7 +2311,7 @@ class CursorTab extends $pb.GeneratedMessage {
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CursorTab>(create);
   static CursorTab? _defaultInstance;
 
-  /// 业务类型
+  /// 業務類型
   @$pb.TagNumber(1)
   $core.String get business => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -2321,7 +2321,7 @@ class CursorTab extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearBusiness() => $_clearField(1);
 
-  /// 业务名称
+  /// 業務名稱
   @$pb.TagNumber(2)
   $core.String get name => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -2331,7 +2331,7 @@ class CursorTab extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearName() => $_clearField(2);
 
-  /// ? app 内部跳转路由
+  /// ? app 內部跳轉路由
   @$pb.TagNumber(3)
   $core.String get router => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -2341,7 +2341,7 @@ class CursorTab extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearRouter() => $_clearField(3);
 
-  /// ? 是否选中
+  /// ? 是否選中
   @$pb.TagNumber(4)
   $core.bool get focus => $_getBF(3);
   @$pb.TagNumber(4)
@@ -2352,7 +2352,7 @@ class CursorTab extends $pb.GeneratedMessage {
   void clearFocus() => $_clearField(4);
 }
 
-/// 参见 [`CursorReply`]
+/// 參見 [`CursorReply`]
 class CursorV2Reply extends $pb.GeneratedMessage {
   factory CursorV2Reply({
     $core.Iterable<CursorItem>? items,
@@ -2441,7 +2441,7 @@ class CursorV2Reply extends $pb.GeneratedMessage {
   void clearEmptyLink() => $_clearField(4);
 }
 
-/// 参见 [`CursorReq`]
+/// 參見 [`CursorReq`]
 class CursorV2Req extends $pb.GeneratedMessage {
   factory CursorV2Req({
     Cursor? cursor,
@@ -2977,7 +2977,7 @@ class DefaultWordsReq extends $pb.GeneratedMessage {
   void clearSearchPageReturn() => $_clearField(15);
 }
 
-/// 历史记录删除请求参数
+/// 歷史記錄刪除請求參數
 class DeleteReq extends $pb.GeneratedMessage {
   factory DeleteReq({
     $core.Iterable<HisInfo>? hisInfo,
@@ -3026,7 +3026,7 @@ class DeleteReq extends $pb.GeneratedMessage {
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<DeleteReq>(create);
   static DeleteReq? _defaultInstance;
 
-  /// 要删除的历史信息
+  /// 要刪除的歷史資訊
   @$pb.TagNumber(1)
   $pb.PbList<HisInfo> get hisInfo => $_getList(0);
 
@@ -3040,7 +3040,7 @@ class DeleteReq extends $pb.GeneratedMessage {
   void clearTab() => $_clearField(2);
 }
 
-/// 设备类型
+/// 裝置類型
 class DeviceType extends $pb.GeneratedMessage {
   factory DeviceType({
     DT? type,
@@ -3088,7 +3088,7 @@ class DeviceType extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<DeviceType>(create);
   static DeviceType? _defaultInstance;
 
-  /// 设备类型
+  /// 裝置類型
   @$pb.TagNumber(1)
   DT get type => $_getN(0);
   @$pb.TagNumber(1)
@@ -3098,7 +3098,7 @@ class DeviceType extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearType() => $_clearField(1);
 
-  /// 图标
+  /// 圖示
   @$pb.TagNumber(2)
   $core.String get icon => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -5959,7 +5959,7 @@ class ReasonStyle extends $pb.GeneratedMessage {
   void clearBgStyle() => $_clearField(8);
 }
 
-/// 新关注组件
+/// 新關注元件
 class Relation extends $pb.GeneratedMessage {
   factory Relation({
     $core.int? status,
@@ -6010,12 +6010,12 @@ class Relation extends $pb.GeneratedMessage {
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Relation>(create);
   static Relation? _defaultInstance;
 
-  /// 按钮展示文案
+  /// 按鈕展示文案
   ///
-  /// - 1: 未关注
-  /// - 2: 已关注
-  /// - 3: 被关注
-  /// - 4: 互相关注
+  /// - 1: 未關注
+  /// - 2: 已關注
+  /// - 3: 被關注
+  /// - 4: 互相關注
   @$pb.TagNumber(1)
   $core.int get status => $_getIZ(0);
   @$pb.TagNumber(1)
@@ -6025,10 +6025,10 @@ class Relation extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearStatus() => $_clearField(1);
 
-  /// 用户关注 UP 主
+  /// 使用者關注 UP 主
   ///
-  /// - 0: 未关注
-  /// - 1: 已关注
+  /// - 0: 未關注
+  /// - 1: 已關注
   @$pb.TagNumber(2)
   $core.int get isFollow => $_getIZ(1);
   @$pb.TagNumber(2)
@@ -6038,10 +6038,10 @@ class Relation extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearIsFollow() => $_clearField(2);
 
-  /// UP 主关注用户
+  /// UP 主關注使用者
   ///
-  /// - 0: 未被关注
-  /// - 1: 已被关注
+  /// - 0: 未被關注
+  /// - 1: 已被關注
   @$pb.TagNumber(3)
   $core.int get isFollowed => $_getIZ(2);
   @$pb.TagNumber(3)

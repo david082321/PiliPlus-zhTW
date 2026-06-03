@@ -142,7 +142,7 @@ class _HorizontalMemberPageState extends State<HorizontalMemberPage> {
     final count = _controller.count;
     if (count != null) {
       return Text(
-        '共$count视频',
+        '共$count影片',
         style: const TextStyle(fontSize: 13),
       );
     }
@@ -316,7 +316,7 @@ class _HorizontalMemberPageState extends State<HorizontalMemberPage> {
                   Get.toNamed('/editProfile');
                 } else {
                   if (!account.isLogin) {
-                    SmartDialog.showToast('账号未登录');
+                    SmartDialog.showToast('帳號未登入');
                     return;
                   }
                   RequestUtils.actionRelationMod(
@@ -333,10 +333,10 @@ class _HorizontalMemberPageState extends State<HorizontalMemberPage> {
               },
               child: Text(
                 widget.mid == account.mid
-                    ? '编辑资料'
+                    ? '編輯資料'
                     : memberInfoModel.isFollowed == true
-                    ? '已关注'
-                    : '关注',
+                    ? '已關注'
+                    : '關注',
                 maxLines: 1,
                 style: const TextStyle(fontSize: 14),
               ),
@@ -351,7 +351,7 @@ class _HorizontalMemberPageState extends State<HorizontalMemberPage> {
               ),
               onPressed: () => Get.toNamed('/member?mid=${widget.mid}'),
               child: const Text(
-                '查看主页',
+                '查看首頁',
                 maxLines: 1,
                 style: TextStyle(fontSize: 14),
               ),

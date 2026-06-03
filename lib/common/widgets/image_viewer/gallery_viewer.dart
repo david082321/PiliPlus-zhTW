@@ -555,7 +555,7 @@ class _GalleryViewerState extends State<GalleryViewer>
                 Utils.copyText(item.url);
               },
               dense: true,
-              title: const Text('复制链接', style: TextStyle(fontSize: 14)),
+              title: const Text('複製連結', style: TextStyle(fontSize: 14)),
             ),
             ListTile(
               onTap: () {
@@ -563,7 +563,7 @@ class _GalleryViewerState extends State<GalleryViewer>
                 ImageUtils.downloadImg([item.url]);
               },
               dense: true,
-              title: const Text('保存图片', style: TextStyle(fontSize: 14)),
+              title: const Text('儲存圖片', style: TextStyle(fontSize: 14)),
             ),
             if (PlatformUtils.isDesktop)
               ListTile(
@@ -572,7 +572,7 @@ class _GalleryViewerState extends State<GalleryViewer>
                   PageUtils.launchURL(item.url);
                 },
                 dense: true,
-                title: const Text('网页打开', style: TextStyle(fontSize: 14)),
+                title: const Text('網頁打開', style: TextStyle(fontSize: 14)),
               )
             else if (widget.sources.length > 1)
               ListTile(
@@ -583,7 +583,7 @@ class _GalleryViewerState extends State<GalleryViewer>
                   );
                 },
                 dense: true,
-                title: const Text('保存全部图片', style: TextStyle(fontSize: 14)),
+                title: const Text('儲存全部圖片', style: TextStyle(fontSize: 14)),
               ),
             if (item.sourceType == SourceType.livePhoto)
               ListTile(
@@ -598,7 +598,7 @@ class _GalleryViewerState extends State<GalleryViewer>
                 },
                 dense: true,
                 title: Text(
-                  '保存${Platform.isIOS ? ' Live Photo' : '视频'}',
+                  '儲存${Platform.isIOS ? ' Live Photo' : '影片'}',
                   style: const TextStyle(fontSize: 14),
                 ),
               ),
@@ -618,17 +618,17 @@ class _GalleryViewerState extends State<GalleryViewer>
         PopupMenuItem(
           height: 42,
           onTap: () => Utils.copyText(item.url),
-          child: const Text('复制链接', style: TextStyle(fontSize: 14)),
+          child: const Text('複製連結', style: TextStyle(fontSize: 14)),
         ),
         PopupMenuItem(
           height: 42,
           onTap: () => ImageUtils.downloadImg([item.url]),
-          child: const Text('保存图片', style: TextStyle(fontSize: 14)),
+          child: const Text('儲存圖片', style: TextStyle(fontSize: 14)),
         ),
         PopupMenuItem(
           height: 42,
           onTap: () => PageUtils.launchURL(item.url),
-          child: const Text('网页打开', style: TextStyle(fontSize: 14)),
+          child: const Text('網頁打開', style: TextStyle(fontSize: 14)),
         ),
         if (item.sourceType == SourceType.livePhoto)
           PopupMenuItem(
@@ -639,7 +639,7 @@ class _GalleryViewerState extends State<GalleryViewer>
               width: item.width!,
               height: item.height!,
             ),
-            child: const Text('保存视频', style: TextStyle(fontSize: 14)),
+            child: const Text('儲存影片', style: TextStyle(fontSize: 14)),
           ),
       ],
     );

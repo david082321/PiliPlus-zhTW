@@ -23,22 +23,22 @@ import 'package:material_design_icons_flutter/material_design_icons_flutter.dart
 
 List<SettingsModel> get videoSettings => [
   const SwitchModel(
-    title: '开启硬解',
-    subtitle: '以较低功耗播放视频，若异常卡死请关闭',
+    title: '開啟硬解',
+    subtitle: '以較低功耗播放影片，若異常卡死請關閉',
     leading: Icon(Icons.flash_on_outlined),
     setKey: SettingBoxKey.enableHA,
     defaultVal: true,
   ),
   const SwitchModel(
-    title: '免登录1080P',
-    subtitle: '免登录查看1080P视频',
+    title: '免登入1080P',
+    subtitle: '免登入查看1080P影片',
     leading: Icon(Icons.hd_outlined),
     setKey: SettingBoxKey.p1080,
     defaultVal: true,
   ),
   NormalModel(
-    title: 'B站定向流量支持',
-    subtitle: '若套餐含B站定向流量，则会自动使用。可查阅运营商的流量记录确认。',
+    title: 'B站定向流量支援',
+    subtitle: '若套餐含B站定向流量，則會自動使用。可查閱運營商的流量記錄確認。',
     leading: const Icon(Icons.perm_data_setting_outlined),
     getTrailing: (theme) => IgnorePointer(
       child: Transform.scale(
@@ -55,118 +55,118 @@ List<SettingsModel> get videoSettings => [
     ),
   ),
   NormalModel(
-    title: 'CDN 设置',
+    title: 'CDN 設定',
     leading: const Icon(MdiIcons.cloudPlusOutline),
     getSubtitle: () =>
-        '当前使用：${VideoUtils.cdnService.desc}，部分 CDN 可能失效，如无法播放请尝试切换',
+        '目前使用：${VideoUtils.cdnService.desc}，部分 CDN 可能失效，如無法播放請嘗試切換',
     onTap: _showCDNDialog,
   ),
   NormalModel(
-    title: '直播 CDN 设置',
+    title: '直播 CDN 設定',
     leading: const Icon(MdiIcons.cloudPlusOutline),
-    getSubtitle: () => '当前使用：${Pref.liveCdnUrl ?? "默认"}',
+    getSubtitle: () => '目前使用：${Pref.liveCdnUrl ?? "預設"}',
     onTap: _showLiveCDNDialog,
   ),
   const SwitchModel(
-    title: 'CDN 测速',
+    title: 'CDN 測速',
     leading: Icon(Icons.speed),
-    subtitle: '测速通过模拟加载视频实现，注意流量消耗，结果仅供参考',
+    subtitle: '測速透過模擬載入影片實現，注意流量消耗，結果僅供參考',
     setKey: SettingBoxKey.cdnSpeedTest,
     defaultVal: true,
   ),
   SwitchModel(
-    title: '音频不跟随 CDN 设置',
-    subtitle: '直接采用备用 URL，可解决部分视频无声',
+    title: '音訊不跟隨 CDN 設定',
+    subtitle: '直接採用備用 URL，可解決部分影片無聲',
     leading: const Icon(MdiIcons.musicNotePlus),
     setKey: SettingBoxKey.disableAudioCDN,
     defaultVal: false,
     onChanged: (value) => VideoUtils.disableAudioCDN = value,
   ),
   NormalModel(
-    title: '默认画质',
+    title: '預設畫質',
     leading: const Icon(Icons.video_settings_outlined),
     getSubtitle: () =>
-        '当前画质：${VideoQuality.fromCode(Pref.defaultVideoQa).desc}',
+        '目前畫質：${VideoQuality.fromCode(Pref.defaultVideoQa).desc}',
     onTap: _showVideoQaDialog,
   ),
   NormalModel(
-    title: '蜂窝网络画质',
+    title: '蜂窩網路畫質',
     leading: const Icon(Icons.video_settings_outlined),
     getSubtitle: () =>
-        '当前画质：${VideoQuality.fromCode(Pref.defaultVideoQaCellular).desc}',
+        '目前畫質：${VideoQuality.fromCode(Pref.defaultVideoQaCellular).desc}',
     onTap: _showVideoCellularQaDialog,
   ),
   NormalModel(
-    title: '默认音质',
+    title: '預設音質',
     leading: const Icon(Icons.music_video_outlined),
     getSubtitle: () =>
-        '当前音质：${AudioQuality.fromCode(Pref.defaultAudioQa).desc}',
+        '目前音質：${AudioQuality.fromCode(Pref.defaultAudioQa).desc}',
     onTap: _showAudioQaDialog,
   ),
   NormalModel(
-    title: '蜂窝网络音质',
+    title: '蜂窩網路音質',
     leading: const Icon(Icons.music_video_outlined),
     getSubtitle: () =>
-        '当前音质：${AudioQuality.fromCode(Pref.defaultAudioQaCellular).desc}',
+        '目前音質：${AudioQuality.fromCode(Pref.defaultAudioQaCellular).desc}',
     onTap: _showAudioCellularQaDialog,
   ),
   NormalModel(
-    title: '直播默认画质',
+    title: '直播預設畫質',
     leading: const Icon(Icons.video_settings_outlined),
-    getSubtitle: () => '当前画质：${LiveQuality.fromCode(Pref.liveQuality)?.desc}',
+    getSubtitle: () => '目前畫質：${LiveQuality.fromCode(Pref.liveQuality)?.desc}',
     onTap: _showLiveQaDialog,
   ),
   NormalModel(
-    title: '蜂窝网络直播默认画质',
+    title: '蜂窩網路直播預設畫質',
     leading: const Icon(Icons.video_settings_outlined),
     getSubtitle: () =>
-        '当前画质：${LiveQuality.fromCode(Pref.liveQualityCellular)?.desc}',
+        '目前畫質：${LiveQuality.fromCode(Pref.liveQualityCellular)?.desc}',
     onTap: _showLiveCellularQaDialog,
   ),
   NormalModel(
-    title: '首选解码格式',
+    title: '首選解碼格式',
     leading: const Icon(Icons.movie_creation_outlined),
     getSubtitle: () =>
-        '首选解码格式：${VideoDecodeFormatType.fromCode(Pref.defaultDecode).description}，请根据设备支持情况与需求调整',
+        '首選解碼格式：${VideoDecodeFormatType.fromCode(Pref.defaultDecode).description}，請根據裝置支援情況與需求調整',
     onTap: _showDecodeDialog,
   ),
   NormalModel(
-    title: '次选解码格式',
+    title: '次選解碼格式',
     getSubtitle: () =>
-        '非杜比视频次选：${VideoDecodeFormatType.fromCode(Pref.secondDecode).description}，仍无则选择首个提供的解码格式',
+        '非杜比影片次選：${VideoDecodeFormatType.fromCode(Pref.secondDecode).description}，仍無則選擇首個提供的解碼格式',
     leading: const Icon(Icons.swap_horizontal_circle_outlined),
     onTap: _showSecondDecodeDialog,
   ),
   if (kDebugMode || Platform.isAndroid)
     NormalModel(
-      title: '音频输出设备',
+      title: '音訊輸出裝置',
       leading: const Icon(Icons.speaker_outlined),
-      getSubtitle: () => '当前：${Pref.audioOutput}',
+      getSubtitle: () => '目前：${Pref.audioOutput}',
       onTap: _showAudioOutputDialog,
     ),
   const SwitchModel(
-    title: '扩大缓冲区',
+    title: '擴大緩衝區',
     leading: Icon(Icons.storage_outlined),
-    subtitle: '默认缓冲区为视频4MB/直播16MB，开启后为32MB/64MB，加载时间变长',
+    subtitle: '預設緩衝區為影片4MB/直播16MB，開啟後為32MB/64MB，載入時間變長',
     setKey: SettingBoxKey.expandBuffer,
     defaultVal: false,
   ),
   NormalModel(
-    title: '自动同步',
+    title: '自動同步',
     leading: const Icon(Icons.sync_rounded),
-    getSubtitle: () => '当前：${Pref.autosync}（此项即mpv的--autosync）',
+    getSubtitle: () => '目前：${Pref.autosync}（此項即mpv的--autosync）',
     onTap: _showAutoSyncDialog,
   ),
   NormalModel(
-    title: '视频同步',
+    title: '影片同步',
     leading: const Icon(Icons.view_timeline_outlined),
-    getSubtitle: () => '当前：${Pref.videoSync}（此项即mpv的--video-sync）',
+    getSubtitle: () => '目前：${Pref.videoSync}（此項即mpv的--video-sync）',
     onTap: _showVideoSyncDialog,
   ),
   NormalModel(
     title: '硬解模式',
     leading: const Icon(Icons.memory_outlined),
-    getSubtitle: () => '当前：${Pref.hardwareDecoding}（此项即mpv的--hwdec）',
+    getSubtitle: () => '目前：${Pref.hardwareDecoding}（此項即mpv的--hwdec）',
     onTap: _showHwDecDialog,
   ),
 ];
@@ -191,7 +191,7 @@ Future<void> _showLiveCDNDialog(
   String? res = await showDialog<String>(
     context: context,
     builder: (context) => AlertDialog(
-      title: const Text('输入CDN host'),
+      title: const Text('輸入CDN host'),
       content: TextFormField(
         initialValue: host,
         autofocus: true,
@@ -207,7 +207,7 @@ Future<void> _showLiveCDNDialog(
         ),
         TextButton(
           onPressed: () => Get.back(result: host),
-          child: const Text('确定'),
+          child: const Text('確定'),
         ),
       ],
     ),
@@ -234,7 +234,7 @@ Future<void> _showVideoQaDialog(
   final res = await showDialog<int>(
     context: context,
     builder: (context) => SelectDialog<int>(
-      title: '默认画质',
+      title: '預設畫質',
       value: Pref.defaultVideoQa,
       values: VideoQuality.values.map((e) => (e.code, e.desc)).toList(),
     ),
@@ -252,7 +252,7 @@ Future<void> _showVideoCellularQaDialog(
   final res = await showDialog<int>(
     context: context,
     builder: (context) => SelectDialog<int>(
-      title: '蜂窝网络画质',
+      title: '蜂窩網路畫質',
       value: Pref.defaultVideoQaCellular,
       values: VideoQuality.values.map((e) => (e.code, e.desc)).toList(),
     ),
@@ -273,7 +273,7 @@ Future<void> _showAudioQaDialog(
   final res = await showDialog<int>(
     context: context,
     builder: (context) => SelectDialog<int>(
-      title: '默认音质',
+      title: '預設音質',
       value: Pref.defaultAudioQa,
       values: AudioQuality.values.map((e) => (e.code, e.desc)).toList(),
     ),
@@ -291,7 +291,7 @@ Future<void> _showAudioCellularQaDialog(
   final res = await showDialog<int>(
     context: context,
     builder: (context) => SelectDialog<int>(
-      title: '蜂窝网络音质',
+      title: '蜂窩網路音質',
       value: Pref.defaultAudioQaCellular,
       values: AudioQuality.values.map((e) => (e.code, e.desc)).toList(),
     ),
@@ -312,7 +312,7 @@ Future<void> _showLiveQaDialog(
   final res = await showDialog<int>(
     context: context,
     builder: (context) => SelectDialog<int>(
-      title: '直播默认画质',
+      title: '直播預設畫質',
       value: Pref.liveQuality,
       values: LiveQuality.values.map((e) => (e.code, e.desc)).toList(),
     ),
@@ -330,7 +330,7 @@ Future<void> _showLiveCellularQaDialog(
   final res = await showDialog<int>(
     context: context,
     builder: (context) => SelectDialog<int>(
-      title: '蜂窝网络直播默认画质',
+      title: '蜂窩網路直播預設畫質',
       value: Pref.liveQualityCellular,
       values: LiveQuality.values.map((e) => (e.code, e.desc)).toList(),
     ),
@@ -348,7 +348,7 @@ Future<void> _showDecodeDialog(
   final res = await showDialog<String>(
     context: context,
     builder: (context) => SelectDialog<String>(
-      title: '默认解码格式',
+      title: '預設解碼格式',
       value: Pref.defaultDecode,
       values: VideoDecodeFormatType.values
           .map((e) => (e.codes.first, e.description))
@@ -368,7 +368,7 @@ Future<void> _showSecondDecodeDialog(
   final res = await showDialog<String>(
     context: context,
     builder: (context) => SelectDialog<String>(
-      title: '次选解码格式',
+      title: '次選解碼格式',
       value: Pref.secondDecode,
       values: VideoDecodeFormatType.values
           .map((e) => (e.codes.first, e.description))
@@ -388,7 +388,7 @@ Future<void> _showAudioOutputDialog(
   final res = await showDialog<List<String>>(
     context: context,
     builder: (context) => OrderedMultiSelectDialog<String>(
-      title: '音频输出设备',
+      title: '音訊輸出裝置',
       initValues: Pref.audioOutput.split(','),
       values: {
         for (final e in AudioOutput.values) e.name: e.label,
@@ -411,7 +411,7 @@ Future<void> _showVideoSyncDialog(
   final res = await showDialog<String>(
     context: context,
     builder: (context) => SelectDialog<String>(
-      title: '视频同步',
+      title: '影片同步',
       value: Pref.videoSync,
       values: const [
         'audio',
@@ -460,7 +460,7 @@ void _showAutoSyncDialog(BuildContext context, VoidCallback setState) {
   showDialog(
     context: context,
     builder: (context) => AlertDialog(
-      title: const Text('自动同步'),
+      title: const Text('自動同步'),
       content: TextFormField(
         autofocus: true,
         initialValue: autosync,
@@ -488,7 +488,7 @@ void _showAutoSyncDialog(BuildContext context, VoidCallback setState) {
               SmartDialog.showToast(e.toString());
             }
           },
-          child: const Text('确定'),
+          child: const Text('確定'),
         ),
       ],
     ),

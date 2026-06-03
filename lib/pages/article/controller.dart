@@ -37,7 +37,7 @@ class ArticleController extends CommonDynController {
   dynamic get sourceId => commentType == 12 ? 'cv$commentId' : id;
 
   final RxBool isLoaded = false.obs;
-  DynamicItemModel? opusData; // 标题信息从summary获取, 动态没有favorite
+  DynamicItemModel? opusData; // 標題資訊從summary取得, 動態沒有favorite
   ArticleViewData? articleData;
   final stats = Rxn<ModuleStatModel>();
 
@@ -163,7 +163,7 @@ class ArticleController extends CommonDynController {
     return false;
   }
 
-  // 请求动态内容
+  // 請求動態內容
   Future<void> _queryContent() async {
     if (type != 'read') {
       isLoaded.value = await queryOpus(id);
@@ -217,7 +217,7 @@ class ArticleController extends CommonDynController {
         like?.count++;
       }
       stats.refresh();
-      SmartDialog.showToast(!isLike ? '点赞成功' : '取消赞');
+      SmartDialog.showToast(!isLike ? '點贊成功' : '取消讚');
     } else {
       res.toast();
     }

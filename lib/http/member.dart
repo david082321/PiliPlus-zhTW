@@ -55,9 +55,9 @@ abstract final class MemberHttp {
       options: Options(contentType: Headers.formUrlEncodedContentType),
     );
     if (res.data['status'] == true) {
-      SmartDialog.showToast('举报成功');
+      SmartDialog.showToast('檢舉成功');
     } else {
-      SmartDialog.showToast('举报失败');
+      SmartDialog.showToast('檢舉失敗');
     }
   }
 
@@ -434,7 +434,7 @@ abstract final class MemberHttp {
     }
   }
 
-  // 用户动态
+  // 使用者動態
   @pragma('vm:notify-debugger-on-exception')
   static Future<LoadingState<DynamicsDataModel>> memberDynamic({
     String? offset,
@@ -506,7 +506,7 @@ abstract final class MemberHttp {
     }
   }
 
-  // 查询分组
+  // 查詢分組
   static Future<LoadingState<List<MemberTagItemModel>>> followUpTags() async {
     final res = await Request().get(Api.followUpTag);
     if (res.data['code'] == 0) {
@@ -539,7 +539,7 @@ abstract final class MemberHttp {
     }
   }
 
-  // 设置分组
+  // 設定分組
   static Future<LoadingState<void>> addUsers(String fids, String tagids) async {
     final res = await Request().post(
       Api.addUsers,
@@ -562,7 +562,7 @@ abstract final class MemberHttp {
     }
   }
 
-  // 获取某分组下的up
+  // 取得某分組下的up
   static Future<LoadingState<FollowData>> followUpGroup({
     int? mid,
     int? tagid,
@@ -657,7 +657,7 @@ abstract final class MemberHttp {
     }
   }
 
-  // 获取up置顶
+  // 取得up置頂
   static Future<LoadingState<List<MemberTagItemModel>?>> getTopVideo() async {
     final res = await Request().get(Api.getTopVideoApi);
     if (res.data['code'] == 0) {
@@ -671,7 +671,7 @@ abstract final class MemberHttp {
     }
   }
 
-  // 获取up播放数、点赞数
+  // 取得up播放數、按讚數
   static Future<LoadingState<Map>> memberView({required int mid}) async {
     final res = await Request().get(
       Api.getMemberViewApi,
@@ -684,7 +684,7 @@ abstract final class MemberHttp {
     }
   }
 
-  // 搜索follow
+  // 搜尋follow
   static Future<LoadingState<FollowData>> getfollowSearch({
     required int mid,
     required int ps,

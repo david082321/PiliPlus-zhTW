@@ -11,13 +11,13 @@ List<SettingsModel> get privacySettings => [
   NormalModel(
     onTap: (context, setState) {
       if (!Accounts.main.isLogin) {
-        SmartDialog.showToast('登录后查看');
+        SmartDialog.showToast('登入後查看');
         return;
       }
       Get.toNamed('/blackListPage');
     },
-    title: '黑名单管理',
-    subtitle: '已拉黑用户',
+    title: '黑名單管理',
+    subtitle: '已封鎖使用者',
     leading: const Icon(Icons.block),
   ),
   NormalModel(
@@ -26,32 +26,32 @@ List<SettingsModel> get privacySettings => [
       setState();
     },
     leading: const Icon(Icons.privacy_tip_outlined),
-    getTitle: () => MineController.anonymity.value ? '退出无痕模式' : '进入无痕模式',
+    getTitle: () => MineController.anonymity.value ? '退出無痕模式' : '進入無痕模式',
     getSubtitle: () => MineController.anonymity.value
-        ? '已进入无痕模式，搜索、观看视频/直播不携带Cookie与CSRF，其余操作不受影响'
-        : '未开启无痕模式，将使用账户信息提供完整服务',
+        ? '已進入無痕模式，搜尋、觀看影片/直播不攜帶Cookie與CSRF，其餘操作不受影響'
+        : '未開啟無痕模式，將使用帳戶資訊提供完整服務',
   ),
   NormalModel(
     onTap: (context, setState) {
       showDialog(
         context: context,
         builder: (context) => AlertDialog(
-          title: const Text('账号模式详情'),
+          title: const Text('帳號模式詳情'),
           content: SingleChildScrollView(
             child: _getAccountDetail(context),
           ),
           actions: [
             TextButton(
               onPressed: Get.back,
-              child: const Text('确认'),
+              child: const Text('確認'),
             ),
           ],
         ),
       );
     },
     leading: const Icon(Icons.flag_outlined),
-    title: '了解账号模式',
-    subtitle: '查看各个账号模式作用的API列表',
+    title: '了解帳號模式',
+    subtitle: '查看各個帳號模式作用的API列表',
   ),
 ];
 

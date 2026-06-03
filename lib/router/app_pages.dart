@@ -81,94 +81,94 @@ import 'package:get/get.dart';
 class Routes {
   static final List<GetPage<dynamic>> getPages = [
     GetPage(name: '/', page: () => const MainApp()),
-    // 首页(推荐)
+    // 首頁(推薦)
     GetPage(name: '/home', page: () => const HomePage()),
-    // 热门
+    // 熱門
     GetPage(name: '/hot', page: () => const HotPage()),
-    // 视频详情
+    // 影片詳情
     GetPage(name: '/videoV', page: () => const VideoDetailPageV()),
     //
     GetPage(name: '/webview', page: () => const WebviewPage()),
-    // 设置
+    // 設定
     GetPage(name: '/setting', page: () => const SettingPage()),
     //
     GetPage(name: '/fav', page: () => const FavPage()),
     //
     GetPage(name: '/favDetail', page: () => const FavDetailPage()),
-    // 稍后再看
+    // 稍後再看
     GetPage(name: '/later', page: () => const LaterPage()),
-    // 历史记录
+    // 歷史記錄
     GetPage(name: '/history', page: () => const HistoryPage()),
-    // 搜索页面
+    // 搜尋頁面
     GetPage(name: '/search', page: () => const SearchPage()),
-    // 搜索结果
+    // 搜尋結果
     GetPage(name: '/searchResult', page: () => const SearchResultPage()),
-    // 动态
+    // 動態
     GetPage(name: '/dynamics', page: () => const DynamicsPage()),
-    // 动态详情
+    // 動態詳情
     GetPage(name: '/dynamicDetail', page: () => const DynamicDetailPage()),
-    // 关注
+    // 關注
     GetPage(name: '/follow', page: () => const FollowPage()),
-    // 粉丝
+    // 粉絲
     GetPage(name: '/fan', page: () => const FansPage()),
-    // 直播详情
+    // 直播詳情
     GetPage(name: '/liveRoom', page: () => const LiveRoomPage()),
-    // 用户中心
+    // 使用者中心
     GetPage(name: '/member', page: () => const MemberPage()),
     GetPage(name: '/memberSearch', page: () => const MemberSearchPage()),
-    // 推荐流设置
+    // 推薦流設定
     GetPage(name: '/recommendSetting', page: () => const RecommendSetting()),
-    // 音视频设置
+    // 影音設定
     GetPage(name: '/videoSetting', page: () => const VideoSetting()),
-    // 播放器设置
+    // 播放器設定
     GetPage(name: '/playSetting', page: () => const PlaySetting()),
-    // 外观设置
+    // 外觀設定
     GetPage(name: '/styleSetting', page: () => const StyleSetting()),
-    // 隐私设置
+    // 隱私設定
     GetPage(name: '/privacySetting', page: () => const PrivacySetting()),
-    // 其它设置
+    // 其它設定
     GetPage(name: '/extraSetting', page: () => const ExtraSetting()),
     //
     GetPage(name: '/blackListPage', page: () => const BlackListPage()),
     GetPage(name: '/colorSetting', page: () => const ColorSelectPage()),
     GetPage(name: '/fontSizeSetting', page: () => const FontSizeSelectPage()),
-    // 屏幕帧率
+    // 螢幕幀率
     GetPage(name: '/displayModeSetting', page: () => const SetDisplayMode()),
-    // 关于
+    // 關於
     GetPage(name: '/about', page: () => const AboutPage()),
     //
     GetPage(name: '/articlePage', page: () => const ArticlePage()),
 
-    // 历史记录搜索
+    // 歷史記錄搜尋
     GetPage(name: '/playSpeedSet', page: () => const PlaySpeedPage()),
-    // 收藏搜索
+    // 收藏搜尋
     GetPage(name: '/favSearch', page: () => const FavSearchPage()),
     GetPage(name: '/historySearch', page: () => const HistorySearchPage()),
     GetPage(name: '/laterSearch', page: () => const LaterSearchPage()),
     GetPage(name: '/followSearch', page: () => const FollowSearchPage()),
-    // 消息页面
+    // 消息頁面
     GetPage(name: '/whisper', page: () => const WhisperPage()),
-    // 私信详情
+    // 私信詳情
     GetPage(name: '/whisperDetail', page: () => const WhisperDetailPage()),
-    // 回复我的
+    // 回覆我的
     GetPage(name: '/replyMe', page: () => const ReplyMePage()),
     // @我的
     GetPage(name: '/atMe', page: () => const AtMePage()),
-    // 收到的赞
+    // 收到的讚
     GetPage(name: '/likeMe', page: () => const LikeMePage()),
-    // 系统消息
+    // 系統消息
     GetPage(name: '/sysMsg', page: () => const SysMsgPage()),
-    // 登录页面
+    // 登入頁面
     GetPage(name: '/loginPage', page: () => const LoginPage()),
-    // 用户动态
+    // 使用者動態
     GetPage(name: '/memberDynamics', page: () => const MemberDynamicsPage()),
-    // 日志
+    // 日誌
     GetPage(name: '/logs', page: () => const LogsPage()),
-    // 订阅
+    // 訂閱
     GetPage(name: '/subscription', page: () => const SubPage()),
-    // 订阅详情
+    // 訂閱詳情
     GetPage(name: '/subDetail', page: () => const SubDetailPage()),
-    // 弹幕屏蔽管理
+    // 彈幕封鎖管理
     GetPage(name: '/danmakuBlock', page: () => const DanmakuBlockPage()),
     GetPage(name: '/sponsorBlock', page: () => const SponsorBlockPage()),
     GetPage(name: '/createFav', page: () => const CreateFavPage()),

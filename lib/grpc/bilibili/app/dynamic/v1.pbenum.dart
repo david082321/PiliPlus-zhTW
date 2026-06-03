@@ -92,25 +92,25 @@ class CornerType extends $pb.ProtobufEnum {
   const CornerType._(super.value, super.name);
 }
 
-/// 折叠分类
+/// 摺疊分類
 class FoldType extends $pb.ProtobufEnum {
   /// 占位
   static const FoldType FoldTypeZero =
       FoldType._(0, _omitEnumNames ? '' : 'FoldTypeZero');
 
-  /// 用户发布折叠
+  /// 使用者發布摺疊
   static const FoldType FoldTypePublish =
       FoldType._(1, _omitEnumNames ? '' : 'FoldTypePublish');
 
-  /// 转发超频折叠
+  /// 轉發超頻摺疊
   static const FoldType FoldTypeFrequent =
       FoldType._(2, _omitEnumNames ? '' : 'FoldTypeFrequent');
 
-  /// 联合投稿折叠
+  /// 聯合投稿摺疊
   static const FoldType FoldTypeUnite =
       FoldType._(3, _omitEnumNames ? '' : 'FoldTypeUnite');
 
-  /// 动态受限折叠
+  /// 動態受限摺疊
   static const FoldType FoldTypeLimit =
       FoldType._(4, _omitEnumNames ? '' : 'FoldTypeLimit');
 
@@ -130,9 +130,9 @@ class FoldType extends $pb.ProtobufEnum {
   const FoldType._(super.value, super.name);
 }
 
-/// 播放器类型
+/// 播放器類型
 class MediaType extends $pb.ProtobufEnum {
-  /// 本地
+  /// 本機
   static const MediaType MediaTypeNone =
       MediaType._(0, _omitEnumNames ? '' : 'MediaTypeNone');
 
@@ -148,7 +148,7 @@ class MediaType extends $pb.ProtobufEnum {
   static const MediaType MediaTypeLive =
       MediaType._(3, _omitEnumNames ? '' : 'MediaTypeLive');
 
-  /// 小视频
+  /// 小影片
   static const MediaType MediaTypeVCS =
       MediaType._(4, _omitEnumNames ? '' : 'MediaTypeVCS');
 
@@ -252,29 +252,29 @@ class StyleType extends $pb.ProtobufEnum {
   const StyleType._(super.value, super.name);
 }
 
-/// 番剧类型
+/// 番劇類型
 class VideoSubType extends $pb.ProtobufEnum {
-  /// 没有子类型
+  /// 沒有子類型
   static const VideoSubType VideoSubTypeNone =
       VideoSubType._(0, _omitEnumNames ? '' : 'VideoSubTypeNone');
 
-  /// 番剧
+  /// 番劇
   static const VideoSubType VideoSubTypeBangumi =
       VideoSubType._(1, _omitEnumNames ? '' : 'VideoSubTypeBangumi');
 
-  /// 电影
+  /// 電影
   static const VideoSubType VideoSubTypeMovie =
       VideoSubType._(2, _omitEnumNames ? '' : 'VideoSubTypeMovie');
 
-  /// 纪录片
+  /// 紀錄片
   static const VideoSubType VideoSubTypeDocumentary =
       VideoSubType._(3, _omitEnumNames ? '' : 'VideoSubTypeDocumentary');
 
-  /// 国创
+  /// 國創
   static const VideoSubType VideoSubTypeDomestic =
       VideoSubType._(4, _omitEnumNames ? '' : 'VideoSubTypeDomestic');
 
-  /// 电视剧
+  /// 電視劇
   static const VideoSubType VideoSubTypeTeleplay =
       VideoSubType._(5, _omitEnumNames ? '' : 'VideoSubTypeTeleplay');
 

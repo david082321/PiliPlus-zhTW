@@ -83,7 +83,7 @@ abstract class CommonDynPageState<T extends StatefulWidget> extends State<T>
               () {
                 final count = controller.count.value;
                 return Text(
-                  '${count == -1 ? 0 : NumUtils.numFormat(count)}条回复',
+                  '${count == -1 ? 0 : NumUtils.numFormat(count)}條回復',
                 );
               },
             ),
@@ -125,7 +125,7 @@ abstract class CommonDynPageState<T extends StatefulWidget> extends State<T>
                       margin: EdgeInsets.only(bottom: padding.bottom),
                       height: 125,
                       child: Text(
-                        controller.isEnd ? '没有更多了' : '加载中...',
+                        controller.isEnd ? '沒有更多了' : '載入中...',
                         style: TextStyle(
                           fontSize: 12,
                           color: theme.colorScheme.outline,
@@ -156,7 +156,7 @@ abstract class CommonDynPageState<T extends StatefulWidget> extends State<T>
                 },
               )
             : HttpError(
-                errMsg: '还没有评论',
+                errMsg: '還沒有評論',
                 onReload: controller.onReload,
               ),
       Error(:final errMsg) => HttpError(
@@ -194,7 +194,7 @@ abstract class CommonDynPageState<T extends StatefulWidget> extends State<T>
           return Scaffold(
             resizeToAvoidBottomInset: false,
             appBar: AppBar(
-              title: const Text('评论详情'),
+              title: const Text('評論詳情'),
               shape: Border(
                 bottom: BorderSide(
                   color: theme.colorScheme.outline.withValues(alpha: 0.1),
@@ -233,7 +233,7 @@ abstract class CommonDynPageState<T extends StatefulWidget> extends State<T>
   }
 
   Widget ratioWidget(double maxWidth) => IconButton(
-    tooltip: '页面比例调节',
+    tooltip: '頁面比例調節',
     onPressed: () => showDialog(
       context: context,
       builder: (context) => Align(
@@ -292,7 +292,7 @@ abstract class CommonDynPageState<T extends StatefulWidget> extends State<T>
         );
       } catch (_) {}
     },
-    tooltip: '评论',
+    tooltip: '評論',
     child: const Icon(Icons.reply),
   );
 }

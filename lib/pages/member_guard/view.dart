@@ -56,7 +56,7 @@ class _MemberGuardState extends State<MemberGuard> {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
-        title: Text('$_userName的舰队${_count == null ? '' : '($_count)'}'),
+        title: Text('$_userName的艦隊${_count == null ? '' : '($_count)'}'),
       ),
       body: refreshIndicator(
         onRefresh: _controller.onRefresh,

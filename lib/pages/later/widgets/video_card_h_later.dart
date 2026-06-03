@@ -16,7 +16,7 @@ import 'package:PiliPlus/utils/platform_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 
-// 视频卡片 - 水平布局
+// 影片卡片 - 水平布局
 class VideoCardHLater extends StatelessWidget {
   const VideoCardHLater({
     super.key,
@@ -101,7 +101,7 @@ class VideoCardHLater extends StatelessWidget {
                         ),
                         if (videoItem.isCharging == true)
                           const PBadge(
-                            text: '充电专属',
+                            text: '充電專屬',
                             top: 6.0,
                             right: 6.0,
                             type: PBadgeType.error,
@@ -120,7 +120,7 @@ class VideoCardHLater extends StatelessWidget {
                           )
                         else if (videoItem.isPugv ?? false)
                           const PBadge(
-                            text: '课堂',
+                            text: '課堂',
                             top: 6.0,
                             right: 6.0,
                           ),

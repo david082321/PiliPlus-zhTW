@@ -82,7 +82,7 @@ abstract final class PiliScheme {
     }
   }
 
-  /// 路由跳转
+  /// 路由跳轉
   static Future<bool> routePush(
     Uri uri, {
     bool selfHandle = false,
@@ -406,7 +406,7 @@ abstract final class PiliScheme {
           default:
             if (!selfHandle) {
               // if (kDebugMode) debugPrint('$uri');
-              SmartDialog.showToast('未知路径:$uri，请截图反馈给开发者');
+              SmartDialog.showToast('未知路徑:$uri，請截圖回饋給開發者');
             }
             return false;
         }
@@ -430,7 +430,7 @@ abstract final class PiliScheme {
         }
         if (!selfHandle) {
           // if (kDebugMode) debugPrint('$uri');
-          SmartDialog.showToast('未知路径:$uri，请截图反馈给开发者');
+          SmartDialog.showToast('未知路徑:$uri，請截圖回饋給開發者');
         }
         return false;
     }
@@ -655,7 +655,7 @@ abstract final class PiliScheme {
         return false;
       case 'bangumi':
         // www.bilibili.com/bangumi/play/ep{eid}?start_progress={offset}&thumb_up_dm_id={dmid}
-        // if (kDebugMode) debugPrint('番剧');
+        // if (kDebugMode) debugPrint('番劇');
         bool hasMatch = PageUtils.viewPgcFromUri(
           path,
           progress: _videoProgress(uri.queryParameters),
@@ -710,7 +710,7 @@ abstract final class PiliScheme {
           launchURL();
           return false;
         }
-        // if (kDebugMode) debugPrint('专栏');
+        // if (kDebugMode) debugPrint('專欄');
         String? id = RegExp(
           r'cv(\d+)',
           caseSensitive: false,
@@ -729,7 +729,7 @@ abstract final class PiliScheme {
         launchURL();
         return false;
       case 'space':
-        // if (kDebugMode) debugPrint('个人空间');
+        // if (kDebugMode) debugPrint('個人空間');
         String? mid = uriDigitRegExp.firstMatch(path)?.group(1);
         if (mid != null) {
           PageUtils.toDupNamed(
@@ -877,7 +877,7 @@ abstract final class PiliScheme {
     );
   }
 
-  // 投稿跳转
+  // 投稿跳轉
   static Future<void> videoPush(
     int? aid,
     String? bvid, {
@@ -890,7 +890,7 @@ abstract final class PiliScheme {
       aid ??= IdUtils.bv2av(bvid!);
       bvid ??= IdUtils.av2bv(aid);
       if (showDialog) {
-        SmartDialog.showLoading<dynamic>(msg: '获取中...');
+        SmartDialog.showLoading<dynamic>(msg: '取得中...');
       }
       final res = await SearchHttp.ab2cWithDimension(
         bvid: bvid,
@@ -913,7 +913,7 @@ abstract final class PiliScheme {
       }
     } catch (e) {
       SmartDialog.dismiss();
-      SmartDialog.showToast('video获取失败: $e');
+      SmartDialog.showToast('video取得失敗: $e');
     }
   }
 }

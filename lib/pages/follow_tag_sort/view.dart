@@ -39,7 +39,7 @@ class _FollowTagSortPageState extends State<FollowTagSortPage>
     return Scaffold(
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
-        title: const Text('关注分组排序'),
+        title: const Text('關注分組排序'),
         actions: _customTags.isNotEmpty
             ? [
                 TextButton(

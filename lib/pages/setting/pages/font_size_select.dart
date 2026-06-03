@@ -37,9 +37,9 @@ class _FontSizeSelectPageState extends State<FontSizeSelectPage> {
               currentSize = 1.0;
               setFontSize();
             },
-            child: const Text('重置'),
+            child: const Text('重設'),
           ),
-          TextButton(onPressed: setFontSize, child: const Text('确定')),
+          TextButton(onPressed: setFontSize, child: const Text('確定')),
           const SizedBox(width: 12),
         ],
       ),
@@ -49,7 +49,7 @@ class _FontSizeSelectPageState extends State<FontSizeSelectPage> {
             Expanded(
               child: Center(
                 child: Text(
-                  '当前字体大小:${currentSize == 1.0 ? '默认' : currentSize}',
+                  '目前字體大小:${currentSize == 1.0 ? '預設' : currentSize}',
                   style: TextStyle(fontSize: 14 * currentSize),
                 ),
               ),

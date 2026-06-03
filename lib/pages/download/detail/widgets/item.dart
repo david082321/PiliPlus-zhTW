@@ -72,13 +72,13 @@ class DetailItem extends StatelessWidget {
                       Get.back();
                       showConfirmDialog(
                         context: context,
-                        title: const Text('确定删除该视频？'),
+                        title: const Text('確定刪除該影片？'),
                         onConfirm: onDelete,
                       );
                     },
                     dense: true,
                     title: const Text(
-                      '删除',
+                      '刪除',
                       style: TextStyle(fontSize: 14),
                     ),
                   ),
@@ -92,12 +92,12 @@ class DetailItem extends StatelessWidget {
                       if (res) {
                         SmartDialog.showToast('更新成功');
                       } else {
-                        SmartDialog.showToast('更新失败');
+                        SmartDialog.showToast('更新失敗');
                       }
                     },
                     dense: true,
                     title: const Text(
-                      '更新弹幕',
+                      '更新彈幕',
                       style: TextStyle(fontSize: 14),
                     ),
                   ),

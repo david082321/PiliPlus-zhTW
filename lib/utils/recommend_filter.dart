@@ -14,7 +14,7 @@ abstract final class RecommendFilter {
   static bool enableFilter = rcmdRegExp.pattern.isNotEmpty;
 
   static bool filter(BaseVideoItemModel videoItem) {
-    //由于相关视频中没有已关注标签，只能视为非关注视频
+    //由於相關影片中沒有已關注標籤，只能視為非關注影片
     if (videoItem.isFollowed && exemptFilterForFollowed) {
       return false;
     }

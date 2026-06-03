@@ -32,7 +32,7 @@ class _WhisperPageState extends State<WhisperPage> {
         title: const Text('消息'),
         actions: [
           IconButton(
-            tooltip: '新增粉丝',
+            tooltip: '新增粉絲',
             onPressed: () => Get.toNamed(
               '/webview',
               parameters: {
@@ -195,7 +195,7 @@ class _WhisperPageState extends State<WhisperPage> {
               ),
               onTap: () {
                 if (!item.enabled) {
-                  SmartDialog.showToast('已禁用');
+                  SmartDialog.showToast('已停用');
                   return;
                 }
                 _controller.unreadCounts[index] = 0;

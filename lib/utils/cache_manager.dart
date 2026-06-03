@@ -13,7 +13,7 @@ abstract final class CacheManager {
   static Future<void> ensureInitialized() =>
       DefaultCacheManager.init().then((i) => manager = i);
 
-  // 获取缓存目录
+  // 取得快取目錄
   @pragma('vm:notify-debugger-on-exception')
   static Future<int> loadApplicationCache() async {
     try {
@@ -29,7 +29,7 @@ abstract final class CacheManager {
     return 0;
   }
 
-  // 循环计算文件的大小
+  // 循環計算文件的大小
   @pragma('vm:notify-debugger-on-exception')
   static Future<int> getTotalSizeOfFilesInDir(final Directory file) async {
     int total = 0;
@@ -51,7 +51,7 @@ abstract final class CacheManager {
     return total;
   }
 
-  // 缓存大小格式转换
+  // 快取大小格式轉換
   static String formatSize(num value) {
     const unitArr = ['B', 'K', 'M', 'G', 'T', 'P'];
     int index = 0;
@@ -63,7 +63,7 @@ abstract final class CacheManager {
     return size + (unitArr.elementAtOrNull(index) ?? '');
   }
 
-  // 清除 Library/Caches 目录及文件缓存
+  // 清除 Library/Caches 目錄及文件快取
   @pragma('vm:notify-debugger-on-exception')
   static Future<void> clearLibraryCache() async {
     try {

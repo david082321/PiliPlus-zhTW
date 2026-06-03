@@ -70,10 +70,10 @@ class PlPlayerController with BlockConfigMixin {
   Player? _videoPlayerController;
   VideoController? _videoController;
 
-  // 添加一个私有静态变量来保存实例
+  // 新增一個私有靜態變數來儲存實例
   static PlPlayerController? _instance;
 
-  // 流事件  监听播放状态变化
+  // 流事件  監聽播放狀態變化
   // StreamSubscription? _playerEventSubs;
 
   /// [playerStatus] has a [status] observable
@@ -84,22 +84,22 @@ class PlPlayerController with BlockConfigMixin {
 
   // bool controlsEnabled = false;
 
-  /// 响应数据
-  /// 带有Seconds的变量只在秒数更新时更新，以避免频繁触发重绘
+  /// 響應資料
+  /// 帶有Seconds的變數只在秒數更新時更新，以避免頻繁觸發重繪
   // 播放位置
   Duration position = Duration.zero;
   final RxInt positionSeconds = 0.obs;
 
-  /// 进度条位置
+  /// 進度條位置
   Duration sliderPosition = Duration.zero;
   final RxInt sliderPositionSeconds = 0.obs;
   // 展示使用
   final Rx<Duration> sliderTempPosition = Rx(Duration.zero);
 
-  /// 视频时长
+  /// 影片時長
   final Rx<Duration> duration = Rx(Duration.zero);
 
-  /// 视频缓冲
+  /// 影片緩衝
   final Rx<Duration> buffered = Rx(Duration.zero);
   final RxInt bufferedSeconds = 0.obs;
 
@@ -109,38 +109,38 @@ class PlPlayerController with BlockConfigMixin {
   final RxDouble _playbackSpeed = Pref.playSpeedDefault.obs;
   late final RxDouble _longPressSpeed = Pref.longPressSpeedDefault.obs;
 
-  /// 音量控制条
+  /// 音量控制條
   final RxDouble volume = RxDouble(
     PlatformUtils.isDesktop ? Pref.desktopVolume : 1.0,
   );
   final setSystemBrightness = Pref.setSystemBrightness;
 
-  /// 亮度控制条
+  /// 亮度控制條
   final RxDouble brightness = (-1.0).obs;
 
-  /// 是否展示控制条
+  /// 是否展示控制條
   final RxBool showControls = false.obs;
 
-  /// 亮度控制条展示/隐藏
+  /// 亮度控制條展示/隱藏
   final RxBool showBrightnessStatus = false.obs;
 
-  /// 是否长按倍速
+  /// 是否長按倍速
   final RxBool longPressStatus = false.obs;
 
-  /// 屏幕锁 为true时，关闭控制栏
+  /// 螢幕鎖 為true時，關閉控制欄
   final RxBool controlsLock = false.obs;
 
-  /// 全屏状态
+  /// 全螢幕狀態
   final RxBool isFullScreen = false.obs;
-  // 默认投稿视频格式
+  // 預設投稿影片格式
   bool isLive = false;
 
   bool _isVertical = false;
 
-  /// 视频比例
+  /// 影片比例
   final Rx<VideoFitType> videoFit = Rx(VideoFitType.contain);
 
-  /// 后台播放
+  /// 後台播放
   late final RxBool continuePlayInBackground =
       Pref.continuePlayInBackground.obs;
 
@@ -149,7 +149,7 @@ class PlPlayerController with BlockConfigMixin {
 
   bool _autoPlay = false;
 
-  // 记录历史记录
+  // 記錄歷史記錄
   int? _aid;
   String? _bvid;
   int? cid;
@@ -174,10 +174,10 @@ class PlPlayerController with BlockConfigMixin {
 
   String get bvid => _bvid!;
 
-  /// 视频播放速度
+  /// 影片播放速度
   double get playbackSpeed => _playbackSpeed.value;
 
-  // 长按倍速
+  // 長按倍速
   double get longPressSpeed => _longPressSpeed.value;
 
   /// [videoPlayerController] instance of Player
@@ -188,20 +188,20 @@ class PlPlayerController with BlockConfigMixin {
 
   bool isMuted = false;
 
-  /// 听视频
+  /// 聽影片
   late final RxBool onlyPlayAudio = false.obs;
 
-  /// 镜像
+  /// 鏡像
   late final RxBool flipX = false.obs;
 
   late final RxBool flipY = false.obs;
 
   final RxBool isBuffering = true.obs;
 
-  /// 全屏方向
+  /// 全螢幕方向
   bool get isVertical => _isVertical;
 
-  /// 弹幕开关
+  /// 彈幕開關
   late final RxBool _enableShowDanmaku = Pref.enableShowDanmaku.obs;
   late final RxBool _enableShowLiveDanmaku = Pref.enableShowLiveDanmaku.obs;
   RxBool get enableShowDanmaku =>
@@ -309,10 +309,10 @@ class PlPlayerController with BlockConfigMixin {
     }
   }
 
-  // 弹幕相关配置
+  // 彈幕相關配置
   late final enableTapDm = PlatformUtils.isMobile && Pref.enableTapDm;
   late RuleFilter filters = Pref.danmakuFilterRule;
-  // 关联弹幕控制器
+  // 關聯彈幕控制器
   DanmakuController<DanmakuExtra>? danmakuController;
   bool showDanmaku = true;
   Set<int> dmState = <int>{};
@@ -388,7 +388,7 @@ class PlPlayerController with BlockConfigMixin {
   num get sliderScale =>
       isRelative ? duration.value.inMilliseconds * offset : offset;
 
-  // 播放顺序相关
+  // 播放順序相關
   late PlayRepeat playRepeat = Pref.playRepeat;
 
   TextStyle get subTitleStyle => TextStyle(
@@ -564,7 +564,7 @@ class PlPlayerController with BlockConfigMixin {
     }
   }
 
-  // 添加一个私有构造函数
+  // 新增一個私有建構子
   PlPlayerController._() {
     if (PlatformUtils.isMobile) {
       _orientationListener = NativeDeviceOrientationPlatform.instance
@@ -596,9 +596,9 @@ class PlPlayerController with BlockConfigMixin {
     }
   }
 
-  // 获取实例 传参
+  // 取得實例 傳參
   static PlPlayerController getInstance({bool isLive = false}) {
-    // 如果实例尚未创建，则创建一个新实例
+    // 如果實例尚未建立，則建立一個新實例
     return (_instance ??= PlPlayerController._())
       ..isLive = isLive
       .._playerCount += 1;
@@ -616,7 +616,7 @@ class PlPlayerController with BlockConfigMixin {
   late final String _audioNormalizationParam =
       AudioNormalization.getParamFromConfig(_audioNormalization);
 
-  // 初始化资源
+  // 初始化資源
   Future<void> setDataSource(
     DataSource dataSource, {
     bool isLive = false,
@@ -630,7 +630,7 @@ class PlPlayerController with BlockConfigMixin {
     Duration? duration,
     // 方向
     bool? isVertical,
-    // 记录历史记录
+    // 記錄歷史記錄
     int? aid,
     String? bvid,
     int? cid,
@@ -650,11 +650,11 @@ class PlPlayerController with BlockConfigMixin {
       this.height = height;
       this.dataSource = dataSource;
       _autoPlay = autoplay;
-      // 初始化视频倍速
+      // 初始化影片倍速
       // _playbackSpeed.value = speed;
-      // 初始化数据加载状态
+      // 初始化資料載入狀態
       dataStatus.value = DataStatus.loading;
-      // 初始化全屏方向
+      // 初始化全螢幕方向
       _isVertical = isVertical ?? false;
       _aid = aid;
       _bvid = bvid;
@@ -675,7 +675,7 @@ class PlPlayerController with BlockConfigMixin {
       if (_playerCount == 0) {
         return;
       }
-      // 配置Player 音轨、字幕等等
+      // 配置Player 音軌、字幕等等
       await _createVideoController(dataSource, seekTo, volume);
 
       if (_playerCount == 0) {
@@ -686,13 +686,13 @@ class PlPlayerController with BlockConfigMixin {
         return;
       }
 
-      // 获取视频时长 00:00
+      // 取得影片時長 00:00
       this.duration.value = duration ?? _videoPlayerController!.state.duration;
       position = buffered.value = sliderPosition = seekTo ?? Duration.zero;
       updatePositionSecond();
       updateSliderPositionSecond();
       updateBufferedSecond();
-      // 数据加载完成
+      // 資料載入完成
       dataStatus.value = DataStatus.loaded;
 
       if (autoFullScreenFlag && autoEnterFullScreen) {
@@ -824,7 +824,7 @@ class PlPlayerController with BlockConfigMixin {
     buffered.value = Duration.zero;
     _heartDuration = 0;
     position = Duration.zero;
-    // 初始化时清空弹幕，防止上次重叠
+    // 初始化時清空彈幕，防止上次重疊
     danmakuController?.clear();
 
     var player = _videoPlayerController;
@@ -904,10 +904,10 @@ class PlPlayerController with BlockConfigMixin {
     return null;
   }
 
-  // 开始播放
+  // 開始播放
   Future<void> _initializePlayer() async {
     if (_instance == null) return;
-    // 设置倍速
+    // 設定倍速
     if (isLive) {
       await setPlaybackSpeed(1.0);
     } else {
@@ -920,12 +920,12 @@ class PlPlayerController with BlockConfigMixin {
     //   await setLooping(_looping);
     // }
 
-    // 跳转播放
+    // 跳轉播放
     // if (seekTo != Duration.zero) {
     //   await this.seekTo(seekTo);
     // }
 
-    // 自动播放
+    // 自動播放
     if (_autoPlay) {
       playIfExists();
       // await play(duration: duration);
@@ -936,7 +936,7 @@ class PlPlayerController with BlockConfigMixin {
   final Set<ValueChanged<Duration>> _positionListeners = {};
   final Set<ValueChanged<PlayerStatus>> _statusListeners = {};
 
-  /// 播放事件监听
+  /// 播放事件監聽
   void _startListeners(NativePlayer player) {
     assert(_subscriptions == null);
     final stream = player.stream;
@@ -962,7 +962,7 @@ class PlPlayerController with BlockConfigMixin {
           isLive,
         );
 
-        /// 触发回调事件
+        /// 觸發回調事件
         for (final element in _statusListeners) {
           element(event ? PlayerStatus.playing : PlayerStatus.paused);
         }
@@ -974,7 +974,7 @@ class PlPlayerController with BlockConfigMixin {
         if (event) {
           playerStatus.value = PlayerStatus.completed;
 
-          /// 触发回调事件
+          /// 觸發回調事件
           for (final element in _statusListeners) {
             element(PlayerStatus.completed);
           }
@@ -991,7 +991,7 @@ class PlPlayerController with BlockConfigMixin {
           updateSliderPositionSecond();
         }
 
-        /// 触发回调事件
+        /// 觸發回調事件
         for (final element in _positionListeners) {
           element(event);
         }
@@ -1051,7 +1051,7 @@ class PlPlayerController with BlockConfigMixin {
                 // }
                 if (isBuffering.value && buffered.value == Duration.zero) {
                   SmartDialog.showToast(
-                    '视频链接打开失败，重试中',
+                    '影片連結打開失敗，重試中',
                     displayTime: const Duration(milliseconds: 500),
                   );
                   refreshPlayer();
@@ -1060,7 +1060,7 @@ class PlPlayerController with BlockConfigMixin {
             },
           );
         } else if (event.startsWith('Could not open codec')) {
-          SmartDialog.showToast('无法加载解码器, $event，可能会切换至软解');
+          SmartDialog.showToast('無法載入解碼器, $event，可能會切換至軟解');
         } else if (!onlyPlayAudio.value) {
           if (event.startsWith("error running") ||
               event.startsWith("Failed to open .") ||
@@ -1069,7 +1069,7 @@ class PlPlayerController with BlockConfigMixin {
             return;
           }
           Utils.reportError(event);
-          // SmartDialog.showToast('视频加载错误, $event');
+          // SmartDialog.showToast('影片載入錯誤, $event');
         }
       }),
       // controllerStream.volume.listen((event) {
@@ -1077,7 +1077,7 @@ class PlPlayerController with BlockConfigMixin {
       //     _volumeBeforeMute = event / 100;
       //   }
       // }),
-      // 媒体通知监听
+      // 媒體通知監聽
       if (videoPlayerServiceHandler != null)
         positionSeconds.listen((int event) {
           videoPlayerServiceHandler!.onPositionChange(Duration(seconds: event));
@@ -1085,7 +1085,7 @@ class PlPlayerController with BlockConfigMixin {
     ];
   }
 
-  /// 移除事件监听
+  /// 移除事件監聽
   void _removeListeners() {
     _subscriptions?.forEach((e) => e.cancel());
     _subscriptions?.clear();
@@ -1099,7 +1099,7 @@ class PlPlayerController with BlockConfigMixin {
     }
   }
 
-  /// 跳转至指定位置
+  /// 跳轉至指定位置
   Future<void> seekTo(Duration position, {bool isSeek = true}) async {
     // if (position >= duration.value) {
     //   position = duration.value - const Duration(milliseconds: 100);
@@ -1116,7 +1116,7 @@ class PlPlayerController with BlockConfigMixin {
 
     Future<void> seek() async {
       if (isSeek) {
-        /// 拖动进度条调节时，不等待第一帧，防止抖动
+        /// 拖動進度條調節時，不等待第一幀，防止抖動
         await _videoPlayerController?.stream.buffer.first;
       }
       danmakuController?.clear();
@@ -1139,7 +1139,7 @@ class PlPlayerController with BlockConfigMixin {
     }
   }
 
-  /// 设置倍速
+  /// 設定倍速
   Future<void> setPlaybackSpeed(double speed) async {
     lastPlaybackSpeed = playbackSpeed;
 
@@ -1164,19 +1164,19 @@ class PlPlayerController with BlockConfigMixin {
     }
   }
 
-  // 还原默认速度
+  // 還原預設速度
   double playSpeedDefault = Pref.playSpeedDefault;
   Future<void> setDefaultSpeed() async {
     await _videoPlayerController?.setRate(playSpeedDefault);
     _playbackSpeed.value = playSpeedDefault;
   }
 
-  /// 播放视频
+  /// 播放影片
   Future<void> play({bool repeat = false, bool hideControls = true}) async {
     if (_playerCount == 0) return;
-    // 播放时自动隐藏控制条
+    // 播放時自動隱藏控制條
     controls = !hideControls;
-    // repeat为true，将从头播放
+    // repeat為true，將從頭播放
     if (repeat) {
       // await seekTo(Duration.zero);
       await seekTo(Duration.zero, isSeek: false);
@@ -1190,12 +1190,12 @@ class PlPlayerController with BlockConfigMixin {
     // screenManager.setOverlays(false);
   }
 
-  /// 暂停播放
+  /// 暫停播放
   Future<void> pause({bool notify = true, bool isInterrupt = false}) async {
     await _videoPlayerController?.pause();
     playerStatus.value = PlayerStatus.paused;
 
-    // 主动暂停时让出音频焦点
+    // 主動暫停時讓出音訊焦點
     if (!isInterrupt) {
       audioSessionHandler?.setActive(false);
     }
@@ -1203,7 +1203,7 @@ class PlPlayerController with BlockConfigMixin {
 
   bool tripling = false;
 
-  /// 隐藏控制条
+  /// 隱藏控制條
   void hideTaskControls() {
     _timer?.cancel();
     _timer = Timer(showControlDuration, () {
@@ -1214,7 +1214,7 @@ class PlPlayerController with BlockConfigMixin {
     });
   }
 
-  /// 调整播放时间
+  /// 調整播放時間
   void onChangedSlider(int v) {
     sliderPosition = Duration(seconds: v);
     updateSliderPositionSecond();
@@ -1285,7 +1285,7 @@ class PlPlayerController with BlockConfigMixin {
     video.put(VideoBoxKey.cacheVideoFit, value.index);
   }
 
-  /// 读取fit
+  /// 讀取fit
   var _prefFit = VideoFitType.values[Pref.cacheVideoFit];
   void _initVideoFit() {
     if (_prefFit == .fill && _isVertical) {
@@ -1295,7 +1295,7 @@ class PlPlayerController with BlockConfigMixin {
     }
   }
 
-  /// 设置后台播放
+  /// 設定後台播放
   void setBackgroundPlay(bool val) {
     videoPlayerServiceHandler?.enableBackgroundPlay = val;
     if (!tempPlayerConf) {
@@ -1317,7 +1317,7 @@ class PlPlayerController with BlockConfigMixin {
     longPressTimer = null;
   }
 
-  /// 设置长按倍速状态 live模式下禁用
+  /// 設定長按倍速狀態 live模式下停用
   Future<void> setLongPressStatus(bool val) async {
     if (isLive) {
       return;
@@ -1347,7 +1347,7 @@ class PlPlayerController with BlockConfigMixin {
       videoPlayerController!.state.completed ||
       (duration.value - position).inMilliseconds <= 50;
 
-  // 双击播放、暂停
+  // 雙擊播放、暫停
   Future<void> onDoubleTapCenter() async {
     if (!isLive && _isCompleted) {
       await videoPlayerController!.seek(Duration.zero);
@@ -1390,20 +1390,20 @@ class PlPlayerController with BlockConfigMixin {
     }
     switch (type) {
       case DoubleTapType.left:
-        // 双击左边区域 👈
+        // 雙擊左邊區域 👈
         onDoubleTapSeekBackward();
         break;
       case DoubleTapType.center:
         onDoubleTapCenter();
         break;
       case DoubleTapType.right:
-        // 双击右边区域 👈
+        // 雙擊右邊區域 👈
         onDoubleTapSeekForward();
         break;
     }
   }
 
-  /// 关闭控制栏
+  /// 關閉控制欄
   void onLockControl(bool val) {
     feedBack();
     controlsLock.value = val;
@@ -1455,7 +1455,7 @@ class PlPlayerController with BlockConfigMixin {
     }
   }
 
-  // 全屏
+  // 全螢幕
   bool _fsProcessing = false;
   Future<void> triggerFullScreen({
     bool status = true,
@@ -1515,7 +1515,7 @@ class PlPlayerController with BlockConfigMixin {
   void removeStatusLister(ValueChanged<PlayerStatus> listener) =>
       _statusListeners.remove(listener);
 
-  // 记录播放记录
+  // 記錄播放記錄
   Future<void>? makeHeartBeat(
     int progress, {
     HeartBeatType type = .playing,
@@ -1604,7 +1604,7 @@ class PlPlayerController with BlockConfigMixin {
   }
 
   void dispose() {
-    // 每次减1，最后销毁
+    // 每次減1，最後銷毀
     resetScreenRotation();
     cancelLongPressTimer();
     _cancelSubForSeek();
@@ -1725,10 +1725,10 @@ class PlPlayerController with BlockConfigMixin {
   }
 
   void takeScreenshot() {
-    SmartDialog.showToast('截图中');
+    SmartDialog.showToast('截圖中');
     videoPlayerController?.screenshot(format: .png).then((value) {
       if (value != null) {
-        SmartDialog.showToast('点击弹窗保存截图');
+        SmartDialog.showToast('點擊彈出視窗儲存截圖');
         showDialog(
           context: Get.context!,
           builder: (context) => GestureDetector(
@@ -1765,7 +1765,7 @@ class PlPlayerController with BlockConfigMixin {
           ),
         );
       } else {
-        SmartDialog.showToast('截图失败');
+        SmartDialog.showToast('截圖失敗');
       }
     });
   }

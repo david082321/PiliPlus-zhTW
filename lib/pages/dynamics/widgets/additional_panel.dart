@@ -25,7 +25,7 @@ Widget? addWidget(
   Widget? child;
   try {
     switch (type) {
-      // 转发的投稿
+      // 轉發的投稿
       case 'ADDITIONAL_TYPE_UGC' when (additional.ugc != null):
         final ugc = additional.ugc!;
         child = InkWell(
@@ -443,7 +443,7 @@ Widget? addWidget(
                           overflow: TextOverflow.ellipsis,
                         ),
                       Text(
-                        '${NumUtils.numFormat(vote.joinNum)}人参与',
+                        '${NumUtils.numFormat(vote.joinNum)}人參與',
                         maxLines: 1,
                         overflow: TextOverflow.ellipsis,
                         style: TextStyle(
@@ -476,7 +476,7 @@ Widget? addWidget(
                     ),
                     tapTargetSize: MaterialTapTargetSize.shrinkWrap,
                   ),
-                  child: const Text('参与'),
+                  child: const Text('參與'),
                 ),
               ],
             ),

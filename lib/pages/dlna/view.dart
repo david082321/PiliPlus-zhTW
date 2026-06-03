@@ -73,10 +73,10 @@ class _DLNAPageState extends State<DLNAPage> {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
-        title: const Text('投屏'),
+        title: const Text('投影'),
         actions: [
           IconButton(
-            tooltip: '搜索',
+            tooltip: '搜尋',
             onPressed: _onSearch,
             icon: const Icon(Icons.refresh),
           ),
@@ -95,7 +95,7 @@ class _DLNAPageState extends State<DLNAPage> {
   Widget _buildBody(ColorScheme colorScheme) {
     if (!_isSearching && _deviceList.isEmpty) {
       return HttpError(
-        errMsg: '没有设备',
+        errMsg: '沒有裝置',
         onReload: _onSearch,
       );
     }

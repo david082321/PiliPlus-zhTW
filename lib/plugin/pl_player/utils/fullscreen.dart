@@ -77,7 +77,7 @@ Future<void>? hideSystemBar() {
   return setEnabledSystemUIMode(.immersiveSticky);
 }
 
-//退出全屏显示
+//退出全螢幕顯示
 Future<void>? showSystemBar() {
   if (_showSystemBar) {
     return null;

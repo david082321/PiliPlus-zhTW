@@ -49,7 +49,7 @@ class PackageHeaderRes extends PackageHeader {
 
   static PackageHeaderRes? fromBytesData(Uint8List data) {
     if (data.length < 10) {
-      logger.w('数据不足以解析PackageHeader');
+      logger.w('資料不足以解析PackageHeader');
       return null;
     }
     final byteData = ByteData.sublistView(data);
@@ -117,7 +117,7 @@ abstract class AbstractPackage<T> {
   AbstractPackage({required this.header, required this.body});
 }
 
-//认证包
+//認證包
 class AuthPackage extends AbstractPackage<Message> {
   AuthPackage({required super.header, required super.body});
 
@@ -197,8 +197,8 @@ class LiveMessageStream {
         return;
       }
       // logger
-      //   ..d('$logTag ===> TCP连接建立')
-      //   ..d('$logTag ===> 发送认证包');
+      //   ..d('$logTag ===> TCP連接建立')
+      //   ..d('$logTag ===> 發送認證包');
       _socketSubscription = _channel?.stream.listen(
         onData,
         onDone: close,
@@ -206,7 +206,7 @@ class LiveMessageStream {
       );
       _channel?.sink.add(authPackage.marshal());
     } catch (e) {
-      SmartDialog.showToast("弹幕地址链接失败: $e");
+      SmartDialog.showToast("彈幕地址連結失敗: $e");
     }
   }
 
@@ -237,7 +237,7 @@ class LiveMessageStream {
       close();
       return;
     }
-    if (kDebugMode) logger.i("$logTag 直播间信息流认证成功 $hashCode");
+    if (kDebugMode) logger.i("$logTag 直播間資訊流認證成功 $hashCode");
     int heartBeatCount = 1;
     _timer ??= Timer.periodic(const Duration(seconds: 30), (timer) {
       if (!_active) {
@@ -272,7 +272,7 @@ class LiveMessageStream {
     final header = PackageHeaderRes.fromBytesData(data as Uint8List);
     if (header != null) {
       List<int> decompressedData = const [];
-      //心跳包回复不用处理
+      //心跳包回復不用處理
       if (header.operationCode == 3) return;
       if (header.operationCode == 8) {
         _heartBeat();

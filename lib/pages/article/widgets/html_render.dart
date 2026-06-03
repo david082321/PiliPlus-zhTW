@@ -70,7 +70,7 @@ Widget htmlRender({
             ),
           );
         } catch (err) {
-          if (kDebugMode) debugPrint('错误的HTML: $element');
+          if (kDebugMode) debugPrint('錯誤的HTML: $element');
           return const SizedBox.shrink();
         }
       },

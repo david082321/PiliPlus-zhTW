@@ -19,7 +19,7 @@ class _PrivacySettingState extends State<PrivacySetting> {
     final padding = MediaQuery.viewPaddingOf(context);
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      appBar: showAppBar ? AppBar(title: const Text('隐私设置')) : null,
+      appBar: showAppBar ? AppBar(title: const Text('隱私設定')) : null,
       body: ListView(
         padding: EdgeInsets.only(
           left: showAppBar ? padding.left : 0,

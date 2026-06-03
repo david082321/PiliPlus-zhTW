@@ -72,8 +72,8 @@ class _SetSwitchItemState extends State<SetSwitchItem> {
     if (widget.setKey == SettingBoxKey.badCertificateCallback && val) {
       val = await showConfirmDialog(
         context: context,
-        title: const Text('确定禁用 SSL 证书验证？'),
-        content: const Text('禁用容易受到中间人攻击'),
+        title: const Text('確定停用 SSL 證書驗證？'),
+        content: const Text('停用容易受到中間人攻擊'),
       );
     }
 
@@ -85,7 +85,7 @@ class _SetSwitchItemState extends State<SetSwitchItem> {
 
     widget.onChanged?.call(val);
     if (widget.needReboot) {
-      SmartDialog.showToast('重启生效');
+      SmartDialog.showToast('重啟生效');
     }
     if (mounted) {
       setState(() {});

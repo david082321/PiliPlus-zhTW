@@ -57,19 +57,19 @@ abstract final class RequestUtils {
     }
   }
 
-  // 1：小视频（已弃用）
+  // 1：小影片（已棄用）
   // 2：相簿
-  // 3：纯文字
-  // 4：直播（此类型不常用，见分享其他内容消息）
-  // 5：视频
-  // 6：专栏
-  // 7：番剧（id 为 season_id）
-  // 8：音乐
-  // 9：国产动画（id 为 AV 号）
-  // 10：图片
-  // 11：动态
-  // 16：番剧（id 为 epid）
-  // 17：番剧
+  // 3：純文字
+  // 4：直播（此類型不常用，見分享其他內容消息）
+  // 5：影片
+  // 6：專欄
+  // 7：番劇（id 為 season_id）
+  // 8：音樂
+  // 9：國產動畫（id 為 AV 號）
+  // 10：圖片
+  // 11：動態
+  // 16：番劇（id 為 epid）
+  // 17：番劇
   // https://github.com/SocialSisterYi/bilibili-API-collect/tree/master/docs/message/private_msg_content.md
   static Future<bool> pmShare({
     required int receiverId,
@@ -110,7 +110,7 @@ abstract final class RequestUtils {
     String tagName = '';
     final onCreate = await showConfirmDialog(
       context: context,
-      title: const Text('新建分组'),
+      title: const Text('建立分組'),
       content: TextFormField(
         autofocus: true,
         initialValue: tagName,
@@ -125,7 +125,7 @@ abstract final class RequestUtils {
       final res = await MemberHttp.createFollowTag(tagName);
       if (res case Success(:final response)) {
         onSuccess((tagid: response, tagName: tagName));
-        SmartDialog.showToast('创建成功');
+        SmartDialog.showToast('建立成功');
       } else {
         res.toast();
       }
@@ -150,7 +150,7 @@ abstract final class RequestUtils {
         reSrc: 11,
       );
       if (res.isSuccess) {
-        SmartDialog.showToast('关注成功');
+        SmartDialog.showToast('關注成功');
         afterMod?.call(2);
       } else {
         res.toast();
@@ -168,7 +168,7 @@ abstract final class RequestUtils {
 
       if (context.mounted) {
         bool isSpecialFollowed = followStatus!.special == 1;
-        String text = isSpecialFollowed ? '移除特别关注' : '加入特别关注';
+        String text = isSpecialFollowed ? '移除特別關注' : '加入特別關注';
         showDialog(
           context: context,
           builder: (context) => AlertDialog(
@@ -237,7 +237,7 @@ abstract final class RequestUtils {
                     }
                   },
                   title: const Text(
-                    '设置分组',
+                    '設定分組',
                     style: TextStyle(fontSize: 14),
                   ),
                 ),
@@ -251,14 +251,14 @@ abstract final class RequestUtils {
                       reSrc: 11,
                     );
                     if (res.isSuccess) {
-                      SmartDialog.showToast('取消关注成功');
+                      SmartDialog.showToast('取消關注成功');
                       afterMod?.call(0);
                     } else {
                       res.toast();
                     }
                   },
                   title: const Text(
-                    '取消关注',
+                    '取消關注',
                     style: TextStyle(fontSize: 14),
                   ),
                 ),
@@ -361,13 +361,13 @@ abstract final class RequestUtils {
                     },
                   );
                 },
-                child: const Text('申诉'),
+                child: const Text('申訴'),
               ),
             if (!isManual)
               TextButton(
                 onPressed: Get.back,
                 child: Text(
-                  '关闭',
+                  '關閉',
                   style: TextStyle(color: theme.colorScheme.outline),
                 ),
               ),
@@ -376,9 +376,9 @@ abstract final class RequestUtils {
             context: Get.context!,
             barrierDismissible: isManual,
             builder: (context) => AlertDialog(
-              title: const Text('动态检查结果'),
+              title: const Text('動態檢查結果'),
               content: SelectableText(
-                '${isSuccess ? '无账号状态下找到了你的动态，动态正常！' : '你的动态被shadow ban（仅自己可见）！'}${dynText != null ? ' \n\n动态内容: $dynText' : ''}',
+                '${isSuccess ? '無帳號狀態下找到了你的動態，動態正常！' : '你的動態被shadow ban（僅自己可見）！'}${dynText != null ? ' \n\n動態內容: $dynText' : ''}',
               ),
               actions: actions.isEmpty ? null : actions,
             ),
@@ -390,7 +390,7 @@ abstract final class RequestUtils {
     }
   }
 
-  // 动态点赞
+  // 動態按讚
   static Future<void> onLikeDynamic(
     DynamicItemModel item,
     bool uiStatus,
@@ -402,17 +402,17 @@ abstract final class RequestUtils {
     final status = like?.status ?? false;
 
     if (status ^ uiStatus) {
-      SmartDialog.showToast(status ? '点赞成功' : '取消赞');
+      SmartDialog.showToast(status ? '點贊成功' : '取消讚');
       onSuccess();
       return;
     }
 
     final res = await DynamicsHttp.thumbDynamic(
       dynamicId: item.idStr!,
-      up: status ? 2 : 1, // 1 已点赞 2 不喜欢 0 未操作
+      up: status ? 2 : 1, // 1 已按讚 2 不喜歡 0 未操作
     );
     if (res.isSuccess) {
-      SmartDialog.showToast(status ? '取消赞' : '点赞成功');
+      SmartDialog.showToast(status ? '取消讚' : '點贊成功');
       like
         ?..count = (like.count ?? 0) + (status ? -1 : 1)
         ..status = !status;
@@ -439,7 +439,7 @@ abstract final class RequestUtils {
           context: context,
           builder: (context) {
             return AlertDialog(
-              title: Text('${isCopy ? '复制' : '移动'}到'),
+              title: Text('${isCopy ? '複製' : '移動'}到'),
               contentPadding: const EdgeInsets.only(top: 5),
               content: SingleChildScrollView(
                 child: RadioGroup(
@@ -498,7 +498,7 @@ abstract final class RequestUtils {
                               ..refresh();
                           }
                           SmartDialog.dismiss();
-                          SmartDialog.showToast('${isCopy ? '复制' : '移动'}成功');
+                          SmartDialog.showToast('${isCopy ? '複製' : '移動'}成功');
                           Get.back();
                         } else {
                           SmartDialog.dismiss();
@@ -507,7 +507,7 @@ abstract final class RequestUtils {
                       });
                     }
                   },
-                  child: const Text('确认'),
+                  child: const Text('確認'),
                 ),
               ],
             );
@@ -549,7 +549,7 @@ abstract final class RequestUtils {
     }
 
     if (!isGeeArgumentValid()) {
-      SmartDialog.showToast("参数为空");
+      SmartDialog.showToast("參數為空");
       return;
     }
 
@@ -601,14 +601,14 @@ abstract final class RequestUtils {
     Gt3FlutterPlugin()
       ..addEventHandler(
         onClose: (Map<String, dynamic> message) {
-          SmartDialog.showToast('关闭验证');
+          SmartDialog.showToast('關閉驗證');
         },
         onResult: (Map<String, dynamic> message) {
           if (kDebugMode) debugPrint("Captcha result: $message");
           String code = message["code"];
           if (code == "1") {
-            // 发送 message["result"] 中的数据向 B 端的业务服务接口进行查询
-            SmartDialog.showToast('验证成功');
+            // 發送 message["result"] 中的資料向 B 端的業務服務介面進行查詢
+            SmartDialog.showToast('驗證成功');
             final result = message['result'];
             captchaData
               ..validate = result?['geetest_validate']
@@ -619,38 +619,38 @@ abstract final class RequestUtils {
               );
             gaiaVgateValidate();
           } else {
-            // 终端用户完成验证失败，自动重试 If the verification fails, it will be automatically retried.
+            // 終端使用者完成驗證失敗，自動重試 If the verification fails, it will be automatically retried.
             if (kDebugMode) debugPrint("Captcha result code : $code");
           }
         },
         onError: (Map<String, dynamic> message) {
           SmartDialog.showToast("Captcha onError: $message");
           String code = message["code"];
-          // 处理验证中返回的错误 Handling errors returned in verification
+          // 處理驗證中返回的錯誤 Handling errors returned in verification
           if (Platform.isAndroid) {
             // Android 平台
             if (code == "-2") {
-              // Dart 调用异常 Call exception
+              // Dart 呼叫異常 Call exception
             } else if (code == "-1") {
-              // Gt3RegisterData 参数不合法 Parameter is invalid
+              // Gt3RegisterData 參數不合法 Parameter is invalid
             } else if (code == "201") {
-              // 网络无法访问 Network inaccessible
+              // 網路無法訪問 Network inaccessible
             } else if (code == "202") {
-              // Json 解析错误 Analysis error
+              // Json 解析錯誤 Analysis error
             } else if (code == "204") {
-              // WebView 加载超时，请检查是否混淆极验 SDK   Load timed out
+              // WebView 載入超時，請檢查是否混淆極驗 SDK   Load timed out
             } else if (code == "204_1") {
-              // WebView 加载前端页面错误，请查看日志 Error loading front-end page, please check the log
+              // WebView 載入前端頁面錯誤，請查看日誌 Error loading front-end page, please check the log
             } else if (code == "204_2") {
-              // WebView 加载 SSLError
+              // WebView 載入 SSLError
             } else if (code == "206") {
-              // gettype 接口错误或返回为 null   API error or return null
+              // gettype 介面錯誤或返回為 null   API error or return null
             } else if (code == "207") {
-              // getphp 接口错误或返回为 null    API error or return null
+              // getphp 介面錯誤或返回為 null    API error or return null
             } else if (code == "208") {
-              // ajax 接口错误或返回为 null      API error or return null
+              // ajax 介面錯誤或返回為 null      API error or return null
             } else {
-              // 更多错误码参考开发文档  More error codes refer to the development document
+              // 更多錯誤碼參考開發文件  More error codes refer to the development document
               // https://docs.geetest.com/sensebot/apirefer/errorcode/android
             }
           }
@@ -658,28 +658,28 @@ abstract final class RequestUtils {
           if (Platform.isIOS) {
             // iOS 平台
             if (code == "-1009") {
-              // 网络无法访问 Network inaccessible
+              // 網路無法訪問 Network inaccessible
             } else if (code == "-1004") {
-              // 无法查找到 HOST  Unable to find HOST
+              // 無法尋找到 HOST  Unable to find HOST
             } else if (code == "-1002") {
               // 非法的 URL  Illegal URL
             } else if (code == "-1001") {
-              // 网络超时 Network timeout
+              // 網路超時 Network timeout
             } else if (code == "-999") {
-              // 请求被意外中断, 一般由用户进行取消操作导致 The interrupted request was usually caused by the user cancelling the operation
+              // 請求被意外中斷, 一般由使用者進行取消操作導致 The interrupted request was usually caused by the user cancelling the operation
             } else if (code == "-21") {
-              // 使用了重复的 challenge   Duplicate challenges are used
-              // 检查获取 challenge 是否进行了缓存  Check if the fetch challenge is cached
+              // 使用了重複的 challenge   Duplicate challenges are used
+              // 檢查取得 challenge 是否進行了快取  Check if the fetch challenge is cached
             } else if (code == "-20") {
-              // 尝试过多, 重新引导用户触发验证即可 Try too many times, lead the user to request verification again
+              // 嘗試過多, 重新引導使用者觸發驗證即可 Try too many times, lead the user to request verification again
             } else if (code == "-10") {
-              // 预判断时被封禁, 不会再进行图形验证 Banned during pre-judgment, and no more image captcha verification
+              // 預判斷時被封禁, 不會再進行圖形驗證 Banned during pre-judgment, and no more image captcha verification
             } else if (code == "-2") {
-              // Dart 调用异常 Call exception
+              // Dart 呼叫異常 Call exception
             } else if (code == "-1") {
-              // Gt3RegisterData 参数不合法  Parameter is invalid
+              // Gt3RegisterData 參數不合法  Parameter is invalid
             } else {
-              // 更多错误码参考开发文档 More error codes refer to the development document
+              // 更多錯誤碼參考開發文件 More error codes refer to the development document
               // https://docs.geetest.com/sensebot/apirefer/errorcode/ios
             }
           }
@@ -702,7 +702,7 @@ abstract final class RequestUtils {
           actions: [
             TextButton(
               onPressed: Get.back,
-              child: const Text('关闭'),
+              child: const Text('關閉'),
             ),
           ],
         ),

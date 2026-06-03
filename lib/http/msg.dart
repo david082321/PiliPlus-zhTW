@@ -342,7 +342,7 @@ abstract final class MsgHttp {
     }
   }
 
-  // 消息标记已读
+  // 消息標記已讀
   static Future<LoadingState<void>> ackSessionMsg({
     required int talkerId,
     required int ackSeqno,
@@ -369,7 +369,7 @@ abstract final class MsgHttp {
     }
   }
 
-  // // 发送私信
+  // // 發送私信
   // static Future<LoadingState<void>> sendMsg({
   //   required int senderUid,
   //   required int receiverId,

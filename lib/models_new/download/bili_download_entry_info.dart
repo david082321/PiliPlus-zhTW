@@ -72,7 +72,7 @@ class BiliDownloadEntryInfo with MultiSelectData {
       itemBuilder: (_) => [
         PopupMenuItem(
           height: 38,
-          child: const Text('查看详情页', style: TextStyle(fontSize: 13)),
+          child: const Text('查看詳情頁', style: TextStyle(fontSize: 13)),
           onTap: () {
             if (ep case final ep?) {
               if (ep.from == VideoType.pugv.name) {
@@ -102,7 +102,7 @@ class BiliDownloadEntryInfo with MultiSelectData {
         if (PlatformUtils.isDesktop)
           PopupMenuItem(
             height: 38,
-            child: const Text('打开本地文件夹', style: TextStyle(fontSize: 13)),
+            child: const Text('打開本機資料夾', style: TextStyle(fontSize: 13)),
             onTap: () async {
               try {
                 final String executable;
@@ -125,7 +125,7 @@ class BiliDownloadEntryInfo with MultiSelectData {
           PopupMenuItem(
             height: 38,
             child: Text(
-              '访问${ownerName != null ? '：$ownerName' : '用户主页'}',
+              '訪問${ownerName != null ? '：$ownerName' : '使用者首頁'}',
               style: const TextStyle(fontSize: 13),
             ),
             onTap: () => Get.toNamed('/member?mid=$mid'),
@@ -408,17 +408,17 @@ class EpInfo {
 }
 
 enum DownloadStatus {
-  downloading('正在下载'),
-  audioDownloading('正在下载音频'),
-  getDanmaku('获取弹幕'),
-  getPlayUrl('获取播放地址'),
+  downloading('正在下載'),
+  audioDownloading('正在下載音訊'),
+  getDanmaku('取得彈幕'),
+  getPlayUrl('取得播放地址'),
   //
-  completed('下载完成'),
-  failDownload('下载失败'),
-  failDownloadAudio('音频下载失败'),
-  failDanmaku('获取弹幕失败'),
-  failPlayUrl('获取播放地址失败'),
-  pause('暂停中'),
+  completed('下載完成'),
+  failDownload('下載失敗'),
+  failDownloadAudio('音訊下載失敗'),
+  failDanmaku('取得彈幕失敗'),
+  failPlayUrl('取得播放地址失敗'),
+  pause('暫停中'),
   wait('等待中'),
   ;
 

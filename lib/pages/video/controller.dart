@@ -79,7 +79,7 @@ import 'package:path/path.dart' as path;
 
 class VideoDetailController extends GetxController
     with GetTickerProviderStateMixin, BlockMixin {
-  /// 路由传参
+  /// 路由傳參
   late final Map args;
   late String bvid;
   late int aid;
@@ -90,13 +90,13 @@ class VideoDetailController extends GetxController
   late final String heroTag;
   late final RxString cover;
 
-  // 视频类型 默认投稿视频
+  // 影片類型 預設投稿影片
   late final VideoType videoType;
   @override
   late final isUgc = videoType == VideoType.ugc;
   VideoType? _actualVideoType;
 
-  // 页面来源 稍后再看 收藏夹
+  // 頁面來源 稍後再看 收藏夾
   late bool isPlayAll;
   late SourceType sourceType;
   late BiliDownloadEntryInfo entry;
@@ -105,19 +105,19 @@ class VideoDetailController extends GetxController
   late final RxList<MediaListItemModel> mediaList = <MediaListItemModel>[].obs;
   late String watchLaterTitle;
 
-  /// tabs相关配置
+  /// tabs相關配置
   late TabController tabCtr;
 
-  // 请求返回的视频信息
+  // 請求返回的影片資訊
   late PlayUrlModel data;
   final RxBool videoState = false.obs;
 
-  /// 播放器配置 画质 音质 解码格式
+  /// 播放器配置 畫質 音質 解碼格式
   final Rxn<VideoQuality> currentVideoQa = Rxn<VideoQuality>();
   AudioQuality? currentAudioQa;
   late VideoDecodeFormatType currentDecodeFormats;
 
-  // 是否开始自动播放 存在多p的情况下，第二p需要为true
+  // 是否開始自動播放 存在多p的情況下，第二p需要為true
   final RxBool _autoPlay = Pref.autoPlayEnable.obs;
 
   final videoPlayerKey = GlobalKey();
@@ -146,7 +146,7 @@ class VideoDetailController extends GetxController
 
   Box setting = GStorage.setting;
 
-  // 预设的解码格式
+  // 預設的解碼格式
   late String cacheDecode = Pref.defaultDecode; // def avc
   late String cacheSecondDecode = Pref.secondDecode; // def av1
 
@@ -480,7 +480,7 @@ class VideoDetailController extends GetxController
     }
   }
 
-  // 稍后再看面板展开
+  // 稍後再看面板展開
   void showMediaListPanel(BuildContext context) {
     if (mediaList.isNotEmpty) {
       Widget panel() => MediaListPanel(
@@ -605,8 +605,8 @@ class VideoDetailController extends GetxController
               padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
               fontSize: 14,
               text: item is SegmentModel
-                  ? '跳过: ${item.segmentType.shortTitle}'
-                  : '上次看到第${(item as int) + 1}P，点击跳转',
+                  ? '跳過: ${item.segmentType.shortTitle}'
+                  : '上次看到第${(item as int) + 1}P，點擊跳轉',
               onTap: (_) {
                 if (item is int) {
                   try {
@@ -618,7 +618,7 @@ class VideoDetailController extends GetxController
                     SmartDialog.showToast('已跳至第${item + 1}P');
                   } catch (e) {
                     if (kDebugMode) debugPrint('$e');
-                    SmartDialog.showToast('跳转失败');
+                    SmartDialog.showToast('跳轉失敗');
                   }
                   onRemoveItem(listData.indexOf(item), item);
                 } else if (item is SegmentModel) {
@@ -636,10 +636,10 @@ class VideoDetailController extends GetxController
   ({int mode, int fontSize, Color color})? dmConfig;
   String? savedDanmaku;
 
-  /// 发送弹幕
+  /// 發送彈幕
   Future<void> showShootDanmakuSheet() async {
     if (plPlayerController.dmState.contains(cid.value)) {
-      SmartDialog.showToast('UP主已关闭弹幕');
+      SmartDialog.showToast('UP主已關閉彈幕');
       return;
     }
     final isPlaying =
@@ -673,7 +673,7 @@ class VideoDetailController extends GetxController
   }
 
   VideoItem findVideoByQa(int qa) {
-    /// 根据currentVideoQa和currentDecodeFormats 重新设置videoUrl
+    /// 根據currentVideoQa和currentDecodeFormats 重新設定videoUrl
     final videoList = data.dash!.video!.where((i) => i.id == qa).toList();
 
     final currentDecodeFormats = this.currentDecodeFormats.codes;
@@ -699,7 +699,7 @@ class VideoDetailController extends GetxController
     return video ?? videoList.first;
   }
 
-  /// 更新画质、音质
+  /// 更新畫質、音質
   void updatePlayer() {
     final currentVideoQa = this.currentVideoQa.value;
     if (currentVideoQa == null) return;
@@ -716,7 +716,7 @@ class VideoDetailController extends GetxController
     firstVideo = video;
     videoUrl = VideoUtils.getCdnUrl(firstVideo.playUrls);
 
-    /// 根据currentAudioQa 重新设置audioUrl
+    /// 根據currentAudioQa 重新設定audioUrl
     if (currentAudioQa != null) {
       final firstAudio = data.dash!.audio!.firstWhere(
         (i) => i.id == currentAudioQa!.code,
@@ -817,7 +817,7 @@ class VideoDetailController extends GetxController
   void setLanguage(String language) {
     if (currLang.value == language) return;
     if (!isLoginVideo) {
-      SmartDialog.showToast('账号未登录');
+      SmartDialog.showToast('帳號未登入');
       return;
     }
     currLang.value = language;
@@ -826,7 +826,7 @@ class VideoDetailController extends GetxController
 
   Volume? volume;
 
-  // 视频链接
+  // 影片連結
   Future<void> queryVideoUrl({
     Duration? defaultST,
     bool fromReset = false,
@@ -886,9 +886,9 @@ class VideoDetailController extends GetxController
         }
       }
 
-      if (data.acceptDesc?.contains('试看') == true) {
+      if (data.acceptDesc?.contains('試看') == true) {
         SmartDialog.showToast(
-          '该视频为专属视频，仅提供试看',
+          '該影片為專屬影片，僅提供試看',
           displayTime: const Duration(seconds: 3),
         );
       }
@@ -897,7 +897,7 @@ class VideoDetailController extends GetxController
         videoUrl = VideoUtils.getCdnUrl(first.playUrls);
         audioUrl = '';
 
-        // 实际为FLV/MP4格式，但已被淘汰，这里仅做兜底处理
+        // 實際為FLV/MP4格式，但已被淘汰，這裡僅做兜底處理
         final videoQuality = VideoQuality.fromCode(data.quality!);
         firstVideo = VideoItem(
           id: data.quality!,
@@ -913,7 +913,7 @@ class VideoDetailController extends GetxController
         return;
       }
       if (data.dash == null) {
-        SmartDialog.showToast('视频资源不存在');
+        SmartDialog.showToast('影片資源不存在');
         _autoPlay.value = false;
         videoState.value = false;
         if (plPlayerController.isFullScreen.value) {
@@ -924,13 +924,13 @@ class VideoDetailController extends GetxController
       }
       final List<VideoItem> videoList = data.dash!.video!;
       // if (kDebugMode) debugPrint("allVideosList:${allVideosList}");
-      // 当前可播放的最高质量视频
+      // 目前可播放的最高品質影片
       final curHighestVideoQa = videoList.first.quality.code;
-      // 预设的画质为null，则当前可用的最高质量
+      // 預設的畫質為null，則目前可用的最高品質
       int targetVideoQa = curHighestVideoQa;
       if (data.acceptQuality?.isNotEmpty == true &&
           plPlayerController.cacheVideoQa! <= curHighestVideoQa) {
-        // 如果预设的画质低于当前最高
+        // 如果預設的畫質低於目前最高
         targetVideoQa = data.acceptQuality!.findClosestTarget(
           (e) => e <= plPlayerController.cacheVideoQa!,
           (a, b) => a > b ? a : b,
@@ -938,25 +938,25 @@ class VideoDetailController extends GetxController
       }
       currentVideoQa.value = VideoQuality.fromCode(targetVideoQa);
 
-      /// 取出符合当前画质的videoList
+      /// 取出符合目前畫質的videoList
       final List<VideoItem> videosList = videoList
           .where((e) => e.quality.code == targetVideoQa)
           .toList();
 
-      /// 优先顺序 设置中指定解码格式 -> 当前可选的首个解码格式
+      /// 優先順序 設定中指定解碼格式 -> 目前可選的首個解碼格式
       final List<FormatItem> supportFormats = data.supportFormats!;
-      // 根据画质选编码格式
+      // 根據畫質選編碼格式
       final List<String> supportDecodeFormats = supportFormats
           .firstWhere(
             (e) => e.quality == targetVideoQa,
             orElse: () => supportFormats.first,
           )
           .codecs!;
-      // 默认从设置中取AV1
+      // 預設從設定中取AV1
       currentDecodeFormats = VideoDecodeFormatType.fromString(cacheDecode);
       VideoDecodeFormatType secondDecodeFormats =
           VideoDecodeFormatType.fromString(cacheSecondDecode);
-      // 当前视频没有对应格式返回第一个
+      // 目前影片沒有對應格式返回第一個
       int flag = 0;
       for (final e in supportDecodeFormats) {
         if (currentDecodeFormats.codes.any(e.startsWith)) {
@@ -974,7 +974,7 @@ class VideoDetailController extends GetxController
         );
       }
 
-      /// 取出符合当前解码格式的videoItem
+      /// 取出符合目前解碼格式的videoItem
       firstVideo = videosList.firstWhere(
         (e) => currentDecodeFormats.codes.any(e.codecs!.startsWith),
         orElse: () => videosList.first,
@@ -983,7 +983,7 @@ class VideoDetailController extends GetxController
 
       videoUrl = VideoUtils.getCdnUrl(firstVideo.playUrls);
 
-      /// 优先顺序 设置中指定质量 -> 当前可选的最高质量
+      /// 優先順序 設定中指定質量 -> 目前可選的最高品質
       AudioItem? firstAudio;
       final audioList = data.dash?.audio;
       if (audioList != null && audioList.isNotEmpty) {
@@ -1070,7 +1070,7 @@ class VideoDetailController extends GetxController
   late final RxBool showVP = true.obs;
   late final RxList<ViewPointSegment> viewPointList = <ViewPointSegment>[].obs;
 
-  // 设定字幕轨道
+  // 設定字幕軌道
   Future<void> setSubtitle(int index) async {
     if (index <= 0) {
       await plPlayerController.videoPlayerController?.setSubtitleTrack(
@@ -1587,7 +1587,7 @@ class VideoDetailController extends GetxController
               this.audioUrl = audioUrl;
               playerInit();
             },
-            child: const Text('确定'),
+            child: const Text('確定'),
           ),
         ],
       ),
@@ -1607,7 +1607,7 @@ class VideoDetailController extends GetxController
     if (res case Success(:final response)) {
       final first = response.durl?.firstOrNull;
       if (first == null || first.playUrls.isEmpty) {
-        SmartDialog.showToast('不支持投屏');
+        SmartDialog.showToast('不支援投影');
         return;
       }
       final url = VideoUtils.getCdnUrl(first.playUrls);

@@ -110,7 +110,7 @@ class _PagesPanelState extends State<PagesPanel> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                const Text('视频选集 '),
+                const Text('影片選集 '),
                 Expanded(
                   child: Text(
                     ' 正在播放：${pages[pageIndex].part}',

@@ -56,13 +56,13 @@ Widget module(
           Text(major!.none!.tips!),
         ],
       );
-    // 图文
+    // 圖文
     case 'DYNAMIC_TYPE_DRAW':
     // 文章
     case 'DYNAMIC_TYPE_ARTICLE':
     case 'DYNAMIC_TYPE_WORD':
       return const SizedBox.shrink();
-    // 视频
+    // 影片
     case 'DYNAMIC_TYPE_AV':
     case 'DYNAMIC_TYPE_UGC_SEASON':
     case 'DYNAMIC_TYPE_PGC':
@@ -76,7 +76,7 @@ Widget module(
         isSave: isSave,
         isDetail: isDetail,
       );
-    // 转发
+    // 轉發
     case 'DYNAMIC_TYPE_FORWARD':
       return forwardPanel(
         context,
@@ -104,7 +104,7 @@ Widget module(
         floor: floor,
         isDetail: isDetail,
       );
-    // 活动
+    // 活動
     case 'DYNAMIC_TYPE_COMMON_SQUARE':
       final common = major?.common ?? major?.upowerCommon;
       if (common == null) return const SizedBox.shrink();
@@ -315,7 +315,7 @@ Widget module(
         padding: floor == 1
             ? const EdgeInsets.symmetric(horizontal: 12)
             : EdgeInsets.zero,
-        child: Text('暂未支持的类型: \n${item.idStr}\n${item.type}'),
+        child: Text('暫未支援的類型: \n${item.idStr}\n${item.type}'),
       );
   }
 }

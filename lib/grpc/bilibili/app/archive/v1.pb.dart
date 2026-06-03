@@ -174,7 +174,7 @@ class Arc extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearAid() => $_clearField(1);
 
-  /// 分 P 数
+  /// 分 P 數
   @$pb.TagNumber(2)
   $fixnum.Int64 get videos => $_getI64(1);
   @$pb.TagNumber(2)
@@ -184,7 +184,7 @@ class Arc extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearVideos() => $_clearField(2);
 
-  /// 分区 ID
+  /// 分區 ID
   @$pb.TagNumber(3)
   $core.int get typeId => $_getIZ(2);
   @$pb.TagNumber(3)
@@ -194,7 +194,7 @@ class Arc extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearTypeId() => $_clearField(3);
 
-  /// 分区名称
+  /// 分區名稱
   @$pb.TagNumber(4)
   $core.String get typeName => $_getSZ(3);
   @$pb.TagNumber(4)
@@ -204,11 +204,11 @@ class Arc extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearTypeName() => $_clearField(4);
 
-  /// 是否转载
+  /// 是否轉載
   ///
-  /// - 0: 历史上可能遗留的脏数据
-  /// - 1: 原创
-  /// - 2: 转载
+  /// - 0: 歷史上可能遺留的髒資料
+  /// - 1: 原創
+  /// - 2: 轉載
   @$pb.TagNumber(5)
   $core.int get copyright => $_getIZ(4);
   @$pb.TagNumber(5)
@@ -228,7 +228,7 @@ class Arc extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   void clearPic() => $_clearField(6);
 
-  /// 标题
+  /// 標題
   @$pb.TagNumber(7)
   $core.String get title => $_getSZ(6);
   @$pb.TagNumber(7)
@@ -238,7 +238,7 @@ class Arc extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   void clearTitle() => $_clearField(7);
 
-  /// 发布时间戳
+  /// 發布時間戳
   @$pb.TagNumber(8)
   $fixnum.Int64 get pubdate => $_getI64(7);
   @$pb.TagNumber(8)
@@ -248,7 +248,7 @@ class Arc extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   void clearPubdate() => $_clearField(8);
 
-  /// 提交时间戳
+  /// 提交時間戳
   @$pb.TagNumber(9)
   $fixnum.Int64 get ctime => $_getI64(8);
   @$pb.TagNumber(9)
@@ -258,7 +258,7 @@ class Arc extends $pb.GeneratedMessage {
   @$pb.TagNumber(9)
   void clearCtime() => $_clearField(9);
 
-  /// 简介
+  /// 簡介
   @$pb.TagNumber(10)
   $core.String get desc => $_getSZ(9);
   @$pb.TagNumber(10)
@@ -268,7 +268,7 @@ class Arc extends $pb.GeneratedMessage {
   @$pb.TagNumber(10)
   void clearDesc() => $_clearField(10);
 
-  /// 状态 (>= 0 为正常可见状态)
+  /// 狀態 (>= 0 為正常可見狀態)
   @$pb.TagNumber(11)
   $core.int get state => $_getIZ(10);
   @$pb.TagNumber(11)
@@ -278,10 +278,10 @@ class Arc extends $pb.GeneratedMessage {
   @$pb.TagNumber(11)
   void clearState() => $_clearField(11);
 
-  /// 是否可访问
+  /// 是否可訪問
   ///
-  /// - 0: 公开
-  /// - 10000: 仅登录用户
+  /// - 0: 公開
+  /// - 10000: 僅登入使用者
   @$pb.TagNumber(12)
   $core.int get access => $_getIZ(11);
   @$pb.TagNumber(12)
@@ -291,7 +291,7 @@ class Arc extends $pb.GeneratedMessage {
   @$pb.TagNumber(12)
   void clearAccess() => $_clearField(12);
 
-  /// 属性
+  /// 屬性
   @$pb.TagNumber(13)
   $core.int get attribute => $_getIZ(12);
   @$pb.TagNumber(13)
@@ -315,7 +315,7 @@ class Arc extends $pb.GeneratedMessage {
   @$pb.TagNumber(15)
   $pb.PbList<$core.String> get tags => $_getList(14);
 
-  /// 所有分 P 加起来的总时长 (seconds)
+  /// 所有分 P 加起來的總時長 (seconds)
   @$pb.TagNumber(16)
   $fixnum.Int64 get duration => $_getI64(15);
   @$pb.TagNumber(16)
@@ -325,7 +325,7 @@ class Arc extends $pb.GeneratedMessage {
   @$pb.TagNumber(16)
   void clearDuration() => $_clearField(16);
 
-  /// 参与的活动 id
+  /// 參與的活動 id
   @$pb.TagNumber(17)
   $fixnum.Int64 get missionId => $_getI64(16);
   @$pb.TagNumber(17)
@@ -335,7 +335,7 @@ class Arc extends $pb.GeneratedMessage {
   @$pb.TagNumber(17)
   void clearMissionId() => $_clearField(17);
 
-  /// 参与的商单 id
+  /// 參與的商單 id
   @$pb.TagNumber(18)
   $fixnum.Int64 get orderId => $_getI64(17);
   @$pb.TagNumber(18)
@@ -345,7 +345,7 @@ class Arc extends $pb.GeneratedMessage {
   @$pb.TagNumber(18)
   void clearOrderId() => $_clearField(18);
 
-  /// 强制跳转地址
+  /// 強制跳轉地址
   @$pb.TagNumber(19)
   $core.String get redirectUrl => $_getSZ(18);
   @$pb.TagNumber(19)
@@ -364,7 +364,7 @@ class Arc extends $pb.GeneratedMessage {
   @$pb.TagNumber(20)
   void clearForward() => $_clearField(20);
 
-  /// 参见 [`Rights`]
+  /// 參見 [`Rights`]
   @$pb.TagNumber(21)
   Rights get rights => $_getN(20);
   @$pb.TagNumber(21)
@@ -376,7 +376,7 @@ class Arc extends $pb.GeneratedMessage {
   @$pb.TagNumber(21)
   Rights ensureRights() => $_ensure(20);
 
-  /// 稿件作者信息, 参见 [`Author`]
+  /// 稿件作者資訊, 參見 [`Author`]
   @$pb.TagNumber(22)
   Author get author => $_getN(21);
   @$pb.TagNumber(22)
@@ -388,7 +388,7 @@ class Arc extends $pb.GeneratedMessage {
   @$pb.TagNumber(22)
   Author ensureAuthor() => $_ensure(21);
 
-  /// 稿件计数信息, 参见 [`Stat`]
+  /// 稿件計數資訊, 參見 [`Stat`]
   @$pb.TagNumber(23)
   Stat get stat => $_getN(22);
   @$pb.TagNumber(23)
@@ -409,7 +409,7 @@ class Arc extends $pb.GeneratedMessage {
   @$pb.TagNumber(24)
   void clearReportResult() => $_clearField(24);
 
-  /// 发布时动态描述
+  /// 發布時動態描述
   @$pb.TagNumber(25)
   $core.String get dynamic => $_getSZ(24);
   @$pb.TagNumber(25)
@@ -419,7 +419,7 @@ class Arc extends $pb.GeneratedMessage {
   @$pb.TagNumber(25)
   void clearDynamic() => $_clearField(25);
 
-  /// 首个分 P 的 cid
+  /// 首個分 P 的 cid
   @$pb.TagNumber(26)
   $fixnum.Int64 get firstCid => $_getI64(25);
   @$pb.TagNumber(26)
@@ -429,7 +429,7 @@ class Arc extends $pb.GeneratedMessage {
   @$pb.TagNumber(26)
   void clearFirstCid() => $_clearField(26);
 
-  /// 首个分 P 的分辨率
+  /// 首個分 P 的解析度
   @$pb.TagNumber(27)
   Dimension get dimension => $_getN(26);
   @$pb.TagNumber(27)
@@ -441,11 +441,11 @@ class Arc extends $pb.GeneratedMessage {
   @$pb.TagNumber(27)
   Dimension ensureDimension() => $_ensure(26);
 
-  /// 联合投稿信息
+  /// 聯合投稿資訊
   @$pb.TagNumber(28)
   $pb.PbList<StaffInfo> get staffInfo => $_getList(27);
 
-  /// UGC 剧集 ID
+  /// UGC 劇集 ID
   @$pb.TagNumber(29)
   $fixnum.Int64 get seasonId => $_getI64(28);
   @$pb.TagNumber(29)
@@ -455,7 +455,7 @@ class Arc extends $pb.GeneratedMessage {
   @$pb.TagNumber(29)
   void clearSeasonId() => $_clearField(29);
 
-  /// 属性 (旧的 int32 不够用了)
+  /// 屬性 (舊的 int32 不夠用了)
   @$pb.TagNumber(30)
   $fixnum.Int64 get attributeV2 => $_getI64(29);
   @$pb.TagNumber(30)
@@ -465,7 +465,7 @@ class Arc extends $pb.GeneratedMessage {
   @$pb.TagNumber(30)
   void clearAttributeV2() => $_clearField(30);
 
-  /// ? UGC 剧集主题
+  /// ? UGC 劇集主題
   @$pb.TagNumber(31)
   SeasonTheme get seasonTheme => $_getN(30);
   @$pb.TagNumber(31)
@@ -477,7 +477,7 @@ class Arc extends $pb.GeneratedMessage {
   @$pb.TagNumber(31)
   SeasonTheme ensureSeasonTheme() => $_ensure(30);
 
-  /// ? 短链接
+  /// ? 短連結
   @$pb.TagNumber(40)
   $core.String get shortLinkV2 => $_getSZ(31);
   @$pb.TagNumber(40)
@@ -506,7 +506,7 @@ class Arc extends $pb.GeneratedMessage {
   void clearFirstFrame() => $_clearField(42);
 }
 
-/// 作者信息
+/// 作者資訊
 class Author extends $pb.GeneratedMessage {
   factory Author({
     $fixnum.Int64? mid,
@@ -567,7 +567,7 @@ class Author extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearMid() => $_clearField(1);
 
-  /// UP 昵称
+  /// UP 暱稱
   @$pb.TagNumber(2)
   $core.String get name => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -577,7 +577,7 @@ class Author extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearName() => $_clearField(2);
 
-  /// UP 头像
+  /// UP 大頭貼
   @$pb.TagNumber(3)
   $core.String get face => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -588,7 +588,7 @@ class Author extends $pb.GeneratedMessage {
   void clearFace() => $_clearField(3);
 }
 
-/// 视频分辨率
+/// 影片解析度
 class Dimension extends $pb.GeneratedMessage {
   factory Dimension({
     $fixnum.Int64? width,
@@ -639,7 +639,7 @@ class Dimension extends $pb.GeneratedMessage {
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Dimension>(create);
   static Dimension? _defaultInstance;
 
-  /// 宽
+  /// 寬
   @$pb.TagNumber(1)
   $fixnum.Int64 get width => $_getI64(0);
   @$pb.TagNumber(1)
@@ -659,7 +659,7 @@ class Dimension extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearHeight() => $_clearField(2);
 
-  /// 是否竖屏
+  /// 是否豎屏
   @$pb.TagNumber(3)
   $fixnum.Int64 get rotate => $_getI64(2);
   @$pb.TagNumber(3)
@@ -670,7 +670,7 @@ class Dimension extends $pb.GeneratedMessage {
   void clearRotate() => $_clearField(3);
 }
 
-/// 分 P 信息
+/// 分 P 資訊
 class Page extends $pb.GeneratedMessage {
   factory Page({
     $fixnum.Int64? cid,
@@ -743,7 +743,7 @@ class Page extends $pb.GeneratedMessage {
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Page>(create);
   static Page? _defaultInstance;
 
-  /// 视频流 CID
+  /// 影片串流 CID
   @$pb.TagNumber(1)
   $fixnum.Int64 get cid => $_getI64(0);
   @$pb.TagNumber(1)
@@ -753,7 +753,7 @@ class Page extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearCid() => $_clearField(1);
 
-  /// 视频序号
+  /// 影片序號
   @$pb.TagNumber(2)
   $core.int get page => $_getIZ(1);
   @$pb.TagNumber(2)
@@ -763,7 +763,7 @@ class Page extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearPage() => $_clearField(2);
 
-  /// 视频来源
+  /// 影片來源
   ///
   /// - vupload
   /// - qq: Tencent
@@ -777,7 +777,7 @@ class Page extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearFrom() => $_clearField(3);
 
-  /// 视频标题
+  /// 影片標題
   @$pb.TagNumber(4)
   $core.String get part => $_getSZ(3);
   @$pb.TagNumber(4)
@@ -787,7 +787,7 @@ class Page extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearPart() => $_clearField(4);
 
-  /// 视频时长 (seconds)
+  /// 影片時長 (seconds)
   @$pb.TagNumber(5)
   $fixnum.Int64 get duration => $_getI64(4);
   @$pb.TagNumber(5)
@@ -797,7 +797,7 @@ class Page extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearDuration() => $_clearField(5);
 
-  /// 站外视频 vid
+  /// 站外影片 vid
   @$pb.TagNumber(6)
   $core.String get vid => $_getSZ(5);
   @$pb.TagNumber(6)
@@ -807,7 +807,7 @@ class Page extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   void clearVid() => $_clearField(6);
 
-  /// 视频简介
+  /// 影片簡介
   @$pb.TagNumber(7)
   $core.String get desc => $_getSZ(6);
   @$pb.TagNumber(7)
@@ -817,7 +817,7 @@ class Page extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   void clearDesc() => $_clearField(7);
 
-  /// 站外视频跳转地址
+  /// 站外影片跳轉地址
   @$pb.TagNumber(8)
   $core.String get webLink => $_getSZ(7);
   @$pb.TagNumber(8)
@@ -827,7 +827,7 @@ class Page extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   void clearWebLink() => $_clearField(8);
 
-  /// 见 [`Dimension`]
+  /// 見 [`Dimension`]
   @$pb.TagNumber(9)
   Dimension get dimension => $_getN(8);
   @$pb.TagNumber(9)
@@ -849,7 +849,7 @@ class Page extends $pb.GeneratedMessage {
   void clearFirstFrame() => $_clearField(10);
 }
 
-/// 常用属性, 0 否 1 是
+/// 常用屬性, 0 否 1 是
 class Rights extends $pb.GeneratedMessage {
   factory Rights({
     $core.int? bp,
@@ -933,7 +933,7 @@ class Rights extends $pb.GeneratedMessage {
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Rights>(create);
   static Rights? _defaultInstance;
 
-  /// 是否付费(旧版)
+  /// 是否付費(舊版)
   @$pb.TagNumber(1)
   $core.int get bp => $_getIZ(0);
   @$pb.TagNumber(1)
@@ -943,7 +943,7 @@ class Rights extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearBp() => $_clearField(1);
 
-  /// 是否支持充电
+  /// 是否支援充電
   @$pb.TagNumber(2)
   $core.int get elec => $_getIZ(1);
   @$pb.TagNumber(2)
@@ -953,7 +953,7 @@ class Rights extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearElec() => $_clearField(2);
 
-  /// 是否下载
+  /// 是否下載
   @$pb.TagNumber(3)
   $core.int get download => $_getIZ(2);
   @$pb.TagNumber(3)
@@ -963,7 +963,7 @@ class Rights extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearDownload() => $_clearField(3);
 
-  /// 是否电影
+  /// 是否電影
   @$pb.TagNumber(4)
   $core.int get movie => $_getIZ(3);
   @$pb.TagNumber(4)
@@ -973,7 +973,7 @@ class Rights extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearMovie() => $_clearField(4);
 
-  /// 是否是需要付费的 PGC 稿件
+  /// 是否是需要付費的 PGC 稿件
   @$pb.TagNumber(5)
   $core.int get pay => $_getIZ(4);
   @$pb.TagNumber(5)
@@ -993,7 +993,7 @@ class Rights extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   void clearHd5() => $_clearField(6);
 
-  /// 是否允许转发
+  /// 是否允許轉發
   @$pb.TagNumber(7)
   $core.int get noReprint => $_getIZ(6);
   @$pb.TagNumber(7)
@@ -1003,7 +1003,7 @@ class Rights extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   void clearNoReprint() => $_clearField(7);
 
-  /// 是否可以自动播放
+  /// 是否可以自動播放
   @$pb.TagNumber(8)
   $core.int get autoplay => $_getIZ(7);
   @$pb.TagNumber(8)
@@ -1013,7 +1013,7 @@ class Rights extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   void clearAutoplay() => $_clearField(8);
 
-  /// 是否是需要付费的 UGC 稿件
+  /// 是否是需要付費的 UGC 稿件
   @$pb.TagNumber(9)
   $core.int get ugcPay => $_getIZ(8);
   @$pb.TagNumber(9)
@@ -1023,7 +1023,7 @@ class Rights extends $pb.GeneratedMessage {
   @$pb.TagNumber(9)
   void clearUgcPay() => $_clearField(9);
 
-  /// 是否联合投稿
+  /// 是否聯合投稿
   @$pb.TagNumber(10)
   $core.int get isCooperation => $_getIZ(9);
   @$pb.TagNumber(10)
@@ -1033,7 +1033,7 @@ class Rights extends $pb.GeneratedMessage {
   @$pb.TagNumber(10)
   void clearIsCooperation() => $_clearField(10);
 
-  /// 需要付费的 PGC 稿件是否支持预览
+  /// 需要付費的 PGC 稿件是否支援預覽
   @$pb.TagNumber(11)
   $core.int get ugcPayPreview => $_getIZ(10);
   @$pb.TagNumber(11)
@@ -1043,7 +1043,7 @@ class Rights extends $pb.GeneratedMessage {
   @$pb.TagNumber(11)
   void clearUgcPayPreview() => $_clearField(11);
 
-  /// 是否禁止后台播放
+  /// 是否禁止後台播放
   @$pb.TagNumber(12)
   $core.int get noBackground => $_getIZ(11);
   @$pb.TagNumber(12)
@@ -1062,7 +1062,7 @@ class Rights extends $pb.GeneratedMessage {
   @$pb.TagNumber(13)
   void clearArcPay() => $_clearField(13);
 
-  /// ? 需要付费的稿件是否支持免费畅览
+  /// ? 需要付費的稿件是否支援免費暢覽
   @$pb.TagNumber(14)
   $core.int get payFreeWatch => $_getIZ(13);
   @$pb.TagNumber(14)
@@ -1152,7 +1152,7 @@ class SeasonTheme extends $pb.GeneratedMessage {
   void clearTextColor() => $_clearField(3);
 }
 
-/// 联合投稿成员
+/// 聯合投稿成員
 class StaffInfo extends $pb.GeneratedMessage {
   factory StaffInfo({
     $fixnum.Int64? mid,
@@ -1203,7 +1203,7 @@ class StaffInfo extends $pb.GeneratedMessage {
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<StaffInfo>(create);
   static StaffInfo? _defaultInstance;
 
-  /// 联合投稿成员 mid
+  /// 聯合投稿成員 mid
   @$pb.TagNumber(1)
   $fixnum.Int64 get mid => $_getI64(0);
   @$pb.TagNumber(1)
@@ -1213,7 +1213,7 @@ class StaffInfo extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearMid() => $_clearField(1);
 
-  /// 联合投稿成员角色
+  /// 聯合投稿成員角色
   @$pb.TagNumber(2)
   $core.String get title => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -1223,7 +1223,7 @@ class StaffInfo extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearTitle() => $_clearField(2);
 
-  /// 属性
+  /// 屬性
   @$pb.TagNumber(3)
   $fixnum.Int64 get attribute => $_getI64(2);
   @$pb.TagNumber(3)
@@ -1234,7 +1234,7 @@ class StaffInfo extends $pb.GeneratedMessage {
   void clearAttribute() => $_clearField(3);
 }
 
-/// 计数相关信息
+/// 計數相關資訊
 class Stat extends $pb.GeneratedMessage {
   factory Stat({
     $fixnum.Int64? aid,
@@ -1329,7 +1329,7 @@ class Stat extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearView() => $_clearField(2);
 
-  /// 弹幕数
+  /// 彈幕數
   @$pb.TagNumber(3)
   $core.int get danmaku => $_getIZ(2);
   @$pb.TagNumber(3)
@@ -1339,7 +1339,7 @@ class Stat extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearDanmaku() => $_clearField(3);
 
-  /// 评论数
+  /// 評論數
   @$pb.TagNumber(4)
   $core.int get reply => $_getIZ(3);
   @$pb.TagNumber(4)
@@ -1349,7 +1349,7 @@ class Stat extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearReply() => $_clearField(4);
 
-  /// 收藏数
+  /// 收藏數
   @$pb.TagNumber(5)
   $core.int get fav => $_getIZ(4);
   @$pb.TagNumber(5)
@@ -1359,7 +1359,7 @@ class Stat extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearFav() => $_clearField(5);
 
-  /// 投币数
+  /// 投幣數
   @$pb.TagNumber(6)
   $core.int get coin => $_getIZ(5);
   @$pb.TagNumber(6)
@@ -1369,7 +1369,7 @@ class Stat extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   void clearCoin() => $_clearField(6);
 
-  /// 分享数
+  /// 分享數
   @$pb.TagNumber(7)
   $core.int get share => $_getIZ(6);
   @$pb.TagNumber(7)
@@ -1379,7 +1379,7 @@ class Stat extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   void clearShare() => $_clearField(7);
 
-  /// 当前排名
+  /// 目前排名
   @$pb.TagNumber(8)
   $core.int get nowRank => $_getIZ(7);
   @$pb.TagNumber(8)
@@ -1389,7 +1389,7 @@ class Stat extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   void clearNowRank() => $_clearField(8);
 
-  /// 历史最高排名
+  /// 歷史最高排名
   @$pb.TagNumber(9)
   $core.int get hisRank => $_getIZ(8);
   @$pb.TagNumber(9)
@@ -1399,7 +1399,7 @@ class Stat extends $pb.GeneratedMessage {
   @$pb.TagNumber(9)
   void clearHisRank() => $_clearField(9);
 
-  /// 点赞数
+  /// 按讚數
   @$pb.TagNumber(10)
   $core.int get like => $_getIZ(9);
   @$pb.TagNumber(10)
@@ -1409,7 +1409,7 @@ class Stat extends $pb.GeneratedMessage {
   @$pb.TagNumber(10)
   void clearLike() => $_clearField(10);
 
-  /// 点踩数 (Deprecated)
+  /// 點踩數 (Deprecated)
   @$pb.TagNumber(11)
   $core.int get dislike => $_getIZ(10);
   @$pb.TagNumber(11)

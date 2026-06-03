@@ -62,7 +62,7 @@ class _SearchUserPanelState
             const Spacer(),
             Obx(
               () => Text(
-                '用户类型: ${controller.userType!.value.label}',
+                '使用者類型: ${controller.userType!.value.label}',
                 maxLines: 1,
                 style: TextStyle(color: theme.colorScheme.outline),
               ),
@@ -72,7 +72,7 @@ class _SearchUserPanelState
               width: 32,
               height: 32,
               child: IconButton(
-                tooltip: '筛选',
+                tooltip: '篩選',
                 style: const ButtonStyle(
                   padding: WidgetStatePropertyAll(EdgeInsets.zero),
                 ),

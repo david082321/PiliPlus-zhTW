@@ -1,24 +1,24 @@
 // ignore_for_file: constant_identifier_names
 enum SearchType {
-  // all('综合'),
-  // 视频：video
-  video('视频'),
-  // 番剧：media_bangumi,
-  media_bangumi('番剧'),
-  // 影视：media_ft
-  media_ft('影视'),
-  // 直播间及主播：live
+  // all('綜合'),
+  // 影片：video
+  video('影片'),
+  // 番劇：media_bangumi,
+  media_bangumi('番劇'),
+  // 影視：media_ft
+  media_ft('影視'),
+  // 直播間及主播：live
   // live,
-  // 直播间：live_room
-  live_room('直播间'),
+  // 直播間：live_room
+  live_room('直播間'),
   // 主播：live_user
   // live_user,
-  // 话题：topic
+  // 話題：topic
   // topic,
-  // 用户：bili_user
-  bili_user('用户'),
-  // 专栏：article
-  article('专栏'),
+  // 使用者：bili_user
+  bili_user('使用者'),
+  // 專欄：article
+  article('專欄'),
   ;
   // 相簿：photo
   // photo

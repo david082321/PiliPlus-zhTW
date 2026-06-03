@@ -141,7 +141,7 @@ class _WebviewPageState extends State<WebviewPage> {
                         break;
                       case WebviewMenuItem.resetCookie:
                         await LoginUtils.setWebCookie();
-                        SmartDialog.showToast('设置成功，刷新或重新打开网页');
+                        SmartDialog.showToast('設定成功，重新整理或重新打開網頁');
                         break;
                     }
                   },
@@ -265,7 +265,7 @@ class _WebviewPageState extends State<WebviewPage> {
                       }
                       return AlertDialog(
                         title: Text(
-                          '下载文件: $suggestedFilename ?',
+                          '下載文件: $suggestedFilename ?',
                           style: const TextStyle(fontSize: 18),
                         ),
                         content: SelectableText(request.url.toString()),
@@ -284,7 +284,7 @@ class _WebviewPageState extends State<WebviewPage> {
                               Get.back();
                               PageUtils.launchURL(request.url.toString());
                             },
-                            child: Text('确定 ($fileSize)'),
+                            child: Text('確定 ($fileSize)'),
                           ),
                         ],
                       );
@@ -332,11 +332,11 @@ class _WebviewPageState extends State<WebviewPage> {
             } else if (_prefixRegex.hasMatch(url)) {
               if (context.mounted) {
                 SnackBar snackBar = SnackBar(
-                  content: const Text('当前网页将要打开外部链接，是否打开'),
+                  content: const Text('目前網頁將要打開外部連結，是否打開'),
                   showCloseIcon: true,
                   persist: false,
                   action: SnackBarAction(
-                    label: '打开',
+                    label: '打開',
                     onPressed: () => PageUtils.launchURL(url),
                   ),
                 );

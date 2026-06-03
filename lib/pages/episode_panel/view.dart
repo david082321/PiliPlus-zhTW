@@ -433,13 +433,13 @@ class _EpisodePanelState extends State<EpisodePanel>
           type: MaterialType.transparency,
           child: InkWell(
             onTap: () {
-              if (episode.badge == "会员" &&
+              if (episode.badge == "會員" &&
                   Accounts.mainEqVideo &&
                   vipStatus != 1) {
-                SmartDialog.showToast('需要大会员');
+                SmartDialog.showToast('需要大會員');
                 // return;
               }
-              SmartDialog.showToast('切换到：$title');
+              SmartDialog.showToast('切換到：$title');
               widget.onClose?.call();
 
               widget.onChangeEpisode(episode).then((res) {
@@ -488,7 +488,7 @@ class _EpisodePanelState extends State<EpisodePanel>
                           ),
                         if (isCharging == true)
                           const PBadge(
-                            text: '充电专属',
+                            text: '充電專屬',
                             top: 6,
                             right: 6,
                             type: PBadgeType.error,
@@ -499,7 +499,7 @@ class _EpisodePanelState extends State<EpisodePanel>
                             top: 6,
                             right: 6,
                             type: switch (episode.badge) {
-                              '预告' => PBadgeType.gray,
+                              '預告' => PBadgeType.gray,
                               '限免' => PBadgeType.free,
                               _ => PBadgeType.primary,
                             },
@@ -580,7 +580,7 @@ class _EpisodePanelState extends State<EpisodePanel>
     return switch (loadingState) {
       Success(:final response) => iconButton(
         iconSize: 22,
-        tooltip: response ? '取消订阅' : '订阅',
+        tooltip: response ? '取消訂閱' : '訂閱',
         icon: response
             ? const Icon(Icons.notifications_off_outlined)
             : const Icon(Icons.notifications_active_outlined),
@@ -590,7 +590,7 @@ class _EpisodePanelState extends State<EpisodePanel>
             seasonId: widget.seasonId,
           );
           if (res.isSuccess) {
-            SmartDialog.showToast('${response ? '取消' : ''}订阅成功');
+            SmartDialog.showToast('${response ? '取消' : ''}訂閱成功');
             _favState!.value = Success(!response);
             widget.ugcIntroController?.seasonFavState[widget.seasonId] =
                 !response;
@@ -642,7 +642,7 @@ class _EpisodePanelState extends State<EpisodePanel>
         if (_favState != null) Obx(() => _buildFavBtn(_favState!.value)),
         iconButton(
           iconSize: 22,
-          tooltip: '跳至顶部',
+          tooltip: '跳至頂部',
           icon: const Icon(Icons.vertical_align_top),
           onPressed: _animToTopOrBottom,
         ),
@@ -654,7 +654,7 @@ class _EpisodePanelState extends State<EpisodePanel>
         ),
         iconButton(
           iconSize: 22,
-          tooltip: '跳至当前',
+          tooltip: '跳至目前',
           icon: const Icon(Icons.my_location),
           onPressed: () async {
             final currentTabIndex = _currentTabIndex.value;
@@ -682,7 +682,7 @@ class _EpisodePanelState extends State<EpisodePanel>
             final currentTabIndex = _currentTabIndex.value;
             return iconButton(
               iconSize: 22,
-              tooltip: _isReversed[currentTabIndex] ? '顺序' : '倒序',
+              tooltip: _isReversed[currentTabIndex] ? '順序' : '倒序',
               icon: !_isReversed[currentTabIndex]
                   ? const Icon(MdiIcons.sortNumericAscending)
                   : const Icon(MdiIcons.sortNumericDescending),
@@ -695,7 +695,7 @@ class _EpisodePanelState extends State<EpisodePanel>
         if (widget.onClose != null)
           iconButton(
             iconSize: 22,
-            tooltip: '关闭',
+            tooltip: '關閉',
             icon: const Icon(Icons.close),
             onPressed: widget.onClose,
           ),

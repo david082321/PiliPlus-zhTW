@@ -17,9 +17,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:get/get.dart';
 
-const _linkFoldedText = '网页链接';
+const _linkFoldedText = '網頁連結';
 
-// 富文本
+// 富文字
 TextSpan? richNode(
   BuildContext context, {
   required ThemeData theme,
@@ -40,7 +40,7 @@ TextSpan? richNode(
       :final title,
       :final summary,
     )) {
-      // 动态页面 richTextNodes 层级可能与主页动态层级不同
+      // 動態頁面 richTextNodes 層級可能與首頁動態層級不同
       richTextNodes = summary?.richTextNodes;
       if (title != null && title.isNotEmpty) {
         if (richTextNodes == null || richTextNodes.isEmpty) {
@@ -75,7 +75,7 @@ TextSpan? richNode(
               ),
             );
             break;
-          // @用户
+          // @使用者
           case 'RICH_TEXT_NODE_TYPE_AT':
             spanChildren.add(
               TextSpan(
@@ -86,7 +86,7 @@ TextSpan? richNode(
               ),
             );
             break;
-          // 话题
+          // 話題
           case 'RICH_TEXT_NODE_TYPE_TOPIC':
             spanChildren.add(
               TextSpan(
@@ -105,7 +105,7 @@ TextSpan? richNode(
               ),
             );
             break;
-          // 网页链接
+          // 網頁連結
           case 'RICH_TEXT_NODE_TYPE_WEB':
             final hasLink = i.jumpUrl?.isNotEmpty ?? false;
             if (!hasLink) {
@@ -175,7 +175,7 @@ TextSpan? richNode(
               ),
             );
             break;
-          // 抽奖
+          // 抽獎
           case 'RICH_TEXT_NODE_TYPE_LOTTERY':
             spanChildren
               ..add(

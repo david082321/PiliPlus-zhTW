@@ -35,7 +35,7 @@ class Request {
       _http11Dio ??= _enableHttp2 ? _cloneHttp11Dio() : dio;
   factory Request() => _instance;
 
-  /// 设置cookie
+  /// 設定cookie
   static void setCookie() {
     accountManager = AccountManager();
     dio.interceptors.add(accountManager);
@@ -60,7 +60,7 @@ class Request {
   }
 
   static Future<void> buvidActive(Account account) async {
-    // 这样线程不安全, 但仍按预期进行
+    // 這樣執行緒不安全, 但仍按預期進行
     if (account.activated) return;
     account.activated = true;
     try {
@@ -154,7 +154,7 @@ class Request {
               ..badCertificateCallback = (cert, host, port) => true
           : () => HttpClient()
               ..idleTimeout = const Duration(seconds: 15)
-              ..autoUncompress = false, // Http2Adapter没有自动解压, 统一行为
+              ..autoUncompress = false, // Http2Adapter沒有自動解壓, 統一行為
     );
 
     final connectionManager = _enableHttp2
@@ -199,21 +199,21 @@ class Request {
    * config it and create
    */
   Request._internal() {
-    //BaseOptions、Options、RequestOptions 都可以配置参数，优先级别依次递增，且可以根据优先级别覆盖参数
+    //BaseOptions、Options、RequestOptions 都可以配置參數，優先級別依次遞增，且可以根據優先級別覆蓋參數
     BaseOptions options = BaseOptions(
-      //请求基地址,可以包含子路径
+      //請求基地址,可以包含子路徑
       baseUrl: HttpString.apiBaseUrl,
-      //连接服务器超时时间，单位是毫秒.
+      //連接伺服器超時時間，單位是毫秒.
       connectTimeout: const Duration(milliseconds: 10000),
-      //响应流上前后两次接受到数据的间隔，单位为毫秒。
+      //響應流上前後兩次接受到資料的間隔，單位為毫秒。
       receiveTimeout: const Duration(milliseconds: 10000),
-      //Http请求头.
+      //Http請求頭.
       headers: {
-        'user-agent': 'Dart/3.6 (dart:io)', // Http2Adapter不会自动添加标头
+        'user-agent': 'Dart/3.6 (dart:io)', // Http2Adapter不會自動新增標頭
         if (!_enableHttp2) 'connection': 'keep-alive',
         'accept-encoding': 'br,gzip',
       },
-      responseDecoder: _responseDecoder, // Http2Adapter没有自动解压
+      responseDecoder: _responseDecoder, // Http2Adapter沒有自動解壓
       persistentConnection: true,
     );
 
@@ -224,14 +224,14 @@ class Request {
           ? Http2Adapter(connectionManager, fallbackAdapter: h11)
           : h11;
 
-    // 先于其他Interceptor
+    // 先於其他Interceptor
     if (Pref.retryCount != 0) {
       dio.interceptors.add(
         RetryInterceptor(dio, Pref.retryCount, Pref.retryDelay),
       );
     }
 
-    // 日志拦截器 输出请求、响应内容
+    // 日誌攔截器 輸出請求、響應內容
     if (kDebugMode) {
       dio.interceptors.add(
         LogInterceptor(
@@ -252,7 +252,7 @@ class Request {
   }
 
   /*
-   * get请求
+   * get請求
    */
   Future<Response> get<T>(
     String url, {
@@ -271,7 +271,7 @@ class Request {
       return Response(
         data: {
           'message': await AccountManager.dioError(e),
-        }, // 将自定义 Map 数据赋值给 Response 的 data 属性
+        }, // 將自訂 Map 資料賦值給 Response 的 data 屬性
         statusCode: e.response?.statusCode ?? -1,
         requestOptions: e.requestOptions,
       );
@@ -279,7 +279,7 @@ class Request {
   }
 
   /*
-   * post请求
+   * post請求
    */
   Future<Response> post<T>(
     String url, {
@@ -302,7 +302,7 @@ class Request {
       return Response(
         data: {
           'message': await AccountManager.dioError(e),
-        }, // 将自定义 Map 数据赋值给 Response 的 data 属性
+        }, // 將自訂 Map 資料賦值給 Response 的 data 屬性
         statusCode: e.response?.statusCode ?? -1,
         requestOptions: e.requestOptions,
       );
@@ -310,7 +310,7 @@ class Request {
   }
 
   /*
-   * 下载文件
+   * 下載文件
    */
   Future<Response> downloadFile(
     String urlPath,
@@ -323,7 +323,7 @@ class Request {
         savePath,
         cancelToken: cancelToken,
         // onReceiveProgress: (int count, int total) {
-        // 进度
+        // 進度
         // if (kDebugMode) debugPrint("$count $total");
         // },
       );

@@ -42,7 +42,7 @@ class VoteInfo extends SimpleVoteInfo {
   int? voterLevel;
   String? face;
   String? name;
-  // 0 文字, 1 图片
+  // 0 文字, 1 圖片
   int? type;
   int? votePublisher;
   int? duration;

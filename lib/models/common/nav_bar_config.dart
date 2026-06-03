@@ -6,13 +6,13 @@ import 'package:flutter/material.dart';
 
 enum NavigationBarType implements EnumWithLabel {
   home(
-    '首页',
+    '首頁',
     Icon(Icons.home_outlined, size: 24),
     Icon(Icons.home, size: 24),
     HomePage(),
   ),
   dynamics(
-    '动态',
+    '動態',
     Icon(Icons.motion_photos_on_outlined, size: 21),
     Icon(Icons.motion_photos_on, size: 21),
     DynamicsPage(),

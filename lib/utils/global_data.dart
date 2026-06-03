@@ -17,12 +17,12 @@ class GlobalData {
 
   bool showMedal = Pref.showMedal;
 
-  // 私有构造函数
+  // 私有建構子
   GlobalData._();
 
-  // 单例实例
+  // 單例實例
   static final GlobalData _instance = GlobalData._();
 
-  // 获取全局实例
+  // 取得全域實例
   factory GlobalData() => _instance;
 }

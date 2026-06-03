@@ -84,7 +84,7 @@ class LiveRoomController extends GetxController {
         liveTime * 1000,
         DateTime.now().millisecondsSinceEpoch,
       );
-      text += duration.isEmpty ? '刚刚开播' : '开播$duration';
+      text += duration.isEmpty ? '剛剛開播' : '開播$duration';
     }
     if (text.isEmpty) {
       return const SizedBox.shrink();
@@ -192,11 +192,11 @@ class LiveRoomController extends GetxController {
     );
     if (res case Success(:final response)) {
       if (response.liveStatus != 1) {
-        _showDialog('当前直播间未开播');
+        _showDialog('目前直播間未開播');
         return;
       }
       if (response.playurlInfo?.playurl == null) {
-        _showDialog('无法获取播放地址');
+        _showDialog('無法取得播放地址');
         return;
       }
       ruid = response.uid;
@@ -209,7 +209,7 @@ class LiveRoomController extends GetxController {
       List<CodecItem> codec =
           response.playurlInfo!.playurl!.stream!.first.format!.first.codec!;
       CodecItem item = codec.first;
-      // 以服务端返回的码率为准
+      // 以服務端返回的碼率為準
       currentQn = item.currentQn!;
       acceptQnList = item.acceptQn!.map((e) {
         return (
@@ -248,7 +248,7 @@ class LiveRoomController extends GetxController {
           TextButton(
             onPressed: Get.back,
             child: Text(
-              '关闭',
+              '關閉',
               style: TextStyle(color: ThemeUtils.theme.colorScheme.outline),
             ),
           ),
@@ -397,7 +397,7 @@ class LiveRoomController extends GetxController {
     super.onClose();
   }
 
-  // 修改画质
+  // 修改畫質
   Future<void>? changeQn(int qn) {
     if (currentQn == qn) {
       return null;
@@ -443,7 +443,7 @@ class LiveRoomController extends GetxController {
   @pragma('vm:notify-debugger-on-exception')
   void _danmakuListener(dynamic obj) {
     try {
-      // logger.i(' 原始弹幕消息 ======> ${jsonEncode(obj)}');
+      // logger.i(' 原始彈幕消息 ======> ${jsonEncode(obj)}');
       switch (obj['cmd']) {
         case 'DANMU_MSG':
           final info = obj['info'];
@@ -585,7 +585,7 @@ class LiveRoomController extends GetxController {
       anchorId: roomInfoH5.value?.roomInfo?.uid,
     );
     if (res.isSuccess) {
-      SmartDialog.showToast('点赞成功');
+      SmartDialog.showToast('點贊成功');
     } else {
       res.toast();
     }
@@ -594,7 +594,7 @@ class LiveRoomController extends GetxController {
 
   void onSendDanmaku([bool fromEmote = false]) {
     if (kReleaseMode && !isLogin) {
-      SmartDialog.showToast('账号未登录');
+      SmartDialog.showToast('帳號未登入');
       return;
     }
     Get.key.currentState!.push(
@@ -625,7 +625,7 @@ class LiveRoomController extends GetxController {
 
   void reportSC(SuperChatItem item) {
     if (!isLogin) {
-      SmartDialog.showToast('账号未登录');
+      SmartDialog.showToast('帳號未登入');
       return;
     }
     autoWrapReportDialog(

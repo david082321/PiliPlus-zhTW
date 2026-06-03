@@ -27,7 +27,7 @@ class PlDanmakuController {
   late final _isLogin = Accounts.main.isLogin;
 
   final Map<int, List<DanmakuElem>> _dmSegMap = HashMap();
-  // 已请求的段落标记
+  // 已請求的段落標記
   late final Set<int> _requestedSeg = HashSet();
 
   static const int segmentLength = 60 * 6 * 1000;
@@ -93,7 +93,7 @@ class PlDanmakuController {
         }
       }
 
-      final int pos = element.progress ~/ 100; //每0.1秒存储一次
+      final int pos = element.progress ~/ 100; //每0.1秒儲存一次
       (_dmSegMap[pos] ??= []).add(element);
     }
   }

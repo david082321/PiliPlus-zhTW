@@ -169,7 +169,7 @@ class _VideoDetailPageVState extends State<VideoDetailPageV>
     addObserverMobile(this);
   }
 
-  // 获取视频资源，初始化播放器
+  // 取得影片資源，初始化播放器
   void videoSourceInit() {
     videoDetailController.queryVideoUrl(autoFullScreenFlag: true);
     if (videoDetailController.autoPlay) {
@@ -213,7 +213,7 @@ class _VideoDetailPageVState extends State<VideoDetailPageV>
     return plPlayerController?.play();
   }
 
-  // 播放器状态监听
+  // 播放器狀態監聽
   Future<void> playerListener(PlayerStatus status) async {
     final isPlaying = status.isPlaying;
     try {
@@ -257,7 +257,7 @@ class _VideoDetailPageVState extends State<VideoDetailPageV>
 
       bool exitFlag = true;
 
-      /// 顺序播放 列表循环
+      /// 順序播放 列表循環
       if (shutdownTimerService.isWaiting) {
         shutdownTimerService.handleWaiting();
       } else {
@@ -289,12 +289,12 @@ class _VideoDetailPageVState extends State<VideoDetailPageV>
     }
   }
 
-  // 继续播放或重新播放
+  // 繼續播放或重新播放
   void continuePlay() {
     plPlayerController!.play();
   }
 
-  /// 未开启自动播放时触发播放
+  /// 未開啟自動播放時觸發播放
   Future<void>? handlePlay() {
     if (!videoDetailController.isFileSource) {
       if (videoDetailController.isQuerying) {
@@ -368,7 +368,7 @@ class _VideoDetailPageVState extends State<VideoDetailPageV>
   }
 
   @override
-  // 离开当前页面时
+  // 離開目前頁面時
   void didPushNext() {
     super.didPushNext();
     isShowing = false;
@@ -396,7 +396,7 @@ class _VideoDetailPageVState extends State<VideoDetailPageV>
   }
 
   @override
-  // 返回当前页面时
+  // 返回目前頁面時
   void didPopNext() {
     super.didPopNext();
 
@@ -616,7 +616,7 @@ class _VideoDetailPageVState extends State<VideoDetailPageV>
                                             width: 42,
                                             height: 34,
                                             child: IconButton(
-                                              tooltip: '返回主页',
+                                              tooltip: '返回首頁',
                                               icon: Icon(
                                                 FontAwesomeIcons.house,
                                                 size: 15,
@@ -646,7 +646,7 @@ class _VideoDetailPageVState extends State<VideoDetailPageV>
                                                 ? '立即'
                                                 : plPlayerController!.playerStatus.isCompleted
                                                 ? '重新'
-                                                : '继续'}播放',
+                                                : '繼續'}播放',
                                             style: TextStyle(
                                               color:
                                                   themeData.colorScheme.primary,
@@ -667,7 +667,7 @@ class _VideoDetailPageVState extends State<VideoDetailPageV>
                                               width: 42,
                                               height: 34,
                                               child: IconButton(
-                                                tooltip: "更多设置",
+                                                tooltip: "更多設定",
                                                 style: const ButtonStyle(
                                                   padding:
                                                       WidgetStatePropertyAll(
@@ -988,7 +988,7 @@ class _VideoDetailPageVState extends State<VideoDetailPageV>
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   buildTabBar(
-                    introText: '相关视频',
+                    introText: '相關影片',
                     showIntro: videoDetailController.isFileSource
                         ? true
                         : showIntro,
@@ -1161,7 +1161,7 @@ class _VideoDetailPageVState extends State<VideoDetailPageV>
                     width: 42,
                     height: 34,
                     child: IconButton(
-                      tooltip: '返回主页',
+                      tooltip: '返回首頁',
                       icon: const Icon(
                         FontAwesomeIcons.house,
                         size: 15,
@@ -1222,38 +1222,38 @@ class _VideoDetailPageVState extends State<VideoDetailPageV>
     itemBuilder: (BuildContext context) => <PopupMenuEntry>[
       PopupMenuItem(
         onTap: introController.viewLater,
-        child: const Text('稍后再看'),
+        child: const Text('稍後再看'),
       ),
       if (videoDetailController.epId == null)
         PopupMenuItem(
           onTap: () => videoDetailController.showNoteList(context),
-          child: const Text('查看笔记'),
+          child: const Text('查看筆記'),
         ),
       if (!videoDetailController.isFileSource)
         PopupMenuItem(
           onTap: () => videoDetailController.onDownload(this.context),
-          child: const Text('缓存视频'),
+          child: const Text('快取影片'),
         ),
       if (videoDetailController.cover.value.isNotEmpty)
         PopupMenuItem(
           onTap: () =>
               ImageUtils.downloadImg([videoDetailController.cover.value]),
-          child: const Text('保存封面'),
+          child: const Text('儲存封面'),
         ),
       if (!videoDetailController.isFileSource && videoDetailController.isUgc)
         PopupMenuItem(
           onTap: videoDetailController.toAudioPage,
-          child: const Text('听音频'),
+          child: const Text('聽音訊'),
         ),
       PopupMenuItem(
         onTap: () {
           if (!Accounts.main.isLogin) {
-            SmartDialog.showToast('账号未登录');
+            SmartDialog.showToast('帳號未登入');
           } else {
             PageUtils.reportVideo(videoDetailController.aid);
           }
         },
-        child: const Text('举报'),
+        child: const Text('檢舉'),
       ),
     ],
   );
@@ -1358,8 +1358,8 @@ class _VideoDetailPageVState extends State<VideoDetailPageV>
   }) {
     List<String> tabs = [
       if (showIntro)
-        videoDetailController.isFileSource ? '离线视频' : introText ?? '简介',
-      if (videoDetailController.showReply) '评论',
+        videoDetailController.isFileSource ? '離線影片' : introText ?? '簡介',
+      if (videoDetailController.showReply) '評論',
       if (_shouldShowSeasonPanel) '播放列表',
     ];
     if (videoDetailController.tabCtr.length != tabs.length) {
@@ -1393,10 +1393,10 @@ class _VideoDetailPageVState extends State<VideoDetailPageV>
           }
           String text = tabs[value];
           if (videoDetailController.isFileSource ||
-              text == '简介' ||
-              text == '相关视频') {
+              text == '簡介' ||
+              text == '相關影片') {
             videoDetailController.introScrollCtr?.animToTop();
-          } else if (text.startsWith('评论')) {
+          } else if (text.startsWith('評論')) {
             _videoReplyController.animateToTop();
           }
         }
@@ -1408,11 +1408,11 @@ class _VideoDetailPageVState extends State<VideoDetailPageV>
         }
       },
       tabs: tabs.map((text) {
-        if (text == '评论') {
+        if (text == '評論') {
           return Obx(() {
             final count = _videoReplyController.count.value;
             return Tab(
-              text: '评论${count == -1 ? '' : ' ${NumUtils.numFormat(count)}'}',
+              text: '評論${count == -1 ? '' : ' ${NumUtils.numFormat(count)}'}',
             );
           });
         } else {
@@ -1454,7 +1454,7 @@ class _VideoDetailPageVState extends State<VideoDetailPageV>
                         ),
                         onPressed: videoDetailController.showShootDanmakuSheet,
                         child: Text(
-                          '发弹幕',
+                          '發彈幕',
                           style: TextStyle(
                             fontSize: 12,
                             color: themeData.colorScheme.onSurfaceVariant,
@@ -1919,7 +1919,7 @@ class _VideoDetailPageVState extends State<VideoDetailPageV>
     heroTag: heroTag,
   );
 
-  // ai总结
+  // ai總結
   void showAiBottomSheet() {
     videoDetailController.childKey.currentState?.showBottomSheet(
       backgroundColor: Colors.transparent,
@@ -2017,7 +2017,7 @@ class _VideoDetailPageVState extends State<VideoDetailPageV>
 
   void onReversePlay({required bool isSeason}) {
     if (isSeason && videoDetailController.isPlayAll) {
-      SmartDialog.showToast('当前为播放全部，合集不支持倒序');
+      SmartDialog.showToast('目前為播放全部，合集不支援倒序');
       return;
     }
 

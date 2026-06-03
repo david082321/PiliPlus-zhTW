@@ -29,7 +29,7 @@ abstract class CommonIntroController extends GetxController
   late final String heroTag;
   late String bvid;
 
-  // 是否稍后再看
+  // 是否稍後再看
   final RxBool hasLater = false.obs;
 
   final Rx<List<VideoTagItem>?> videoTags = Rx<List<VideoTagItem>?>(null);
@@ -62,7 +62,7 @@ abstract class CommonIntroController extends GetxController
 
   void actionShareVideo(BuildContext context);
 
-  // 同时观看
+  // 同時觀看
   final bool isShowOnlineTotal = Pref.enableOnlineTotal;
   late final RxString total = '1'.obs;
   Timer? timer;
@@ -98,7 +98,7 @@ abstract class CommonIntroController extends GetxController
     timer = null;
   }
 
-  // 查看同时在看人数
+  // 查看同時在看人數
   Future<void> queryOnlineTotal() async {
     if (!isShowOnlineTotal) {
       return;
@@ -131,7 +131,7 @@ abstract class CommonIntroController extends GetxController
       selectLike: coinWithLike ? 1 : 0,
     );
     if (res.isSuccess) {
-      SmartDialog.showToast('投币成功');
+      SmartDialog.showToast('投幣成功');
       coinNum.value += coin;
       GlobalData().afterCoin(coin);
       stat.coin += coin;
@@ -203,12 +203,12 @@ mixin FavMixin on TripleMixin {
   // 收藏
   void showFavBottomSheet(BuildContext context, {bool isLongPress = false}) {
     if (!Accounts.main.isLogin) {
-      SmartDialog.showToast('账号未登录');
+      SmartDialog.showToast('帳號未登入');
       return;
     }
     // 快速收藏 &
-    // 点按 收藏至默认文件夹
-    // 长按选择文件夹
+    // 點按 收藏至預設資料夾
+    // 長按選擇資料夾
     if (enableQuickFav) {
       if (!isLongPress) {
         actionFavVideo(isQuick: true);
@@ -224,9 +224,9 @@ mixin FavMixin on TripleMixin {
 
   Future<void> actionFavVideo({bool isQuick = false}) async {
     final (rid, type) = getFavRidType;
-    // 收藏至默认文件夹
+    // 收藏至預設資料夾
     if (isQuick) {
-      SmartDialog.showLoading(msg: '请求中');
+      SmartDialog.showLoading(msg: '請求中');
       queryVideoInFolder().then((res) async {
         if (res.isSuccess) {
           final hasFav = this.hasFav.value;
@@ -269,7 +269,7 @@ mixin FavMixin on TripleMixin {
     } catch (e) {
       if (kDebugMode) debugPrint(e.toString());
     }
-    SmartDialog.showLoading(msg: '请求中');
+    SmartDialog.showLoading(msg: '請求中');
     final result = await FavHttp.favVideo(
       resources: '$rid:$type',
       addIds: addMediaIdsNew.join(','),

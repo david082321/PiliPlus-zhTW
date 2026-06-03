@@ -91,7 +91,7 @@ abstract final class PgcHttp {
   }
 
   static Future<LoadingState<List<TimelineResult>?>> pgcTimeline({
-    int types = 1, // 1：`番剧`<br />3：`电影`<br />4：`国创` |
+    int types = 1, // 1：`番劇`<br />3：`電影`<br />4：`國創` |
     required int before,
     required int after,
   }) async {

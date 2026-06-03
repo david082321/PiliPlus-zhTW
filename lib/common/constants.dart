@@ -1,8 +1,8 @@
 abstract final class Constants {
   static const appName = 'PiliPlus';
-  static const sourceCodeUrl = 'https://github.com/bggRGjQaUbCoE/PiliPlus';
+  static const sourceCodeUrl = 'https://github.com/david082321/PiliPlus-zhTW';
 
-  // 27eb53fc9058f8c3  移动端 Android
+  // 27eb53fc9058f8c3  行動端 Android
   // 4409e2ce8ffd12b8  HD版
   static const String appKey = 'dfca71928277209b';
   // 59b43e04ad6965f34319062b478f83dd TV端
@@ -17,7 +17,7 @@ abstract final class Constants {
       'Mozilla/5.0 BiliDroid/2.0.1 (bbcallen@gmail.com) os/android model/android_hd mobi_app/android_hd build/2001100 channel/master innerVer/2001100 osVer/15 network/2';
   static const String statistics =
       '{"appId":5,"platform":3,"version":"2.0.1","abtest":""}';
-  // 请求时会自动encodeComponent
+  // 請求時會自動encodeComponent
 
   // app
   static const String userAgentApp =

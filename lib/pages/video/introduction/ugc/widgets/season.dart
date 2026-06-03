@@ -55,14 +55,14 @@ class _SeasonPanelState extends State<SeasonPanel> {
         ? videoDetail.pages!.last.cid
         : videoDetail.pages!.first.cid;
 
-    /// 根据 cid 找到对应集，找到对应 episodes
-    /// 有多个episodes时，只显示其中一个
+    /// 根據 cid 找到對應集，找到對應 episodes
+    /// 有多個episodes時，只顯示其中一個
     _findEpisode();
     if (episodes.isEmpty) {
       return;
     }
 
-    /// 取对应 season_id 的 episodes
+    /// 取對應 season_id 的 episodes
     currentIndex.value = episodes.indexWhere(
       (EpisodeItem e) => e.cid == _videoDetailController.seasonCid,
     );

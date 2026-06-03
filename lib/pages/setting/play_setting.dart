@@ -19,7 +19,7 @@ class _PlaySettingState extends State<PlaySetting> {
     final padding = MediaQuery.viewPaddingOf(context);
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      appBar: showAppBar ? AppBar(title: const Text('播放器设置')) : null,
+      appBar: showAppBar ? AppBar(title: const Text('播放器設定')) : null,
       body: ListView.builder(
         padding: EdgeInsets.only(
           left: showAppBar ? padding.left : 0,

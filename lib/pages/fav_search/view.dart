@@ -47,7 +47,7 @@ class _FavSearchPageState
           mediaId: controller.mediaId,
           mid: Accounts.main.mid,
         ),
-        child: Text('复制', style: textStyle),
+        child: Text('複製', style: textStyle),
       ),
       TextButton(
         style: btnStyle,
@@ -58,7 +58,7 @@ class _FavSearchPageState
           mediaId: controller.mediaId,
           mid: Accounts.main.mid,
         ),
-        child: Text('移动', style: textStyle),
+        child: Text('移動', style: textStyle),
       ),
     ];
   }

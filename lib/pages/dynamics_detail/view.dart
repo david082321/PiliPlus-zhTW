@@ -399,7 +399,7 @@ class _DynamicDetailPageState extends CommonDynPageState<DynamicDetailPage> {
                       final forward = moduleStat?.forward;
                       return textIconButton(
                         icon: FontAwesomeIcons.shareFromSquare,
-                        text: '转发',
+                        text: '轉發',
                         stat: forward,
                         onPressed: (_) => showModalBottomSheet(
                           context: context,
@@ -438,7 +438,7 @@ class _DynamicDetailPageState extends CommonDynPageState<DynamicDetailPage> {
                       return textIconButton(
                         icon: FontAwesomeIcons.thumbsUp,
                         activatedIcon: FontAwesomeIcons.solidThumbsUp,
-                        text: '点赞',
+                        text: '按讚',
                         stat: moduleStat?.like,
                         onPressed: (iconColor) => RequestUtils.onLikeDynamic(
                           controller.dynItem,

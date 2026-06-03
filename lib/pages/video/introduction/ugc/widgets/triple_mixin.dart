@@ -9,11 +9,11 @@ import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:get/get.dart';
 
 mixin TripleMixin on GetxController, TickerProvider {
-  // 是否点赞
+  // 是否按讚
   final RxBool hasLike = false.obs;
-  // 投币数量
+  // 投幣數量
   final RxNum coinNum = RxNum(0);
-  // 是否投币
+  // 是否投幣
   bool get hasCoin => coinNum.value != 0;
   // 是否收藏
   final RxBool hasFav = false.obs;
@@ -36,7 +36,7 @@ mixin TripleMixin on GetxController, TickerProvider {
 
   void actionCoinVideo() {
     if (!isLogin) {
-      SmartDialog.showToast('账号未登录');
+      SmartDialog.showToast('帳號未登入');
       return;
     }
 
@@ -44,12 +44,12 @@ mixin TripleMixin on GetxController, TickerProvider {
     final copyright = this.copyright;
     final hasCopyright = isHasCopyright(copyright);
     if (reachCoinLimit(hasCopyright, coinNum)) {
-      SmartDialog.showToast('达到投币上限啦~');
+      SmartDialog.showToast('達到投幣上限啦~');
       return;
     }
 
     if (GlobalData().coins != null && GlobalData().coins! < 1) {
-      SmartDialog.showToast('硬币不足');
+      SmartDialog.showToast('硬幣不足');
       // return;
     }
 
@@ -92,7 +92,7 @@ mixin TripleMixin on GetxController, TickerProvider {
     _timer ??= Timer(_duration, () {
       HapticFeedback.lightImpact();
       if (hasTriple) {
-        SmartDialog.showToast('已完成三连');
+        SmartDialog.showToast('已完成三連');
       } else {
         tripleAnimCtr.forward().whenComplete(() {
           tripleAnimCtr.reset();

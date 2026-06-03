@@ -38,7 +38,7 @@ class PgcIntroController extends CommonIntroController {
 
   late final String pgcType = pgcItem.type == 1 || pgcItem.type == 4
       ? '追番'
-      : '追剧';
+      : '追劇';
 
   late final bool isPgc;
   late final PgcInfoModel pgcItem;
@@ -74,7 +74,7 @@ class PgcIntroController extends CommonIntroController {
     }
   }
 
-  // 获取点赞/投币/收藏状态
+  // 取得按讚/投幣/收藏狀態
   Future<void> queryPgcLikeCoinFav() async {
     final result = await VideoHttp.pgcLikeCoinFav(epId: epId!);
     if (result case Success(:final response)) {
@@ -95,17 +95,17 @@ class PgcIntroController extends CommonIntroController {
     }
   }
 
-  // （取消）点赞
+  // （取消）按讚
   @override
   Future<void> actionLikeVideo() async {
     if (!isLogin) {
-      SmartDialog.showToast('账号未登录');
+      SmartDialog.showToast('帳號未登入');
       return;
     }
     final newVal = !hasLike.value;
     final result = await VideoHttp.likeVideo(bvid: bvid, type: newVal);
     if (result case Success(:final response)) {
-      SmartDialog.showToast(newVal ? response : '取消赞');
+      SmartDialog.showToast(newVal ? response : '取消讚');
       pgcItem.stat?.like += newVal ? 1 : -1;
       hasLike.value = newVal;
     } else {
@@ -116,7 +116,7 @@ class PgcIntroController extends CommonIntroController {
   @override
   int get copyright => 1;
 
-  // 分享视频
+  // 分享影片
   @override
   void actionShareVideo(BuildContext context) {
     String videoUrl =
@@ -132,7 +132,7 @@ class PgcIntroController extends CommonIntroController {
             ListTile(
               dense: true,
               title: const Text(
-                '复制链接',
+                '複製連結',
                 style: TextStyle(fontSize: 14),
               ),
               onTap: () {
@@ -143,7 +143,7 @@ class PgcIntroController extends CommonIntroController {
             ListTile(
               dense: true,
               title: const Text(
-                '其它app打开',
+                '其它app打開',
                 style: TextStyle(fontSize: 14),
               ),
               onTap: () {
@@ -155,7 +155,7 @@ class PgcIntroController extends CommonIntroController {
               ListTile(
                 dense: true,
                 title: const Text(
-                  '分享视频',
+                  '分享影片',
                   style: TextStyle(fontSize: 14),
                 ),
                 onTap: () {
@@ -172,7 +172,7 @@ class PgcIntroController extends CommonIntroController {
             ListTile(
               dense: true,
               title: const Text(
-                '分享至动态',
+                '分享至動態',
                 style: TextStyle(fontSize: 14),
               ),
               onTap: () {
@@ -187,13 +187,13 @@ class PgcIntroController extends CommonIntroController {
                   builder: (context) => RepostPanel(
                     rid: epId,
                     /**
-                         *  1：番剧 // 4097
-                            2：电影 // 4098
-                            3：纪录片 // 4101
-                            4：国创 // 4100
-                            5：电视剧 // 4099
-                            6：漫画
-                            7：综艺 // 4099
+                         *  1：番劇 // 4097
+                            2：電影 // 4098
+                            3：紀錄片 // 4101
+                            4：國創 // 4100
+                            5：電視劇 // 4099
+                            6：漫畫
+                            7：綜藝 // 4099
                          */
                     dynType: switch (pgcItem.type) {
                       1 => 4097,
@@ -236,13 +236,13 @@ class PgcIntroController extends CommonIntroController {
                       "source": 16,
                       "thumb": item.cover,
                       "source_desc": switch (pgcItem.type) {
-                        1 => '番剧',
-                        2 => '电影',
-                        3 => '纪录片',
-                        4 => '国创',
-                        5 => '电视剧',
-                        6 => '漫画',
-                        7 => '综艺',
+                        1 => '番劇',
+                        2 => '電影',
+                        3 => '紀錄片',
+                        4 => '國創',
+                        5 => '電視劇',
+                        6 => '漫畫',
+                        7 => '綜藝',
                         _ => null,
                       },
                     },
@@ -258,7 +258,7 @@ class PgcIntroController extends CommonIntroController {
     );
   }
 
-  // 修改分P或番剧分集
+  // 修改分P或番劇分集
   Future<bool> onChangeEpisode(BaseEpisodeItem episode) async {
     try {
       final int epId = episode.epId ?? episode.id!;
@@ -271,7 +271,7 @@ class PgcIntroController extends CommonIntroController {
       }
       final String? cover = episode.cover;
 
-      // 重新获取视频资源
+      // 重新取得影片資源
       this.epId = epId;
       this.bvid = bvid;
 
@@ -288,7 +288,7 @@ class PgcIntroController extends CommonIntroController {
         videoDetailCtr.cover.value = cover;
       }
 
-      // 重新请求评论
+      // 重新請求評論
       if (videoDetailCtr.showReply) {
         try {
           final replyCtr = Get.find<VideoReplyController>(tag: heroTag)
@@ -369,7 +369,7 @@ class PgcIntroController extends CommonIntroController {
     return true;
   }
 
-  /// 列表循环或者顺序播放时，自动播放下一个；自动连播时，播放相关视频
+  /// 列表循環或者順序播放時，自動播放下一個；自動連播時，播放相關影片
   @override
   bool nextPlay() {
     try {
@@ -381,7 +381,7 @@ class PgcIntroController extends CommonIntroController {
         (e) => e.cid == videoDetailCtr.cid.value,
       );
       int nextIndex = currentIndex + 1;
-      // 列表循环
+      // 列表循環
       if (nextIndex >= episodes.length) {
         if (playRepeat == PlayRepeat.listCycle) {
           nextIndex = 0;
@@ -398,17 +398,17 @@ class PgcIntroController extends CommonIntroController {
     }
   }
 
-  // 一键三连
+  // 一鍵三連
   @override
   Future<void> actionTriple() async {
     feedBack();
     if (!isLogin) {
-      SmartDialog.showToast('账号未登录');
+      SmartDialog.showToast('帳號未登入');
       return;
     }
     if (hasLike.value && hasCoin && hasFav.value) {
-      // 已点赞、投币、收藏
-      SmartDialog.showToast('已三连');
+      // 已按讚、投幣、收藏
+      SmartDialog.showToast('已三連');
       return;
     }
     final result = await VideoHttp.pgcTriple(epId: epId!, seasonId: seasonId);
@@ -428,9 +428,9 @@ class PgcIntroController extends CommonIntroController {
         hasFav.value = true;
       }
       if (!hasCoin) {
-        SmartDialog.showToast('投币失败');
+        SmartDialog.showToast('投幣失敗');
       } else {
-        SmartDialog.showToast('三连成功');
+        SmartDialog.showToast('三連成功');
       }
     } else {
       result.toast();

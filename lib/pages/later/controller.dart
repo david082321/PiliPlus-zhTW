@@ -29,10 +29,10 @@ mixin BaseLaterController
     showConfirmDialog(
       context: Get.context!,
       title: const Text('提示'),
-      content: const Text('确认删除所选稍后再看吗？'),
+      content: const Text('確認刪除所選稍後再看嗎？'),
       onConfirm: () async {
         final removeList = allChecked.toSet();
-        SmartDialog.showLoading(msg: '请求中');
+        SmartDialog.showLoading(msg: '請求中');
         final res = await UserHttp.toViewDel(
           aids: removeList.map((item) => item.aid).join(','),
         );
@@ -55,7 +55,7 @@ mixin BaseLaterController
       context: context,
       builder: (context) => AlertDialog(
         title: const Text('提示'),
-        content: const Text('即将移除该视频，确定是否移除'),
+        content: const Text('即將移除該影片，確定是否移除'),
         actions: [
           TextButton(
             onPressed: Get.back,
@@ -75,7 +75,7 @@ mixin BaseLaterController
                 updateCount?.call(1);
               }
             },
-            child: const Text('确认移除'),
+            child: const Text('確認移除'),
           ),
         ],
       ),
@@ -126,16 +126,16 @@ class LaterController extends MultiSelectController<LaterData, LaterItemModel>
     }
   }
 
-  // 一键清空
+  // 一鍵清空
   void toViewClear(BuildContext context, [int? cleanType]) {
     String content = switch (cleanType) {
-      1 => '确定清空已失效视频吗？',
-      2 => '确定清空已看完视频吗？',
-      _ => '确定清空稍后再看列表吗？',
+      1 => '確定清空已失效影片嗎？',
+      2 => '確定清空已看完影片嗎？',
+      _ => '確定清空稍後再看列表嗎？',
     };
     showConfirmDialog(
       context: context,
-      title: const Text('确认'),
+      title: const Text('確認'),
       content: Text(content),
       onConfirm: () async {
         final res = await UserHttp.toViewClear(cleanType);
@@ -156,7 +156,7 @@ class LaterController extends MultiSelectController<LaterData, LaterItemModel>
     );
   }
 
-  // 稍后再看播放全部
+  // 稍後再看播放全部
   void toViewPlayAll() {
     if (loadingState.value case Success(:final response)) {
       if (response == null || response.isEmpty) return;
@@ -174,7 +174,7 @@ class LaterController extends MultiSelectController<LaterData, LaterItemModel>
             extraArguments: {
               'sourceType': SourceType.watchLater,
               'count': baseCtr.counts[LaterViewType.all.index],
-              'favTitle': '稍后再看',
+              'favTitle': '稍後再看',
               'mediaId': mid,
               'desc': asc.value,
             },

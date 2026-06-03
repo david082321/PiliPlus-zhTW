@@ -24,7 +24,7 @@ class VideoCardVSkeleton extends StatelessWidget {
           Padding(
             // 多列
             padding: const EdgeInsets.fromLTRB(4, 5, 6, 6),
-            // 单列
+            // 單列
             // padding: const EdgeInsets.fromLTRB(14, 10, 4, 8),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,

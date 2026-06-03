@@ -31,13 +31,13 @@ abstract final class SponsorBlock {
 
   static Error getErrMsg(Response res) {
     String statusMessage = switch (res.statusCode) {
-      200 => '意料之外的响应',
-      400 => '参数错误',
-      403 => '被自动审核机制拒绝',
-      404 => '未找到数据',
-      409 => '重复提交',
-      429 => '提交太快（触发速率控制）',
-      500 => '服务器无法获取信息',
+      200 => '意料之外的響應',
+      400 => '參數錯誤',
+      403 => '被自動審核機制拒絕',
+      404 => '未找到資料',
+      409 => '重複提交',
+      429 => '提交太快（觸發速率控制）',
+      500 => '伺服器無法取得資訊',
       -1 => res.data['message'].toString(), // DioException
       _ => res.statusMessage ?? res.statusCode.toString(),
     };
@@ -171,12 +171,12 @@ abstract final class SponsorBlock {
   }
 
   /// {
-  ///   "bvID": string,     // B站视频BVID
-  ///   "cid": string,      // 视频CID
-  ///   "ytbID": string,    // YouTube视频ID
-  ///   "UUID": string,     // 绑定记录的UUID（不是视频中片段的UUID，是绑定记录本身的UUID）
-  ///   "votes": int,       // 绑定记录的投票数
-  ///   "locked": int,      // 绑定记录是否锁定
+  ///   "bvID": string,     // B站影片BVID
+  ///   "cid": string,      // 影片CID
+  ///   "ytbID": string,    // YouTube影片ID
+  ///   "UUID": string,     // 綁定記錄的UUID（不是影片中片段的UUID，是綁定記錄本身的UUID）
+  ///   "votes": int,       // 綁定記錄的投票數
+  ///   "locked": int,      // 綁定記錄是否鎖定
   /// }
   /// TODO: show port video info dialog
   static Future<LoadingState<String>> getPortVideo({

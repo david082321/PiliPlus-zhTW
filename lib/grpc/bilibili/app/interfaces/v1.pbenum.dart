@@ -58,7 +58,7 @@ class CommentType extends $pb.ProtobufEnum {
   const CommentType._(super.value, super.name);
 }
 
-/// 设备类型
+/// 裝置類型
 class DT extends $pb.ProtobufEnum {
   static const DT Unknown = DT._(0, _omitEnumNames ? '' : 'Unknown');
   static const DT Phone = DT._(1, _omitEnumNames ? '' : 'Phone');

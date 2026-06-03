@@ -79,7 +79,7 @@ class _DownloadPageState extends State<DownloadPage> {
                   if (res.every((e) => e)) {
                     SmartDialog.showToast('更新成功');
                   } else {
-                    SmartDialog.showToast('更新失败');
+                    SmartDialog.showToast('更新失敗');
                   }
                 },
                 child: Text(
@@ -89,10 +89,10 @@ class _DownloadPageState extends State<DownloadPage> {
               ),
             ],
             child: AppBar(
-              title: const Text('离线缓存'),
+              title: const Text('離線快取'),
               actions: [
                 IconButton(
-                  tooltip: '搜索',
+                  tooltip: '搜尋',
                   onPressed: () async {
                     await _downloadService.waitForInitialization;
                     if (!mounted) return;
@@ -101,7 +101,7 @@ class _DownloadPageState extends State<DownloadPage> {
                   icon: const Icon(Icons.search),
                 ),
                 IconButton(
-                  tooltip: '多选',
+                  tooltip: '多選',
                   onPressed: () {
                     if (enableMultiSelect) {
                       _controller.handleSelect();
@@ -132,7 +132,7 @@ class _DownloadPageState extends State<DownloadPage> {
                           padding: const EdgeInsets.only(left: 12, bottom: 7),
                           sliver: SliverToBoxAdapter(
                             child: Text(
-                              '正在缓存 (${_downloadService.waitDownloadQueue.length})',
+                              '正在快取 (${_downloadService.waitDownloadQueue.length})',
                             ),
                           ),
                         ),
@@ -167,7 +167,7 @@ class _DownloadPageState extends State<DownloadPage> {
                                 : 7,
                           ),
                           sliver: const SliverToBoxAdapter(
-                            child: Text('已缓存视频'),
+                            child: Text('已快取影片'),
                           ),
                         ),
                         SliverGrid.builder(
@@ -243,7 +243,7 @@ class _DownloadPageState extends State<DownloadPage> {
                       Get.back();
                       showConfirmDialog(
                         context: context,
-                        title: const Text('确定删除？'),
+                        title: const Text('確定刪除？'),
                         onConfirm: () async {
                           await GStorage.watchProgress.deleteAll(
                             pageInfo.entries.map((e) => e.cid.toString()),
@@ -256,7 +256,7 @@ class _DownloadPageState extends State<DownloadPage> {
                     },
                     dense: true,
                     title: const Text(
-                      '删除',
+                      '刪除',
                       style: TextStyle(fontSize: 14),
                     ),
                   ),
@@ -274,12 +274,12 @@ class _DownloadPageState extends State<DownloadPage> {
                       if (res.every((e) => e)) {
                         SmartDialog.showToast('更新成功');
                       } else {
-                        SmartDialog.showToast('更新失败');
+                        SmartDialog.showToast('更新失敗');
                       }
                     },
                     dense: true,
                     title: const Text(
-                      '更新弹幕',
+                      '更新彈幕',
                       style: TextStyle(fontSize: 14),
                     ),
                   ),
@@ -328,7 +328,7 @@ class _DownloadPageState extends State<DownloadPage> {
                     ),
                   ),
                   PBadge(
-                    text: '${pageInfo.entries.length}个视频',
+                    text: '${pageInfo.entries.length}個影片',
                     right: 6.0,
                     bottom: 6.0,
                     isBold: false,
@@ -337,13 +337,13 @@ class _DownloadPageState extends State<DownloadPage> {
                   if (pageInfo.seasonType case final pgcType?)
                     PBadge(
                       text: switch (pgcType) {
-                        -1 => '课程',
-                        1 => '番剧',
-                        2 => '电影',
-                        3 => '纪录片',
-                        4 => '国创',
-                        5 => '电视剧',
-                        7 => '综艺',
+                        -1 => '課程',
+                        1 => '番劇',
+                        2 => '電影',
+                        3 => '紀錄片',
+                        4 => '國創',
+                        5 => '電視劇',
+                        7 => '綜藝',
                         _ => null,
                       },
                       right: 6.0,

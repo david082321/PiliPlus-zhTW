@@ -19,7 +19,7 @@ import 'package:PiliPlus/utils/platform_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-// 收藏视频卡片 - 水平布局
+// 收藏影片卡片 - 水平布局
 class FavVideoCardH extends StatelessWidget {
   final FavDetailItemModel item;
   final int? index;
@@ -118,7 +118,7 @@ class FavVideoCardH extends StatelessWidget {
                         ),
                         if (item.type == 12)
                           const PBadge(
-                            text: '音频',
+                            text: '音訊',
                             top: 6.0,
                             right: 6.0,
                             type: PBadgeType.gray,
@@ -219,7 +219,7 @@ class FavVideoCardH extends StatelessWidget {
                   context: context,
                   builder: (context) => AlertDialog(
                     title: const Text('提示'),
-                    content: const Text('要取消收藏吗?'),
+                    content: const Text('要取消收藏嗎?'),
                     actions: [
                       TextButton(
                         onPressed: Get.back,
@@ -233,7 +233,7 @@ class FavVideoCardH extends StatelessWidget {
                           Get.back();
                           ctr!.onCancelFav(index!, item.id!, item.type!);
                         },
-                        child: const Text('确定取消'),
+                        child: const Text('確定取消'),
                       ),
                     ],
                   ),

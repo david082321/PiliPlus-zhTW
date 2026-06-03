@@ -38,7 +38,7 @@ abstract final class UrlUtils {
     return redirectUrl;
   }
 
-  // 匹配url路由跳转
+  // 匹配url路由跳轉
   static Future<void> matchUrlPush(
     String pathSegment,
     String redirectUrl,

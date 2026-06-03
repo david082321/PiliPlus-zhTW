@@ -43,7 +43,7 @@ class _MatchInfoPageState extends CommonDynPageState<MatchInfoPage> {
     final theme = Theme.of(context);
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      appBar: AppBar(title: const Text('比赛详情')),
+      appBar: AppBar(title: const Text('比賽詳情')),
       body: ViewSafeArea(
         child: refreshIndicator(
           onRefresh: controller.onRefresh,
@@ -150,7 +150,7 @@ class _MatchInfoPageState extends CommonDynPageState<MatchInfoPage> {
                           )
                         else if (response.contestStatus == 3)
                           Text(
-                            '${DateFormatUtils.dateFormat(response.stime)}${response.contestStatus == 3 ? ' 已结束' : ''}',
+                            '${DateFormatUtils.dateFormat(response.stime)}${response.contestStatus == 3 ? ' 已結束' : ''}',
                             style: TextStyle(
                               color: theme.colorScheme.outline,
                             ),
@@ -201,7 +201,7 @@ class _MatchInfoPageState extends CommonDynPageState<MatchInfoPage> {
         Scaffold(
           resizeToAvoidBottomInset: false,
           appBar: AppBar(
-            title: const Text('评论详情'),
+            title: const Text('評論詳情'),
             shape: Border(
               bottom: BorderSide(
                 color: theme.colorScheme.outline.withValues(alpha: 0.1),

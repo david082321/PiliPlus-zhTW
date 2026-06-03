@@ -11,7 +11,7 @@ import 'package:canvas_danmaku/canvas_danmaku.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-/// 传入播放器控制器，监听播放进度，加载对应弹幕
+/// 傳入播放器控制器，監聽播放進度，載入對應彈幕
 class PlDanmaku extends StatefulWidget {
   final int cid;
   final PlPlayerController playerController;
@@ -78,7 +78,7 @@ class _PlDanmakuState extends State<PlDanmaku> {
     }
   }
 
-  // 播放器状态监听
+  // 播放器狀態監聽
   void playerListener(PlayerStatus status) {
     if (_controller case final controller?) {
       if (status.isPlaying) {
@@ -104,7 +104,7 @@ class _PlDanmakuState extends State<PlDanmaku> {
     }
 
     int currentPosition = position.inMilliseconds;
-    currentPosition -= currentPosition % 100; //取整百的毫秒数
+    currentPosition -= currentPosition % 100; //取整百的毫秒數
     if (currentPosition == latestAddedPosition) {
       return;
     }

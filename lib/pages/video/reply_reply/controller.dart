@@ -26,9 +26,9 @@ class VideoReplyReplyController extends ReplyController
   });
   final int? dialog;
   int? id;
-  // 视频aid 请求时使用的oid
+  // 影片aid 請求時使用的oid
   int oid;
-  // rpid 请求楼中楼回复
+  // rpid 請求樓中樓回復
   int rpid;
   int replyType;
 

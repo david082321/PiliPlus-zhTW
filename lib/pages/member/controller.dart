@@ -35,7 +35,7 @@ class MemberController extends CommonDataController<SpaceData, SpaceData?>
   Live? live;
   int? silence;
 
-  int? isFollowed; // 被关注
+  int? isFollowed; // 被關注
   RxInt relation = 0.obs;
   bool get isFollow => relation.value != 0 && relation.value != 128;
 
@@ -144,11 +144,11 @@ class MemberController extends CommonDataController<SpaceData, SpaceData?>
   @override
   bool handleError(String? errMsg) {
     tab2 = const [
-      SpaceTab2(title: '动态', param: 'dynamic'),
+      SpaceTab2(title: '動態', param: 'dynamic'),
       SpaceTab2(
         title: '投稿',
         param: 'contribute',
-        items: [SpaceTab2Item(title: '视频', param: 'video')],
+        items: [SpaceTab2Item(title: '影片', param: 'video')],
       ),
       SpaceTab2(title: '收藏', param: 'favorite'),
       SpaceTab2(title: '追番', param: 'bangumi'),
@@ -172,19 +172,19 @@ class MemberController extends CommonDataController<SpaceData, SpaceData?>
 
   void blockUser(BuildContext context) {
     if (!account.isLogin) {
-      SmartDialog.showToast('账号未登录');
+      SmartDialog.showToast('帳號未登入');
       return;
     }
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
         title: const Text('提示'),
-        content: Text(relation.value != 128 ? '确定拉黑UP主?' : '从黑名单移除UP主'),
+        content: Text(relation.value != 128 ? '確定封鎖UP主?' : '從黑名單移除UP主'),
         actions: [
           TextButton(
             onPressed: Get.back,
             child: Text(
-              '点错了',
+              '點錯了',
               style: TextStyle(color: Theme.of(context).colorScheme.outline),
             ),
           ),
@@ -193,7 +193,7 @@ class MemberController extends CommonDataController<SpaceData, SpaceData?>
               Get.back();
               _onBlock();
             },
-            child: const Text('确认'),
+            child: const Text('確認'),
           ),
         ],
       ),
@@ -223,7 +223,7 @@ class MemberController extends CommonDataController<SpaceData, SpaceData?>
       _onBlock();
     } else {
       if (!account.isLogin) {
-        SmartDialog.showToast('账号未登录');
+        SmartDialog.showToast('帳號未登入');
         return;
       }
       RequestUtils.actionRelationMod(
@@ -268,7 +268,7 @@ class MemberController extends CommonDataController<SpaceData, SpaceData?>
   Future<void> vipExpAdd() async {
     final res = await UserHttp.vipExpAdd();
     if (res.isSuccess) {
-      SmartDialog.showToast('领取成功');
+      SmartDialog.showToast('領取成功');
     } else {
       res.toast();
     }

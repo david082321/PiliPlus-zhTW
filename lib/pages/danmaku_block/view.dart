@@ -45,7 +45,7 @@ class _DanmakuBlockPageState extends State<DanmakuBlockPage> {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
-        title: const Text('弹幕屏蔽'),
+        title: const Text('彈幕封鎖'),
         bottom: TabBar(
           controller: _controller.tabController,
           tabs: DmBlockType.values
@@ -72,7 +72,7 @@ class _DanmakuBlockPageState extends State<DanmakuBlockPage> {
             .toList(),
       ),
       floatingActionButton: FloatingActionButton(
-        tooltip: '添加',
+        tooltip: '新增',
         onPressed: () =>
             _showAddDialog(DmBlockType.values[_controller.tabController.index]),
         child: const Icon(Icons.add),
@@ -93,11 +93,11 @@ class _DanmakuBlockPageState extends State<DanmakuBlockPage> {
         final SimpleRule item = list[itemIndex];
         final child = iconButton(
           iconSize: 20,
-          tooltip: '删除',
+          tooltip: '刪除',
           icon: const Icon(Icons.delete_outlined),
           onPressed: () => showConfirmDialog(
             context: context,
-            title: const Text('确定删除该规则？'),
+            title: const Text('確定刪除該規則？'),
             onConfirm: () => _controller.danmakuFilterDel(
               tabIndex,
               itemIndex,
@@ -117,7 +117,7 @@ class _DanmakuBlockPageState extends State<DanmakuBlockPage> {
                   children: [
                     iconButton(
                       iconSize: 20,
-                      tooltip: '编辑',
+                      tooltip: '編輯',
                       icon: const Icon(Icons.edit_outlined),
                       onPressed: () => _showAddDialog(
                         DmBlockType.values[_controller.tabController.index],
@@ -143,15 +143,15 @@ class _DanmakuBlockPageState extends State<DanmakuBlockPage> {
     assert((itemIndex == null) == (itemId == null));
     String filter = initFilter;
     final hintText = switch (type) {
-      DmBlockType.keyword => '输入过滤的关键词，其它类别请切换标签页后添加',
-      DmBlockType.regex => '输入//之间的正则表达式，无需包含头尾的"/"',
-      DmBlockType.uid => '输入用户UID',
+      DmBlockType.keyword => '輸入過濾的關鍵字，其它類別請切換分頁後新增',
+      DmBlockType.regex => '輸入//之間的正規表示式，無需包含頭尾的"/"',
+      DmBlockType.uid => '輸入使用者UID',
     };
     final isUid = type == DmBlockType.uid;
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
-        title: Text('${itemId != null ? "编辑" : "添加新的"}${type.label}规则'),
+        title: Text('${itemId != null ? "編輯" : "新增新的"}${type.label}規則'),
         content: Column(
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -177,7 +177,7 @@ class _DanmakuBlockPageState extends State<DanmakuBlockPage> {
             ),
           ),
           TextButton(
-            child: const Text('确定'),
+            child: const Text('確定'),
             onPressed: () async {
               if (filter != initFilter) {
                 Get.back();
@@ -194,7 +194,7 @@ class _DanmakuBlockPageState extends State<DanmakuBlockPage> {
                 );
               } else {
                 SmartDialog.showToast(
-                  '输入内容${filter.isEmpty ? "不能为空" : "与上次相同"}',
+                  '輸入內容${filter.isEmpty ? "不能為空" : "與上次相同"}',
                 );
               }
             },

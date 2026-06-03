@@ -37,8 +37,8 @@ class _LiveDmBlockPageState extends State<LiveDmBlockPage> {
     Widget tabBar = TabBar(
       controller: _controller.tabController,
       tabs: const [
-        Tab(text: '关键词'),
-        Tab(text: '用户'),
+        Tab(text: '關鍵字'),
+        Tab(text: '使用者'),
       ],
     );
 
@@ -61,7 +61,7 @@ class _LiveDmBlockPageState extends State<LiveDmBlockPage> {
         bottom: 12,
       ),
       child: const Text(
-        '关键词屏蔽',
+        '關鍵字封鎖',
         style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold),
       ),
     );
@@ -72,7 +72,7 @@ class _LiveDmBlockPageState extends State<LiveDmBlockPage> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const Text(
-            '全局屏蔽',
+            '全域封鎖',
             style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold),
           ),
           ..._buildHeader(theme),
@@ -83,7 +83,7 @@ class _LiveDmBlockPageState extends State<LiveDmBlockPage> {
 
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      appBar: AppBar(title: const Text('弹幕屏蔽')),
+      appBar: AppBar(title: const Text('彈幕封鎖')),
       body: Padding(
         padding: EdgeInsets.only(left: padding.left, right: padding.right),
         child: Stack(
@@ -143,7 +143,7 @@ class _LiveDmBlockPageState extends State<LiveDmBlockPage> {
               right: kFloatingActionButtonMargin,
               bottom: kFloatingActionButtonMargin + padding.bottom,
               child: FloatingActionButton(
-                tooltip: '添加',
+                tooltip: '新增',
                 onPressed: _addShieldKeyword,
                 child: const Icon(Icons.add),
               ),
@@ -175,7 +175,7 @@ class _LiveDmBlockPageState extends State<LiveDmBlockPage> {
               text: item is ShieldUserList ? item.uname! : item as String,
               onTap: (value) => showConfirmDialog(
                 context: context,
-                title: const Text('确定删除该规则？'),
+                title: const Text('確定刪除該規則？'),
                 onConfirm: () => _controller.onRemove(e.$1, item),
               ),
             );
@@ -194,7 +194,7 @@ class _LiveDmBlockPageState extends State<LiveDmBlockPage> {
           return Row(
             spacing: 10,
             children: [
-              Text('屏蔽${isEnable ? '已' : '未'}开启'),
+              Text('封鎖${isEnable ? '已' : '未'}開啟'),
               Transform.scale(
                 scale: .8,
                 child: Switch(
@@ -212,7 +212,7 @@ class _LiveDmBlockPageState extends State<LiveDmBlockPage> {
           final level = _controller.level.value;
           return Row(
             children: [
-              const Text('用户等级'),
+              const Text('使用者等級'),
               Slider(
                 min: 0,
                 max: 60,
@@ -250,7 +250,7 @@ class _LiveDmBlockPageState extends State<LiveDmBlockPage> {
               theme,
               isEnable,
               Icons.live_tv,
-              '非正式会员',
+              '非正式會員',
               () => _controller.setSilent(
                 LiveDmSilentType.rank,
                 isEnable ? 0 : 1,
@@ -263,7 +263,7 @@ class _LiveDmBlockPageState extends State<LiveDmBlockPage> {
               theme,
               isEnable,
               Icons.smartphone,
-              '未绑定手机用户',
+              '未綁定手機使用者',
               () => _controller.setSilent(
                 LiveDmSilentType.verify,
                 isEnable ? 0 : 1,
@@ -347,7 +347,7 @@ class _LiveDmBlockPageState extends State<LiveDmBlockPage> {
     String value = '';
     showConfirmDialog(
       context: context,
-      title: Text('${isKeyword ? '关键词' : '用户'}屏蔽'),
+      title: Text('${isKeyword ? '關鍵字' : '使用者'}封鎖'),
       content: TextFormField(
         autofocus: true,
         initialValue: value,

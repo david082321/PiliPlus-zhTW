@@ -11,7 +11,7 @@ abstract final class FollowHttp {
     int? vmid,
     int? pn,
     int ps = 20,
-    String orderType = '', // ''=>最近关注，'attention'=>最常访问
+    String orderType = '', // ''=>最近關注，'attention'=>最常訪問
   }) async {
     final res = await Request().get(
       Api.followings,

@@ -19,7 +19,7 @@ class _VideoSettingState extends State<VideoSetting> {
     final padding = MediaQuery.viewPaddingOf(context);
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      appBar: showAppBar ? AppBar(title: const Text('音视频设置')) : null,
+      appBar: showAppBar ? AppBar(title: const Text('影音設定')) : null,
       body: ListView.builder(
         padding: EdgeInsets.only(
           left: showAppBar ? padding.left : 0,

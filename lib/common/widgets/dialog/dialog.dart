@@ -28,7 +28,7 @@ Future<bool> showConfirmDialog({
                 Get.back(result: true);
                 onConfirm?.call();
               },
-              child: const Text('确认'),
+              child: const Text('確認'),
             ),
           ],
         ),
@@ -53,7 +53,7 @@ void showPgcFollowDialog({
       title: Padding(
         padding: const EdgeInsets.only(left: 10),
         child: Text(
-          '标记为 $text',
+          '標記為 $text',
           style: const TextStyle(fontSize: 14),
         ),
       ),
@@ -71,7 +71,7 @@ void showPgcFollowDialog({
         mainAxisSize: MainAxisSize.min,
         children: [
           ...const [
-            (followStatus: 3, title: '看过'),
+            (followStatus: 3, title: '看過'),
             (followStatus: 2, title: '在看'),
             (followStatus: 1, title: '想看'),
           ].map(

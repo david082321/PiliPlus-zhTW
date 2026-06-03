@@ -19,7 +19,7 @@ class _StyleSettingState extends State<StyleSetting> {
     final padding = MediaQuery.viewPaddingOf(context);
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      appBar: showAppBar ? AppBar(title: const Text('外观设置')) : null,
+      appBar: showAppBar ? AppBar(title: const Text('外觀設定')) : null,
       body: ListView.builder(
         padding: EdgeInsets.only(
           left: showAppBar ? padding.left : 0,

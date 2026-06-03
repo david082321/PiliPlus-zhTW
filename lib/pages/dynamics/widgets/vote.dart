@@ -74,9 +74,9 @@ class _VotePanelState extends State<VotePanel> {
         children: [
           Text(
             _enabled
-                ? '投票选项'
+                ? '投票選項'
                 : groupValue.isEmpty
-                ? '已结束'
+                ? '已結束'
                 : '已完成',
           ),
           if (_enabled) Obx(() => Text('${groupValue.length} / $_maxCnt')),
@@ -161,7 +161,7 @@ class _VotePanelState extends State<VotePanel> {
                       final colorScheme = ColorScheme.of(context);
                       return AlertDialog(
                         clipBehavior: .hardEdge,
-                        title: const Text('关注的人的投票'),
+                        title: const Text('關注的人的投票'),
                         contentPadding: const .only(top: 10, bottom: 12),
                         content: SingleChildScrollView(
                           child: Column(
@@ -184,7 +184,7 @@ class _VotePanelState extends State<VotePanel> {
                                         children: [
                                           TextSpan(text: e.name),
                                           TextSpan(
-                                            text: ' 投给了',
+                                            text: ' 投給了',
                                             style: TextStyle(
                                               fontSize: 12,
                                               color: colorScheme.outline,
@@ -263,7 +263,7 @@ class _VotePanelState extends State<VotePanel> {
                       text: NumUtils.numFormat(_voteInfo.joinNum),
                       style: TextStyle(color: theme.colorScheme.primary),
                     ),
-                    const TextSpan(text: '人参与'),
+                    const TextSpan(text: '人參與'),
                   ],
                 ),
               ),
@@ -296,7 +296,7 @@ class _VotePanelState extends State<VotePanel> {
     spacing: 16,
     children: [
       CheckBoxText(
-        text: '显示比例',
+        text: '顯示比例',
         selected: _showPercentage,
         onChanged: (value) {
           setState(() {

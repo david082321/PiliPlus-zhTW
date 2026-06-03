@@ -40,7 +40,7 @@ class PgcPanel extends StatefulWidget {
 class _PgcPanelState extends State<PgcPanel> {
   late int currentIndex;
   late final ScrollController listViewScrollCtr;
-  // 默认未开通
+  // 預設未開通
   late final bool vipStatus;
   late int cid;
   late final VideoDetailController videoDetailCtr;
@@ -124,8 +124,8 @@ class _PgcPanelState extends State<PgcPanel> {
                     cid,
                   ),
                   child: Text(
-                    widget.newEp?.desc?.contains('连载') == true
-                        ? '连载中，更新至${Utils.isStringNumeric(widget.newEp!.title!) ? '第${widget.newEp!.title}话' : '${widget.newEp!.title}'}'
+                    widget.newEp?.desc?.contains('連載') == true
+                        ? '連載中，更新至${Utils.isStringNumeric(widget.newEp!.title!) ? '第${widget.newEp!.title}話' : '${widget.newEp!.title}'}'
                         : widget.newEp?.desc ?? '查看全部',
                     style: const TextStyle(fontSize: 13),
                   ),
@@ -167,8 +167,8 @@ class _PgcPanelState extends State<PgcPanel> {
         child: InkWell(
           borderRadius: const BorderRadius.all(Radius.circular(6)),
           onTap: () {
-            if (item.badge == '会员' && Accounts.mainEqVideo && vipStatus) {
-              SmartDialog.showToast('需要大会员');
+            if (item.badge == '會員' && Accounts.mainEqVideo && vipStatus) {
+              SmartDialog.showToast('需要大會員');
             }
             widget.onChangeEpisode(item);
           },
@@ -200,7 +200,7 @@ class _PgcPanelState extends State<PgcPanel> {
                                 ),
                               ),
                             TextSpan(
-                              text: item.title ?? '第${index + 1}话',
+                              text: item.title ?? '第${index + 1}話',
                               style: TextStyle(
                                 fontSize: 13,
                                 color: color,
@@ -212,12 +212,12 @@ class _PgcPanelState extends State<PgcPanel> {
                     ),
                     if (item.badge?.isNotEmpty == true) ...[
                       const SizedBox(width: 2),
-                      if (item.badge == '会员')
+                      if (item.badge == '會員')
                         Image.asset(
                           Assets.vipIcon,
                           height: 16,
                           cacheHeight: 16.cacheSize(context),
-                          semanticLabel: "大会员",
+                          semanticLabel: "大會員",
                         )
                       else
                         Text(
@@ -226,7 +226,7 @@ class _PgcPanelState extends State<PgcPanel> {
                             fontSize: 11,
                             color: switch (item.badge) {
                               '限免' => theme.freeColor,
-                              '预告' => theme.onSurfaceVariant,
+                              '預告' => theme.onSurfaceVariant,
                               _ => theme.primary,
                             },
                           ),

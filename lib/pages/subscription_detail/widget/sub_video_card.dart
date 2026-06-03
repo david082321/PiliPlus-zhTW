@@ -13,7 +13,7 @@ import 'package:PiliPlus/utils/page_utils.dart';
 import 'package:PiliPlus/utils/platform_utils.dart';
 import 'package:flutter/material.dart';
 
-// 收藏视频卡片 - 水平布局
+// 收藏影片卡片 - 水平布局
 class SubVideoCardH extends StatelessWidget {
   final SubDetailItemModel videoItem;
   final int? searchType;

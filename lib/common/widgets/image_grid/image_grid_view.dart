@@ -156,20 +156,20 @@ class ImageGridView extends StatelessWidget {
         PopupMenuItem(
           height: 42,
           onTap: () => ImageUtils.downloadImg([item.url]),
-          child: const Text('保存图片', style: TextStyle(fontSize: 14)),
+          child: const Text('儲存圖片', style: TextStyle(fontSize: 14)),
         ),
         if (PlatformUtils.isDesktop)
           PopupMenuItem(
             height: 42,
             onTap: () => PageUtils.launchURL(item.url),
-            child: const Text('网页打开', style: TextStyle(fontSize: 14)),
+            child: const Text('網頁打開', style: TextStyle(fontSize: 14)),
           )
         else if (picArr.length > 1)
           PopupMenuItem(
             height: 42,
             onTap: () =>
                 ImageUtils.downloadImg(picArr.map((item) => item.url).toList()),
-            child: const Text('保存全部', style: TextStyle(fontSize: 14)),
+            child: const Text('儲存全部', style: TextStyle(fontSize: 14)),
           ),
         if (item.isLivePhoto)
           PopupMenuItem(
@@ -181,7 +181,7 @@ class ImageGridView extends StatelessWidget {
               height: item.height.toInt(),
             ),
             child: Text(
-              '保存${Platform.isIOS ? '实况' : '视频'}',
+              '儲存${Platform.isIOS ? '實況' : '影片'}',
               style: const TextStyle(fontSize: 14),
             ),
           ),
@@ -249,7 +249,7 @@ class ImageGridView extends StatelessWidget {
                   )
                 else if (item.isLongPic)
                   const PBadge(
-                    text: '长图',
+                    text: '長圖',
                     right: 8,
                     bottom: 8,
                   ),

@@ -129,7 +129,7 @@ class _LiveHeaderControlState extends State<LiveHeaderControl>
               final isAlwaysOnTop = plPlayerController.isAlwaysOnTop.value;
               return ComBtn(
                 height: 30,
-                tooltip: '${isAlwaysOnTop ? '取消' : ''}置顶',
+                tooltip: '${isAlwaysOnTop ? '取消' : ''}置頂',
                 icon: isAlwaysOnTop
                     ? const Icon(
                         size: 18,
@@ -147,7 +147,7 @@ class _LiveHeaderControlState extends State<LiveHeaderControl>
           if (isFullScreen || PlatformUtils.isDesktop)
             ComBtn(
               height: 30,
-              tooltip: '发弹幕',
+              tooltip: '發彈幕',
               icon: const Icon(
                 size: 18,
                 Icons.comment_outlined,
@@ -158,7 +158,7 @@ class _LiveHeaderControlState extends State<LiveHeaderControl>
           if (Platform.isAndroid || (PlatformUtils.isDesktop && !isFullScreen))
             ComBtn(
               height: 30,
-              tooltip: '画中画',
+              tooltip: '畫中畫',
               onTap: () {
                 if (PlatformUtils.isDesktop) {
                   plPlayerController.toggleDesktopPip();
@@ -179,7 +179,7 @@ class _LiveHeaderControlState extends State<LiveHeaderControl>
               final onlyPlayAudio = plPlayerController.onlyPlayAudio.value;
               return ComBtn(
                 height: 30,
-                tooltip: '仅播放音频',
+                tooltip: '僅播放音訊',
                 onTap: () {
                   plPlayerController.onlyPlayAudio.value = !onlyPlayAudio;
                   widget.onPlayAudio();
@@ -204,7 +204,7 @@ class _LiveHeaderControlState extends State<LiveHeaderControl>
                   plPlayerController.continuePlayInBackground.value;
               return ComBtn(
                 height: 30,
-                tooltip: '${continuePlayInBackground ? '关闭' : ''}后台播放',
+                tooltip: '${continuePlayInBackground ? '關閉' : ''}後台播放',
                 onTap: plPlayerController.setContinuePlayInBackground,
                 icon: continuePlayInBackground
                     ? const Icon(
@@ -221,7 +221,7 @@ class _LiveHeaderControlState extends State<LiveHeaderControl>
             }),
           ComBtn(
             height: 30,
-            tooltip: '定时关闭',
+            tooltip: '定時關閉',
             onTap: () => shutdownTimerService.showScheduleExitDialog(
               context,
               isFullScreen: isFullScreen,
@@ -235,7 +235,7 @@ class _LiveHeaderControlState extends State<LiveHeaderControl>
           ),
           ComBtn(
             height: 30,
-            tooltip: '播放信息',
+            tooltip: '播放資訊',
             onTap: () => HeaderControlState.showPlayerInfo(
               context,
               plPlayerController: plPlayerController,

@@ -1,8 +1,8 @@
 enum DynamicsTabType {
   all('全部'),
   video('投稿'),
-  pgc('番剧'),
-  article('专栏'),
+  pgc('番劇'),
+  article('專欄'),
   up('UP'),
   ;
 

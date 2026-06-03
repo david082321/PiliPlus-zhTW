@@ -94,7 +94,7 @@ class DynamicsDataModel {
   }
 }
 
-// 单个动态
+// 單個動態
 class DynamicItemModel {
   Basic? basic;
   dynamic idStr;
@@ -151,7 +151,7 @@ class Fallback {
   );
 }
 
-// 单个动态详情
+// 單個動態詳情
 class ItemModulesModel {
   ItemModulesModel();
 
@@ -159,13 +159,13 @@ class ItemModulesModel {
   ModuleStatModel? moduleStat;
   ModuleTag? moduleTag; // 也做opus的title用
 
-  // 动态
+  // 動態
   ModuleDynamicModel? moduleDynamic;
   // ModuleInterModel? moduleInter;
   ModuleInteraction? moduleInteraction;
   ModuleDispute? moduleDispute;
 
-  // 专栏
+  // 專欄
   ModuleTop? moduleTop;
   ModuleCollection? moduleCollection;
   List<ModuleTag>? moduleExtend; // opus的tag
@@ -406,7 +406,7 @@ class Basic {
   }
 }
 
-// 单个动态详情 - 作者信息
+// 單個動態詳情 - 作者資訊
 class ModuleAuthorModel extends Avatar {
   String? pubAction;
   String? pubTime;
@@ -466,7 +466,7 @@ class Fan {
   );
 }
 
-// 单个动态详情 - 动态信息
+// 單個動態詳情 - 動態資訊
 class ModuleDynamicModel {
   ModuleDynamicModel({
     this.additional,
@@ -767,8 +767,8 @@ class ReserveBtn {
   ReserveBtn.fromJson(Map<String, dynamic> json) {
     status = safeToInt(json['status']);
     type = safeToInt(json['type']);
-    checkText = json['check']?['text'] ?? '已预约';
-    uncheckText = json['uncheck']?['text'] ?? '预约';
+    checkText = json['check']?['text'] ?? '已預約';
+    uncheckText = json['uncheck']?['text'] ?? '預約';
     disable = safeToInt(json['uncheck']?['disable']);
     jumpText = json['jump_style']?['text'];
     jumpUrl = json['jump_url'];
@@ -1095,7 +1095,7 @@ class Badge {
   String? text;
 
   Badge.fromJson(Map<String, dynamic> json) {
-    text = json['text'] == '投稿视频' ? null : json['text'];
+    text = json['text'] == '投稿影片' ? null : json['text'];
   }
 }
 
@@ -1301,7 +1301,7 @@ class ModuleTag {
   }
 }
 
-// 动态状态 转发、评论、点赞
+// 動態狀態 轉發、評論、按讚
 class ModuleStatModel {
   ModuleStatModel({
     this.comment,
@@ -1329,7 +1329,7 @@ class ModuleStatModel {
   }
 }
 
-// 动态状态
+// 動態狀態
 class DynamicStat {
   DynamicStat({
     this.count,

@@ -39,7 +39,7 @@ class _WebDavSettingPageState extends State<WebDavSettingPage> {
     final showAppBar = widget.showAppBar;
     final padding = MediaQuery.viewPaddingOf(context);
     return Scaffold(
-      appBar: showAppBar ? AppBar(title: const Text('WebDAV 设置')) : null,
+      appBar: showAppBar ? AppBar(title: const Text('WebDAV 設定')) : null,
       body: Stack(
         clipBehavior: Clip.none,
         children: [
@@ -62,7 +62,7 @@ class _WebDavSettingPageState extends State<WebDavSettingPage> {
               TextField(
                 controller: _usernameCtr,
                 decoration: const InputDecoration(
-                  labelText: '用户',
+                  labelText: '使用者',
                   border: OutlineInputBorder(),
                 ),
               ),
@@ -71,7 +71,7 @@ class _WebDavSettingPageState extends State<WebDavSettingPage> {
                 controller: _passwordCtr,
                 autofillHints: const [AutofillHints.password],
                 decoration: InputDecoration(
-                  labelText: '密码',
+                  labelText: '密碼',
                   border: const OutlineInputBorder(),
                   suffixIcon: IconButton(
                     onPressed: () =>
@@ -87,7 +87,7 @@ class _WebDavSettingPageState extends State<WebDavSettingPage> {
               TextField(
                 controller: _directoryCtr,
                 decoration: const InputDecoration(
-                  labelText: '路径',
+                  labelText: '路徑',
                   border: OutlineInputBorder(),
                 ),
               ),
@@ -102,7 +102,7 @@ class _WebDavSettingPageState extends State<WebDavSettingPage> {
                         ),
                       ),
                       onPressed: WebDav().backup,
-                      child: const Text('备份设置'),
+                      child: const Text('備份設定'),
                     ),
                   ),
                   const SizedBox(width: 20),
@@ -114,7 +114,7 @@ class _WebDavSettingPageState extends State<WebDavSettingPage> {
                         ),
                       ),
                       onPressed: WebDav().restore,
-                      child: const Text('恢复设置'),
+                      child: const Text('復原設定'),
                     ),
                   ),
                 ],
@@ -142,10 +142,10 @@ class _WebDavSettingPageState extends State<WebDavSettingPage> {
                   if (res.first) {
                     SmartDialog.showToast('配置成功');
                   } else {
-                    SmartDialog.showToast('配置失败: ${res.second}');
+                    SmartDialog.showToast('配置失敗: ${res.second}');
                   }
                 } catch (e) {
-                  SmartDialog.showToast('配置失败: ${e.toString()}');
+                  SmartDialog.showToast('配置失敗: ${e.toString()}');
                   return;
                 }
               },

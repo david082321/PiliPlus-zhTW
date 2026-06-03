@@ -417,10 +417,10 @@ class ReplyItemGrpc extends StatelessWidget {
                   (context as Element).markNeedsBuild();
                 }
               } else {
-                SmartDialog.showToast('翻译结果为空');
+                SmartDialog.showToast('翻譯結果為空');
               }
             } else if (res case Error(:final errMsg)) {
-              SmartDialog.showToast('翻译失败: $errMsg');
+              SmartDialog.showToast('翻譯失敗: $errMsg');
             }
             isProcessing = false;
           }
@@ -431,7 +431,7 @@ class ReplyItemGrpc extends StatelessWidget {
           children: [
             Icon(Icons.translate, size: 16, color: color),
             Text(
-              replyControl.showTranslation ? '原文' : '翻译',
+              replyControl.showTranslation ? '原文' : '翻譯',
               style: textStyle.copyWith(color: color),
             ),
           ],
@@ -464,7 +464,7 @@ class ReplyItemGrpc extends StatelessWidget {
         child: TextButton(
           onPressed: showDialogue,
           style: buttonStyle,
-          child: Text('查看对话', style: textStyle),
+          child: Text('查看對話', style: textStyle),
         ),
       );
     } else if (replyLevel == 3 && replyItem.parent != replyItem.root) {
@@ -473,7 +473,7 @@ class ReplyItemGrpc extends StatelessWidget {
         child: TextButton(
           onPressed: jumpToDialogue,
           style: buttonStyle,
-          child: Text('跳转回复', style: textStyle),
+          child: Text('跳轉回復', style: textStyle),
         ),
       );
     }
@@ -497,7 +497,7 @@ class ReplyItemGrpc extends StatelessWidget {
                   size: 18,
                   color: theme.colorScheme.outline.withValues(alpha: 0.8),
                 ),
-                Text('回复', style: textStyle),
+                Text('回復', style: textStyle),
               ],
             ),
           ),
@@ -666,7 +666,7 @@ class ReplyItemGrpc extends StatelessWidget {
                             ),
                           ),
                         TextSpan(
-                          text: '共${replyItem.count}条回复',
+                          text: '共${replyItem.count}條回復',
                           style: TextStyle(
                             color: theme.colorScheme.primary,
                           ),
@@ -692,7 +692,7 @@ class ReplyItemGrpc extends StatelessWidget {
     bool hasNote = false;
 
     final urlKeys = content.urls.keys;
-    // 构建正则表达式
+    // 構建正規表示式
     final List<String> specialTokens = [
       ...content.emotes.keys,
       ...content.topics.keys.map((e) => '#$e#'),
@@ -736,7 +736,7 @@ class ReplyItemGrpc extends StatelessWidget {
             ),
           ),
         TextSpan(
-          text: isCv ? '[笔记] ' : url.title,
+          text: isCv ? '[筆記] ' : url.title,
           style: TextStyle(
             color: theme.colorScheme.primary,
           ),
@@ -787,7 +787,7 @@ class ReplyItemGrpc extends StatelessWidget {
       }
     }
 
-    // 分割文本并处理每个部分
+    // 分割文字並處理每個部分
     content.message.splitMapJoin(
       pattern,
       onMatch: (Match match) {
@@ -795,7 +795,7 @@ class ReplyItemGrpc extends StatelessWidget {
         late final name = matchStr.substring(1);
         late final topic = matchStr.substring(1, matchStr.length - 1);
         if (content.emotes.containsKey(matchStr)) {
-          // 处理表情
+          // 處理表情
           final emote = content.emotes[matchStr]!;
           final size = emote.size.toInt() * 20.0;
           spanChildren.add(
@@ -814,7 +814,7 @@ class ReplyItemGrpc extends StatelessWidget {
           );
         } else if (matchStr.startsWith("@") &&
             content.atNameToMid.containsKey(name)) {
-          // 处理@用户
+          // 處理@使用者
           spanChildren.add(
             TextSpan(
               text: matchStr,
@@ -856,9 +856,9 @@ class ReplyItemGrpc extends StatelessWidget {
               recognizer: isValid
                   ? (NoDeadlineTapGestureRecognizer()
                       ..onTap = () {
-                        // 跳转到指定位置
+                        // 跳轉到指定位置
                         try {
-                          SmartDialog.showToast('跳转至：$matchStr');
+                          SmartDialog.showToast('跳轉至：$matchStr');
                           Get.find<VideoDetailController>(
                             tag: Get.arguments['heroTag'],
                           ).plPlayerController.seekTo(
@@ -868,7 +868,7 @@ class ReplyItemGrpc extends StatelessWidget {
                             isSeek: false,
                           );
                         } catch (e) {
-                          SmartDialog.showToast('跳转失败: $e');
+                          SmartDialog.showToast('跳轉失敗: $e');
                         }
                       })
                   : null,
@@ -878,7 +878,7 @@ class ReplyItemGrpc extends StatelessWidget {
           final url = content.urls[matchStr];
           if (url != null && !matchedUrls.contains(matchStr)) {
             addUrl(matchStr, url, addPlainText: true);
-            // 只显示一次
+            // 只顯示一次
             matchedUrls.add(matchStr);
           } else if (matchStr.length > 1 && content.topics[topic] != null) {
             spanChildren.add(
@@ -949,7 +949,7 @@ class ReplyItemGrpc extends StatelessWidget {
       spanChildren.insert(
         0,
         TextSpan(
-          text: '[笔记] ',
+          text: '[筆記] ',
           style: TextStyle(color: color),
           recognizer: recognizer,
         ),
@@ -1053,11 +1053,11 @@ class ReplyItemGrpc extends StatelessWidget {
                   builder: (context) {
                     final theme = Theme.of(context);
                     return AlertDialog(
-                      title: const Text('删除评论'),
+                      title: const Text('刪除評論'),
                       content: Text.rich(
                         TextSpan(
                           children: [
-                            const TextSpan(text: '确定删除这条评论吗？\n\n'),
+                            const TextSpan(text: '確定刪除這條評論嗎？\n\n'),
                             if (ownerMid != item.member.mid.toInt()) ...[
                               TextSpan(
                                 text: '@${item.member.name}',
@@ -1083,7 +1083,7 @@ class ReplyItemGrpc extends StatelessWidget {
                         ),
                         TextButton(
                           onPressed: () => Get.back(result: true),
-                          child: const Text('确定'),
+                          child: const Text('確定'),
                         ),
                       ],
                     );
@@ -1092,7 +1092,7 @@ class ReplyItemGrpc extends StatelessWidget {
                 if (isDelete == null || !isDelete) {
                   return;
                 }
-                SmartDialog.showLoading(msg: '删除中...');
+                SmartDialog.showLoading(msg: '刪除中...');
                 final res = await VideoHttp.replyDel(
                   type: item.type.toInt(),
                   oid: item.oid.toInt(),
@@ -1100,15 +1100,15 @@ class ReplyItemGrpc extends StatelessWidget {
                 );
                 SmartDialog.dismiss();
                 if (res.isSuccess) {
-                  SmartDialog.showToast('删除成功');
+                  SmartDialog.showToast('刪除成功');
                   onDelete();
                 } else {
-                  SmartDialog.showToast('删除失败, $res');
+                  SmartDialog.showToast('刪除失敗, $res');
                 }
               },
               minLeadingWidth: 0,
               leading: Icon(Icons.delete_outlined, color: errorColor, size: 19),
-              title: Text('删除', style: style.copyWith(color: errorColor)),
+              title: Text('刪除', style: style.copyWith(color: errorColor)),
             ),
           if (ownerMid != Int64.ZERO)
             ListTile(
@@ -1134,7 +1134,7 @@ class ReplyItemGrpc extends StatelessWidget {
               },
               minLeadingWidth: 0,
               leading: Icon(Icons.error_outline, color: errorColor, size: 19),
-              title: Text('举报', style: style.copyWith(color: errorColor)),
+              title: Text('檢舉', style: style.copyWith(color: errorColor)),
             ),
           if (replyLevel == 1 && !isSubReply && ownerMid == upMid)
             ListTile(
@@ -1145,7 +1145,7 @@ class ReplyItemGrpc extends StatelessWidget {
               minLeadingWidth: 0,
               leading: const Icon(Icons.vertical_align_top, size: 19),
               title: Text(
-                '${replyItem.replyControl.isUpTop ? '取消' : ''}置顶',
+                '${replyItem.replyControl.isUpTop ? '取消' : ''}置頂',
                 style: style,
               ),
             ),
@@ -1156,7 +1156,7 @@ class ReplyItemGrpc extends StatelessWidget {
             },
             minLeadingWidth: 0,
             leading: const Icon(Icons.copy_all_outlined, size: 19),
-            title: Text('复制全部', style: style),
+            title: Text('複製全部', style: style),
           ),
           ListTile(
             onTap: () {
@@ -1178,7 +1178,7 @@ class ReplyItemGrpc extends StatelessWidget {
             },
             minLeadingWidth: 0,
             leading: const Icon(Icons.copy_outlined, size: 19),
-            title: Text('自由复制', style: style),
+            title: Text('自由複製', style: style),
           ),
           ListTile(
             onTap: () {
@@ -1187,7 +1187,7 @@ class ReplyItemGrpc extends StatelessWidget {
             },
             minLeadingWidth: 0,
             leading: const Icon(Icons.save_alt, size: 19),
-            title: Text('保存评论', style: style),
+            title: Text('儲存評論', style: style),
           ),
           if (kDebugMode || item.mid == ownerMid)
             ListTile(
@@ -1197,7 +1197,7 @@ class ReplyItemGrpc extends StatelessWidget {
               },
               minLeadingWidth: 0,
               leading: const Icon(CustomIcons.shield_reply, size: 19),
-              title: Text('检查评论', style: style),
+              title: Text('檢查評論', style: style),
             ),
         ],
       ),
@@ -1222,7 +1222,7 @@ class ReplyItemGrpc extends StatelessWidget {
 
             showConfirmDialog(
               context: context,
-              title: const Text('是否确认评论过滤的变更：'),
+              title: const Text('是否確認評論過濾的變更：'),
               content: Text.rich(
                 TextSpan(
                   text: ReplyGrpc.replyRegExp.pattern,
@@ -1242,11 +1242,11 @@ class ReplyItemGrpc extends StatelessWidget {
                 ReplyGrpc.replyRegExp = RegExp(filter, caseSensitive: true);
                 ReplyGrpc.enableFilter = true;
                 GStorage.setting.put(SettingBoxKey.banWordForReply, filter);
-                SmartDialog.showToast('已保存');
+                SmartDialog.showToast('已儲存');
               },
             );
           },
-          label: '加入过滤',
+          label: '加入過濾',
         ),
       );
     }

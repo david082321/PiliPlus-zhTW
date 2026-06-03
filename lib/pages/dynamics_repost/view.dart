@@ -218,7 +218,7 @@ class _RepostPanelState extends CommonRichTextPubPageState<RepostPanel> {
     child: SizedBox(
       width: double.infinity,
       child: Text(
-        '说点什么吧',
+        '說點什麼吧',
         style: TextStyle(
           height: 1.75,
           fontSize: 15,
@@ -244,7 +244,7 @@ class _RepostPanelState extends CommonRichTextPubPageState<RepostPanel> {
         onSubmitted: onSubmitted,
         readOnly: readOnly.value,
         decoration: InputDecoration(
-          hintText: '说点什么吧',
+          hintText: '說點什麼吧',
           hintStyle: TextStyle(color: theme.colorScheme.outline),
           border: const OutlineInputBorder(
             borderSide: BorderSide.none,
@@ -262,7 +262,7 @@ class _RepostPanelState extends CommonRichTextPubPageState<RepostPanel> {
           children: [
             const SizedBox(width: 16),
             Text(
-              widget.rid != null ? '分享至动态' : '转发动态',
+              widget.rid != null ? '分享至動態' : '轉發動態',
               style: const TextStyle(fontWeight: FontWeight.bold),
             ),
             const Spacer(),
@@ -275,7 +275,7 @@ class _RepostPanelState extends CommonRichTextPubPageState<RepostPanel> {
                 ),
                 visualDensity: VisualDensity.compact,
               ),
-              child: Text(widget.rid != null ? '立即发布' : '立即转发'),
+              child: Text(widget.rid != null ? '立即發布' : '立即轉發'),
             ),
             const SizedBox(width: 16),
           ],
@@ -310,7 +310,7 @@ class _RepostPanelState extends CommonRichTextPubPageState<RepostPanel> {
               ),
               Center(
                 child: Text(
-                  widget.rid != null ? '分享至动态' : '转发动态',
+                  widget.rid != null ? '分享至動態' : '轉發動態',
                   style: const TextStyle(
                     fontSize: 15,
                     fontWeight: FontWeight.bold,
@@ -329,7 +329,7 @@ class _RepostPanelState extends CommonRichTextPubPageState<RepostPanel> {
                     ),
                     visualDensity: VisualDensity.compact,
                   ),
-                  child: Text(widget.rid != null ? '发布' : '转发'),
+                  child: Text(widget.rid != null ? '發布' : '轉發'),
                 ),
               ),
             ],
@@ -431,7 +431,7 @@ class _RepostPanelState extends CommonRichTextPubPageState<RepostPanel> {
     if (res case Success(:final response)) {
       hasPub = true;
       Get.back();
-      SmartDialog.showToast('转发成功');
+      SmartDialog.showToast('轉發成功');
       widget.onSuccess?.call();
       final id = response?['dyn_id'];
       RequestUtils.insertCreatedDyn(id);

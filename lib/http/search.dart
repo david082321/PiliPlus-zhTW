@@ -19,7 +19,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 
 abstract final class SearchHttp {
-  // 获取搜索建议
+  // 取得搜尋建議
   static Future<LoadingState<SearchSuggestModel>> searchSuggest({
     required String term,
   }) async {
@@ -42,7 +42,7 @@ abstract final class SearchHttp {
     return const Error(null);
   }
 
-  // 分类搜索
+  // 分類搜尋
   @pragma('vm:notify-debugger-on-exception')
   static Future<LoadingState<R>> searchByType<R extends SearchNumData>({
     required SearchType searchType,
@@ -95,7 +95,7 @@ abstract final class SearchHttp {
         final vVoucher = dataData['v_voucher'];
         if (vVoucher != null) {
           RequestUtils.validate(vVoucher, onSuccess);
-          return const Error('触发风控');
+          return const Error('觸發風控');
         }
         dynamic data;
         try {
@@ -126,7 +126,7 @@ abstract final class SearchHttp {
         return Error(resData['message'], code: resData['code']);
       }
     } else {
-      return const Error('服务器错误');
+      return const Error('伺服器錯誤');
     }
   }
 
@@ -160,7 +160,7 @@ abstract final class SearchHttp {
       queryParameters: params,
     );
     if (res.data is! Map) {
-      return const Error('没有相关数据');
+      return const Error('沒有相關資料');
     }
     if (res.data['code'] == 0) {
       try {
@@ -169,7 +169,7 @@ abstract final class SearchHttp {
         return Error('$e\n\n$s');
       }
     } else {
-      return Error(res.data['message'] ?? '没有相关数据');
+      return Error(res.data['message'] ?? '沒有相關資料');
     }
   }
 

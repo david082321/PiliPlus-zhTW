@@ -14,7 +14,7 @@ import 'package:PiliPlus/utils/page_utils.dart';
 import 'package:PiliPlus/utils/platform_utils.dart';
 import 'package:flutter/material.dart';
 
-// 视频卡片 - 水平布局
+// 影片卡片 - 水平布局
 class VideoCardH extends StatelessWidget {
   const VideoCardH({
     super.key,
@@ -117,7 +117,7 @@ class VideoCardH extends StatelessWidget {
                                 top: 6.0,
                                 right: 6.0,
                                 type: switch (badge) {
-                                  '充电专属' => .error,
+                                  '充電專屬' => .error,
                                   _ => .primary,
                                 },
                               ),

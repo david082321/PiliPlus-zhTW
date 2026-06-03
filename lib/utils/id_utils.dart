@@ -30,7 +30,7 @@ abstract final class IdUtils {
     list[idx2] = idx1Value;
   }
 
-  /// av转bv
+  /// av轉bv
   static String av2bv(int aid) {
     final bytes = ['B', 'V', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0'];
     int bvIndex = bytes.length - 1;
@@ -46,7 +46,7 @@ abstract final class IdUtils {
     return bytes.join();
   }
 
-  /// bv转av
+  /// bv轉av
   static int bv2av(String bvid) {
     final bvidArr = bvid.codeUnits.sublist(3);
 
@@ -95,7 +95,7 @@ abstract final class IdUtils {
     return base64Encoded;
   }
 
-  // https://github.com/SocialSisterYi/bilibili-API-collect/blob/master/grpc_api/readme.md#x-bili-trace-id-生成算法
+  // https://github.com/SocialSisterYi/bilibili-API-collect/blob/master/grpc_api/readme.md#x-bili-trace-id-生成演算法
   static String genTraceId() {
     final randomTraceId = StringBuffer(Utils.generateRandomString(24));
 

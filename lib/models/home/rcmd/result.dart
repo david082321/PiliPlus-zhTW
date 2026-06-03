@@ -16,7 +16,7 @@ class RcmdVideoItemAppModel extends BaseRcmdVideoItemModel {
     cid = json['player_args']?['cid'];
     cover = json['cover'];
     stat = RcmdStat.fromJson(json);
-    // 改用player_args中的duration作为原始数据（秒数）
+    // 改用player_args中的duration作為原始資料（秒數）
     duration = json['player_args']?['duration'] ?? 0;
     //duration = json['cover_right_text'];
     title = json['title'];
@@ -24,14 +24,14 @@ class RcmdVideoItemAppModel extends BaseRcmdVideoItemModel {
     rcmdReason = json['rcmd_reason'];
     //     json['bottom_rcmd_reason'] ??
     //     json['top_rcmd_reason'];
-    if (rcmdReason != null && rcmdReason!.contains('赞')) {
-      // 有时能在推荐原因里获得点赞数
+    if (rcmdReason != null && rcmdReason!.contains('讚')) {
+      // 有時能在推薦原因裡獲得按讚數
       (stat as RcmdStat).like = NumUtils.parseNum(rcmdReason!);
     }
-    // 由于app端api并不会直接返回与owner的关注状态
-    // 所以借用推荐原因是否为“已关注”、“新关注”判别关注状态，从而与web端接口等效
-    isFollowed = const {'已关注', '新关注'}.contains(rcmdReason);
-    // 如果是，就无需再显示推荐原因，交由view统一处理即可
+    // 由於app端api並不會直接返回與owner的關注狀態
+    // 所以借用推薦原因是否為「已關注」、「新關注」判別關注狀態，從而與web端介面等效
+    isFollowed = const {'已關注', '新關注'}.contains(rcmdReason);
+    // 如果是，就無需再顯示推薦原因，交由view統一處理即可
     if (isFollowed) rcmdReason = null;
 
     goto = json['goto'];

@@ -24,7 +24,7 @@ class LoginDevicesPageState extends State<LoginDevicesPage> {
     final colorScheme = Theme.of(context).colorScheme;
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      appBar: AppBar(title: const Text('登录设备')),
+      appBar: AppBar(title: const Text('登入裝置')),
       body: refreshIndicator(
         onRefresh: _controller.onRefresh,
         child: CustomScrollView(
@@ -81,7 +81,7 @@ class LoginDevicesPageState extends State<LoginDevicesPage> {
         style: style,
       ),
       trailing: item.isCurrentDevice == true
-          ? Text('(本机)', style: style)
+          ? Text('(本機)', style: style)
           : null,
     );
   }

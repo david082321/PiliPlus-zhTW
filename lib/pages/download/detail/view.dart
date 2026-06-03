@@ -116,7 +116,7 @@ class _DownloadDetailPageState extends State<DownloadDetailPage>
                   if (res.every((e) => e)) {
                     SmartDialog.showToast('更新成功');
                   } else {
-                    SmartDialog.showToast('更新失败');
+                    SmartDialog.showToast('更新失敗');
                   }
                 },
                 child: Text(
@@ -129,7 +129,7 @@ class _DownloadDetailPageState extends State<DownloadDetailPage>
               title: Text(widget.title),
               actions: [
                 IconButton(
-                  tooltip: '多选',
+                  tooltip: '多選',
                   onPressed: () {
                     if (enableMultiSelect) {
                       handleSelect();
@@ -198,7 +198,7 @@ class _DownloadDetailPageState extends State<DownloadDetailPage>
   void onRemove() {
     showConfirmDialog(
       context: context,
-      title: const Text('确定删除选中视频？'),
+      title: const Text('確定刪除選中影片？'),
       onConfirm: () async {
         SmartDialog.showLoading();
         final allChecked = this.allChecked.toList();

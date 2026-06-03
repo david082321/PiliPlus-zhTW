@@ -43,12 +43,12 @@ import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart' show compute;
 import 'package:protobuf/protobuf.dart';
 
-/// view层根据 status 判断渲染逻辑
+/// view層根據 status 判斷繪製邏輯
 abstract final class VideoHttp {
   static RegExp zoneRegExp = RegExp(Pref.banWordForZone, caseSensitive: false);
   static bool enableFilter = zoneRegExp.pattern.isNotEmpty;
 
-  // 首页推荐视频
+  // 首頁推薦影片
   static Future<LoadingState<List<RcmdVideoItemModel>>> rcmdVideoList({
     required int ps,
     required int freshIdx,
@@ -68,7 +68,7 @@ abstract final class VideoHttp {
     if (res.data['code'] == 0) {
       List<RcmdVideoItemModel> list = <RcmdVideoItemModel>[];
       for (final i in res.data['data']['item']) {
-        //过滤掉live与ad，以及拉黑用户
+        //過濾掉live與ad，以及封鎖使用者
         if (i['goto'] == 'av' &&
             (i['owner'] != null &&
                 !GlobalData().blackMids.contains(i['owner']['mid']))) {
@@ -84,7 +84,7 @@ abstract final class VideoHttp {
     }
   }
 
-  // 添加额外的loginState变量模拟未登录状态
+  // 新增額外的loginState變數模擬未登入狀態
   static Future<LoadingState<List<RcmdVideoItemAppModel>>> rcmdVideoListApp({
     required int freshIdx,
   }) async {
@@ -141,7 +141,7 @@ abstract final class VideoHttp {
     if (res.data['code'] == 0) {
       List<RcmdVideoItemAppModel> list = <RcmdVideoItemAppModel>[];
       for (final i in res.data['data']['items']) {
-        // 屏蔽推广和拉黑用户
+        // 封鎖推廣和封鎖使用者
         if (i['card_goto'] != 'ad_av' &&
             i['card_goto'] != 'ad_web_s' &&
             i['ad_info'] == null &&
@@ -164,7 +164,7 @@ abstract final class VideoHttp {
     }
   }
 
-  // 最热视频
+  // 最熱影片
   static Future<LoadingState<List<HotVideoItemModel>>> hotVideoList({
     required int pn,
     required int ps,
@@ -196,7 +196,7 @@ abstract final class VideoHttp {
     }
   }
 
-  // 视频流
+  // 影片串流
   @pragma('vm:notify-debugger-on-exception')
   static Future<LoadingState<PlayUrlModel>> videoUrl({
     int? avid,
@@ -219,7 +219,7 @@ abstract final class VideoHttp {
       'season_id': ?seasonId,
       'cid': cid,
       'qn': qn ?? 80,
-      // 获取所有格式的视频
+      // 取得所有格式的影片
       'fnval': 4048,
       'fourk': 1,
       'fnver': 0,
@@ -227,7 +227,7 @@ abstract final class VideoHttp {
       'gaia_source': 'pre-load',
       'isGaiaAvoided': true,
       'web_location': 1315873,
-      // 免登录查看1080p
+      // 免登入查看1080p
       if (tryLook) 'try_look': 1,
       'dm_img_list': '[]',
       'dm_img_str': dmImgStr,
@@ -279,13 +279,13 @@ abstract final class VideoHttp {
 
   static String _parseVideoErr(int? code, String? msg) {
     return switch (code) {
-      -404 => '视频不存在或已被删除',
-      87008 => '当前视频可能是专属视频，可能需包月充电观看($msg})',
-      _ => '错误($code): $msg',
+      -404 => '影片不存在或已被刪除',
+      87008 => '目前影片可能是專屬影片，可能需包月充電觀看($msg})',
+      _ => '錯誤($code): $msg',
     };
   }
 
-  // 视频信息 标题、简介
+  // 影片資訊 標題、簡介
   static Future<LoadingState<VideoDetailData>> videoIntro({
     required String bvid,
   }) async {
@@ -315,7 +315,7 @@ abstract final class VideoHttp {
     }
   }
 
-  // 相关视频
+  // 相關影片
   static Future<LoadingState<List<HotVideoItemModel>?>> relatedVideoList({
     required String bvid,
   }) async {
@@ -336,7 +336,7 @@ abstract final class VideoHttp {
     }
   }
 
-  // 获取点赞/投币/收藏状态 pgc
+  // 取得按讚/投幣/收藏狀態 pgc
   static Future<LoadingState<PgcLCF>> pgcLikeCoinFav({
     required Object epId,
   }) async {
@@ -351,7 +351,7 @@ abstract final class VideoHttp {
     }
   }
 
-  // 投币
+  // 投幣
   static Future<LoadingState<void>> coinVideo({
     required String bvid,
     required int multiply,
@@ -375,7 +375,7 @@ abstract final class VideoHttp {
     }
   }
 
-  // 一键三连 pgc
+  // 一鍵三連 pgc
   static Future<LoadingState<PgcTriple>> pgcTriple({
     required Object epId,
     Object? seasonId,
@@ -400,7 +400,7 @@ abstract final class VideoHttp {
     }
   }
 
-  // 一键三连
+  // 一鍵三連
   static Future<LoadingState<UgcTriple>> ugcTriple({
     required String bvid,
   }) async {
@@ -432,7 +432,7 @@ abstract final class VideoHttp {
     }
   }
 
-  // （取消）点赞
+  // （取消）按讚
   static Future<LoadingState<String>> likeVideo({
     required String bvid,
     required bool type,
@@ -449,13 +449,13 @@ abstract final class VideoHttp {
     }
   }
 
-  // （取消）点踩
+  // （取消）點踩
   static Future<LoadingState<void>> dislikeVideo({
     required String bvid,
     required bool type,
   }) async {
     if (Accounts.main.accessKey.isNullOrEmpty) {
-      return const Error('请退出账号后重新登录');
+      return const Error('請退出帳號後重新登入');
     }
     final res = await Request().post(
       Api.dislikeVideo,
@@ -472,7 +472,7 @@ abstract final class VideoHttp {
     }
   }
 
-  // 推送不感兴趣反馈
+  // 推送不感興趣回饋
   static Future<LoadingState<void>> feedDislike({
     required String goto,
     required int id,
@@ -480,7 +480,7 @@ abstract final class VideoHttp {
     int? feedbackId,
   }) async {
     if (Accounts.get(AccountType.recommend).accessKey.isNullOrEmpty) {
-      return const Error('请退出账号后重新登录');
+      return const Error('請退出帳號後重新登入');
     }
     assert((reasonId != null) ^ (feedbackId != null));
     final res = await Request().get(
@@ -501,7 +501,7 @@ abstract final class VideoHttp {
     }
   }
 
-  // 推送不感兴趣取消
+  // 推送不感興趣取消
   static Future<LoadingState<void>> feedDislikeCancel({
     required String goto,
     required int id,
@@ -509,7 +509,7 @@ abstract final class VideoHttp {
     int? feedbackId,
   }) async {
     if (Accounts.get(AccountType.recommend).accessKey.isNullOrEmpty) {
-      return const Error('请退出账号后重新登录');
+      return const Error('請退出帳號後重新登入');
     }
     final res = await Request().get(
       Api.feedDislikeCancel,
@@ -529,14 +529,14 @@ abstract final class VideoHttp {
     }
   }
 
-  // 发表评论 replyAdd
+  // 發表評論 replyAdd
 
-  // type	num	评论区类型代码	必要	类型代码见表
-  // oid	num	目标评论区id	必要
-  // root	num	根评论rpid	非必要	二级评论以上使用
-  // parent	num	父评论rpid	非必要	二级评论同根评论id 大于二级评论为要回复的评论id
-  // message	str	发送评论内容	必要	最大1000字符
-  // plat	num	发送平台标识	非必要	1：web端 2：安卓客户端  3：ios客户端  4：wp客户端
+  // type	num	評論區類型程式碼	必要	類型程式碼見表
+  // oid	num	目標評論區id	必要
+  // root	num	根評論rpid	非必要	二級評論以上使用
+  // parent	num	父評論rpid	非必要	二級評論同根評論id 大於二級評論為要回復的評論id
+  // message	str	發送評論內容	必要	最大1000字元
+  // plat	num	發送平台標識	非必要	1：web端 2：安卓用戶端  3：ios用戶端  4：wp用戶端
   static Future<LoadingState<ReplyInfo?>> replyAdd({
     required int type,
     required int oid,
@@ -603,11 +603,11 @@ abstract final class VideoHttp {
       GStorage.reply?.delete(rpid.toString());
       return const Success(null);
     } else {
-      return const Error('请退出账号后重新登录');
+      return const Error('請退出帳號後重新登入');
     }
   }
 
-  // 操作用户关系
+  // 操作使用者關係
   static Future<LoadingState<void>> relationMod({
     required int mid,
     required int act,
@@ -675,7 +675,7 @@ abstract final class VideoHttp {
     );
   }
 
-  // 视频播放进度
+  // 影片播放進度
   static Future<void> heartBeat({
     Object? aid,
     Object? bvid,
@@ -720,7 +720,7 @@ abstract final class VideoHttp {
     );
   }
 
-  // 添加追番
+  // 新增追番
   static Future<LoadingState<String>> pgcAdd({int? seasonId}) async {
     final res = await Request().post(
       Api.pgcAdd,
@@ -768,7 +768,7 @@ abstract final class VideoHttp {
     }
   }
 
-  // 查看视频同时在看人数
+  // 查看影片同時在看人數
   static Future<LoadingState<String>> onlineTotal({
     int? aid,
     String? bvid,
@@ -883,7 +883,7 @@ abstract final class VideoHttp {
     return false;
   }
 
-  // 视频排行
+  // 影片排行
   static Future<LoadingState<List<HotVideoItemModel>>> getRankVideoList(
     int rid,
   ) async {

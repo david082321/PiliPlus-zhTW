@@ -124,7 +124,7 @@ class _PgcReviewPageState extends State<PgcReviewPage>
                     ListTile(
                       dense: true,
                       title: const Text(
-                        '写短评',
+                        '寫短評',
                         style: TextStyle(fontSize: 14),
                       ),
                       onTap: () {
@@ -145,7 +145,7 @@ class _PgcReviewPageState extends State<PgcReviewPage>
                     ListTile(
                       dense: true,
                       title: const Text(
-                        '写长评',
+                        '寫長評',
                         style: TextStyle(fontSize: 14),
                       ),
                       onTap: () => Get

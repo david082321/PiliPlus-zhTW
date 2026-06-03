@@ -72,9 +72,9 @@ class _FullScreenScSizeState extends State<FullScreenScSize> {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
-        title: const Text('全屏 SC 大小设置'),
+        title: const Text('全螢幕 SC 大小設定'),
         actions: [
-          TextButton(onPressed: _onReset, child: const Text('重置')),
+          TextButton(onPressed: _onReset, child: const Text('重設')),
         ],
       ),
       body: Padding(padding: _padding, child: _buildBody),

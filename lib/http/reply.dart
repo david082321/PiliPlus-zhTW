@@ -34,7 +34,7 @@ abstract final class ReplyHttp {
               'type': type,
               'pagination_str':
                   '{"offset":"${nextOffset.replaceAll('"', '\\"')}"}',
-              'mode': sort + 2, //2:按时间排序；3：按热度排序
+              'mode': sort + 2, //2:按時間排序；3：按熱度排序
             },
             options: !isLogin ? options : null,
           )
@@ -112,7 +112,7 @@ abstract final class ReplyHttp {
     }
   }
 
-  // 评论点赞
+  // 評論按讚
   static Future<LoadingState<void>> likeReply({
     required int type,
     required int oid,

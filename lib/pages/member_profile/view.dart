@@ -63,7 +63,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
     final theme = Theme.of(context);
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      appBar: AppBar(title: const Text('账号资料')),
+      appBar: AppBar(title: const Text('帳號資料')),
       body: _buildBody(theme, _loadingState),
     );
   }
@@ -136,7 +136,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
           divider1,
           _item(
             theme: theme,
-            title: '头像',
+            title: '大頭貼',
             widget: Padding(
               padding: const EdgeInsets.symmetric(vertical: 5),
               child: NetworkImgLayer(
@@ -157,15 +157,15 @@ class _EditProfilePageState extends State<EditProfilePage> {
           divider,
           _item(
             theme: theme,
-            title: '昵称',
+            title: '暱稱',
             text: response.name,
             onTap: () {
               if (response.coins! < 6) {
-                SmartDialog.showToast('硬币不足');
+                SmartDialog.showToast('硬幣不足');
               } else {
                 _editDialog(
                   type: ProfileType.uname,
-                  title: '昵称',
+                  title: '暱稱',
                   text: response.name!,
                 );
               }
@@ -174,7 +174,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
           divider,
           _item(
             theme: theme,
-            title: '性别',
+            title: '性別',
             text: _sex(response.sex!),
             onTap: () => showDialog(
               context: context,
@@ -204,18 +204,18 @@ class _EditProfilePageState extends State<EditProfilePage> {
           divider,
           _item(
             theme: theme,
-            title: '个性签名',
+            title: '個性簽名',
             text: response.sign,
             onTap: () => _editDialog(
               type: ProfileType.sign,
-              title: '个性签名',
+              title: '個性簽名',
               text: response.sign ?? '',
             ),
           ),
           divider1,
           _item(
             theme: theme,
-            title: '头像挂件',
+            title: '大頭貼掛件',
             onTap: () => PageUtils.inAppWebview(
               'https://www.bilibili.com/h5/mall/pendant/home',
             ),
@@ -231,7 +231,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
           divider1,
           _item(
             theme: theme,
-            title: '哔哩哔哩认证',
+            title: '嗶哩嗶哩認證',
             onTap: () => PageUtils.inAppWebview(
               'https://account.bilibili.com/official/mobile/home',
             ),
@@ -330,12 +330,12 @@ class _EditProfilePageState extends State<EditProfilePage> {
             TextButton(
               onPressed: () {
                 if (_textController.text == text) {
-                  SmartDialog.showToast('与原$title相同');
+                  SmartDialog.showToast('與原$title相同');
                 } else {
                   _update(type: type);
                 }
               },
-              child: const Text('确定'),
+              child: const Text('確定'),
             ),
           ],
         );
@@ -349,7 +349,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
   }) async {
     final accessKey = Accounts.main.accessKey;
     if (accessKey == null || accessKey.isEmpty) {
-      SmartDialog.showToast('请退出账号后重新登录');
+      SmartDialog.showToast('請退出帳號後重新登入');
       return;
     }
     final data = <String, String>{
@@ -435,7 +435,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
   }) {
     return ListTile(
       onTap: onTap,
-      dense: title != '头像',
+      dense: title != '大頭貼',
       leading: Text(
         title,
         style: const TextStyle(
@@ -485,7 +485,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
             ?.split('/')
             .elementAtOrNull(1);
         if (mimeType == 'gif') {
-          SmartDialog.showToast('不能选GIF');
+          SmartDialog.showToast('不能選GIF');
           return;
         }
         if (PlatformUtils.isMobile) {

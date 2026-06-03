@@ -27,7 +27,7 @@ class _MemberSearchPageState extends State<MemberSearchPage> {
       appBar: AppBar(
         actions: [
           IconButton(
-            tooltip: '搜索',
+            tooltip: '搜尋',
             onPressed: _controller.submit,
             icon: const Icon(Icons.search, size: 22),
           ),
@@ -40,7 +40,7 @@ class _MemberSearchPageState extends State<MemberSearchPage> {
           textInputAction: TextInputAction.search,
           textAlignVertical: TextAlignVertical.center,
           decoration: InputDecoration(
-            hintText: '搜索',
+            hintText: '搜尋',
             visualDensity: .standard,
             border: InputBorder.none,
             suffixIcon: IconButton(
@@ -72,13 +72,13 @@ class _MemberSearchPageState extends State<MemberSearchPage> {
                         Obx(
                           () => Tab(
                             text:
-                                '视频 ${_controller.counts[0] != -1 ? _controller.counts[0] : ''}',
+                                '影片 ${_controller.counts[0] != -1 ? _controller.counts[0] : ''}',
                           ),
                         ),
                         Obx(
                           () => Tab(
                             text:
-                                '动态 ${_controller.counts[1] != -1 ? _controller.counts[1] : ''}',
+                                '動態 ${_controller.counts[1] != -1 ? _controller.counts[1] : ''}',
                           ),
                         ),
                       ],
@@ -117,7 +117,7 @@ class _MemberSearchPageState extends State<MemberSearchPage> {
                   : Align(
                       alignment: const Alignment(0, -0.5),
                       child: Text(
-                        '搜索「${_controller.uname}」的动态、视频',
+                        '搜尋「${_controller.uname}」的動態、影片',
                         textAlign: TextAlign.center,
                       ),
                     ),

@@ -104,7 +104,7 @@ class _WhisperDetailPageState
         ),
         actions: [
           IconButton(
-            tooltip: '设置',
+            tooltip: '設定',
             onPressed: () => Get.to(
               WhisperLinkSettingPage(
                 talkerUid: _whisperDetailController.talkerId,
@@ -224,7 +224,7 @@ class _WhisperDetailPageState
                         : ReportOptions.imMsgReport['']![reasonType]!,
                   ),
             ),
-            child: const Text('举报', style: TextStyle(fontSize: 14)),
+            child: const Text('檢舉', style: TextStyle(fontSize: 14)),
           ),
       ],
     );
@@ -269,7 +269,7 @@ class _WhisperDetailPageState
                   );
                 },
                 dense: true,
-                title: const Text('举报', style: TextStyle(fontSize: 14)),
+                title: const Text('檢舉', style: TextStyle(fontSize: 14)),
               ),
       ),
     );
@@ -315,7 +315,7 @@ class _WhisperDetailPageState
                   textInputAction: TextInputAction.newline,
                   decoration: InputDecoration(
                     filled: true,
-                    hintText: '发个消息聊聊呗~',
+                    hintText: '發個消息聊聊唄~',
                     fillColor: theme.colorScheme.surface,
                     border: const OutlineInputBorder(
                       borderSide: BorderSide.none,
@@ -350,7 +350,7 @@ class _WhisperDetailPageState
                       );
                       if (pickedFile != null) {
                         final path = pickedFile.path;
-                        SmartDialog.showLoading(msg: '正在上传图片');
+                        SmartDialog.showLoading(msg: '正在上傳圖片');
                         final result = await MsgHttp.uploadBfs(
                           path: path,
                           biz: 'im',
@@ -369,7 +369,7 @@ class _WhisperDetailPageState
                             'original': 1,
                             'size': response.imgSize,
                           };
-                          SmartDialog.showLoading(msg: '正在发送');
+                          SmartDialog.showLoading(msg: '正在發送');
                           await _whisperDetailController
                               .sendMsg(
                                 picMsg: picMsg,
@@ -396,7 +396,7 @@ class _WhisperDetailPageState
                       ? Icons.send
                       : Icons.add_photo_alternate_outlined,
                 ),
-                tooltip: enablePublish ? '发送' : '图片',
+                tooltip: enablePublish ? '發送' : '圖片',
               );
             },
           ),

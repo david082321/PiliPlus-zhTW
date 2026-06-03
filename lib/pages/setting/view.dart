@@ -47,32 +47,32 @@ class _SettingPageState extends State<SettingPage> {
   static const List<_SettingsModel> _items = [
     _SettingsModel(
       type: SettingType.privacySetting,
-      subtitle: '黑名单、无痕模式',
+      subtitle: '黑名單、無痕模式',
       icon: Icon(Icons.privacy_tip_outlined),
     ),
     _SettingsModel(
       type: SettingType.recommendSetting,
-      subtitle: '推荐来源（web/app）、刷新保留内容、过滤器',
+      subtitle: '推薦來源（web/app）、重新整理保留內容、過濾器',
       icon: Icon(Icons.explore_outlined),
     ),
     _SettingsModel(
       type: SettingType.videoSetting,
-      subtitle: '画质、音质、解码、缓冲、音频输出等',
+      subtitle: '畫質、音質、解碼、緩衝、音訊輸出等',
       icon: Icon(Icons.video_settings_outlined),
     ),
     _SettingsModel(
       type: SettingType.playSetting,
-      subtitle: '双击/长按、全屏、后台播放、弹幕、字幕、底部进度条等',
+      subtitle: '雙擊/長按、全螢幕、後台播放、彈幕、字幕、底部進度條等',
       icon: Icon(Icons.touch_app_outlined),
     ),
     _SettingsModel(
       type: SettingType.styleSetting,
-      subtitle: '横屏适配（平板）、侧栏、列宽、首页、动态红点、主题、字号、图片、帧率等',
+      subtitle: '橫屏適配（平板）、側欄、列寬、首頁、動態紅點、主題、字號、圖片、幀率等',
       icon: Icon(Icons.style_outlined),
     ),
     _SettingsModel(
       type: SettingType.extraSetting,
-      subtitle: '震动、搜索、收藏、ai、评论、动态、代理、更新检查等',
+      subtitle: '震動、搜尋、收藏、ai、評論、動態、代理、更新檢查等',
       icon: Icon(Icons.extension_outlined),
     ),
     _SettingsModel(
@@ -92,7 +92,7 @@ class _SettingPageState extends State<SettingPage> {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
-        title: _isPortrait ? const Text('设置') : Text(_type.title),
+        title: _isPortrait ? const Text('設定') : Text(_type.title),
       ),
       body: ViewSafeArea(
         child: _isPortrait
@@ -190,7 +190,7 @@ class _SettingPageState extends State<SettingPage> {
         ListTile(
           onTap: () => LoginPageController.switchAccountDialog(context),
           leading: const Icon(Icons.switch_account_outlined),
-          title: Text('设置账号模式', style: titleStyle),
+          title: Text('設定帳號模式', style: titleStyle),
         ),
         Obx(
           () => _noAccount.value
@@ -198,7 +198,7 @@ class _SettingPageState extends State<SettingPage> {
               : ListTile(
                   leading: const Icon(Icons.logout_outlined),
                   onTap: () => _logoutDialog(context),
-                  title: Text('退出登录', style: titleStyle),
+                  title: Text('退出登入', style: titleStyle),
                 ),
         ),
         ListTile(
@@ -215,7 +215,7 @@ class _SettingPageState extends State<SettingPage> {
     final result = await showDialog<Set<LoginAccount>>(
       context: context,
       builder: (context) => MultiSelectDialog<LoginAccount>(
-        title: '选择要登出的账号uid',
+        title: '選擇要登出的帳號uid',
         initValues: const Iterable.empty(),
         values: {
           for (final i in Accounts.account.values) i: i.mid.toString(),
@@ -235,13 +235,13 @@ class _SettingPageState extends State<SettingPage> {
         return AlertDialog(
           title: const Text('提示'),
           content: Text(
-            "确认要退出以下账号登录吗\n\n${result.map((i) => i.mid.toString()).join('\n')}",
+            "確認要退出以下帳號登入嗎\n\n${result.map((i) => i.mid.toString()).join('\n')}",
           ),
           actions: [
             TextButton(
               onPressed: Get.back,
               child: Text(
-                '点错了',
+                '點錯了',
                 style: TextStyle(
                   color: theme.colorScheme.outline,
                 ),
@@ -253,7 +253,7 @@ class _SettingPageState extends State<SettingPage> {
                 logout();
               },
               child: Text(
-                '仅登出',
+                '僅登出',
                 style: TextStyle(color: theme.colorScheme.error),
               ),
             ),
@@ -270,7 +270,7 @@ class _SettingPageState extends State<SettingPage> {
                   SmartDialog.showToast(res['msg'].toString());
                 }
               },
-              child: const Text('确认'),
+              child: const Text('確認'),
             ),
           ],
         );
@@ -305,7 +305,7 @@ class _SettingPageState extends State<SettingPage> {
                   Icons.search,
                 ),
                 Text(
-                  ' 搜索',
+                  ' 搜尋',
                   style: TextStyle(height: 1),
                   strutStyle: StrutStyle(height: 1, leading: 0),
                 ),

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart' show Alignment;
 
 enum UserInfoType {
-  fan('粉丝', .centerLeft),
-  follow('关注', .center),
-  like('获赞', .centerRight),
+  fan('粉絲', .centerLeft),
+  follow('關注', .center),
+  like('獲讚', .centerRight),
   ;
 
   final String title;

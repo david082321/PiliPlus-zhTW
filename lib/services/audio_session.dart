@@ -63,7 +63,7 @@ class AudioSessionHandler {
       }
     });
 
-    // 耳机拔出暂停
+    // 耳機拔出暫停
     session.becomingNoisyEventStream.listen((_) {
       PlPlayerController.pauseIfExists();
       // final player = PlPlayerController.getInstance();

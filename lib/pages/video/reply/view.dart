@@ -152,7 +152,7 @@ class _VideoReplyPanelState extends State<VideoReplyPanel>
                         replyType: _videoReplyController.videoType.replyType,
                       );
                     },
-                    tooltip: '发表评论',
+                    tooltip: '發表評論',
                     child: const Icon(Icons.reply),
                   ),
                 ),
@@ -191,7 +191,7 @@ class _VideoReplyPanelState extends State<VideoReplyPanel>
                       alignment: Alignment.center,
                       margin: EdgeInsets.only(bottom: bottom),
                       child: Text(
-                        _videoReplyController.isEnd ? '没有更多了' : '加载中...',
+                        _videoReplyController.isEnd ? '沒有更多了' : '載入中...',
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           fontSize: 12,
@@ -223,7 +223,7 @@ class _VideoReplyPanelState extends State<VideoReplyPanel>
                 itemCount: response.length + 1,
               )
             : HttpError(
-                errMsg: '还没有评论',
+                errMsg: '還沒有評論',
                 onReload: _videoReplyController.onReload,
               ),
       Error(:final errMsg) => HttpError(
@@ -233,7 +233,7 @@ class _VideoReplyPanelState extends State<VideoReplyPanel>
     };
   }
 
-  // 展示二级回复
+  // 展示二級回復
   void replyReply(ReplyInfo replyItem, int? id) {
     EasyThrottle.throttle('replyReply', const Duration(milliseconds: 500), () {
       int oid = replyItem.oid.toInt();

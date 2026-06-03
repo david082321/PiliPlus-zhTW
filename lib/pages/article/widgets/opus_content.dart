@@ -442,7 +442,7 @@ class OpusContent extends StatelessWidget {
                           children: [
                             Text(opus.title!),
                             Text(
-                              '${opus.authorName} · ${opus.statView ?? 0}阅读',
+                              '${opus.authorName} · ${opus.statView ?? 0}閱讀',
                               style: TextStyle(
                                 fontSize: 13,
                                 color: colorScheme.outline,
@@ -477,7 +477,7 @@ class OpusContent extends StatelessWidget {
                           children: [
                             Text(vote.desc!),
                             Text(
-                              '${vote.joinNum}人参与',
+                              '${vote.joinNum}人參與',
                               style: TextStyle(
                                 fontSize: 13,
                                 color: colorScheme.outline,
@@ -590,7 +590,7 @@ class OpusContent extends StatelessWidget {
                             }
                             if (type == 'LINK_CARD_TYPE_ITEM_NULL') {
                               switch (element.linkCard?.card?.itemNull?.text) {
-                                case '视频':
+                                case '影片':
                                   PiliScheme.videoPush(
                                     int.parse(element.linkCard!.card!.oid!),
                                     null,
@@ -686,7 +686,7 @@ class OpusContent extends StatelessWidget {
               }
 
               return SelectableText(
-                '不支持的类型 (${element.paraType})',
+                '不支援的類型 (${element.paraType})',
                 style: const TextStyle(
                   fontWeight: .bold,
                   color: Colors.red,
@@ -695,7 +695,7 @@ class OpusContent extends StatelessWidget {
           }
         } catch (e) {
           return SelectableText(
-            '错误的类型 $e',
+            '錯誤的類型 $e',
             style: const TextStyle(
               fontWeight: .bold,
               color: Colors.red,

@@ -770,7 +770,7 @@ class BubbleModuleUser extends $pb.GeneratedMessage {
   $pb.PbList<UserInfo> get users => $_getList(0);
 }
 
-/// 付费课程批次卡片数据
+/// 付費課程批次卡片資料
 class CardCurrBatch extends $pb.GeneratedMessage {
   factory CardCurrBatch({
     $core.String? title,
@@ -832,7 +832,7 @@ class CardCurrBatch extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<CardCurrBatch>(create);
   static CardCurrBatch? _defaultInstance;
 
-  /// 标题
+  /// 標題
   @$pb.TagNumber(1)
   $core.String get title => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -852,7 +852,7 @@ class CardCurrBatch extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearCover() => $_clearField(2);
 
-  /// 跳转地址
+  /// 跳轉地址
   @$pb.TagNumber(3)
   $core.String get uri => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -862,7 +862,7 @@ class CardCurrBatch extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearUri() => $_clearField(3);
 
-  /// 展示项 1: 本集标题
+  /// 展示項 1: 本集標題
   @$pb.TagNumber(4)
   $core.String get text1 => $_getSZ(3);
   @$pb.TagNumber(4)
@@ -872,7 +872,7 @@ class CardCurrBatch extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearText1() => $_clearField(4);
 
-  /// 展示项 2: 更新了多少个视频
+  /// 展示項 2: 更新了多少個影片
   @$pb.TagNumber(5)
   $core.String get text2 => $_getSZ(4);
   @$pb.TagNumber(5)
@@ -882,7 +882,7 @@ class CardCurrBatch extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearText2() => $_clearField(5);
 
-  /// 角标
+  /// 角標
   @$pb.TagNumber(6)
   VideoBadge get badge => $_getN(5);
   @$pb.TagNumber(6)
@@ -895,7 +895,7 @@ class CardCurrBatch extends $pb.GeneratedMessage {
   VideoBadge ensureBadge() => $_ensure(5);
 }
 
-/// 付费课程系列卡片数据
+/// 付費課程系列卡片資料
 class CardCurrSeason extends $pb.GeneratedMessage {
   factory CardCurrSeason({
     $core.String? title,
@@ -957,7 +957,7 @@ class CardCurrSeason extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<CardCurrSeason>(create);
   static CardCurrSeason? _defaultInstance;
 
-  /// 标题
+  /// 標題
   @$pb.TagNumber(1)
   $core.String get title => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -977,7 +977,7 @@ class CardCurrSeason extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearCover() => $_clearField(2);
 
-  /// 跳转地址
+  /// 跳轉地址
   @$pb.TagNumber(3)
   $core.String get uri => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -987,7 +987,7 @@ class CardCurrSeason extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearUri() => $_clearField(3);
 
-  /// 展示项 1 (展示更新信息)
+  /// 展示項 1 (展示更新資訊)
   @$pb.TagNumber(4)
   $core.String get text1 => $_getSZ(3);
   @$pb.TagNumber(4)
@@ -997,7 +997,7 @@ class CardCurrSeason extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearText1() => $_clearField(4);
 
-  /// 描述信息
+  /// 描述資訊
   @$pb.TagNumber(5)
   $core.String get desc => $_getSZ(4);
   @$pb.TagNumber(5)
@@ -1007,7 +1007,7 @@ class CardCurrSeason extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearDesc() => $_clearField(5);
 
-  /// 角标
+  /// 角標
   @$pb.TagNumber(6)
   VideoBadge get badge => $_getN(5);
   @$pb.TagNumber(6)
@@ -1020,7 +1020,7 @@ class CardCurrSeason extends $pb.GeneratedMessage {
   VideoBadge ensureBadge() => $_ensure(5);
 }
 
-/// PGC 视频卡片数据
+/// PGC 影片卡片資料
 class CardPGC extends $pb.GeneratedMessage {
   factory CardPGC({
     $core.String? title,
@@ -1118,7 +1118,7 @@ class CardPGC extends $pb.GeneratedMessage {
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CardPGC>(create);
   static CardPGC? _defaultInstance;
 
-  /// 标题
+  /// 標題
   @$pb.TagNumber(1)
   $core.String get title => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1138,7 +1138,7 @@ class CardPGC extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearCover() => $_clearField(2);
 
-  /// 秒开地址
+  /// 秒開地址
   @$pb.TagNumber(3)
   $core.String get uri => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -1148,7 +1148,7 @@ class CardPGC extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearUri() => $_clearField(3);
 
-  /// 视频封面展示项 1
+  /// 影片封面展示項 1
   @$pb.TagNumber(4)
   $core.String get coverLeftText1 => $_getSZ(3);
   @$pb.TagNumber(4)
@@ -1158,7 +1158,7 @@ class CardPGC extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearCoverLeftText1() => $_clearField(4);
 
-  /// 视频封面展示项 2
+  /// 影片封面展示項 2
   @$pb.TagNumber(5)
   $core.String get coverLeftText2 => $_getSZ(4);
   @$pb.TagNumber(5)
@@ -1168,7 +1168,7 @@ class CardPGC extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearCoverLeftText2() => $_clearField(5);
 
-  /// 视频封面展示项 3
+  /// 影片封面展示項 3
   @$pb.TagNumber(6)
   $core.String get coverLeftText3 => $_getSZ(5);
   @$pb.TagNumber(6)
@@ -1178,7 +1178,7 @@ class CardPGC extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   void clearCoverLeftText3() => $_clearField(6);
 
-  /// 视频 cid
+  /// 影片 cid
   @$pb.TagNumber(7)
   $fixnum.Int64 get cid => $_getI64(6);
   @$pb.TagNumber(7)
@@ -1188,7 +1188,7 @@ class CardPGC extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   void clearCid() => $_clearField(7);
 
-  /// PGC 剧集 ID
+  /// PGC 劇集 ID
   @$pb.TagNumber(8)
   $fixnum.Int64 get seasonId => $_getI64(7);
   @$pb.TagNumber(8)
@@ -1198,7 +1198,7 @@ class CardPGC extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   void clearSeasonId() => $_clearField(8);
 
-  /// PGC 剧集分集 ID
+  /// PGC 劇集分集 ID
   @$pb.TagNumber(9)
   $fixnum.Int64 get epid => $_getI64(8);
   @$pb.TagNumber(9)
@@ -1208,7 +1208,7 @@ class CardPGC extends $pb.GeneratedMessage {
   @$pb.TagNumber(9)
   void clearEpid() => $_clearField(9);
 
-  /// 视频 avid
+  /// 影片 avid
   @$pb.TagNumber(10)
   $fixnum.Int64 get aid => $_getI64(9);
   @$pb.TagNumber(10)
@@ -1218,7 +1218,7 @@ class CardPGC extends $pb.GeneratedMessage {
   @$pb.TagNumber(10)
   void clearAid() => $_clearField(10);
 
-  /// 视频源类型
+  /// 影片源類型
   @$pb.TagNumber(11)
   MediaType get mediaType => $_getN(10);
   @$pb.TagNumber(11)
@@ -1228,7 +1228,7 @@ class CardPGC extends $pb.GeneratedMessage {
   @$pb.TagNumber(11)
   void clearMediaType() => $_clearField(11);
 
-  /// 番剧类型
+  /// 番劇類型
   @$pb.TagNumber(12)
   VideoSubType get subType => $_getN(11);
   @$pb.TagNumber(12)
@@ -1238,7 +1238,7 @@ class CardPGC extends $pb.GeneratedMessage {
   @$pb.TagNumber(12)
   void clearSubType() => $_clearField(12);
 
-  /// 番剧是否为预览视频
+  /// 番劇是否為預覽影片
   @$pb.TagNumber(13)
   $core.int get isPreview => $_getIZ(12);
   @$pb.TagNumber(13)
@@ -1248,7 +1248,7 @@ class CardPGC extends $pb.GeneratedMessage {
   @$pb.TagNumber(13)
   void clearIsPreview() => $_clearField(13);
 
-  /// 分辨率
+  /// 解析度
   @$pb.TagNumber(14)
   Dimension get dimension => $_getN(13);
   @$pb.TagNumber(14)
@@ -1260,11 +1260,11 @@ class CardPGC extends $pb.GeneratedMessage {
   @$pb.TagNumber(14)
   Dimension ensureDimension() => $_ensure(13);
 
-  /// 角标
+  /// 角標
   @$pb.TagNumber(15)
   $pb.PbList<VideoBadge> get badge => $_getList(14);
 
-  /// 是否能够自动播放
+  /// 是否能夠自動播放
   @$pb.TagNumber(16)
   $core.int get canPlay => $_getIZ(15);
   @$pb.TagNumber(16)
@@ -1274,7 +1274,7 @@ class CardPGC extends $pb.GeneratedMessage {
   @$pb.TagNumber(16)
   void clearCanPlay() => $_clearField(16);
 
-  /// PGC 剧集信息
+  /// PGC 劇集資訊
   @$pb.TagNumber(17)
   PGCSeason get season => $_getN(16);
   @$pb.TagNumber(17)
@@ -1287,7 +1287,7 @@ class CardPGC extends $pb.GeneratedMessage {
   PGCSeason ensureSeason() => $_ensure(16);
 }
 
-/// UGC 视频卡片数据
+/// UGC 影片卡片資料
 class CardUGC extends $pb.GeneratedMessage {
   factory CardUGC({
     $core.String? title,
@@ -1368,7 +1368,7 @@ class CardUGC extends $pb.GeneratedMessage {
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CardUGC>(create);
   static CardUGC? _defaultInstance;
 
-  /// 标题
+  /// 標題
   @$pb.TagNumber(1)
   $core.String get title => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1378,7 +1378,7 @@ class CardUGC extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearTitle() => $_clearField(1);
 
-  /// 封面图
+  /// 封面圖
   @$pb.TagNumber(2)
   $core.String get cover => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -1388,7 +1388,7 @@ class CardUGC extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearCover() => $_clearField(2);
 
-  /// 秒开地址
+  /// 秒開地址
   @$pb.TagNumber(3)
   $core.String get uri => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -1398,7 +1398,7 @@ class CardUGC extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearUri() => $_clearField(3);
 
-  /// 视频封面展示项 1
+  /// 影片封面展示項 1
   @$pb.TagNumber(4)
   $core.String get coverLeftText1 => $_getSZ(3);
   @$pb.TagNumber(4)
@@ -1408,7 +1408,7 @@ class CardUGC extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearCoverLeftText1() => $_clearField(4);
 
-  /// 视频封面展示项 2
+  /// 影片封面展示項 2
   @$pb.TagNumber(5)
   $core.String get coverLeftText2 => $_getSZ(4);
   @$pb.TagNumber(5)
@@ -1418,7 +1418,7 @@ class CardUGC extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearCoverLeftText2() => $_clearField(5);
 
-  /// 视频封面展示项 3
+  /// 影片封面展示項 3
   @$pb.TagNumber(6)
   $core.String get coverLeftText3 => $_getSZ(5);
   @$pb.TagNumber(6)
@@ -1428,7 +1428,7 @@ class CardUGC extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   void clearCoverLeftText3() => $_clearField(6);
 
-  /// 视频 avid
+  /// 影片 avid
   @$pb.TagNumber(7)
   $fixnum.Int64 get avid => $_getI64(6);
   @$pb.TagNumber(7)
@@ -1438,7 +1438,7 @@ class CardUGC extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   void clearAvid() => $_clearField(7);
 
-  /// 视频 cid
+  /// 影片 cid
   @$pb.TagNumber(8)
   $fixnum.Int64 get cid => $_getI64(7);
   @$pb.TagNumber(8)
@@ -1448,7 +1448,7 @@ class CardUGC extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   void clearCid() => $_clearField(8);
 
-  /// 视频源类型
+  /// 影片源類型
   @$pb.TagNumber(9)
   MediaType get mediaType => $_getN(8);
   @$pb.TagNumber(9)
@@ -1458,7 +1458,7 @@ class CardUGC extends $pb.GeneratedMessage {
   @$pb.TagNumber(9)
   void clearMediaType() => $_clearField(9);
 
-  /// 分辨率
+  /// 解析度
   @$pb.TagNumber(10)
   Dimension get dimension => $_getN(9);
   @$pb.TagNumber(10)
@@ -1470,11 +1470,11 @@ class CardUGC extends $pb.GeneratedMessage {
   @$pb.TagNumber(10)
   Dimension ensureDimension() => $_ensure(9);
 
-  /// 角标
+  /// 角標
   @$pb.TagNumber(11)
   $pb.PbList<VideoBadge> get badge => $_getList(10);
 
-  /// 是否能够自动播放
+  /// 是否能夠自動播放
   @$pb.TagNumber(12)
   $core.int get canPlay => $_getIZ(11);
   @$pb.TagNumber(12)
@@ -1672,7 +1672,7 @@ class CornerInfo extends $pb.GeneratedMessage {
   void clearCornerNumber() => $_clearField(6);
 }
 
-/// 粉丝样式
+/// 粉絲樣式
 class DecoCardFan extends $pb.GeneratedMessage {
   factory DecoCardFan({
     $core.int? isFan,
@@ -1724,7 +1724,7 @@ class DecoCardFan extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<DecoCardFan>(create);
   static DecoCardFan? _defaultInstance;
 
-  /// 是否是粉丝
+  /// 是否是粉絲
   @$pb.TagNumber(1)
   $core.int get isFan => $_getIZ(0);
   @$pb.TagNumber(1)
@@ -1734,7 +1734,7 @@ class DecoCardFan extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearIsFan() => $_clearField(1);
 
-  /// 数量
+  /// 數量
   @$pb.TagNumber(2)
   $core.int get number => $_getIZ(1);
   @$pb.TagNumber(2)
@@ -1744,7 +1744,7 @@ class DecoCardFan extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearNumber() => $_clearField(2);
 
-  /// 颜色
+  /// 顏色
   @$pb.TagNumber(3)
   $core.String get color => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -1755,7 +1755,7 @@ class DecoCardFan extends $pb.GeneratedMessage {
   void clearColor() => $_clearField(3);
 }
 
-/// 装扮卡片
+/// 裝扮卡片
 class DecorateCard extends $pb.GeneratedMessage {
   factory DecorateCard({
     $fixnum.Int64? id,
@@ -1811,7 +1811,7 @@ class DecorateCard extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<DecorateCard>(create);
   static DecorateCard? _defaultInstance;
 
-  /// 装扮卡片 ID
+  /// 裝扮卡片 ID
   @$pb.TagNumber(1)
   $fixnum.Int64 get id => $_getI64(0);
   @$pb.TagNumber(1)
@@ -1821,7 +1821,7 @@ class DecorateCard extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearId() => $_clearField(1);
 
-  /// 装扮卡片链接
+  /// 裝扮卡片連結
   @$pb.TagNumber(2)
   $core.String get cardUrl => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -1831,7 +1831,7 @@ class DecorateCard extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearCardUrl() => $_clearField(2);
 
-  /// 装扮卡片点击跳转链接
+  /// 裝扮卡片點擊跳轉連結
   @$pb.TagNumber(3)
   $core.String get jumpUrl => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -1841,7 +1841,7 @@ class DecorateCard extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearJumpUrl() => $_clearField(3);
 
-  /// 粉丝样式
+  /// 粉絲樣式
   @$pb.TagNumber(4)
   DecoCardFan get fan => $_getN(3);
   @$pb.TagNumber(4)
@@ -1854,7 +1854,7 @@ class DecorateCard extends $pb.GeneratedMessage {
   DecoCardFan ensureFan() => $_ensure(3);
 }
 
-/// 文本描述
+/// 文字描述
 class Description extends $pb.GeneratedMessage {
   factory Description({
     $core.String? text,
@@ -1912,7 +1912,7 @@ class Description extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<Description>(create);
   static Description? _defaultInstance;
 
-  /// 文本内容
+  /// 文字內容
   @$pb.TagNumber(1)
   $core.String get text => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1922,7 +1922,7 @@ class Description extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearText() => $_clearField(1);
 
-  /// 文本类型
+  /// 文字類型
   @$pb.TagNumber(2)
   $core.String get type => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -1932,7 +1932,7 @@ class Description extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearType() => $_clearField(2);
 
-  /// 跳转地址
+  /// 跳轉地址
   @$pb.TagNumber(3)
   $core.String get uri => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -1942,7 +1942,7 @@ class Description extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearUri() => $_clearField(3);
 
-  /// emoji 类型
+  /// emoji 類型
   @$pb.TagNumber(4)
   $core.String get emojiType => $_getSZ(3);
   @$pb.TagNumber(4)
@@ -1952,7 +1952,7 @@ class Description extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearEmojiType() => $_clearField(4);
 
-  /// 商品类型
+  /// 商品類型
   @$pb.TagNumber(5)
   $core.String get goodsType => $_getSZ(4);
   @$pb.TagNumber(5)
@@ -1963,7 +1963,7 @@ class Description extends $pb.GeneratedMessage {
   void clearGoodsType() => $_clearField(5);
 }
 
-/// 分辨率信息
+/// 解析度資訊
 class Dimension extends $pb.GeneratedMessage {
   factory Dimension({
     $fixnum.Int64? height,
@@ -2024,7 +2024,7 @@ class Dimension extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearHeight() => $_clearField(1);
 
-  /// 宽
+  /// 寬
   @$pb.TagNumber(2)
   $fixnum.Int64 get width => $_getI64(1);
   @$pb.TagNumber(2)
@@ -2034,7 +2034,7 @@ class Dimension extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearWidth() => $_clearField(2);
 
-  /// 是否为竖屏
+  /// 是否為豎屏
   @$pb.TagNumber(3)
   $fixnum.Int64 get rotate => $_getI64(2);
   @$pb.TagNumber(3)
@@ -2045,7 +2045,7 @@ class Dimension extends $pb.GeneratedMessage {
   void clearRotate() => $_clearField(3);
 }
 
-/// 通过动态 ID 批量获取动态详情返回值
+/// 透過動態 ID 批次取得動態詳情返回值
 class DynDetailsReply extends $pb.GeneratedMessage {
   factory DynDetailsReply({
     $core.Iterable<DynamicItem>? list,
@@ -2092,12 +2092,12 @@ class DynDetailsReply extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<DynDetailsReply>(create);
   static DynDetailsReply? _defaultInstance;
 
-  /// 动态列表
+  /// 動態列表
   @$pb.TagNumber(1)
   $pb.PbList<DynamicItem> get list => $_getList(0);
 }
 
-/// 通过动态 ID 批量获取动态详情请求参数
+/// 透過動態 ID 批次取得動態詳情請求參數
 class DynDetailsReq extends $pb.GeneratedMessage {
   factory DynDetailsReq({
     $core.int? teenagersMode,
@@ -2171,7 +2171,7 @@ class DynDetailsReq extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearTeenagersMode() => $_clearField(1);
 
-  /// 动态 ID
+  /// 動態 ID
   @$pb.TagNumber(2)
   $core.String get dynamicIds => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -2181,7 +2181,7 @@ class DynDetailsReq extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearDynamicIds() => $_clearField(2);
 
-  /// 清晰度 (供秒开)
+  /// 清晰度 (供秒開)
   @$pb.TagNumber(3)
   $core.int get qn => $_getIZ(2);
   @$pb.TagNumber(3)
@@ -2191,7 +2191,7 @@ class DynDetailsReq extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearQn() => $_clearField(3);
 
-  /// 功能版本号 (供秒开)
+  /// 功能版本號 (供秒開)
   @$pb.TagNumber(4)
   $core.int get fnver => $_getIZ(3);
   @$pb.TagNumber(4)
@@ -2201,7 +2201,7 @@ class DynDetailsReq extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearFnver() => $_clearField(4);
 
-  /// 功能标识 (供秒开)
+  /// 功能標識 (供秒開)
   @$pb.TagNumber(5)
   $core.int get fnval => $_getIZ(4);
   @$pb.TagNumber(5)
@@ -2211,7 +2211,7 @@ class DynDetailsReq extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearFnval() => $_clearField(5);
 
-  /// 返回 playurl 是否强制使用域名 (供秒开)
+  /// 返回 playurl 是否強制使用域名 (供秒開)
   @$pb.TagNumber(6)
   $core.int get forceHost => $_getIZ(5);
   @$pb.TagNumber(6)
@@ -2221,7 +2221,7 @@ class DynDetailsReq extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   void clearForceHost() => $_clearField(6);
 
-  /// 是否需要 4K 视频 (供秒开)
+  /// 是否需要 4K 影片 (供秒開)
   @$pb.TagNumber(7)
   $core.int get fourk => $_getIZ(6);
   @$pb.TagNumber(7)
@@ -2402,7 +2402,7 @@ class DynMixUpListViewMoreReply extends $pb.GeneratedMessage {
   void clearSearchDefaultText() => $_clearField(2);
 }
 
-/// 动态同城物料
+/// 動態同城物料
 class DynOurCityItem extends $pb.GeneratedMessage {
   factory DynOurCityItem({
     $core.String? cardType,
@@ -2464,10 +2464,10 @@ class DynOurCityItem extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<DynOurCityItem>(create);
   static DynOurCityItem? _defaultInstance;
 
-  /// 卡片类型
+  /// 卡片類型
   ///
   /// - av: 稿件
-  /// - draw: 图文
+  /// - draw: 圖文
   @$pb.TagNumber(1)
   $core.String get cardType => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -2477,7 +2477,7 @@ class DynOurCityItem extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearCardType() => $_clearField(1);
 
-  /// 动态 ID
+  /// 動態 ID
   @$pb.TagNumber(2)
   $fixnum.Int64 get dynId => $_getI64(1);
   @$pb.TagNumber(2)
@@ -2487,7 +2487,7 @@ class DynOurCityItem extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearDynId() => $_clearField(2);
 
-  /// 跳转地址
+  /// 跳轉地址
   @$pb.TagNumber(3)
   $core.String get uri => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -2497,11 +2497,11 @@ class DynOurCityItem extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearUri() => $_clearField(3);
 
-  /// 模块列表
+  /// 模組列表
   @$pb.TagNumber(4)
   $pb.PbList<DynOurCityModule> get modules => $_getList(3);
 
-  /// 资源 ID
+  /// 資源 ID
   @$pb.TagNumber(5)
   $fixnum.Int64 get rid => $_getI64(4);
   @$pb.TagNumber(5)
@@ -2511,7 +2511,7 @@ class DynOurCityItem extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearRid() => $_clearField(5);
 
-  /// ? DEBUG 信息
+  /// ? DEBUG 資訊
   @$pb.TagNumber(6)
   $core.String get debugInfo => $_getSZ(5);
   @$pb.TagNumber(6)
@@ -2530,7 +2530,7 @@ enum DynOurCityModule_ModuleItem {
   notSet
 }
 
-/// 动态同城物料模块
+/// 動態同城物料模組
 class DynOurCityModule extends $pb.GeneratedMessage {
   factory DynOurCityModule({
     $core.String? moduleType,
@@ -2613,12 +2613,12 @@ class DynOurCityModule extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearModuleItem() => $_clearField($_whichOneof(0));
 
-  /// 模块类型
+  /// 模組類型
   ///
   /// - `cover`: 封面
   /// - `desc`: 描述
-  /// - `author`: 发布人
-  /// - `extend`: 扩展部分
+  /// - `author`: 發布人
+  /// - `extend`: 擴展部分
   @$pb.TagNumber(1)
   $core.String get moduleType => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -2628,7 +2628,7 @@ class DynOurCityModule extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearModuleType() => $_clearField(1);
 
-  /// 参见 [`DynOurCityModuleCover`]
+  /// 參見 [`DynOurCityModuleCover`]
   @$pb.TagNumber(2)
   DynOurCityModuleCover get moduleCover => $_getN(1);
   @$pb.TagNumber(2)
@@ -2640,7 +2640,7 @@ class DynOurCityModule extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   DynOurCityModuleCover ensureModuleCover() => $_ensure(1);
 
-  /// 参见 [`DynOurCityModuleDesc`]
+  /// 參見 [`DynOurCityModuleDesc`]
   @$pb.TagNumber(3)
   DynOurCityModuleDesc get moduleDesc => $_getN(2);
   @$pb.TagNumber(3)
@@ -2652,7 +2652,7 @@ class DynOurCityModule extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   DynOurCityModuleDesc ensureModuleDesc() => $_ensure(2);
 
-  /// 参见 [`DynOurCityModuleAuthor`]
+  /// 參見 [`DynOurCityModuleAuthor`]
   @$pb.TagNumber(4)
   DynOurCityModuleAuthor get moduleAuthor => $_getN(3);
   @$pb.TagNumber(4)
@@ -2664,7 +2664,7 @@ class DynOurCityModule extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   DynOurCityModuleAuthor ensureModuleAuthor() => $_ensure(3);
 
-  /// 参见 [`DynOurCityModuleExtend`]
+  /// 參見 [`DynOurCityModuleExtend`]
   @$pb.TagNumber(5)
   DynOurCityModuleExtend get moduleExtend => $_getN(4);
   @$pb.TagNumber(5)
@@ -2677,7 +2677,7 @@ class DynOurCityModule extends $pb.GeneratedMessage {
   DynOurCityModuleExtend ensureModuleExtend() => $_ensure(4);
 }
 
-/// 动态同城物料发布人模块
+/// 動態同城物料發布人模組
 class DynOurCityModuleAuthor extends $pb.GeneratedMessage {
   factory DynOurCityModuleAuthor({
     $fixnum.Int64? mid,
@@ -2733,7 +2733,7 @@ class DynOurCityModuleAuthor extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<DynOurCityModuleAuthor>(create);
   static DynOurCityModuleAuthor? _defaultInstance;
 
-  /// 发布人 mid
+  /// 發布人 mid
   @$pb.TagNumber(1)
   $fixnum.Int64 get mid => $_getI64(0);
   @$pb.TagNumber(1)
@@ -2743,7 +2743,7 @@ class DynOurCityModuleAuthor extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearMid() => $_clearField(1);
 
-  /// 发布人昵称
+  /// 發布人暱稱
   @$pb.TagNumber(2)
   $core.String get name => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -2753,7 +2753,7 @@ class DynOurCityModuleAuthor extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearName() => $_clearField(2);
 
-  /// 发布人头像
+  /// 發布人大頭貼
   @$pb.TagNumber(3)
   $core.String get face => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -2763,7 +2763,7 @@ class DynOurCityModuleAuthor extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearFace() => $_clearField(3);
 
-  /// 跳转地址
+  /// 跳轉地址
   @$pb.TagNumber(4)
   $core.String get uri => $_getSZ(3);
   @$pb.TagNumber(4)
@@ -2774,7 +2774,7 @@ class DynOurCityModuleAuthor extends $pb.GeneratedMessage {
   void clearUri() => $_clearField(4);
 }
 
-/// 动态同城物料封面模块
+/// 動態同城物料封面模組
 class DynOurCityModuleCover extends $pb.GeneratedMessage {
   factory DynOurCityModuleCover({
     $core.Iterable<$core.String>? covers,
@@ -2843,17 +2843,17 @@ class DynOurCityModuleCover extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<DynOurCityModuleCover>(create);
   static DynOurCityModuleCover? _defaultInstance;
 
-  /// 封面图
+  /// 封面圖
   ///
-  /// 单图样式取第一个元素
+  /// 單圖樣式取第一個元素
   @$pb.TagNumber(1)
   $pb.PbList<$core.String> get covers => $_getList(0);
 
-  /// 封面样式
+  /// 封面樣式
   ///
-  /// - 1: 横图
-  /// - 2: 竖图
-  /// - 3: 方图
+  /// - 1: 橫圖
+  /// - 2: 豎圖
+  /// - 3: 方圖
   @$pb.TagNumber(2)
   $core.int get style => $_getIZ(1);
   @$pb.TagNumber(2)
@@ -2863,7 +2863,7 @@ class DynOurCityModuleCover extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearStyle() => $_clearField(2);
 
-  /// 视频封面展示项图标 1
+  /// 影片封面展示項圖示 1
   @$pb.TagNumber(3)
   $core.int get coverLeftIcon1 => $_getIZ(2);
   @$pb.TagNumber(3)
@@ -2873,7 +2873,7 @@ class DynOurCityModuleCover extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearCoverLeftIcon1() => $_clearField(3);
 
-  /// 视频封面展示项 1
+  /// 影片封面展示項 1
   @$pb.TagNumber(4)
   $core.String get coverLeftText1 => $_getSZ(3);
   @$pb.TagNumber(4)
@@ -2883,7 +2883,7 @@ class DynOurCityModuleCover extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearCoverLeftText1() => $_clearField(4);
 
-  /// 视频封面展示项图标 2
+  /// 影片封面展示項圖示 2
   @$pb.TagNumber(5)
   $core.int get coverLeftIcon2 => $_getIZ(4);
   @$pb.TagNumber(5)
@@ -2893,7 +2893,7 @@ class DynOurCityModuleCover extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearCoverLeftIcon2() => $_clearField(5);
 
-  /// 视频封面展示项 2
+  /// 影片封面展示項 2
   @$pb.TagNumber(6)
   $core.String get coverLeftText2 => $_getSZ(5);
   @$pb.TagNumber(6)
@@ -2903,7 +2903,7 @@ class DynOurCityModuleCover extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   void clearCoverLeftText2() => $_clearField(6);
 
-  /// 视频封面展示项 3
+  /// 影片封面展示項 3
   @$pb.TagNumber(7)
   $core.String get coverLeftText3 => $_getSZ(6);
   @$pb.TagNumber(7)
@@ -2913,12 +2913,12 @@ class DynOurCityModuleCover extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   void clearCoverLeftText3() => $_clearField(7);
 
-  /// 角标
+  /// 角標
   @$pb.TagNumber(8)
   $pb.PbList<VideoBadge> get badge => $_getList(7);
 }
 
-/// 动态同城物料详情模块
+/// 動態同城物料詳情模組
 class DynOurCityModuleDesc extends $pb.GeneratedMessage {
   factory DynOurCityModuleDesc({
     $core.String? desc,
@@ -2964,7 +2964,7 @@ class DynOurCityModuleDesc extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<DynOurCityModuleDesc>(create);
   static DynOurCityModuleDesc? _defaultInstance;
 
-  /// 详情
+  /// 詳情
   @$pb.TagNumber(1)
   $core.String get desc => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -2977,7 +2977,7 @@ class DynOurCityModuleDesc extends $pb.GeneratedMessage {
 
 enum DynOurCityModuleExtend_Extend { extendLbs, notSet }
 
-/// 动态同城物料拓展模块
+/// 動態同城物料擴展模組
 class DynOurCityModuleExtend extends $pb.GeneratedMessage {
   factory DynOurCityModuleExtend({
     $core.String? type,
@@ -3061,7 +3061,7 @@ class DynOurCityModuleExtend extends $pb.GeneratedMessage {
   DynOurCityModuleExtendLBS ensureExtendLbs() => $_ensure(1);
 }
 
-/// 动态同城物料拓展模块: LBS
+/// 動態同城物料擴展模組: LBS
 class DynOurCityModuleExtendLBS extends $pb.GeneratedMessage {
   factory DynOurCityModuleExtendLBS({
     $core.String? title,
@@ -3117,7 +3117,7 @@ class DynOurCityModuleExtendLBS extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<DynOurCityModuleExtendLBS>(create);
   static DynOurCityModuleExtendLBS? _defaultInstance;
 
-  /// 标题
+  /// 標題
   @$pb.TagNumber(1)
   $core.String get title => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -3127,7 +3127,7 @@ class DynOurCityModuleExtendLBS extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearTitle() => $_clearField(1);
 
-  /// 跳转地址
+  /// 跳轉地址
   @$pb.TagNumber(2)
   $core.String get uri => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -3137,7 +3137,7 @@ class DynOurCityModuleExtendLBS extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearUri() => $_clearField(2);
 
-  /// 小图标
+  /// 小圖示
   @$pb.TagNumber(3)
   $core.String get icon => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -3157,7 +3157,7 @@ class DynOurCityModuleExtendLBS extends $pb.GeneratedMessage {
   void clearPoiType() => $_clearField(4);
 }
 
-/// 动态同城页请求返回值
+/// 動態同城頁請求返回值
 class DynOurCityReply extends $pb.GeneratedMessage {
   factory DynOurCityReply({
     $core.String? offset,
@@ -3225,7 +3225,7 @@ class DynOurCityReply extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<DynOurCityReply>(create);
   static DynOurCityReply? _defaultInstance;
 
-  /// 翻页游标
+  /// 翻頁游標
   @$pb.TagNumber(1)
   $core.String get offset => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -3235,7 +3235,7 @@ class DynOurCityReply extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearOffset() => $_clearField(1);
 
-  /// 是否还有更多
+  /// 是否還有更多
   @$pb.TagNumber(2)
   $core.int get hasMore => $_getIZ(1);
   @$pb.TagNumber(2)
@@ -3245,9 +3245,9 @@ class DynOurCityReply extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearHasMore() => $_clearField(2);
 
-  /// 样式类型
+  /// 樣式類型
   ///
-  /// - 1: 双列
+  /// - 1: 雙列
   /// - 2: 瀑布流
   @$pb.TagNumber(3)
   $core.int get style => $_getIZ(2);
@@ -3258,7 +3258,7 @@ class DynOurCityReply extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearStyle() => $_clearField(3);
 
-  /// ? 顶部导引信息
+  /// ? 頂部導引資訊
   @$pb.TagNumber(4)
   $core.String get topLabel => $_getSZ(3);
   @$pb.TagNumber(4)
@@ -3268,11 +3268,11 @@ class DynOurCityReply extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearTopLabel() => $_clearField(4);
 
-  /// 列表详情
+  /// 列表詳情
   @$pb.TagNumber(5)
   $pb.PbList<DynOurCityItem> get list => $_getList(4);
 
-  /// ? 顶部导引按钮信息
+  /// ? 頂部導引按鈕資訊
   @$pb.TagNumber(6)
   $core.String get topButtonLabel => $_getSZ(5);
   @$pb.TagNumber(6)
@@ -3292,7 +3292,7 @@ class DynOurCityReply extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   void clearCityId() => $_clearField(7);
 
-  /// 城市名称
+  /// 城市名稱
   @$pb.TagNumber(8)
   $core.String get cityName => $_getSZ(7);
   @$pb.TagNumber(8)
@@ -3303,7 +3303,7 @@ class DynOurCityReply extends $pb.GeneratedMessage {
   void clearCityName() => $_clearField(8);
 }
 
-/// 动态同城页请求参数
+/// 動態同城頁請求參數
 class DynOurCityReq extends $pb.GeneratedMessage {
   factory DynOurCityReq({
     $fixnum.Int64? cityId,
@@ -3409,7 +3409,7 @@ class DynOurCityReq extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearCityId() => $_clearField(1);
 
-  /// 纬度
+  /// 緯度
   @$pb.TagNumber(2)
   $core.double get lat => $_getN(1);
   @$pb.TagNumber(2)
@@ -3429,7 +3429,7 @@ class DynOurCityReq extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearLng() => $_clearField(3);
 
-  /// 透传上一次接口请求返回的 offset
+  /// 透傳上一次介面請求返回的 offset
   @$pb.TagNumber(4)
   $core.String get offset => $_getSZ(3);
   @$pb.TagNumber(4)
@@ -3439,7 +3439,7 @@ class DynOurCityReq extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearOffset() => $_clearField(4);
 
-  /// 每页元素个数
+  /// 每頁元素個數
   @$pb.TagNumber(5)
   $core.int get pageSize => $_getIZ(4);
   @$pb.TagNumber(5)
@@ -3459,7 +3459,7 @@ class DynOurCityReq extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   void clearTeenagersMode() => $_clearField(6);
 
-  /// 清晰度 (供秒开)
+  /// 清晰度 (供秒開)
   @$pb.TagNumber(7)
   $core.int get qn => $_getIZ(6);
   @$pb.TagNumber(7)
@@ -3469,7 +3469,7 @@ class DynOurCityReq extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   void clearQn() => $_clearField(7);
 
-  /// 功能版本号 (供秒开)
+  /// 功能版本號 (供秒開)
   @$pb.TagNumber(8)
   $core.int get fnver => $_getIZ(7);
   @$pb.TagNumber(8)
@@ -3479,7 +3479,7 @@ class DynOurCityReq extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   void clearFnver() => $_clearField(8);
 
-  /// 功能标识 (供秒开)
+  /// 功能標識 (供秒開)
   @$pb.TagNumber(9)
   $core.int get fnval => $_getIZ(8);
   @$pb.TagNumber(9)
@@ -3489,7 +3489,7 @@ class DynOurCityReq extends $pb.GeneratedMessage {
   @$pb.TagNumber(9)
   void clearFnval() => $_clearField(9);
 
-  /// 返回 playurl 是否强制使用域名 (供秒开)
+  /// 返回 playurl 是否強制使用域名 (供秒開)
   @$pb.TagNumber(10)
   $core.int get forceHost => $_getIZ(9);
   @$pb.TagNumber(10)
@@ -3499,7 +3499,7 @@ class DynOurCityReq extends $pb.GeneratedMessage {
   @$pb.TagNumber(10)
   void clearForceHost() => $_clearField(10);
 
-  /// 是否需要 4K 视频 (供秒开)
+  /// 是否需要 4K 影片 (供秒開)
   @$pb.TagNumber(11)
   $core.int get fourk => $_getIZ(10);
   @$pb.TagNumber(11)
@@ -3509,7 +3509,7 @@ class DynOurCityReq extends $pb.GeneratedMessage {
   @$pb.TagNumber(11)
   void clearFourk() => $_clearField(11);
 
-  /// 是否开启 LBS
+  /// 是否開啟 LBS
   @$pb.TagNumber(12)
   $core.int get lbsState => $_getIZ(11);
   @$pb.TagNumber(12)
@@ -3528,7 +3528,7 @@ class DynOurCityReq extends $pb.GeneratedMessage {
   @$pb.TagNumber(13)
   void clearRefreshCity() => $_clearField(13);
 
-  /// ab 测试配置
+  /// ab 測試配置
   @$pb.TagNumber(14)
   ExpConf get expConf => $_getN(13);
   @$pb.TagNumber(14)
@@ -3540,7 +3540,7 @@ class DynOurCityReq extends $pb.GeneratedMessage {
   @$pb.TagNumber(14)
   ExpConf ensureExpConf() => $_ensure(13);
 
-  /// 播放器参数 (供秒开)
+  /// 播放器參數 (供秒開)
   @$pb.TagNumber(15)
   $1.PlayerArgs get playerArgs => $_getN(14);
   @$pb.TagNumber(15)
@@ -3571,7 +3571,7 @@ class DynOurCityReq extends $pb.GeneratedMessage {
   void clearBuildTime() => $_clearField(17);
 }
 
-/// 动态同城开关请求参数
+/// 動態同城開關請求參數
 class DynOurCitySwitchReq extends $pb.GeneratedMessage {
   factory DynOurCitySwitchReq({
     $core.int? switch_1,
@@ -3627,7 +3627,7 @@ class DynOurCitySwitchReq extends $pb.GeneratedMessage {
   void clearSwitch_1() => $_clearField(1);
 }
 
-/// 红点具体信息
+/// 紅點具體資訊
 class DynRedItem extends $pb.GeneratedMessage {
   factory DynRedItem({
     $fixnum.Int64? count,
@@ -3672,7 +3672,7 @@ class DynRedItem extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<DynRedItem>(create);
   static DynRedItem? _defaultInstance;
 
-  /// 数字红点有效更新数
+  /// 數字紅點有效更新數
   @$pb.TagNumber(1)
   $fixnum.Int64 get count => $_getI64(0);
   @$pb.TagNumber(1)
@@ -3683,7 +3683,7 @@ class DynRedItem extends $pb.GeneratedMessage {
   void clearCount() => $_clearField(1);
 }
 
-/// 动态红点返回值
+/// 動態紅點返回值
 class DynRedReply extends $pb.GeneratedMessage {
   factory DynRedReply({
     $core.String? redType,
@@ -3747,11 +3747,11 @@ class DynRedReply extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<DynRedReply>(create);
   static DynRedReply? _defaultInstance;
 
-  /// 动态红点类型
+  /// 動態紅點類型
   ///
-  /// - count: 数字红点
-  /// - point: 普通红点
-  /// - no_point: 没有红点
+  /// - count: 數字紅點
+  /// - point: 普通紅點
+  /// - no_point: 沒有紅點
   @$pb.TagNumber(1)
   $core.String get redType => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -3761,7 +3761,7 @@ class DynRedReply extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearRedType() => $_clearField(1);
 
-  /// 动态红点具体信息, 参见 [`DynRedItem`]
+  /// 動態紅點具體資訊, 參見 [`DynRedItem`]
   @$pb.TagNumber(2)
   DynRedItem get dynRedItem => $_getN(1);
   @$pb.TagNumber(2)
@@ -3773,7 +3773,7 @@ class DynRedReply extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   DynRedItem ensureDynRedItem() => $_ensure(1);
 
-  /// 动态红点默认 tab 值, 对应 tab 接口下发的 anchor
+  /// 動態紅點預設 tab 值, 對應 tab 介面下發的 anchor
   @$pb.TagNumber(3)
   $core.String get defaultTab => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -3783,7 +3783,7 @@ class DynRedReply extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearDefaultTab() => $_clearField(3);
 
-  /// 动态红点样式
+  /// 動態紅點樣式
   @$pb.TagNumber(4)
   DynRedStyle get redStyle => $_getN(3);
   @$pb.TagNumber(4)
@@ -3816,7 +3816,7 @@ class DynRedReply extends $pb.GeneratedMessage {
   BubbleInfo ensureBubbleInfo() => $_ensure(5);
 }
 
-/// 动态红点请求参数
+/// 動態紅點請求參數
 class DynRedReq extends $pb.GeneratedMessage {
   factory DynRedReq({
     $core.Iterable<TabOffset>? tabOffset,
@@ -3876,7 +3876,7 @@ class DynRedReq extends $pb.GeneratedMessage {
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<DynRedReq>(create);
   static DynRedReq? _defaultInstance;
 
-  /// 参见 [`TabOffset`]
+  /// 參見 [`TabOffset`]
   @$pb.TagNumber(1)
   $pb.PbList<TabOffset> get tabOffset => $_getList(0);
 
@@ -3911,7 +3911,7 @@ class DynRedReq extends $pb.GeneratedMessage {
   void clearReqScene() => $_clearField(5);
 }
 
-/// 动态红点样式
+/// 動態紅點樣式
 class DynRedStyle extends $pb.GeneratedMessage {
   factory DynRedStyle({
     BgType? bgType,
@@ -4142,7 +4142,7 @@ class DynRedStyleUp extends $pb.GeneratedMessage {
   Color ensureBorderColor() => $_ensure(3);
 }
 
-/// 动态 tab
+/// 動態 tab
 class DynTab extends $pb.GeneratedMessage {
   factory DynTab({
     $core.String? title,
@@ -4217,9 +4217,9 @@ class DynTab extends $pb.GeneratedMessage {
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<DynTab>(create);
   static DynTab? _defaultInstance;
 
-  /// tab 标题
+  /// tab 標題
   ///
-  /// 优先展示用, 未开启状态第一次请求返回 `同城`, 后续请求返回对应城市名
+  /// 優先展示用, 未開啟狀態第一次請求返回 `同城`, 後續請求返回對應城市名
   @$pb.TagNumber(1)
   $core.String get title => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -4229,7 +4229,7 @@ class DynTab extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearTitle() => $_clearField(1);
 
-  /// 跳转链接
+  /// 跳轉連結
   @$pb.TagNumber(2)
   $core.String get uri => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -4239,7 +4239,7 @@ class DynTab extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearUri() => $_clearField(2);
 
-  /// 气泡内容
+  /// 氣泡內容
   @$pb.TagNumber(3)
   $core.String get bubble => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -4249,7 +4249,7 @@ class DynTab extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearBubble() => $_clearField(3);
 
-  /// 是否推红点
+  /// 是否推紅點
   @$pb.TagNumber(4)
   $core.int get redPoint => $_getIZ(3);
   @$pb.TagNumber(4)
@@ -4269,7 +4269,7 @@ class DynTab extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearCityId() => $_clearField(5);
 
-  /// 是否弹窗
+  /// 是否彈出視窗
   @$pb.TagNumber(6)
   $core.int get isPopup => $_getIZ(5);
   @$pb.TagNumber(6)
@@ -4279,7 +4279,7 @@ class DynTab extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   void clearIsPopup() => $_clearField(6);
 
-  /// 弹窗内容
+  /// 彈出視窗內容
   @$pb.TagNumber(7)
   Popup get popup => $_getN(6);
   @$pb.TagNumber(7)
@@ -4291,7 +4291,7 @@ class DynTab extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   Popup ensurePopup() => $_ensure(6);
 
-  /// 是否默认 tab
+  /// 是否預設 tab
   @$pb.TagNumber(8)
   $core.bool get defaultTab => $_getBF(7);
   @$pb.TagNumber(8)
@@ -4301,9 +4301,9 @@ class DynTab extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   void clearDefaultTab() => $_clearField(8);
 
-  /// 副标题
+  /// 副標題
   ///
-  /// 对应城市名
+  /// 對應城市名
   @$pb.TagNumber(9)
   $core.String get subTitle => $_getSZ(8);
   @$pb.TagNumber(9)
@@ -4313,7 +4313,7 @@ class DynTab extends $pb.GeneratedMessage {
   @$pb.TagNumber(9)
   void clearSubTitle() => $_clearField(9);
 
-  /// 锚点字段
+  /// 錨點欄位
   @$pb.TagNumber(10)
   $core.String get anchor => $_getSZ(9);
   @$pb.TagNumber(10)
@@ -4323,7 +4323,7 @@ class DynTab extends $pb.GeneratedMessage {
   @$pb.TagNumber(10)
   void clearAnchor() => $_clearField(10);
 
-  /// ? 内部测试
+  /// ? 內部測試
   @$pb.TagNumber(11)
   $core.String get internalTest => $_getSZ(10);
   @$pb.TagNumber(11)
@@ -4334,7 +4334,7 @@ class DynTab extends $pb.GeneratedMessage {
   void clearInternalTest() => $_clearField(11);
 }
 
-/// 动态 tab 请求返回值
+/// 動態 tab 請求返回值
 class DynTabReply extends $pb.GeneratedMessage {
   factory DynTabReply({
     $core.Iterable<DynTab>? dynTab,
@@ -4380,12 +4380,12 @@ class DynTabReply extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<DynTabReply>(create);
   static DynTabReply? _defaultInstance;
 
-  /// 参见 [`DynTab`]
+  /// 參見 [`DynTab`]
   @$pb.TagNumber(1)
   $pb.PbList<DynTab> get dynTab => $_getList(0);
 }
 
-/// 动态 tab 请求参数
+/// 動態 tab 請求參數
 class DynTabReq extends $pb.GeneratedMessage {
   factory DynTabReq({
     $core.int? teenagersMode,
@@ -4441,7 +4441,7 @@ class DynTabReq extends $pb.GeneratedMessage {
   void clearTeenagersMode() => $_clearField(1);
 }
 
-/// 最近访问标记已读请求参数
+/// 最近訪問標記已讀請求參數
 class DynUpdOffsetReq extends $pb.GeneratedMessage {
   factory DynUpdOffsetReq({
     $fixnum.Int64? hostUid,
@@ -4490,7 +4490,7 @@ class DynUpdOffsetReq extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<DynUpdOffsetReq>(create);
   static DynUpdOffsetReq? _defaultInstance;
 
-  /// 被访问者的 mid
+  /// 被訪問者的 mid
   @$pb.TagNumber(1)
   $fixnum.Int64 get hostUid => $_getI64(0);
   @$pb.TagNumber(1)
@@ -4500,7 +4500,7 @@ class DynUpdOffsetReq extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearHostUid() => $_clearField(1);
 
-  /// 用户已读进度
+  /// 使用者已讀進度
   @$pb.TagNumber(2)
   $core.String get readOffset => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -4511,7 +4511,7 @@ class DynUpdOffsetReq extends $pb.GeneratedMessage {
   void clearReadOffset() => $_clearField(2);
 }
 
-/// 最近访问个人视频 feed 流返回值
+/// 最近訪問個人影片 feed 流返回值
 class DynVideoPersonalReply extends $pb.GeneratedMessage {
   factory DynVideoPersonalReply({
     $core.Iterable<DynamicItem>? list,
@@ -4568,7 +4568,7 @@ class DynVideoPersonalReply extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<DynVideoPersonalReply>(create);
   static DynVideoPersonalReply? _defaultInstance;
 
-  /// 参见 [`DynamicItem`]
+  /// 參見 [`DynamicItem`]
   @$pb.TagNumber(1)
   $pb.PbList<DynamicItem> get list => $_getList(0);
 
@@ -4582,7 +4582,7 @@ class DynVideoPersonalReply extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearOffset() => $_clearField(2);
 
-  /// 是否还有更多
+  /// 是否還有更多
   @$pb.TagNumber(3)
   $core.int get hasMore => $_getIZ(2);
   @$pb.TagNumber(3)
@@ -4592,7 +4592,7 @@ class DynVideoPersonalReply extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearHasMore() => $_clearField(3);
 
-  /// 已读进度
+  /// 已讀進度
   @$pb.TagNumber(4)
   $core.String get readOffset => $_getSZ(3);
   @$pb.TagNumber(4)
@@ -4603,7 +4603,7 @@ class DynVideoPersonalReply extends $pb.GeneratedMessage {
   void clearReadOffset() => $_clearField(4);
 }
 
-/// 最近访问个人视频 feed 流请求参数
+/// 最近訪問個人影片 feed 流請求參數
 class DynVideoPersonalReq extends $pb.GeneratedMessage {
   factory DynVideoPersonalReq({
     $core.int? teenagersMode,
@@ -4686,7 +4686,7 @@ class DynVideoPersonalReq extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearTeenagersMode() => $_clearField(1);
 
-  /// 被访问者的 mid
+  /// 被訪問者的 mid
   @$pb.TagNumber(2)
   $fixnum.Int64 get hostUid => $_getI64(1);
   @$pb.TagNumber(2)
@@ -4698,7 +4698,7 @@ class DynVideoPersonalReq extends $pb.GeneratedMessage {
 
   /// 偏移量
   ///
-  /// 第一页可传空
+  /// 第一頁可傳空
   @$pb.TagNumber(3)
   $core.String get offset => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -4708,7 +4708,7 @@ class DynVideoPersonalReq extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearOffset() => $_clearField(3);
 
-  /// 标明下拉几次
+  /// 標明下拉幾次
   @$pb.TagNumber(4)
   $core.int get page => $_getIZ(3);
   @$pb.TagNumber(4)
@@ -4718,7 +4718,7 @@ class DynVideoPersonalReq extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearPage() => $_clearField(4);
 
-  /// 是否是预加载
+  /// 是否是預載入
   @$pb.TagNumber(5)
   $core.int get isPreload => $_getIZ(4);
   @$pb.TagNumber(5)
@@ -4728,7 +4728,7 @@ class DynVideoPersonalReq extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearIsPreload() => $_clearField(5);
 
-  /// 清晰度 (供秒开)
+  /// 清晰度 (供秒開)
   @$pb.TagNumber(6)
   $core.int get qn => $_getIZ(5);
   @$pb.TagNumber(6)
@@ -4738,7 +4738,7 @@ class DynVideoPersonalReq extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   void clearQn() => $_clearField(6);
 
-  /// 功能版本号 (供秒开)
+  /// 功能版本號 (供秒開)
   @$pb.TagNumber(7)
   $core.int get fnver => $_getIZ(6);
   @$pb.TagNumber(7)
@@ -4748,7 +4748,7 @@ class DynVideoPersonalReq extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   void clearFnver() => $_clearField(7);
 
-  /// 功能标识 (供秒开)
+  /// 功能標識 (供秒開)
   @$pb.TagNumber(8)
   $core.int get fnval => $_getIZ(7);
   @$pb.TagNumber(8)
@@ -4758,7 +4758,7 @@ class DynVideoPersonalReq extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   void clearFnval() => $_clearField(8);
 
-  /// 返回 playurl 是否强制使用域名 (供秒开)
+  /// 返回 playurl 是否強制使用域名 (供秒開)
   @$pb.TagNumber(9)
   $core.int get forceHost => $_getIZ(8);
   @$pb.TagNumber(9)
@@ -4768,7 +4768,7 @@ class DynVideoPersonalReq extends $pb.GeneratedMessage {
   @$pb.TagNumber(9)
   void clearForceHost() => $_clearField(9);
 
-  /// 是否需要 4K 视频 (供秒开)
+  /// 是否需要 4K 影片 (供秒開)
   @$pb.TagNumber(10)
   $core.int get fourk => $_getIZ(9);
   @$pb.TagNumber(10)
@@ -4779,7 +4779,7 @@ class DynVideoPersonalReq extends $pb.GeneratedMessage {
   void clearFourk() => $_clearField(10);
 }
 
-/// 动态视频页请求参数
+/// 動態影片頁請求參數
 class DynVideoReq extends $pb.GeneratedMessage {
   factory DynVideoReq({
     $core.int? teenagersMode,
@@ -4862,7 +4862,7 @@ class DynVideoReq extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearTeenagersMode() => $_clearField(1);
 
-  /// 透传参数
+  /// 透傳參數
   @$pb.TagNumber(2)
   $core.String get updateBaseline => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -4872,7 +4872,7 @@ class DynVideoReq extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearUpdateBaseline() => $_clearField(2);
 
-  /// 透传参数
+  /// 透傳參數
   @$pb.TagNumber(3)
   $core.String get offset => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -4882,7 +4882,7 @@ class DynVideoReq extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearOffset() => $_clearField(3);
 
-  /// 向下翻页数
+  /// 向下翻頁數
   @$pb.TagNumber(4)
   $core.int get page => $_getIZ(3);
   @$pb.TagNumber(4)
@@ -4892,10 +4892,10 @@ class DynVideoReq extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearPage() => $_clearField(4);
 
-  /// 刷新方式
+  /// 重新整理方式
   ///
-  /// - 1: 向上刷新
-  /// - 2: 向下翻页
+  /// - 1: 向上重新整理
+  /// - 2: 向下翻頁
   @$pb.TagNumber(5)
   $core.int get refreshType => $_getIZ(4);
   @$pb.TagNumber(5)
@@ -4905,7 +4905,7 @@ class DynVideoReq extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearRefreshType() => $_clearField(5);
 
-  /// 清晰度 (供秒开)
+  /// 清晰度 (供秒開)
   @$pb.TagNumber(6)
   $core.int get qn => $_getIZ(5);
   @$pb.TagNumber(6)
@@ -4915,7 +4915,7 @@ class DynVideoReq extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   void clearQn() => $_clearField(6);
 
-  /// 功能版本号 (供秒开)
+  /// 功能版本號 (供秒開)
   @$pb.TagNumber(7)
   $core.int get fnver => $_getIZ(6);
   @$pb.TagNumber(7)
@@ -4925,7 +4925,7 @@ class DynVideoReq extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   void clearFnver() => $_clearField(7);
 
-  /// 功能标识 (供秒开)
+  /// 功能標識 (供秒開)
   @$pb.TagNumber(8)
   $core.int get fnval => $_getIZ(7);
   @$pb.TagNumber(8)
@@ -4935,7 +4935,7 @@ class DynVideoReq extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   void clearFnval() => $_clearField(8);
 
-  /// 返回 playurl 是否强制使用域名 (供秒开)
+  /// 返回 playurl 是否強制使用域名 (供秒開)
   @$pb.TagNumber(9)
   $core.int get forceHost => $_getIZ(8);
   @$pb.TagNumber(9)
@@ -4945,7 +4945,7 @@ class DynVideoReq extends $pb.GeneratedMessage {
   @$pb.TagNumber(9)
   void clearForceHost() => $_clearField(9);
 
-  /// 是否需要 4K 视频 (供秒开)
+  /// 是否需要 4K 影片 (供秒開)
   @$pb.TagNumber(10)
   $core.int get fourk => $_getIZ(9);
   @$pb.TagNumber(10)
@@ -4956,7 +4956,7 @@ class DynVideoReq extends $pb.GeneratedMessage {
   void clearFourk() => $_clearField(10);
 }
 
-/// 动态视频页返回值
+/// 動態影片頁返回值
 class DynVideoReqReply extends $pb.GeneratedMessage {
   factory DynVideoReqReply({
     $core.Iterable<DynamicItem>? list,
@@ -5015,11 +5015,11 @@ class DynVideoReqReply extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<DynVideoReqReply>(create);
   static DynVideoReqReply? _defaultInstance;
 
-  /// 动态列表
+  /// 動態列表
   @$pb.TagNumber(1)
   $pb.PbList<DynamicItem> get list => $_getList(0);
 
-  /// 更新的动态数
+  /// 更新的動態數
   @$pb.TagNumber(2)
   $core.int get updateNum => $_getIZ(1);
   @$pb.TagNumber(2)
@@ -5029,7 +5029,7 @@ class DynVideoReqReply extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearUpdateNum() => $_clearField(2);
 
-  /// 历史偏移
+  /// 歷史偏移
   @$pb.TagNumber(3)
   $core.String get historyOffset => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -5039,7 +5039,7 @@ class DynVideoReqReply extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearHistoryOffset() => $_clearField(3);
 
-  /// 更新基础信息
+  /// 更新基礎資訊
   @$pb.TagNumber(4)
   $core.String get updateBaseline => $_getSZ(3);
   @$pb.TagNumber(4)
@@ -5049,7 +5049,7 @@ class DynVideoReqReply extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearUpdateBaseline() => $_clearField(4);
 
-  /// 是否还有更多
+  /// 是否還有更多
   @$pb.TagNumber(5)
   $core.int get hasMore => $_getIZ(4);
   @$pb.TagNumber(5)
@@ -5060,7 +5060,7 @@ class DynVideoReqReply extends $pb.GeneratedMessage {
   void clearHasMore() => $_clearField(5);
 }
 
-/// 动态卡片项
+/// 動態卡片項
 class DynamicItem extends $pb.GeneratedMessage {
   factory DynamicItem({
     $core.String? cardType,
@@ -5125,14 +5125,14 @@ class DynamicItem extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<DynamicItem>(create);
   static DynamicItem? _defaultInstance;
 
-  /// 动态卡片类型
+  /// 動態卡片類型
   ///
-  /// - 转发: `forward`
-  /// - 稿件视频: `av`
-  /// - 折叠: `fold`
-  /// - PGC 内容: `pgc`
-  /// - 付费视频: `courses`
-  /// - 最近访问列表: `upList`
+  /// - 轉發: `forward`
+  /// - 稿件影片: `av`
+  /// - 摺疊: `fold`
+  /// - PGC 內容: `pgc`
+  /// - 付費影片: `courses`
+  /// - 最近訪問列表: `upList`
   /// - 我的追番列表: `followList`
   @$pb.TagNumber(1)
   $core.String get cardType => $_getSZ(0);
@@ -5143,7 +5143,7 @@ class DynamicItem extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearCardType() => $_clearField(1);
 
-  /// 转发类型的 items 的类型
+  /// 轉發類型的 items 的類型
   @$pb.TagNumber(2)
   $core.String get itemType => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -5153,11 +5153,11 @@ class DynamicItem extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearItemType() => $_clearField(2);
 
-  /// 模块内容
+  /// 模組內容
   @$pb.TagNumber(3)
   $pb.PbList<Module> get modules => $_getList(2);
 
-  /// 动态 ID (string)
+  /// 動態 ID (string)
   @$pb.TagNumber(4)
   $core.String get dynIdStr => $_getSZ(3);
   @$pb.TagNumber(4)
@@ -5167,7 +5167,7 @@ class DynamicItem extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearDynIdStr() => $_clearField(4);
 
-  /// 转发源动态 ID(string)
+  /// 轉發源動態 ID(string)
   @$pb.TagNumber(5)
   $core.String get origDynIdStr => $_getSZ(4);
   @$pb.TagNumber(5)
@@ -5186,7 +5186,7 @@ class DynamicItem extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   void clearRType() => $_clearField(6);
 
-  /// 该卡片下面是否含折叠卡片
+  /// 該卡片下面是否含摺疊卡片
   @$pb.TagNumber(7)
   $core.int get hasFold => $_getIZ(6);
   @$pb.TagNumber(7)
@@ -5323,7 +5323,7 @@ class ExpConf extends $pb.GeneratedMessage {
   $pb.PbList<Exp> get exps => $_getList(1);
 }
 
-/// 拓展信息: 游戏小卡
+/// 擴展資訊: 遊戲小卡
 class ExtInfoGame extends $pb.GeneratedMessage {
   factory ExtInfoGame({
     $core.String? title,
@@ -5375,7 +5375,7 @@ class ExtInfoGame extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ExtInfoGame>(create);
   static ExtInfoGame? _defaultInstance;
 
-  /// 标题
+  /// 標題
   @$pb.TagNumber(1)
   $core.String get title => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -5385,7 +5385,7 @@ class ExtInfoGame extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearTitle() => $_clearField(1);
 
-  /// 跳转地址
+  /// 跳轉地址
   @$pb.TagNumber(2)
   $core.String get uri => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -5395,7 +5395,7 @@ class ExtInfoGame extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearUri() => $_clearField(2);
 
-  /// 图标
+  /// 圖示
   @$pb.TagNumber(3)
   $core.String get icon => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -5406,7 +5406,7 @@ class ExtInfoGame extends $pb.GeneratedMessage {
   void clearIcon() => $_clearField(3);
 }
 
-/// 拓展信息: 热门视频
+/// 擴展資訊: 熱門影片
 class ExtInfoHot extends $pb.GeneratedMessage {
   factory ExtInfoHot({
     $core.String? title,
@@ -5457,7 +5457,7 @@ class ExtInfoHot extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ExtInfoHot>(create);
   static ExtInfoHot? _defaultInstance;
 
-  /// 标题
+  /// 標題
   @$pb.TagNumber(1)
   $core.String get title => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -5467,7 +5467,7 @@ class ExtInfoHot extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearTitle() => $_clearField(1);
 
-  /// 跳转地址
+  /// 跳轉地址
   @$pb.TagNumber(2)
   $core.String get uri => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -5477,7 +5477,7 @@ class ExtInfoHot extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearUri() => $_clearField(2);
 
-  /// 图标
+  /// 圖示
   @$pb.TagNumber(3)
   $core.String get icon => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -5488,7 +5488,7 @@ class ExtInfoHot extends $pb.GeneratedMessage {
   void clearIcon() => $_clearField(3);
 }
 
-/// 拓展信息: LBS
+/// 擴展資訊: LBS
 class ExtInfoLBS extends $pb.GeneratedMessage {
   factory ExtInfoLBS({
     $core.String? title,
@@ -5542,7 +5542,7 @@ class ExtInfoLBS extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ExtInfoLBS>(create);
   static ExtInfoLBS? _defaultInstance;
 
-  /// 标题
+  /// 標題
   @$pb.TagNumber(1)
   $core.String get title => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -5552,7 +5552,7 @@ class ExtInfoLBS extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearTitle() => $_clearField(1);
 
-  /// 跳转地址
+  /// 跳轉地址
   @$pb.TagNumber(2)
   $core.String get uri => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -5562,7 +5562,7 @@ class ExtInfoLBS extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearUri() => $_clearField(2);
 
-  /// 图标
+  /// 圖示
   @$pb.TagNumber(3)
   $core.String get icon => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -5582,7 +5582,7 @@ class ExtInfoLBS extends $pb.GeneratedMessage {
   void clearPoiType() => $_clearField(4);
 }
 
-/// 拓展信息: 话题小卡
+/// 擴展資訊: 話題小卡
 class ExtInfoTopic extends $pb.GeneratedMessage {
   factory ExtInfoTopic({
     $core.String? title,
@@ -5634,7 +5634,7 @@ class ExtInfoTopic extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ExtInfoTopic>(create);
   static ExtInfoTopic? _defaultInstance;
 
-  /// 话题名
+  /// 話題名
   @$pb.TagNumber(1)
   $core.String get title => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -5644,7 +5644,7 @@ class ExtInfoTopic extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearTitle() => $_clearField(1);
 
-  /// 跳转地址
+  /// 跳轉地址
   @$pb.TagNumber(2)
   $core.String get uri => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -5654,7 +5654,7 @@ class ExtInfoTopic extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearUri() => $_clearField(2);
 
-  /// 图标
+  /// 圖示
   @$pb.TagNumber(3)
   $core.String get icon => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -5667,7 +5667,7 @@ class ExtInfoTopic extends $pb.GeneratedMessage {
 
 enum Extend_Extend { extInfoTopic, extInfoLbs, extInfoHot, extInfoGame, notSet }
 
-/// 拓展
+/// 擴展
 class Extend extends $pb.GeneratedMessage {
   factory Extend({
     $core.String? type,
@@ -5747,12 +5747,12 @@ class Extend extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearExtend() => $_clearField($_whichOneof(0));
 
-  /// 类型
+  /// 類型
   ///
-  /// - 话题小卡: `topic`
+  /// - 話題小卡: `topic`
   /// - lbs: `lbs`
-  /// - 热门视频: `hot`
-  /// - 游戏: `game`
+  /// - 熱門影片: `hot`
+  /// - 遊戲: `game`
   @$pb.TagNumber(1)
   $core.String get type => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -5762,7 +5762,7 @@ class Extend extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearType() => $_clearField(1);
 
-  /// 参见 [`ExtInfoTopic`]
+  /// 參見 [`ExtInfoTopic`]
   @$pb.TagNumber(2)
   ExtInfoTopic get extInfoTopic => $_getN(1);
   @$pb.TagNumber(2)
@@ -5774,7 +5774,7 @@ class Extend extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   ExtInfoTopic ensureExtInfoTopic() => $_ensure(1);
 
-  /// 参见 [`ExtInfoLBS`]
+  /// 參見 [`ExtInfoLBS`]
   @$pb.TagNumber(3)
   ExtInfoLBS get extInfoLbs => $_getN(2);
   @$pb.TagNumber(3)
@@ -5786,7 +5786,7 @@ class Extend extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   ExtInfoLBS ensureExtInfoLbs() => $_ensure(2);
 
-  /// 参见 [`ExtInfoHot`]
+  /// 參見 [`ExtInfoHot`]
   @$pb.TagNumber(4)
   ExtInfoHot get extInfoHot => $_getN(3);
   @$pb.TagNumber(4)
@@ -5798,7 +5798,7 @@ class Extend extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   ExtInfoHot ensureExtInfoHot() => $_ensure(3);
 
-  /// 参见 [`ExtInfoGame`]
+  /// 參見 [`ExtInfoGame`]
   @$pb.TagNumber(5)
   ExtInfoGame get extInfoGame => $_getN(4);
   @$pb.TagNumber(5)
@@ -5811,7 +5811,7 @@ class Extend extends $pb.GeneratedMessage {
   ExtInfoGame ensureExtInfoGame() => $_ensure(4);
 }
 
-/// 我的追番列表项目
+/// 我的追番列表項目
 class FollowListItem extends $pb.GeneratedMessage {
   factory FollowListItem({
     $core.int? seasonId,
@@ -5869,7 +5869,7 @@ class FollowListItem extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<FollowListItem>(create);
   static FollowListItem? _defaultInstance;
 
-  /// 剧集 ID
+  /// 劇集 ID
   @$pb.TagNumber(1)
   $core.int get seasonId => $_getIZ(0);
   @$pb.TagNumber(1)
@@ -5879,7 +5879,7 @@ class FollowListItem extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearSeasonId() => $_clearField(1);
 
-  /// 标题
+  /// 標題
   @$pb.TagNumber(2)
   $core.String get title => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -5899,7 +5899,7 @@ class FollowListItem extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearCover() => $_clearField(3);
 
-  /// 跳转链接
+  /// 跳轉連結
   @$pb.TagNumber(4)
   $core.String get url => $_getSZ(3);
   @$pb.TagNumber(4)
@@ -5909,7 +5909,7 @@ class FollowListItem extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearUrl() => $_clearField(4);
 
-  /// 剧集最新分集
+  /// 劇集最新分集
   @$pb.TagNumber(5)
   NewEP get newEp => $_getN(4);
   @$pb.TagNumber(5)
@@ -6151,7 +6151,7 @@ class Gps extends $pb.GeneratedMessage {
   void clearLng() => $_clearField(2);
 }
 
-/// 点赞动画
+/// 按讚動畫
 class LikeAnimation extends $pb.GeneratedMessage {
   factory LikeAnimation({
     $core.String? begin,
@@ -6206,7 +6206,7 @@ class LikeAnimation extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<LikeAnimation>(create);
   static LikeAnimation? _defaultInstance;
 
-  /// 开始动画
+  /// 開始動畫
   @$pb.TagNumber(1)
   $core.String get begin => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -6216,7 +6216,7 @@ class LikeAnimation extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearBegin() => $_clearField(1);
 
-  /// 过程动画
+  /// 過程動畫
   @$pb.TagNumber(2)
   $core.String get proc => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -6226,7 +6226,7 @@ class LikeAnimation extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearProc() => $_clearField(2);
 
-  /// 结束动画
+  /// 結束動畫
   @$pb.TagNumber(3)
   $core.String get end => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -6247,7 +6247,7 @@ class LikeAnimation extends $pb.GeneratedMessage {
   void clearLikeIconId() => $_clearField(4);
 }
 
-/// 点赞拓展信息
+/// 按讚擴展資訊
 class LikeInfo extends $pb.GeneratedMessage {
   factory LikeInfo({
     LikeAnimation? animation,
@@ -6296,7 +6296,7 @@ class LikeInfo extends $pb.GeneratedMessage {
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<LikeInfo>(create);
   static LikeInfo? _defaultInstance;
 
-  /// 点赞动画
+  /// 按讚動畫
   @$pb.TagNumber(1)
   LikeAnimation get animation => $_getN(0);
   @$pb.TagNumber(1)
@@ -6308,7 +6308,7 @@ class LikeInfo extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   LikeAnimation ensureAnimation() => $_ensure(0);
 
-  /// 是否点赞
+  /// 是否按讚
   @$pb.TagNumber(2)
   $core.int get isLike => $_getIZ(1);
   @$pb.TagNumber(2)
@@ -6319,7 +6319,7 @@ class LikeInfo extends $pb.GeneratedMessage {
   void clearIsLike() => $_clearField(2);
 }
 
-/// 点赞用户
+/// 按讚使用者
 class LikeUser extends $pb.GeneratedMessage {
   factory LikeUser({
     $fixnum.Int64? uid,
@@ -6370,7 +6370,7 @@ class LikeUser extends $pb.GeneratedMessage {
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<LikeUser>(create);
   static LikeUser? _defaultInstance;
 
-  /// 点赞用户 mid
+  /// 按讚使用者 mid
   @$pb.TagNumber(1)
   $fixnum.Int64 get uid => $_getI64(0);
   @$pb.TagNumber(1)
@@ -6380,7 +6380,7 @@ class LikeUser extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearUid() => $_clearField(1);
 
-  /// 点赞用户昵称
+  /// 按讚使用者暱稱
   @$pb.TagNumber(2)
   $core.String get uname => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -6390,7 +6390,7 @@ class LikeUser extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearUname() => $_clearField(2);
 
-  /// 点击跳转链接
+  /// 點擊跳轉連結
   @$pb.TagNumber(3)
   $core.String get uri => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -6401,7 +6401,7 @@ class LikeUser extends $pb.GeneratedMessage {
   void clearUri() => $_clearField(3);
 }
 
-/// 直播信息
+/// 直播資訊
 class LiveInfo extends $pb.GeneratedMessage {
   factory LiveInfo({
     $core.int? isLiving,
@@ -6459,7 +6459,7 @@ class LiveInfo extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearIsLiving() => $_clearField(1);
 
-  /// 跳转地址
+  /// 跳轉地址
   @$pb.TagNumber(2)
   $core.String get uri => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -6750,7 +6750,7 @@ enum Module_ModuleItem {
   notSet
 }
 
-/// 卡片模块
+/// 卡片模組
 class Module extends $pb.GeneratedMessage {
   factory Module({
     $core.String? moduleType,
@@ -6890,7 +6890,7 @@ class Module extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearModuleType() => $_clearField(1);
 
-  /// 参见 [`ModuleFold`]
+  /// 參見 [`ModuleFold`]
   @$pb.TagNumber(2)
   ModuleFold get moduleFold => $_getN(1);
   @$pb.TagNumber(2)
@@ -6902,7 +6902,7 @@ class Module extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   ModuleFold ensureModuleFold() => $_ensure(1);
 
-  /// 参见 [`ModuleAuthor`]
+  /// 參見 [`ModuleAuthor`]
   @$pb.TagNumber(3)
   ModuleAuthor get moduleAuthor => $_getN(2);
   @$pb.TagNumber(3)
@@ -6914,7 +6914,7 @@ class Module extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   ModuleAuthor ensureModuleAuthor() => $_ensure(2);
 
-  /// 参见 [`ModuleDynamic`]
+  /// 參見 [`ModuleDynamic`]
   @$pb.TagNumber(4)
   ModuleDynamic get moduleDynamic => $_getN(3);
   @$pb.TagNumber(4)
@@ -6926,7 +6926,7 @@ class Module extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   ModuleDynamic ensureModuleDynamic() => $_ensure(3);
 
-  /// 参见 [`ModuleState`]
+  /// 參見 [`ModuleState`]
   @$pb.TagNumber(5)
   ModuleState get moduleState => $_getN(4);
   @$pb.TagNumber(5)
@@ -6938,7 +6938,7 @@ class Module extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   ModuleState ensureModuleState() => $_ensure(4);
 
-  /// 参见 [`ModuleForward`]
+  /// 參見 [`ModuleForward`]
   @$pb.TagNumber(6)
   ModuleForward get moduleForward => $_getN(5);
   @$pb.TagNumber(6)
@@ -6950,7 +6950,7 @@ class Module extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   ModuleForward ensureModuleForward() => $_ensure(5);
 
-  /// 参见 [`ModuleExtend`]
+  /// 參見 [`ModuleExtend`]
   @$pb.TagNumber(7)
   ModuleExtend get moduleExtend => $_getN(6);
   @$pb.TagNumber(7)
@@ -6962,7 +6962,7 @@ class Module extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   ModuleExtend ensureModuleExtend() => $_ensure(6);
 
-  /// 参见 [`ModuleDispute`]
+  /// 參見 [`ModuleDispute`]
   @$pb.TagNumber(8)
   ModuleDispute get moduleDispute => $_getN(7);
   @$pb.TagNumber(8)
@@ -6974,7 +6974,7 @@ class Module extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   ModuleDispute ensureModuleDispute() => $_ensure(7);
 
-  /// 参见 [`ModuleDesc`]
+  /// 參見 [`ModuleDesc`]
   @$pb.TagNumber(9)
   ModuleDesc get moduleDesc => $_getN(8);
   @$pb.TagNumber(9)
@@ -6986,7 +6986,7 @@ class Module extends $pb.GeneratedMessage {
   @$pb.TagNumber(9)
   ModuleDesc ensureModuleDesc() => $_ensure(8);
 
-  /// 参见 [`ModuleLikeUser`]
+  /// 參見 [`ModuleLikeUser`]
   @$pb.TagNumber(10)
   ModuleLikeUser get moduleLikeUser => $_getN(9);
   @$pb.TagNumber(10)
@@ -6998,7 +6998,7 @@ class Module extends $pb.GeneratedMessage {
   @$pb.TagNumber(10)
   ModuleLikeUser ensureModuleLikeUser() => $_ensure(9);
 
-  /// 参见 [`ModuleDynUpList`]
+  /// 參見 [`ModuleDynUpList`]
   @$pb.TagNumber(11)
   ModuleDynUpList get moduleUpList => $_getN(10);
   @$pb.TagNumber(11)
@@ -7010,7 +7010,7 @@ class Module extends $pb.GeneratedMessage {
   @$pb.TagNumber(11)
   ModuleDynUpList ensureModuleUpList() => $_ensure(10);
 
-  /// 参见 [`ModuleFollowList`]
+  /// 參見 [`ModuleFollowList`]
   @$pb.TagNumber(12)
   ModuleFollowList get moduleFollowList => $_getN(11);
   @$pb.TagNumber(12)
@@ -7023,7 +7023,7 @@ class Module extends $pb.GeneratedMessage {
   ModuleFollowList ensureModuleFollowList() => $_ensure(11);
 }
 
-/// Module: 作者信息
+/// Module: 作者資訊
 class ModuleAuthor extends $pb.GeneratedMessage {
   factory ModuleAuthor({
     $fixnum.Int64? id,
@@ -7090,7 +7090,7 @@ class ModuleAuthor extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearId() => $_clearField(1);
 
-  /// 时间标签
+  /// 時間標籤
   @$pb.TagNumber(2)
   $core.String get ptimeLabelText => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -7100,7 +7100,7 @@ class ModuleAuthor extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearPtimeLabelText() => $_clearField(2);
 
-  /// 用户详情
+  /// 使用者詳情
   @$pb.TagNumber(3)
   UserInfo get author => $_getN(2);
   @$pb.TagNumber(3)
@@ -7112,7 +7112,7 @@ class ModuleAuthor extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   UserInfo ensureAuthor() => $_ensure(2);
 
-  /// 装扮卡片
+  /// 裝扮卡片
   @$pb.TagNumber(4)
   DecorateCard get decorateCard => $_getN(3);
   @$pb.TagNumber(4)
@@ -7125,7 +7125,7 @@ class ModuleAuthor extends $pb.GeneratedMessage {
   DecorateCard ensureDecorateCard() => $_ensure(3);
 }
 
-/// Module: 文本内容
+/// Module: 文字內容
 class ModuleDesc extends $pb.GeneratedMessage {
   factory ModuleDesc({
     $core.Iterable<Description>? desc,
@@ -7175,7 +7175,7 @@ class ModuleDesc extends $pb.GeneratedMessage {
   $pb.PbList<Description> get desc => $_getList(0);
 }
 
-/// Module: 争议小黄条
+/// Module: 爭議小黃條
 class ModuleDispute extends $pb.GeneratedMessage {
   factory ModuleDispute({
     $core.String? title,
@@ -7227,7 +7227,7 @@ class ModuleDispute extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ModuleDispute>(create);
   static ModuleDispute? _defaultInstance;
 
-  /// 标题
+  /// 標題
   @$pb.TagNumber(1)
   $core.String get title => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -7247,7 +7247,7 @@ class ModuleDispute extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearDesc() => $_clearField(2);
 
-  /// 跳转地址
+  /// 跳轉地址
   @$pb.TagNumber(3)
   $core.String get uri => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -7258,7 +7258,7 @@ class ModuleDispute extends $pb.GeneratedMessage {
   void clearUri() => $_clearField(3);
 }
 
-/// 最近访问 UP 主列表
+/// 最近訪問 UP 主列表
 class ModuleDynUpList extends $pb.GeneratedMessage {
   factory ModuleDynUpList({
     $core.String? moduleTitle,
@@ -7311,7 +7311,7 @@ class ModuleDynUpList extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ModuleDynUpList>(create);
   static ModuleDynUpList? _defaultInstance;
 
-  /// 标题展示文案
+  /// 標題展示文案
   @$pb.TagNumber(1)
   $core.String get moduleTitle => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -7321,7 +7321,7 @@ class ModuleDynUpList extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearModuleTitle() => $_clearField(1);
 
-  /// "全部" 按钮文案
+  /// "全部" 按鈕文案
   @$pb.TagNumber(2)
   $core.String get showAll => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -7344,7 +7344,7 @@ enum ModuleDynamic_Card {
   notSet
 }
 
-/// Module: 动态详情
+/// Module: 動態詳情
 class ModuleDynamic extends $pb.GeneratedMessage {
   factory ModuleDynamic({
     $core.String? cardType,
@@ -7426,12 +7426,12 @@ class ModuleDynamic extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearCard() => $_clearField($_whichOneof(0));
 
-  /// 动态卡片类型
+  /// 動態卡片類型
   ///
-  /// - UGC 视频卡片: `ugc`
-  /// - PGC 视频卡片: `pgc`
-  /// - 付费课程系列: `currSeason`
-  /// - 付费课程批次: `currBatch`
+  /// - UGC 影片卡片: `ugc`
+  /// - PGC 影片卡片: `pgc`
+  /// - 付費課程系列: `currSeason`
+  /// - 付費課程批次: `currBatch`
   @$pb.TagNumber(1)
   $core.String get cardType => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -7441,7 +7441,7 @@ class ModuleDynamic extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearCardType() => $_clearField(1);
 
-  /// UGC 视频卡片
+  /// UGC 影片卡片
   @$pb.TagNumber(2)
   CardUGC get cardUgc => $_getN(1);
   @$pb.TagNumber(2)
@@ -7453,7 +7453,7 @@ class ModuleDynamic extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   CardUGC ensureCardUgc() => $_ensure(1);
 
-  /// PGC 视频卡片
+  /// PGC 影片卡片
   @$pb.TagNumber(3)
   CardPGC get cardPgc => $_getN(2);
   @$pb.TagNumber(3)
@@ -7465,7 +7465,7 @@ class ModuleDynamic extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   CardPGC ensureCardPgc() => $_ensure(2);
 
-  /// 付费课程系列
+  /// 付費課程系列
   @$pb.TagNumber(4)
   CardCurrSeason get cardCurrSeason => $_getN(3);
   @$pb.TagNumber(4)
@@ -7477,7 +7477,7 @@ class ModuleDynamic extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   CardCurrSeason ensureCardCurrSeason() => $_ensure(3);
 
-  /// 付费课程批次
+  /// 付費課程批次
   @$pb.TagNumber(5)
   CardCurrBatch get cardCurrBatch => $_getN(4);
   @$pb.TagNumber(5)
@@ -7490,7 +7490,7 @@ class ModuleDynamic extends $pb.GeneratedMessage {
   CardCurrBatch ensureCardCurrBatch() => $_ensure(4);
 }
 
-/// Module: 拓展
+/// Module: 擴展
 class ModuleExtend extends $pb.GeneratedMessage {
   factory ModuleExtend({
     $core.Iterable<Extend>? extend,
@@ -7540,7 +7540,7 @@ class ModuleExtend extends $pb.GeneratedMessage {
   $pb.PbList<Extend> get extend => $_getList(0);
 }
 
-/// Module: 折叠
+/// Module: 摺疊
 class ModuleFold extends $pb.GeneratedMessage {
   factory ModuleFold({
     FoldType? foldType,
@@ -7610,7 +7610,7 @@ class ModuleFold extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearFoldType() => $_clearField(1);
 
-  /// 折叠文案
+  /// 摺疊文案
   @$pb.TagNumber(2)
   $core.String get text => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -7620,7 +7620,7 @@ class ModuleFold extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearText() => $_clearField(2);
 
-  /// 被折叠的动态
+  /// 被摺疊的動態
   @$pb.TagNumber(3)
   $core.String get foldIds => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -7630,11 +7630,11 @@ class ModuleFold extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearFoldIds() => $_clearField(3);
 
-  /// 被折叠的用户
+  /// 被摺疊的使用者
   @$pb.TagNumber(4)
   $pb.PbList<UserInfo> get foldUsers => $_getList(3);
 
-  /// 折叠分类
+  /// 摺疊分類
   @$pb.TagNumber(5)
   FoldType get foldTypeV2 => $_getN(4);
   @$pb.TagNumber(5)
@@ -7695,7 +7695,7 @@ class ModuleFollowList extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ModuleFollowList>(create);
   static ModuleFollowList? _defaultInstance;
 
-  /// 查看全部的跳转链接
+  /// 查看全部的跳轉連結
   @$pb.TagNumber(1)
   $core.String get viewAllLink => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -7705,12 +7705,12 @@ class ModuleFollowList extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearViewAllLink() => $_clearField(1);
 
-  /// 参见 [`FollowListItem`]
+  /// 參見 [`FollowListItem`]
   @$pb.TagNumber(2)
   $pb.PbList<FollowListItem> get list => $_getList(1);
 }
 
-/// Module: 转发
+/// Module: 轉發
 class ModuleForward extends $pb.GeneratedMessage {
   factory ModuleForward({
     $core.String? cardType,
@@ -7760,7 +7760,7 @@ class ModuleForward extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ModuleForward>(create);
   static ModuleForward? _defaultInstance;
 
-  /// 卡片类型
+  /// 卡片類型
   @$pb.TagNumber(1)
   $core.String get cardType => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -7775,7 +7775,7 @@ class ModuleForward extends $pb.GeneratedMessage {
   $pb.PbList<Module> get modules => $_getList(1);
 }
 
-/// Module: 点赞用户
+/// Module: 按讚使用者
 class ModuleLikeUser extends $pb.GeneratedMessage {
   factory ModuleLikeUser({
     $core.Iterable<LikeUser>? likeUsers,
@@ -7825,7 +7825,7 @@ class ModuleLikeUser extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ModuleLikeUser>(create);
   static ModuleLikeUser? _defaultInstance;
 
-  /// 点赞用户
+  /// 按讚使用者
   @$pb.TagNumber(1)
   $pb.PbList<LikeUser> get likeUsers => $_getList(0);
 
@@ -7840,7 +7840,7 @@ class ModuleLikeUser extends $pb.GeneratedMessage {
   void clearDisplayText() => $_clearField(2);
 }
 
-/// Module: 计数状态
+/// Module: 計數狀態
 class ModuleState extends $pb.GeneratedMessage {
   factory ModuleState({
     $core.int? repost,
@@ -7902,7 +7902,7 @@ class ModuleState extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ModuleState>(create);
   static ModuleState? _defaultInstance;
 
-  /// 转发数
+  /// 轉發數
   @$pb.TagNumber(1)
   $core.int get repost => $_getIZ(0);
   @$pb.TagNumber(1)
@@ -7912,7 +7912,7 @@ class ModuleState extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearRepost() => $_clearField(1);
 
-  /// 点赞数
+  /// 按讚數
   @$pb.TagNumber(2)
   $core.int get like => $_getIZ(1);
   @$pb.TagNumber(2)
@@ -7922,7 +7922,7 @@ class ModuleState extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearLike() => $_clearField(2);
 
-  /// 评论数
+  /// 評論數
   @$pb.TagNumber(3)
   $core.int get reply => $_getIZ(2);
   @$pb.TagNumber(3)
@@ -7932,7 +7932,7 @@ class ModuleState extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearReply() => $_clearField(3);
 
-  /// 点赞拓展信息
+  /// 按讚擴展資訊
   @$pb.TagNumber(4)
   LikeInfo get likeInfo => $_getN(3);
   @$pb.TagNumber(4)
@@ -7944,7 +7944,7 @@ class ModuleState extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   LikeInfo ensureLikeInfo() => $_ensure(3);
 
-  /// 禁止评论
+  /// 禁止評論
   @$pb.TagNumber(5)
   $core.bool get noComment => $_getBF(4);
   @$pb.TagNumber(5)
@@ -7954,7 +7954,7 @@ class ModuleState extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearNoComment() => $_clearField(5);
 
-  /// 禁止转发
+  /// 禁止轉發
   @$pb.TagNumber(6)
   $core.bool get noForward => $_getBF(5);
   @$pb.TagNumber(6)
@@ -7965,7 +7965,7 @@ class ModuleState extends $pb.GeneratedMessage {
   void clearNoForward() => $_clearField(6);
 }
 
-/// 认证名牌
+/// 認證名牌
 class Nameplate extends $pb.GeneratedMessage {
   factory Nameplate({
     $fixnum.Int64? nid,
@@ -8025,7 +8025,7 @@ class Nameplate extends $pb.GeneratedMessage {
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Nameplate>(create);
   static Nameplate? _defaultInstance;
 
-  /// 认证名牌 ID
+  /// 認證名牌 ID
   @$pb.TagNumber(1)
   $fixnum.Int64 get nid => $_getI64(0);
   @$pb.TagNumber(1)
@@ -8035,7 +8035,7 @@ class Nameplate extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearNid() => $_clearField(1);
 
-  /// 认证名牌名称
+  /// 認證名牌名稱
   @$pb.TagNumber(2)
   $core.String get name => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -8045,7 +8045,7 @@ class Nameplate extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearName() => $_clearField(2);
 
-  /// 认证名牌图片
+  /// 認證名牌圖片
   @$pb.TagNumber(3)
   $core.String get image => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -8055,7 +8055,7 @@ class Nameplate extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearImage() => $_clearField(3);
 
-  /// 认证名牌图片(小)
+  /// 認證名牌圖片(小)
   @$pb.TagNumber(4)
   $core.String get imageSmall => $_getSZ(3);
   @$pb.TagNumber(4)
@@ -8065,7 +8065,7 @@ class Nameplate extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearImageSmall() => $_clearField(4);
 
-  /// 等级
+  /// 等級
   @$pb.TagNumber(5)
   $core.String get level => $_getSZ(4);
   @$pb.TagNumber(5)
@@ -8075,7 +8075,7 @@ class Nameplate extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearLevel() => $_clearField(5);
 
-  /// 获取条件
+  /// 取得條件
   @$pb.TagNumber(6)
   $core.String get condition => $_getSZ(5);
   @$pb.TagNumber(6)
@@ -8086,7 +8086,7 @@ class Nameplate extends $pb.GeneratedMessage {
   void clearCondition() => $_clearField(6);
 }
 
-/// 剧集最新分集
+/// 劇集最新分集
 class NewEP extends $pb.GeneratedMessage {
   factory NewEP({
     $core.int? id,
@@ -8137,7 +8137,7 @@ class NewEP extends $pb.GeneratedMessage {
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<NewEP>(create);
   static NewEP? _defaultInstance;
 
-  /// 剧集最新分集的 ID
+  /// 劇集最新分集的 ID
   @$pb.TagNumber(1)
   $core.int get id => $_getIZ(0);
   @$pb.TagNumber(1)
@@ -8147,7 +8147,7 @@ class NewEP extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearId() => $_clearField(1);
 
-  /// 更新至 XX 话
+  /// 更新至 XX 話
   @$pb.TagNumber(2)
   $core.String get indexShow => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -8157,7 +8157,7 @@ class NewEP extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearIndexShow() => $_clearField(2);
 
-  /// 更新剧集的封面
+  /// 更新劇集的封面
   @$pb.TagNumber(3)
   $core.String get cover => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -8244,7 +8244,7 @@ class NoReq extends $pb.GeneratedMessage {
   static NoReq? _defaultInstance;
 }
 
-/// 认证信息
+/// 認證資訊
 class OfficialVerify extends $pb.GeneratedMessage {
   factory OfficialVerify({
     $core.int? type,
@@ -8296,9 +8296,9 @@ class OfficialVerify extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<OfficialVerify>(create);
   static OfficialVerify? _defaultInstance;
 
-  /// - 0: 个人
+  /// - 0: 個人
   /// - 1: 官方
-  /// - 127: 未认证
+  /// - 127: 未認證
   @$pb.TagNumber(1)
   $core.int get type => $_getIZ(0);
   @$pb.TagNumber(1)
@@ -8308,7 +8308,7 @@ class OfficialVerify extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearType() => $_clearField(1);
 
-  /// 认证描述
+  /// 認證描述
   @$pb.TagNumber(2)
   $core.String get desc => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -8460,7 +8460,7 @@ class OurCityClickReportReq extends $pb.GeneratedMessage {
   void clearLng() => $_clearField(4);
 }
 
-/// PGC 剧集信息
+/// PGC 劇集資訊
 class PGCSeason extends $pb.GeneratedMessage {
   factory PGCSeason({
     $core.int? isFinish,
@@ -8511,7 +8511,7 @@ class PGCSeason extends $pb.GeneratedMessage {
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<PGCSeason>(create);
   static PGCSeason? _defaultInstance;
 
-  /// 已完结
+  /// 已完結
   @$pb.TagNumber(1)
   $core.int get isFinish => $_getIZ(0);
   @$pb.TagNumber(1)
@@ -8521,7 +8521,7 @@ class PGCSeason extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearIsFinish() => $_clearField(1);
 
-  /// 标题
+  /// 標題
   @$pb.TagNumber(2)
   $core.String get title => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -8531,7 +8531,7 @@ class PGCSeason extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearTitle() => $_clearField(2);
 
-  /// 类型
+  /// 類型
   @$pb.TagNumber(3)
   $core.int get type => $_getIZ(2);
   @$pb.TagNumber(3)
@@ -8645,7 +8645,7 @@ class PlayerPreloadParams extends $pb.GeneratedMessage {
   void clearFourk() => $_clearField(5);
 }
 
-/// 动态 tab 弹窗详情
+/// 動態 tab 彈出視窗詳情
 class Popup extends $pb.GeneratedMessage {
   factory Popup({
     $core.String? title,
@@ -8696,7 +8696,7 @@ class Popup extends $pb.GeneratedMessage {
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Popup>(create);
   static Popup? _defaultInstance;
 
-  /// 标题
+  /// 標題
   @$pb.TagNumber(1)
   $core.String get title => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -8716,7 +8716,7 @@ class Popup extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearDesc() => $_clearField(2);
 
-  /// 文案附加跳转地址
+  /// 文案附加跳轉地址
   @$pb.TagNumber(3)
   $core.String get uri => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -9513,7 +9513,7 @@ class SVideoReply extends $pb.GeneratedMessage {
   SVideoTop ensureTop() => $_ensure(3);
 }
 
-/// 小视频连播页请求参数
+/// 小影片連播頁請求參數
 class SVideoReq extends $pb.GeneratedMessage {
   factory SVideoReq({
     $fixnum.Int64? oid,
@@ -9876,7 +9876,7 @@ class SVideoTop extends $pb.GeneratedMessage {
   void clearDesc() => $_clearField(2);
 }
 
-/// 分享信息
+/// 分享資訊
 class ShareInfo extends $pb.GeneratedMessage {
   factory ShareInfo({
     $fixnum.Int64? aid,
@@ -9959,7 +9959,7 @@ class ShareInfo extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearBvid() => $_clearField(2);
 
-  /// 稿件标题
+  /// 稿件標題
   @$pb.TagNumber(3)
   $core.String get title => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -9999,7 +9999,7 @@ class ShareInfo extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   void clearMid() => $_clearField(6);
 
-  /// UP 主昵称
+  /// UP 主暱稱
   @$pb.TagNumber(7)
   $core.String get name => $_getSZ(6);
   @$pb.TagNumber(7)
@@ -10010,7 +10010,7 @@ class ShareInfo extends $pb.GeneratedMessage {
   void clearName() => $_clearField(7);
 }
 
-/// 动态红点接口各 tab offset 信息
+/// 動態紅點介面各 tab offset 資訊
 class TabOffset extends $pb.GeneratedMessage {
   factory TabOffset({
     $core.int? tab,
@@ -10058,8 +10058,8 @@ class TabOffset extends $pb.GeneratedMessage {
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<TabOffset>(create);
   static TabOffset? _defaultInstance;
 
-  /// - 1: 综合页
-  /// - 2: 视频页
+  /// - 1: 綜合頁
+  /// - 2: 影片頁
   @$pb.TagNumber(1)
   $core.int get tab => $_getIZ(0);
   @$pb.TagNumber(1)
@@ -10069,7 +10069,7 @@ class TabOffset extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearTab() => $_clearField(1);
 
-  /// 上一次对应列表页 offset
+  /// 上一次對應列表頁 offset
   @$pb.TagNumber(2)
   $core.String get offset => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -10144,7 +10144,7 @@ class UpListItem extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearHasUpdate() => $_clearField(1);
 
-  /// 头像
+  /// 大頭貼
   @$pb.TagNumber(2)
   $core.String get face => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -10154,7 +10154,7 @@ class UpListItem extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearFace() => $_clearField(2);
 
-  /// 昵称
+  /// 暱稱
   @$pb.TagNumber(3)
   $core.String get name => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -10175,7 +10175,7 @@ class UpListItem extends $pb.GeneratedMessage {
   void clearUid() => $_clearField(4);
 }
 
-/// 用户信息
+/// 使用者資訊
 class UserInfo extends $pb.GeneratedMessage {
   factory UserInfo({
     $fixnum.Int64? mid,
@@ -10248,7 +10248,7 @@ class UserInfo extends $pb.GeneratedMessage {
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<UserInfo>(create);
   static UserInfo? _defaultInstance;
 
-  /// 用户 mid
+  /// 使用者 mid
   @$pb.TagNumber(1)
   $fixnum.Int64 get mid => $_getI64(0);
   @$pb.TagNumber(1)
@@ -10258,7 +10258,7 @@ class UserInfo extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearMid() => $_clearField(1);
 
-  /// 用户昵称
+  /// 使用者暱稱
   @$pb.TagNumber(2)
   $core.String get name => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -10268,7 +10268,7 @@ class UserInfo extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearName() => $_clearField(2);
 
-  /// 用户头像
+  /// 使用者大頭貼
   @$pb.TagNumber(3)
   $core.String get face => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -10278,7 +10278,7 @@ class UserInfo extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearFace() => $_clearField(3);
 
-  /// 用户认证信息
+  /// 使用者認證資訊
   @$pb.TagNumber(4)
   OfficialVerify get official => $_getN(3);
   @$pb.TagNumber(4)
@@ -10290,7 +10290,7 @@ class UserInfo extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   OfficialVerify ensureOfficial() => $_ensure(3);
 
-  /// 用户大会员信息
+  /// 使用者大會員資訊
   @$pb.TagNumber(5)
   VipInfo get vip => $_getN(4);
   @$pb.TagNumber(5)
@@ -10302,7 +10302,7 @@ class UserInfo extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   VipInfo ensureVip() => $_ensure(4);
 
-  /// 用户直播信息
+  /// 使用者直播資訊
   @$pb.TagNumber(6)
   LiveInfo get live => $_getN(5);
   @$pb.TagNumber(6)
@@ -10314,7 +10314,7 @@ class UserInfo extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   LiveInfo ensureLive() => $_ensure(5);
 
-  /// 空间页跳转链接
+  /// 空間頁跳轉連結
   @$pb.TagNumber(7)
   $core.String get uri => $_getSZ(6);
   @$pb.TagNumber(7)
@@ -10324,7 +10324,7 @@ class UserInfo extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   void clearUri() => $_clearField(7);
 
-  /// 挂件
+  /// 掛件
   @$pb.TagNumber(8)
   UserPendant get pendant => $_getN(7);
   @$pb.TagNumber(8)
@@ -10336,7 +10336,7 @@ class UserInfo extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   UserPendant ensurePendant() => $_ensure(7);
 
-  /// 认证名牌
+  /// 認證名牌
   @$pb.TagNumber(9)
   Nameplate get nameplate => $_getN(8);
   @$pb.TagNumber(9)
@@ -10349,7 +10349,7 @@ class UserInfo extends $pb.GeneratedMessage {
   Nameplate ensureNameplate() => $_ensure(8);
 }
 
-/// 挂件
+/// 掛件
 class UserPendant extends $pb.GeneratedMessage {
   factory UserPendant({
     $fixnum.Int64? pid,
@@ -10404,7 +10404,7 @@ class UserPendant extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<UserPendant>(create);
   static UserPendant? _defaultInstance;
 
-  /// 挂件 ID
+  /// 掛件 ID
   @$pb.TagNumber(1)
   $fixnum.Int64 get pid => $_getI64(0);
   @$pb.TagNumber(1)
@@ -10414,7 +10414,7 @@ class UserPendant extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearPid() => $_clearField(1);
 
-  /// 挂件名称
+  /// 掛件名稱
   @$pb.TagNumber(2)
   $core.String get name => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -10424,7 +10424,7 @@ class UserPendant extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearName() => $_clearField(2);
 
-  /// 挂件图片
+  /// 掛件圖片
   @$pb.TagNumber(3)
   $core.String get image => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -10434,7 +10434,7 @@ class UserPendant extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearImage() => $_clearField(3);
 
-  /// 挂件有效期
+  /// 掛件有效期
   @$pb.TagNumber(4)
   $fixnum.Int64 get expire => $_getI64(3);
   @$pb.TagNumber(4)
@@ -10445,7 +10445,7 @@ class UserPendant extends $pb.GeneratedMessage {
   void clearExpire() => $_clearField(4);
 }
 
-/// 角标
+/// 角標
 class VideoBadge extends $pb.GeneratedMessage {
   factory VideoBadge({
     $core.String? text,
@@ -10521,7 +10521,7 @@ class VideoBadge extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearText() => $_clearField(1);
 
-  /// 文案文本颜色
+  /// 文案文字顏色
   @$pb.TagNumber(2)
   $core.String get textColor => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -10531,7 +10531,7 @@ class VideoBadge extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearTextColor() => $_clearField(2);
 
-  /// 文案文本颜色 (暗黑模式下)
+  /// 文案文字顏色 (暗黑模式下)
   @$pb.TagNumber(3)
   $core.String get textColorNight => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -10541,7 +10541,7 @@ class VideoBadge extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearTextColorNight() => $_clearField(3);
 
-  /// 背景颜色
+  /// 背景顏色
   @$pb.TagNumber(4)
   $core.String get bgColor => $_getSZ(3);
   @$pb.TagNumber(4)
@@ -10551,7 +10551,7 @@ class VideoBadge extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearBgColor() => $_clearField(4);
 
-  /// 背景颜色 (暗黑模式下)
+  /// 背景顏色 (暗黑模式下)
   @$pb.TagNumber(5)
   $core.String get bgColorNight => $_getSZ(4);
   @$pb.TagNumber(5)
@@ -10561,7 +10561,7 @@ class VideoBadge extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearBgColorNight() => $_clearField(5);
 
-  /// 边框颜色
+  /// 邊框顏色
   @$pb.TagNumber(6)
   $core.String get borderColor => $_getSZ(5);
   @$pb.TagNumber(6)
@@ -10571,7 +10571,7 @@ class VideoBadge extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   void clearBorderColor() => $_clearField(6);
 
-  /// 边框颜色 (暗黑模式下)
+  /// 邊框顏色 (暗黑模式下)
   @$pb.TagNumber(7)
   $core.String get borderColorNight => $_getSZ(6);
   @$pb.TagNumber(7)
@@ -10581,7 +10581,7 @@ class VideoBadge extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   void clearBorderColorNight() => $_clearField(7);
 
-  /// 样式
+  /// 樣式
   @$pb.TagNumber(8)
   $core.int get bgStyle => $_getIZ(7);
   @$pb.TagNumber(8)
@@ -10592,7 +10592,7 @@ class VideoBadge extends $pb.GeneratedMessage {
   void clearBgStyle() => $_clearField(8);
 }
 
-/// 大会员信息
+/// 大會員資訊
 class VipInfo extends $pb.GeneratedMessage {
   factory VipInfo({
     $core.int? type,
@@ -10650,7 +10650,7 @@ class VipInfo extends $pb.GeneratedMessage {
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<VipInfo>(create);
   static VipInfo? _defaultInstance;
 
-  /// 大会员类型
+  /// 大會員類型
   @$pb.TagNumber(1)
   $core.int get type => $_getIZ(0);
   @$pb.TagNumber(1)
@@ -10660,7 +10660,7 @@ class VipInfo extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearType() => $_clearField(1);
 
-  /// 大会员状态
+  /// 大會員狀態
   @$pb.TagNumber(2)
   $core.int get status => $_getIZ(1);
   @$pb.TagNumber(2)
@@ -10670,7 +10670,7 @@ class VipInfo extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearStatus() => $_clearField(2);
 
-  /// 大会员过期时间
+  /// 大會員過期時間
   @$pb.TagNumber(3)
   $fixnum.Int64 get dueDate => $_getI64(2);
   @$pb.TagNumber(3)
@@ -10680,7 +10680,7 @@ class VipInfo extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearDueDate() => $_clearField(3);
 
-  /// 大会员标签
+  /// 大會員標籤
   @$pb.TagNumber(4)
   VipLabel get label => $_getN(3);
   @$pb.TagNumber(4)
@@ -10692,7 +10692,7 @@ class VipInfo extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   VipLabel ensureLabel() => $_ensure(3);
 
-  /// 大会员主题
+  /// 大會員主題
   @$pb.TagNumber(5)
   $core.int get themeType => $_getIZ(4);
   @$pb.TagNumber(5)
@@ -10703,7 +10703,7 @@ class VipInfo extends $pb.GeneratedMessage {
   void clearThemeType() => $_clearField(5);
 }
 
-/// 大会员标签
+/// 大會員標籤
 class VipLabel extends $pb.GeneratedMessage {
   factory VipLabel({
     $core.String? path,
@@ -10748,7 +10748,7 @@ class VipLabel extends $pb.GeneratedMessage {
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<VipLabel>(create);
   static VipLabel? _defaultInstance;
 
-  /// 图片地址
+  /// 圖片地址
   @$pb.TagNumber(1)
   $core.String get path => $_getSZ(0);
   @$pb.TagNumber(1)

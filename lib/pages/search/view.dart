@@ -96,7 +96,7 @@ class _SearchPageState extends State<SearchPage> {
       Obx(
         () => _searchController.showUidBtn.value
             ? IconButton(
-                tooltip: 'UID搜索用户',
+                tooltip: 'UID搜尋使用者',
                 icon: const Icon(Icons.person_outline, size: 22),
                 onPressed: () => Get.toNamed(
                   '/member?mid=${_searchController.controller.text}',
@@ -110,7 +110,7 @@ class _SearchPageState extends State<SearchPage> {
         onPressed: _searchController.onClear,
       ),
       IconButton(
-        tooltip: '搜索',
+        tooltip: '搜尋',
         onPressed: _searchController.submit,
         icon: const Icon(Icons.search, size: 22),
       ),
@@ -124,7 +124,7 @@ class _SearchPageState extends State<SearchPage> {
       onChanged: _searchController.onChange,
       decoration: InputDecoration(
         visualDensity: .standard,
-        hintText: _searchController.hintText ?? '搜索',
+        hintText: _searchController.hintText ?? '搜尋',
         border: InputBorder.none,
       ),
       onSubmitted: (value) => _searchController.submit(),
@@ -177,7 +177,7 @@ class _SearchPageState extends State<SearchPage> {
     bool isTrending = true,
   }) {
     final text = Text(
-      isTrending ? '大家都在搜' : '搜索发现',
+      isTrending ? '大家都在搜' : '搜尋發現',
       strutStyle: const StrutStyle(leading: 0, height: 1),
       style: theme.textTheme.titleMedium!.copyWith(
         height: 1,
@@ -226,7 +226,7 @@ class _SearchPageState extends State<SearchPage> {
                               child: Row(
                                 children: [
                                   Text(
-                                    '完整榜单',
+                                    '完整榜單',
                                     strutStyle: const StrutStyle(
                                       leading: 0,
                                       height: 1,
@@ -261,7 +261,7 @@ class _SearchPageState extends State<SearchPage> {
                       color: secondary,
                     ),
                     label: Text(
-                      '刷新',
+                      '重新整理',
                       strutStyle: const StrutStyle(leading: 0, height: 1),
                       style: TextStyle(
                         height: 1,
@@ -314,7 +314,7 @@ class _SearchPageState extends State<SearchPage> {
                   child: Row(
                     children: [
                       Text(
-                        '搜索历史',
+                        '搜尋歷史',
                         strutStyle: const StrutStyle(leading: 0, height: 1),
                         style: theme.textTheme.titleMedium!.copyWith(
                           height: 1,
@@ -384,7 +384,7 @@ class _SearchPageState extends State<SearchPage> {
       bool enable = _searchController.recordSearchHistory.value;
       return IconButton(
         iconSize: 22,
-        tooltip: enable ? '记录搜索' : '无痕搜索',
+        tooltip: enable ? '記錄搜尋' : '無痕搜尋',
         icon: DisabledIcon(
           disable: !enable,
           child: Icon(
@@ -411,7 +411,7 @@ class _SearchPageState extends State<SearchPage> {
 
   Widget get _exportBtn => IconButton(
     iconSize: 22,
-    tooltip: '导入/导出历史记录',
+    tooltip: '匯入/匯出歷史記錄',
     icon: Icon(
       Icons.import_export_outlined,
       color: theme.colorScheme.onSurfaceVariant.withValues(alpha: 0.8),
@@ -423,7 +423,7 @@ class _SearchPageState extends State<SearchPage> {
     ),
     onPressed: () => showImportExportDialog<List>(
       context,
-      title: '历史记录',
+      title: '歷史記錄',
       localFileName: () => 'search',
       onExport: () => jsonEncode(_searchController.historyList),
       onImport: (json) {

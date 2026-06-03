@@ -285,7 +285,7 @@ class _MusicDetailPageState extends CommonDynPageState<MusicDetailPage> {
                   // Expanded(
                   //   child: textIconButton(
                   //     icon: FontAwesomeIcons.shareFromSquare,
-                  //     text: '转发',
+                  //     text: '轉發',
                   //     count: item.musicShares,
                   //     onPressed: () {
                   //       final data = controller.infoState.value.dataOrNull;
@@ -318,12 +318,12 @@ class _MusicDetailPageState extends CommonDynPageState<MusicDetailPage> {
                       builder: (context) => textIconButton(
                         icon: FontAwesomeIcons.thumbsUp,
                         activatedIcon: FontAwesomeIcons.solidThumbsUp,
-                        text: '点赞',
+                        text: '按讚',
                         count: item.wishCount,
                         status: item.wishListen ?? false,
                         onPressed: () async {
                           if (!Accounts.main.isLogin) {
-                            SmartDialog.showToast('请先登录');
+                            SmartDialog.showToast('請先登入');
                             return;
                           }
                           final hasLike = item.wishListen ?? false;
@@ -478,7 +478,7 @@ class _MusicDetailPageState extends CommonDynPageState<MusicDetailPage> {
                                 _buildArtist(artist, textTheme.bodySmall),
                             if (!item.musicPublish.isNullOrEmpty)
                               Text(
-                                '发行日期：${item.musicPublish}',
+                                '發行日期：${item.musicPublish}',
                                 style: textTheme.bodySmall!.copyWith(
                                   color: theme.colorScheme.outline,
                                 ),
@@ -561,17 +561,17 @@ class _MusicDetailPageState extends CommonDynPageState<MusicDetailPage> {
                   if (!(item.originArtist ?? item.originArtistList)
                       .isNullOrEmpty)
                     '原唱：${item.originArtist ?? item.originArtistList}',
-                  if (!item.album.isNullOrEmpty) '专辑：${item.album}',
-                  if (!item.musicSource.isNullOrEmpty) '出处：${item.musicSource}',
+                  if (!item.album.isNullOrEmpty) '專輯：${item.album}',
+                  if (!item.musicSource.isNullOrEmpty) '出處：${item.musicSource}',
                 ].join('\n'),
               ),
               const Divider(),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  const Text('热歌榜排名'),
-                  _buildRank(item.hotSongHeat?.lastHeat, '热度', theme),
-                  _buildRank(item.listenPv, '总播放量', theme),
+                  const Text('熱歌榜排名'),
+                  _buildRank(item.hotSongHeat?.lastHeat, '熱度', theme),
+                  _buildRank(item.listenPv, '總播放量', theme),
                   _buildRank(
                     item.musicRelation,
                     '使用稿件量',
@@ -606,7 +606,7 @@ class _MusicDetailPageState extends CommonDynPageState<MusicDetailPage> {
       child: Column(
         spacing: 8,
         children: [
-          Text('近${heat.length}日热度趋势', style: theme.textTheme.titleMedium),
+          Text('近${heat.length}日熱度趨勢', style: theme.textTheme.titleMedium),
           SizedBox(
             width: maxWidth,
             height: maxWidth * 0.5,

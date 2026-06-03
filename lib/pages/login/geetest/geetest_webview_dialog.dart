@@ -101,7 +101,7 @@ class _GeetestWebviewDialogState extends State<GeetestWebviewDialog> {
       configuration: const CreateConfiguration(
         windowWidth: 300,
         windowHeight: 400,
-        title: "验证码",
+        title: "驗證碼",
       ),
     );
 
@@ -180,14 +180,14 @@ class _GeetestWebviewDialogState extends State<GeetestWebviewDialog> {
   Widget build(BuildContext context) {
     if (Platform.isLinux) {
       return AlertDialog(
-        title: const Text('验证码'),
+        title: const Text('驗證碼'),
         content: SizedBox(
           width: 300,
           height: 400,
           child: Center(
             child: _linuxWebviewLoading
                 ? const CircularProgressIndicator()
-                : const Text('请在弹出的新窗口中完成验证'),
+                : const Text('請在彈出的新視窗中完成驗證'),
           ),
         ),
         actions: [
@@ -203,7 +203,7 @@ class _GeetestWebviewDialogState extends State<GeetestWebviewDialog> {
     }
 
     return AlertDialog(
-      title: const Text('验证码'),
+      title: const Text('驗證碼'),
       content: SizedBox(
         width: 300,
         height: 400,

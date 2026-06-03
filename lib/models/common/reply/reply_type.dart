@@ -1,49 +1,49 @@
 // enum ReplyType {
 //   unset,
-//   // 视频
+//   // 影片
 //   video,
-//   // 话题
+//   // 話題
 //   topic,
 //   //
 //   unset2,
-//   // 活动
+//   // 活動
 //   activity,
-//   // 小视频
+//   // 小影片
 //   videoS,
-//   // 小黑屋封禁信息
+//   // 小黑屋封禁資訊
 //   blockMsg,
-//   // 公告信息
+//   // 公告資訊
 //   publicMsg,
-//   // 直播活动
+//   // 直播活動
 //   liveActivity,
-//   // 活动稿件
+//   // 活動稿件
 //   activityFile,
 //   // 直播公告
 //   livePublic,
 //   // 相簿
 //   album,
-//   // 专栏
+//   // 專欄
 //   column,
-//   // 票务
+//   // 票務
 //   ticket,
-//   // 音频
+//   // 音訊
 //   audio,
-//   // 风纪委员会
+//   // 風紀委員會
 //   unset3,
-//   // 点评
+//   // 評論
 //   comment,
-//   // 动态
+//   // 動態
 //   dynamics,
-//   // 播单
+//   // 播單
 //   playList,
-//   // 音乐播单
+//   // 音樂播單
 //   musicPlayList,
-//   // 漫画
+//   // 漫畫
 //   comics1,
-//   // 漫画
+//   // 漫畫
 //   comics2,
-//   // 漫画
+//   // 漫畫
 //   comics3,
-//   // 课程
+//   // 課程
 //   course,
 // }

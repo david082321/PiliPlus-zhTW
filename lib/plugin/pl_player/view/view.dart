@@ -389,7 +389,7 @@ class _PLVideoPlayerState extends State<PLVideoPlayer>
     super.dispose();
   }
 
-  // 动态构建底部控制条
+  // 動態構建底部控制條
   Widget buildBottomControl(
     VideoDetailController videoDetailController,
     bool isLandscape,
@@ -406,7 +406,7 @@ class _PLVideoPlayerState extends State<PLVideoPlayer>
     Widget progressWidget(
       BottomControlType bottomControl,
     ) => switch (bottomControl) {
-      /// 播放暂停
+      /// 播放暫停
       BottomControlType.playOrPause => PlayOrPauseButton(
         plPlayerController: plPlayerController,
       ),
@@ -423,7 +423,7 @@ class _PLVideoPlayerState extends State<PLVideoPlayer>
         ),
         onTap: () {
           if (!introController.prevPlay()) {
-            SmartDialog.showToast('已经是第一集了');
+            SmartDialog.showToast('已經是第一集了');
           }
         },
       ),
@@ -440,12 +440,12 @@ class _PLVideoPlayerState extends State<PLVideoPlayer>
         ),
         onTap: () {
           if (!introController.nextPlay()) {
-            SmartDialog.showToast('已经是最后一集了');
+            SmartDialog.showToast('已經是最後一集了');
           }
         },
       ),
 
-      /// 时间进度
+      /// 時間進度
       BottomControlType.time => Obx(
         () => _VideoTime(
           position: DurationUtils.formatDuration(
@@ -457,7 +457,7 @@ class _PLVideoPlayerState extends State<PLVideoPlayer>
         ),
       ),
 
-      /// 高能进度条
+      /// 高能進度條
       BottomControlType.dmChart => Obx(
         () {
           final list = videoDetailController.dmTrend.value?.dataOrNull;
@@ -466,7 +466,7 @@ class _PLVideoPlayerState extends State<PLVideoPlayer>
             return ComBtn(
               width: widgetWidth,
               height: 30,
-              tooltip: '高能进度条',
+              tooltip: '高能進度條',
               icon: DisabledIcon(
                 disable: !show,
                 child: const Icon(
@@ -482,12 +482,12 @@ class _PLVideoPlayerState extends State<PLVideoPlayer>
         },
       ),
 
-      /// 超分辨率
+      /// 超解析度
       BottomControlType.superResolution => Obx(
         () {
           final type = plPlayerController.superResolutionType.value;
           return PopupMenuButton<SuperResolutionType>(
-            tooltip: '超分辨率',
+            tooltip: '超解析度',
             requestFocus: false,
             initialValue: type,
             color: Colors.black.withValues(alpha: 0.8),
@@ -521,7 +521,7 @@ class _PLVideoPlayerState extends State<PLVideoPlayer>
         },
       ),
 
-      /// 分段信息
+      /// 分段資訊
       BottomControlType.viewPoints => Obx(
         () {
           if (videoDetailController.viewPointList.isNotEmpty) {
@@ -529,7 +529,7 @@ class _PLVideoPlayerState extends State<PLVideoPlayer>
             return ComBtn(
               width: widgetWidth,
               height: 30,
-              tooltip: '分段信息',
+              tooltip: '分段資訊',
               icon: DisabledIcon(
                 iconSize: 22,
                 color: Colors.white,
@@ -554,11 +554,11 @@ class _PLVideoPlayerState extends State<PLVideoPlayer>
         },
       ),
 
-      /// 选集
+      /// 選集
       BottomControlType.episode => ComBtn(
         width: widgetWidth,
         height: 30,
-        tooltip: '选集',
+        tooltip: '選集',
         icon: const Icon(
           Icons.list,
           size: 22,
@@ -609,12 +609,12 @@ class _PLVideoPlayerState extends State<PLVideoPlayer>
         },
       ),
 
-      /// 画面比例
+      /// 畫面比例
       BottomControlType.fit => Obx(
         () {
           final fit = plPlayerController.videoFit.value;
           return PopupMenuButton<VideoFitType>(
-            tooltip: '画面比例',
+            tooltip: '畫面比例',
             requestFocus: false,
             initialValue: fit,
             color: Colors.black.withValues(alpha: 0.8),
@@ -653,7 +653,7 @@ class _PLVideoPlayerState extends State<PLVideoPlayer>
           final list = videoDetailController.languages.value;
           if (list != null && list.isNotEmpty) {
             return PopupMenuButton<String>(
-              tooltip: '翻译',
+              tooltip: '翻譯',
               requestFocus: false,
               initialValue: videoDetailController.currLang.value,
               color: Colors.black.withValues(alpha: 0.8),
@@ -664,7 +664,7 @@ class _PLVideoPlayerState extends State<PLVideoPlayer>
                     value: '',
                     onTap: () => videoDetailController.setLanguage(''),
                     child: const Text(
-                      "关闭翻译",
+                      "關閉翻譯",
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 13,
@@ -719,7 +719,7 @@ class _PLVideoPlayerState extends State<PLVideoPlayer>
                     height: 35,
                     onTap: () => videoDetailController.setSubtitle(0),
                     child: const Text(
-                      "关闭字幕",
+                      "關閉字幕",
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 13,
@@ -824,7 +824,7 @@ class _PLVideoPlayerState extends State<PLVideoPlayer>
             }
           }
           return PopupMenuButton<int>(
-            tooltip: '画质',
+            tooltip: '畫質',
             requestFocus: false,
             initialValue: currentVideoQa.code,
             color: Colors.black.withValues(alpha: 0.8),
@@ -850,7 +850,7 @@ class _PLVideoPlayerState extends State<PLVideoPlayer>
                         ..currentVideoQa.value = newQa
                         ..updatePlayer();
 
-                      SmartDialog.showToast("画质已变为：${newQa.desc}");
+                      SmartDialog.showToast("畫質已變為：${newQa.desc}");
 
                       // update
                       if (!plPlayerController.tempPlayerConf) {
@@ -886,11 +886,11 @@ class _PLVideoPlayerState extends State<PLVideoPlayer>
         },
       ),
 
-      /// 全屏
+      /// 全螢幕
       BottomControlType.fullscreen => ComBtn(
         width: widgetWidth,
         height: 30,
-        tooltip: isFullScreen ? '退出全屏' : '全屏',
+        tooltip: isFullScreen ? '退出全螢幕' : '全螢幕',
         icon: isFullScreen
             ? const Icon(
                 Icons.fullscreen_exit,
@@ -1005,7 +1005,7 @@ class _PLVideoPlayerState extends State<PLVideoPlayer>
           if (!plPlayerController.enableSlideVolumeBrightness) {
             return;
           }
-          // 左边区域
+          // 左邊區域
           if (PlatformUtils.isDesktop) {
             _gestureType = .right;
           } else {
@@ -1015,13 +1015,13 @@ class _PLVideoPlayerState extends State<PLVideoPlayer>
           if (!plPlayerController.enableSlideFS) {
             return;
           }
-          // 全屏
+          // 全螢幕
           _gestureType = .center;
         } else {
           if (!plPlayerController.enableSlideVolumeBrightness) {
             return;
           }
-          // 右边区域
+          // 右邊區域
           _gestureType = .right;
         }
       }
@@ -1031,7 +1031,7 @@ class _PLVideoPlayerState extends State<PLVideoPlayer>
     Offset delta = details.focalPointDelta;
 
     if (_gestureType == .horizontal) {
-      // live模式下禁用
+      // live模式下停用
       if (plPlayerController.isLive) return;
 
       final int curSliderPosition =
@@ -1069,7 +1069,7 @@ class _PLVideoPlayerState extends State<PLVideoPlayer>
                 color: colorScheme.secondaryContainer,
               ),
               child: Text(
-                '松开手指，取消进退',
+                '鬆開手指，取消進退',
                 style: TextStyle(
                   color: colorScheme.onSecondaryContainer,
                 ),
@@ -1093,14 +1093,14 @@ class _PLVideoPlayerState extends State<PLVideoPlayer>
         plPlayerController.updatePreviewIndex(newPos ~/ 1000);
       }
     } else if (_gestureType == .left) {
-      // 左边区域 👈
+      // 左邊區域 👈
       final double level = maxHeight * 3;
       final double brightness = (_brightnessValue.value - delta.dy / level)
           .clamp(0.0, 1.0);
       setBrightness(brightness);
     } else if (_gestureType == .center) {
-      // 全屏
-      const double threshold = 2.5; // 滑动阈值
+      // 全螢幕
+      const double threshold = 2.5; // 滑動閾值
       double cumulativeDy = details.localFocalPoint.dy - _initialFocalPoint!.dy;
 
       void fullScreenTrigger(bool status) {
@@ -1123,7 +1123,7 @@ class _PLVideoPlayerState extends State<PLVideoPlayer>
         }
       }
     } else if (_gestureType == .right) {
-      // 右边区域
+      // 右邊區域
       final double level = maxHeight * 0.5;
       EasyThrottle.throttle(
         'setVolume',
@@ -1434,7 +1434,7 @@ class _PLVideoPlayerState extends State<PLVideoPlayer>
             },
           ),
 
-        /// 长按倍速 toast
+        /// 長按倍速 toast
         if (!isLive)
           IgnorePointer(
             ignoring: true,
@@ -1473,7 +1473,7 @@ class _PLVideoPlayerState extends State<PLVideoPlayer>
             ),
           ),
 
-        /// 时间进度 toast
+        /// 時間進度 toast
         if (!isLive)
           IgnorePointer(
             ignoring: true,
@@ -1535,7 +1535,7 @@ class _PLVideoPlayerState extends State<PLVideoPlayer>
             ),
           ),
 
-        /// 音量🔊 控制条展示
+        /// 音量🔊 控制條展示
         IgnorePointer(
           ignoring: true,
           child: Align(
@@ -1586,7 +1586,7 @@ class _PLVideoPlayerState extends State<PLVideoPlayer>
           ),
         ),
 
-        /// 亮度🌞 控制条展示
+        /// 亮度🌞 控制條展示
         IgnorePointer(
           ignoring: true,
           child: Align(
@@ -1634,7 +1634,7 @@ class _PLVideoPlayerState extends State<PLVideoPlayer>
           ),
         ),
 
-        // 头部、底部控制条
+        // 頭部、底部控制條
         Positioned.fill(
           top: -1,
           bottom: -1,
@@ -1737,14 +1737,14 @@ class _PLVideoPlayerState extends State<PLVideoPlayer>
                           ..removeListener(listener)
                           ..dispose();
                       },
-                      child: const Text('还原屏幕'),
+                      child: const Text('還原螢幕'),
                     ),
                   ),
                 )
               : const SizedBox.shrink(),
         ),
 
-        /// 进度条 live模式下禁用
+        /// 進度條 live模式下停用
         if (!isLive)
           Positioned(
             bottom: -2.2,
@@ -1851,7 +1851,7 @@ class _PLVideoPlayerState extends State<PLVideoPlayer>
           ),
 
         if (isFullScreen || plPlayerController.isDesktopPip) ...[
-          // 锁
+          // 鎖
           if (plPlayerController.showFsLockBtn)
             ViewSafeArea(
               right: false,
@@ -1872,7 +1872,7 @@ class _PLVideoPlayerState extends State<PLVideoPlayer>
                           final controlsLock =
                               plPlayerController.controlsLock.value;
                           return ComBtn(
-                            tooltip: controlsLock ? '解锁' : '锁定',
+                            tooltip: controlsLock ? '解鎖' : '鎖定',
                             icon: controlsLock
                                 ? const Icon(
                                     FontAwesomeIcons.lock,
@@ -1895,7 +1895,7 @@ class _PLVideoPlayerState extends State<PLVideoPlayer>
               ),
             ),
 
-          // 截图
+          // 截圖
           if (plPlayerController.showFsScreenshotBtn)
             ViewSafeArea(
               left: false,
@@ -1913,7 +1913,7 @@ class _PLVideoPlayerState extends State<PLVideoPlayer>
                           borderRadius: BorderRadius.all(Radius.circular(8)),
                         ),
                         child: ComBtn(
-                          tooltip: '截图',
+                          tooltip: '截圖',
                           icon: const Icon(
                             Icons.photo_camera,
                             size: 20,
@@ -1955,14 +1955,14 @@ class _PLVideoPlayerState extends State<PLVideoPlayer>
                         Assets.buffering,
                         height: 25,
                         cacheHeight: 25.cacheSize(context),
-                        semanticLabel: "加载中",
+                        semanticLabel: "載入中",
                         color: Colors.white,
                       ),
                       if (plPlayerController.isBuffering.value)
                         Obx(() {
                           if (plPlayerController.bufferedSeconds.value == 0) {
                             return const Text(
-                              '加载中...',
+                              '載入中...',
                               style: TextStyle(
                                 color: Colors.white,
                                 fontSize: 12,
@@ -1989,7 +1989,7 @@ class _PLVideoPlayerState extends State<PLVideoPlayer>
           }
         }),
 
-        /// 点击 快进/快退
+        /// 點擊 快進/快退
         if (!isLive)
           Obx(() {
             final mountSeekBackwardButton =
@@ -2150,7 +2150,7 @@ class _PLVideoPlayerState extends State<PLVideoPlayer>
         await showDialog<bool>(
           context: Get.context!,
           builder: (context) => AlertDialog(
-            title: const Text('动态截图'),
+            title: const Text('動態截圖'),
             content: Column(
               spacing: 12,
               mainAxisSize: MainAxisSize.min,
@@ -2162,7 +2162,7 @@ class _PLVideoPlayerState extends State<PLVideoPlayer>
                   videoDuration: duration,
                 ),
                 PopupMenuText(
-                  title: '选择画质',
+                  title: '選擇畫質',
                   value: () => qa.code,
                   onSelected: (value) {
                     final video = videoDetailController.findVideoByQa(value);
@@ -2182,7 +2182,7 @@ class _PLVideoPlayerState extends State<PLVideoPlayer>
                   getSelectTitle: (_) => qa.shortDesc,
                 ),
                 PopupMenuText(
-                  title: 'webp预设',
+                  title: 'webp預設',
                   value: () => preset,
                   onSelected: (value) {
                     preset = value;
@@ -2194,7 +2194,7 @@ class _PLVideoPlayerState extends State<PLVideoPlayer>
                   getSelectTitle: (i) => '${i.name}(${i.desc})',
                 ),
                 Text(
-                  '*转码使用CPU，速度可能慢于播放，请不要选择过长的时间段或过高画质',
+                  '*轉檔使用CPU，速度可能慢於播放，請不要選擇過長的時間段或過高畫質',
                   style: theme.textTheme.bodySmall,
                 ),
               ],
@@ -2215,7 +2215,7 @@ class _PLVideoPlayerState extends State<PLVideoPlayer>
                     Get.back(result: true);
                   }
                 },
-                child: const Text('确定'),
+                child: const Text('確定'),
               ),
             ],
           ),
@@ -2242,7 +2242,7 @@ class _PLVideoPlayerState extends State<PLVideoPlayer>
 
     SmartDialog.showLoading(
       backType: SmartBackType.normal,
-      builder: (_) => LoadingWidget(progress: progress, msg: '正在保存，可能需要较长时间'),
+      builder: (_) => LoadingWidget(progress: progress, msg: '正在儲存，可能需要較長時間'),
       onDismiss: () async {
         if (progress.value < 1.0) {
           mpv.dispose();
@@ -2254,7 +2254,7 @@ class _PLVideoPlayerState extends State<PLVideoPlayer>
             needToast: true,
           );
         } else {
-          SmartDialog.showToast('转码出现错误或已取消');
+          SmartDialog.showToast('轉檔出現錯誤或已取消');
         }
         if (isPlay) ctr.play();
       },

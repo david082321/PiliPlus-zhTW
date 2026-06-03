@@ -66,7 +66,7 @@ abstract final class ApiType {
       Api.feedDislikeCancel,
       Api.hotList,
       Api.relatedList,
-      Api.hotSearchList, // 不同账号搜索结果可能不一样
+      Api.hotSearchList, // 不同帳號搜尋結果可能不一樣
       Api.searchDefault,
       Api.searchSuggest,
       Api.liveList,

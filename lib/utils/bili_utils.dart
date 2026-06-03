@@ -10,7 +10,7 @@ abstract final class BiliUtils {
     if (attr == null) {
       return '';
     }
-    return isPublicFav(attr) ? '公开' : '私密';
+    return isPublicFav(attr) ? '公開' : '私密';
   }
 
   static bool isPublicFav(int attr) {

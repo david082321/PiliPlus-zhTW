@@ -147,7 +147,7 @@ class MemberVideoCtr
 
   Future<void> toViewPlayAll() async {
     final episodicButton = this.episodicButton!;
-    if (episodicButton.text == '继续播放' &&
+    if (episodicButton.text == '繼續播放' &&
         episodicButton.uri?.isNotEmpty == true) {
       final params = Uri.parse(episodicButton.uri!).queryParameters;
       String? oid = params['oid'];

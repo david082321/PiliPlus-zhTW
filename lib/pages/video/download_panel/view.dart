@@ -111,7 +111,7 @@ class _DownloadPanelState extends State<DownloadPanel> {
         spacing: 16,
         children: [
           Text(
-            '最高画质',
+            '最高畫質',
             style: textStyle,
           ),
           Builder(
@@ -157,8 +157,8 @@ class _DownloadPanelState extends State<DownloadPanel> {
                 if (snapshot.data case final data?) {
                   final network = data.contains(ConnectivityResult.wifi)
                       ? 'WIFI'
-                      : '数据';
-                  return Text('当前网络：$network', style: textStyle);
+                      : '資料';
+                  return Text('目前網路：$network', style: textStyle);
                 }
                 return const SizedBox.shrink();
               },
@@ -255,10 +255,10 @@ class _DownloadPanelState extends State<DownloadPanel> {
       return false;
     }
 
-    if (kReleaseMode && episode.badge == '会员' && Accounts.mainEqVideo) {
+    if (kReleaseMode && episode.badge == '會員' && Accounts.mainEqVideo) {
       if (vipStatus != 1) {
         if (!isDownloadAll) {
-          SmartDialog.showToast('需要大会员');
+          SmartDialog.showToast('需要大會員');
         }
         return false;
       }
@@ -425,7 +425,7 @@ class _DownloadPanelState extends State<DownloadPanel> {
                               ),
                             if (isCharging == true)
                               const PBadge(
-                                text: '充电专属',
+                                text: '充電專屬',
                                 top: 6,
                                 right: 6,
                                 type: PBadgeType.error,
@@ -436,7 +436,7 @@ class _DownloadPanelState extends State<DownloadPanel> {
                                 top: 6,
                                 right: 6,
                                 type: switch (episode.badge) {
-                                  '预告' => PBadgeType.gray,
+                                  '預告' => PBadgeType.gray,
                                   '限免' => PBadgeType.free,
                                   _ => PBadgeType.primary,
                                 },
@@ -541,11 +541,11 @@ class _DownloadPanelState extends State<DownloadPanel> {
       child: Row(
         children: [
           _buildBottomBtn(
-            text: '缓存全部',
+            text: '快取全部',
             onTap: () {
               showConfirmDialog(
                 context: context,
-                title: const Text('确定缓存全部？'),
+                title: const Text('確定快取全部？'),
                 onConfirm: () {
                   for (int i = 0; i < widget.episodes.length; i++) {
                     _onDownload(
@@ -567,7 +567,7 @@ class _DownloadPanelState extends State<DownloadPanel> {
             ),
           ),
           _buildBottomBtn(
-            text: '查看缓存',
+            text: '查看快取',
             onTap: () => Navigator.of(context).push(
               GetPageRoute(page: () => const DownloadPage()),
             ),

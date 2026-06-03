@@ -68,7 +68,7 @@ class VideoReplyReplyPanel extends CommonSlidePage {
       () => Scaffold(
         resizeToAvoidBottomInset: false,
         appBar: AppBar(
-          title: const Text('评论详情'),
+          title: const Text('評論詳情'),
           actions: [
             IconButton(
               tooltip: '前往',
@@ -159,9 +159,9 @@ class _VideoReplyReplyPanelState extends State<VideoReplyReplyPanel>
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: <Widget>[
-                      Text(isDialogue ? '对话列表' : '评论详情'),
+                      Text(isDialogue ? '對話列表' : '評論詳情'),
                       IconButton(
-                        tooltip: '关闭',
+                        tooltip: '關閉',
                         icon: const Icon(Icons.close, size: 20),
                         onPressed: Get.back,
                       ),
@@ -256,7 +256,7 @@ class _VideoReplyReplyPanelState extends State<VideoReplyReplyPanel>
                 final count = _controller.count.value;
                 return count != -1
                     ? Text(
-                        '相关回复共${NumUtils.numFormat(count)}条',
+                        '相關回復共${NumUtils.numFormat(count)}條',
                         style: const TextStyle(fontSize: 13),
                       )
                     : const SizedBox.shrink();
@@ -309,7 +309,7 @@ class _VideoReplyReplyPanelState extends State<VideoReplyReplyPanel>
                 bottom: MediaQuery.viewPaddingOf(context).bottom,
               ),
               child: Text(
-                _controller.isEnd ? '没有更多了' : '加载中...',
+                _controller.isEnd ? '沒有更多了' : '載入中...',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 12,
@@ -327,7 +327,7 @@ class _VideoReplyReplyPanelState extends State<VideoReplyReplyPanel>
                   end: theme.colorScheme.surface,
                 ).chain(
                   CurveTween(
-                    curve: const Interval(0.8, 1.0), // 前0.8s不变, 后0.2s开始动画
+                    curve: const Interval(0.8, 1.0), // 前0.8s不變, 後0.2s開始動畫
                   ),
                 ),
               ),
@@ -366,7 +366,7 @@ class _VideoReplyReplyPanelState extends State<VideoReplyReplyPanel>
       ),
       jumpToDialogue: () {
         if (!_controller.setIndexById(replyItem.parent)) {
-          SmartDialog.showToast('评论可能已被删除');
+          SmartDialog.showToast('評論可能已被刪除');
         }
       },
       onCheckReply: (item) => _controller.onCheckReply(item, isManual: true),

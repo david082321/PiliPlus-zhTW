@@ -37,7 +37,7 @@ class _DownloadSearchPageState
   @override
   List<Widget>? get extraActions => [
     IconButton(
-      tooltip: '多选',
+      tooltip: '多選',
       onPressed: () {
         if (controller.loadingState.value is! Success) {
           return;
@@ -70,7 +70,7 @@ class _DownloadSearchPageState
         if (res.every((e) => e)) {
           SmartDialog.showToast('更新成功');
         } else {
-          SmartDialog.showToast('更新失败');
+          SmartDialog.showToast('更新失敗');
         }
       },
       child: Text(

@@ -55,7 +55,7 @@ abstract final class UserHttp {
     }
   }
 
-  // 稍后再看
+  // 稍後再看
   static Future<LoadingState<LaterData>> seeYouLater({
     required int page,
     int viewed = 0,
@@ -81,7 +81,7 @@ abstract final class UserHttp {
     }
   }
 
-  // 观看历史
+  // 觀看歷史
   static Future<LoadingState<HistoryData>> historyList({
     required String type,
     int? max,
@@ -105,12 +105,12 @@ abstract final class UserHttp {
     }
   }
 
-  // 暂停观看历史
+  // 暫停觀看歷史
   static Future<LoadingState<void>> pauseHistory(
     bool switchStatus, {
     Account? account,
   }) async {
-    // 暂停switchStatus传true 否则false
+    // 暫停switchStatus傳true 否則false
     account ??= Accounts.history;
     final res = await Request().post(
       Api.pauseHistory,
@@ -131,7 +131,7 @@ abstract final class UserHttp {
     }
   }
 
-  // 观看历史暂停状态
+  // 觀看歷史暫停狀態
   static Future<LoadingState<bool>> historyStatus({Account? account}) async {
     final res = await Request().get(
       Api.historyStatus,
@@ -144,7 +144,7 @@ abstract final class UserHttp {
     }
   }
 
-  // 清空历史记录
+  // 清空歷史記錄
   static Future<LoadingState<void>> clearHistory({Account? account}) async {
     account ??= Accounts.history;
     final res = await Request().post(
@@ -165,7 +165,7 @@ abstract final class UserHttp {
     }
   }
 
-  // 稍后再看
+  // 稍後再看
   static Future<LoadingState<void>> toViewLater({
     String? bvid,
     Object? aid,
@@ -181,7 +181,7 @@ abstract final class UserHttp {
       options: Options(contentType: Headers.formUrlEncodedContentType),
     );
     if (res.data['code'] == 0) {
-      SmartDialog.showToast('yeah！稍后再看');
+      SmartDialog.showToast('yeah！稍後再看');
       return const Success(null);
     } else {
       SmartDialog.showToast(res.data['message'].toString());
@@ -189,7 +189,7 @@ abstract final class UserHttp {
     }
   }
 
-  // 移除已观看
+  // 移除已觀看
   static Future<LoadingState<void>> toViewDel({required String aids}) async {
     final Map<String, dynamic> params = {
       'csrf': Accounts.main.csrf,
@@ -209,7 +209,7 @@ abstract final class UserHttp {
     }
   }
 
-  // 获取用户凭证 失效
+  // 取得使用者憑證 失效
   // static Future thirdLogin() async {
   //   final res = await Request().get(
   //     'https://passport.bilibili.com/login/app/third',
@@ -224,11 +224,11 @@ abstract final class UserHttp {
   //       Request().get(res.data['data']['confirm_uri']);
   //     }
   //   } catch (err) {
-  //     SmartDialog.showNotify(msg: '获取用户凭证: $err', notifyType: NotifyType.error);
+  //     SmartDialog.showNotify(msg: '取得使用者憑證: $err', notifyType: NotifyType.error);
   //   }
   // }
 
-  // 清空稍后再看 // clean_type: null->all, 1->invalid, 2->viewed
+  // 清空稍後再看 // clean_type: null->all, 1->invalid, 2->viewed
   static Future<LoadingState<void>> toViewClear([int? cleanType]) async {
     final res = await Request().post(
       Api.toViewClear,
@@ -245,7 +245,7 @@ abstract final class UserHttp {
     }
   }
 
-  // 删除历史记录
+  // 刪除歷史記錄
   static Future<LoadingState<void>> delHistory(
     String kid, {
     Account? account,
@@ -284,7 +284,7 @@ abstract final class UserHttp {
     }
   }
 
-  // 搜索历史记录
+  // 搜尋歷史記錄
   static Future<LoadingState<HistoryData>> searchHistory({
     required int pn,
     required String keyword,
@@ -306,7 +306,7 @@ abstract final class UserHttp {
     }
   }
 
-  // 我的订阅
+  // 我的訂閱
   static Future<LoadingState<SubData>> userSubFolder({
     required int mid,
     required int pn,
@@ -347,7 +347,7 @@ abstract final class UserHttp {
     }
   }
 
-  // 稍后再看列表
+  // 稍後再看列表
   static Future<LoadingState<MediaListData>> getMediaList({
     required Object type,
     required Object bizId,

@@ -261,11 +261,11 @@ class _UgcIntroPanelState extends State<UgcIntroPanel> {
                                   videoDetailCtr.queryVideoUrl();
                                 }
                               },
-                              label: const Text("点此重新加载"),
+                              label: const Text("點此重新載入"),
                             ),
                           ),
                   ),
-                  // 点赞收藏转发 布局样式2
+                  // 按讚收藏轉發 布局樣式2
                   if (!isHorizontal) ...[
                     const SizedBox(height: 8),
                     actionGrid(
@@ -454,7 +454,7 @@ class _UgcIntroPanelState extends State<UgcIntroPanel> {
             ],
             if (videoDetail.isUpowerExclusive == true) ...[
               _labelWidget(
-                '充电专属',
+                '充電專屬',
                 isDark
                     ? theme.colorScheme.error
                     : theme.colorScheme.errorContainer,
@@ -465,7 +465,7 @@ class _UgcIntroPanelState extends State<UgcIntroPanel> {
               const TextSpan(text: ' '),
             ] else if (videoDetail.rights?.isSteinGate == 1) ...[
               _labelWidget(
-                '互动视频',
+                '互動影片',
                 theme.colorScheme.secondaryContainer,
                 theme.colorScheme.onSecondaryContainer,
               ),
@@ -504,12 +504,12 @@ class _UgcIntroPanelState extends State<UgcIntroPanel> {
           ),
           child: Text(
             switch (attr) {
-              1 => '悄悄关注',
-              2 => '已关注',
-              4 || 6 => '已互关',
-              128 => '已拉黑',
-              -10 => '特别关注',
-              _ => ' 关注 ',
+              1 => '悄悄關注',
+              2 => '已關注',
+              4 || 6 => '已互關',
+              128 => '已封鎖',
+              -10 => '特別關注',
+              _ => ' 關注 ',
             },
             style: const TextStyle(fontSize: 13),
           ),
@@ -535,7 +535,7 @@ class _UgcIntroPanelState extends State<UgcIntroPanel> {
               icon: const Icon(FontAwesomeIcons.thumbsUp),
               selectIcon: const Icon(FontAwesomeIcons.solidThumbsUp),
               selectStatus: introController.hasLike.value,
-              semanticsLabel: '点赞',
+              semanticsLabel: '按讚',
               text: !isLoading
                   ? NumUtils.numFormat(videoDetail.stat!.like)
                   : null,
@@ -551,8 +551,8 @@ class _UgcIntroPanelState extends State<UgcIntroPanel> {
                 introController.actionDislikeVideo,
               ),
               selectStatus: introController.hasDislike.value,
-              semanticsLabel: '点踩',
-              text: "点踩",
+              semanticsLabel: '點踩',
+              text: "點踩",
             ),
           ),
           Obx(
@@ -562,7 +562,7 @@ class _UgcIntroPanelState extends State<UgcIntroPanel> {
               selectIcon: const Icon(FontAwesomeIcons.b),
               onTap: introController.actionCoinVideo,
               selectStatus: introController.hasCoin,
-              semanticsLabel: '投币',
+              semanticsLabel: '投幣',
               text: !isLoading
                   ? NumUtils.numFormat(videoDetail.stat!.coin)
                   : null,
@@ -625,8 +625,8 @@ class _UgcIntroPanelState extends State<UgcIntroPanel> {
       return const TextSpan();
     }
     // type
-    // 1 普通文本
-    // 2 @用户
+    // 1 普通文字
+    // 2 @使用者
     final List<TextSpan> spanChildren = content.descV2!.map((currentDesc) {
       switch (currentDesc.type) {
         case 1:
@@ -673,9 +673,9 @@ class _UgcIntroPanelState extends State<UgcIntroPanel> {
                               if (!mounted) return;
                               final confirmed = await showConfirmDialog(
                                 context: context,
-                                title: const Text('空降助手：搬运视频同步'),
+                                title: const Text('空降助手：搬運影片同步'),
                                 content: Text(
-                                  '${hasPortVideo ? "" : "是否将"}该视频${hasPortVideo ? "已" : ""}绑定到此YouTube视频($ytbId)',
+                                  '${hasPortVideo ? "" : "是否將"}該影片${hasPortVideo ? "已" : ""}綁定到此YouTube影片($ytbId)',
                                 ),
                               );
                               if (!hasPortVideo && confirmed) {
@@ -686,7 +686,7 @@ class _UgcIntroPanelState extends State<UgcIntroPanel> {
                                   videoDuration: (duration / 1000).round(),
                                 );
                                 SmartDialog.showToast(
-                                  '提交搬运视频${res.isSuccess ? "成功" : "失败: $res"}',
+                                  '提交搬運影片${res.isSuccess ? "成功" : "失敗: $res"}',
                                 );
                                 return;
                               }
@@ -938,7 +938,7 @@ class _UgcIntroPanelState extends State<UgcIntroPanel> {
                 ),
                 const SizedBox(height: 0),
                 Text(
-                  '${NumUtils.numFormat(userStat.follower)}粉丝    ${'${NumUtils.numFormat(userStat.archiveCount)}视频'}',
+                  '${NumUtils.numFormat(userStat.follower)}粉絲    ${'${NumUtils.numFormat(userStat.archiveCount)}影片'}',
                   style: TextStyle(
                     fontSize: 12,
                     color: theme.colorScheme.outline,
@@ -977,7 +977,7 @@ class _UgcIntroPanelState extends State<UgcIntroPanel> {
           MdiIcons.incognito,
           size: 15,
           color: theme.colorScheme.outline,
-          semanticLabel: '无痕',
+          semanticLabel: '無痕',
         ),
       if (introController.isShowOnlineTotal)
         Obx(
@@ -1008,12 +1008,12 @@ class _UgcIntroPanelState extends State<UgcIntroPanel> {
             if (summary?.isNotEmpty == true || outline?.isNotEmpty == true) {
               widget.showAiBottomSheet();
             } else {
-              SmartDialog.showToast("当前视频不支持AI视频总结");
+              SmartDialog.showToast("目前影片不支援AI影片總結");
             }
           }
         },
         child: Image.asset(
-          semanticLabel: 'AI总结',
+          semanticLabel: 'AI總結',
           Assets.ai,
           height: 18,
           width: 18,
@@ -1038,7 +1038,7 @@ class _UgcIntroPanelState extends State<UgcIntroPanel> {
                 (item) => SearchText(
                   fontSize: 13,
                   text: switch (item.tagType) {
-                    'bgm' => item.tagName!.replaceFirst('发现', '♫ BGM：'),
+                    'bgm' => item.tagName!.replaceFirst('發現', '♫ BGM：'),
                     'topic' => '#${item.tagName}',
                     _ => item.tagName!,
                   },

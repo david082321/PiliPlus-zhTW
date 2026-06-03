@@ -76,7 +76,7 @@ class HistoryController
     return false;
   }
 
-  // 观看历史暂停状态
+  // 觀看歷史暫停狀態
   Future<void> historyStatus() async {
     final res = await UserHttp.historyStatus(account: account);
     if (res case Success(:final response)) {
@@ -87,12 +87,12 @@ class HistoryController
     }
   }
 
-  // 删除某条历史记录
+  // 刪除某條歷史記錄
   void delHistory(HistoryItemModel item) {
     _onDelete({item});
   }
 
-  // 删除已看历史记录
+  // 刪除已看歷史記錄
   void onDelViewedHistory() {
     final viewedList = loadingState.value.dataOrNull
         ?.where((e) => e.progress == -1)
@@ -100,12 +100,12 @@ class HistoryController
     if (viewedList != null && viewedList.isNotEmpty) {
       _onDelete(viewedList);
     } else {
-      SmartDialog.showToast('无已看记录');
+      SmartDialog.showToast('無已看記錄');
     }
   }
 
   Future<void> _onDelete(Set<HistoryItemModel> removeList) async {
-    SmartDialog.showLoading(msg: '请求中');
+    SmartDialog.showLoading(msg: '請求中');
     final res = await UserHttp.delHistory(
       removeList
           .map((item) => '${item.history.business}_${item.kid}')
@@ -115,19 +115,19 @@ class HistoryController
     SmartDialog.dismiss();
     if (res.isSuccess) {
       afterDelete(removeList);
-      SmartDialog.showToast('已删除');
+      SmartDialog.showToast('已刪除');
     } else {
       res.toast();
     }
   }
 
-  // 删除选中的记录
+  // 刪除選中的紀錄
   @override
   void onRemove() {
     showConfirmDialog(
       context: Get.context!,
       title: const Text('提示'),
-      content: const Text('确认删除所选历史记录吗？'),
+      content: const Text('確認刪除所選歷史記錄嗎？'),
       onConfirm: () => _onDelete(allChecked.toSet()),
     );
   }

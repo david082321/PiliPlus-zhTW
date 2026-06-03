@@ -29,30 +29,30 @@ abstract final class GStorage {
     regAdapter();
 
     await Future.wait([
-      // 登录用户信息
+      // 登入使用者資訊
       Hive.openBox<UserInfoData>(
         'userInfo',
         compactionStrategy: (int entries, int deletedEntries) {
           return deletedEntries > 2;
         },
       ).then((res) => userInfo = res),
-      // 本地缓存
+      // 本機快取
       Hive.openBox(
         'localCache',
         compactionStrategy: (int entries, int deletedEntries) {
           return deletedEntries > 4;
         },
       ).then((res) => localCache = res),
-      // 设置
+      // 設定
       Hive.openBox('setting').then((res) => setting = res),
-      // 搜索历史
+      // 搜尋歷史
       Hive.openBox(
         'historyWord',
         compactionStrategy: (int entries, int deletedEntries) {
           return deletedEntries > 10;
         },
       ).then((res) => historyWord = res),
-      // 视频设置
+      // 影片設定
       Hive.openBox('video').then((res) => video = res),
       Accounts.init(),
       Hive.openBox<int>(

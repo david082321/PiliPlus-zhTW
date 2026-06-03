@@ -1,8 +1,8 @@
 enum BtmProgressBehavior {
-  alwaysShow('始终展示'),
-  alwaysHide('始终隐藏'),
-  onlyShowFullScreen('仅全屏时展示'),
-  onlyHideFullScreen('仅全屏时隐藏'),
+  alwaysShow('始終展示'),
+  alwaysHide('始終隱藏'),
+  onlyShowFullScreen('僅全螢幕時展示'),
+  onlyHideFullScreen('僅全螢幕時隱藏'),
   ;
 
   final String desc;

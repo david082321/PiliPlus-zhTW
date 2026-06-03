@@ -78,7 +78,7 @@ abstract final class FavHttp {
     }
   }
 
-  // 取消订阅
+  // 取消訂閱
   static Future<LoadingState<void>> cancelSub({
     required int id,
     required int type,
@@ -394,7 +394,7 @@ abstract final class FavHttp {
     }
   }
 
-  // 收藏夹
+  // 收藏夾
   static Future<LoadingState<FavFolderData>> userfavFolder({
     required int pn,
     required int ps,
@@ -411,7 +411,7 @@ abstract final class FavHttp {
     if (res.data['code'] == 0) {
       return Success(FavFolderData.fromJson(res.data['data']));
     } else {
-      return Error(res.data['message'] ?? '账号未登录');
+      return Error(res.data['message'] ?? '帳號未登入');
     }
   }
 
@@ -718,7 +718,7 @@ abstract final class FavHttp {
     }
   }
 
-  // 查看视频被收藏在哪个文件夹
+  // 查看影片被收藏在哪個資料夾
   static Future<LoadingState<FavFolderData>> videoInFolder({
     dynamic mid,
     dynamic rid,

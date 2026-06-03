@@ -71,7 +71,7 @@ class VideoPlayerServiceHandler extends BaseAudioHandler with SeekHandler {
   void setMediaItem(MediaItem newMediaItem) {
     if (!enableBackgroundPlay) return;
     // if (kDebugMode) {
-    //   debugPrint("此时调用栈为：");
+    //   debugPrint("此時呼叫堆疊為：");
     //   debugPrint(newMediaItem);
     //   debugPrint(newMediaItem.title);
     //   debugPrint(StackTrace.current.toString());
@@ -164,7 +164,7 @@ class VideoPlayerServiceHandler extends BaseAudioHandler with SeekHandler {
   }) {
     if (!enableBackgroundPlay) return;
     // if (kDebugMode) {
-    //   debugPrint('当前调用栈为：');
+    //   debugPrint('目前呼叫堆疊為：');
     //   debugPrint(StackTrace.current);
     // }
     if (!PlPlayerController.instanceExists()) return;

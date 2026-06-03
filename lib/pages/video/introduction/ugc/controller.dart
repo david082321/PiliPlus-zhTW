@@ -52,13 +52,13 @@ class UgcIntroController extends CommonIntroController with ReloadMixin {
 
   final RxBool status = true.obs;
 
-  // up主粉丝数
+  // up主粉絲數
   final Rx<MemberCardInfoData> userStat = MemberCardInfoData().obs;
-  // 关注状态 默认未关注
+  // 關注狀態 預設未關注
   late final Rx<RelationData> followStatus = Rx(RelationData());
   late final RxMap staffRelations = {}.obs;
 
-  // 是否点踩
+  // 是否點踩
   final RxBool hasDislike = false.obs;
 
   late final showArgueMsg = Pref.showArgueMsg;
@@ -87,7 +87,7 @@ class UgcIntroController extends CommonIntroController with ReloadMixin {
     videoDetail.value.title = Get.arguments['title'] ?? '';
   }
 
-  // 获取视频简介&分p
+  // 取得影片簡介&分p
   @override
   Future<void> queryVideoIntro() async {
     queryVideoTags();
@@ -146,7 +146,7 @@ class UgcIntroController extends CommonIntroController with ReloadMixin {
     }
   }
 
-  // 获取up主粉丝数
+  // 取得up主粉絲數
   Future<void> queryUserStat(List<Staff>? staff) async {
     if (staff != null && staff.isNotEmpty) {
       final res = await Request().get(
@@ -185,17 +185,17 @@ class UgcIntroController extends CommonIntroController with ReloadMixin {
     }
   }
 
-  // 一键三连
+  // 一鍵三連
   @override
   Future<void> actionTriple() async {
     feedBack();
     if (!isLogin) {
-      SmartDialog.showToast('账号未登录');
+      SmartDialog.showToast('帳號未登入');
       return;
     }
     if (hasLike.value && hasCoin && hasFav.value) {
-      // 已点赞、投币、收藏
-      SmartDialog.showToast('已三连');
+      // 已按讚、投幣、收藏
+      SmartDialog.showToast('已三連');
       return;
     }
     final result = await VideoHttp.ugcTriple(bvid: bvid);
@@ -216,20 +216,20 @@ class UgcIntroController extends CommonIntroController with ReloadMixin {
       }
       hasDislike.value = false;
       if (!hasCoin) {
-        SmartDialog.showToast('投币失败');
+        SmartDialog.showToast('投幣失敗');
       } else {
-        SmartDialog.showToast('三连成功');
+        SmartDialog.showToast('三連成功');
       }
     } else {
       result.toast();
     }
   }
 
-  // （取消）点赞
+  // （取消）按讚
   @override
   Future<void> actionLikeVideo() async {
     if (!isLogin) {
-      SmartDialog.showToast('账号未登录');
+      SmartDialog.showToast('帳號未登入');
       return;
     }
     if (videoDetail.value.stat == null) {
@@ -238,7 +238,7 @@ class UgcIntroController extends CommonIntroController with ReloadMixin {
     final newVal = !hasLike.value;
     final result = await VideoHttp.likeVideo(bvid: bvid, type: newVal);
     if (result case Success(:final response)) {
-      SmartDialog.showToast(newVal ? response : '取消赞');
+      SmartDialog.showToast(newVal ? response : '取消讚');
       videoDetail.value.stat?.like += newVal ? 1 : -1;
       hasLike.value = newVal;
       if (newVal) {
@@ -251,7 +251,7 @@ class UgcIntroController extends CommonIntroController with ReloadMixin {
 
   Future<void> actionDislikeVideo() async {
     if (!isLogin) {
-      SmartDialog.showToast('账号未登录');
+      SmartDialog.showToast('帳號未登入');
       return;
     }
     final res = await VideoHttp.dislikeVideo(
@@ -260,7 +260,7 @@ class UgcIntroController extends CommonIntroController with ReloadMixin {
     );
     if (res.isSuccess) {
       if (!hasDislike.value) {
-        SmartDialog.showToast('点踩成功');
+        SmartDialog.showToast('點踩成功');
         hasDislike.value = true;
         if (hasLike.value) {
           videoDetail.value.stat?.like--;
@@ -284,7 +284,7 @@ class UgcIntroController extends CommonIntroController with ReloadMixin {
   @override
   StatDetail? getStat() => videoDetail.value.stat;
 
-  // 分享视频
+  // 分享影片
   @override
   void actionShareVideo(BuildContext context) {
     final videoDetail = this.videoDetail.value;
@@ -301,7 +301,7 @@ class UgcIntroController extends CommonIntroController with ReloadMixin {
             ListTile(
               dense: true,
               title: const Text(
-                '复制链接',
+                '複製連結',
                 style: TextStyle(fontSize: 14),
               ),
               onTap: () {
@@ -310,7 +310,7 @@ class UgcIntroController extends CommonIntroController with ReloadMixin {
               },
               trailing: playedTimePos.isNotEmpty
                   ? iconButton(
-                      tooltip: '精确分享',
+                      tooltip: '精確分享',
                       icon: const Icon(Icons.timer_outlined),
                       onPressed: () {
                         Get.back();
@@ -322,7 +322,7 @@ class UgcIntroController extends CommonIntroController with ReloadMixin {
             ListTile(
               dense: true,
               title: const Text(
-                '其它app打开',
+                '其它app打開',
                 style: TextStyle(fontSize: 14),
               ),
               onTap: () {
@@ -334,7 +334,7 @@ class UgcIntroController extends CommonIntroController with ReloadMixin {
               ListTile(
                 dense: true,
                 title: const Text(
-                  '分享视频',
+                  '分享影片',
                   style: TextStyle(fontSize: 14),
                 ),
                 onTap: () {
@@ -349,7 +349,7 @@ class UgcIntroController extends CommonIntroController with ReloadMixin {
             ListTile(
               dense: true,
               title: const Text(
-                '分享至动态',
+                '分享至動態',
                 style: TextStyle(fontSize: 14),
               ),
               onTap: () {
@@ -400,7 +400,7 @@ class UgcIntroController extends CommonIntroController with ReloadMixin {
     );
   }
 
-  // 查询关注状态
+  // 查詢關注狀態
   Future<void> queryFollowStatus() async {
     final videoDetail = this.videoDetail.value;
     if (videoDetail.owner == null || videoDetail.staff?.isNotEmpty == true) {
@@ -413,10 +413,10 @@ class UgcIntroController extends CommonIntroController with ReloadMixin {
     }
   }
 
-  // 关注/取关up
+  // 關注/取關up
   Future<void> actionRelationMod(BuildContext context) async {
     if (!isLogin) {
-      SmartDialog.showToast('账号未登录');
+      SmartDialog.showToast('帳號未登入');
       return;
     }
     final videoDetail = this.videoDetail.value;
@@ -456,7 +456,7 @@ class UgcIntroController extends CommonIntroController with ReloadMixin {
     }
   }
 
-  // 修改分P或番剧分集
+  // 修改分P或番劇分集
   Future<bool> onChangeEpisode(
     BaseEpisodeItem episode, {
     bool isStein = false,
@@ -479,7 +479,7 @@ class UgcIntroController extends CommonIntroController with ReloadMixin {
 
       final String? cover = episode.cover;
 
-      // 重新获取视频资源
+      // 重新取得影片資源
       if (videoDetailCtr.isPlayAll) {
         if (videoDetailCtr.mediaList.indexWhere((item) => item.bvid == bvid) ==
             -1) {
@@ -514,7 +514,7 @@ class UgcIntroController extends CommonIntroController with ReloadMixin {
           videoDetailCtr.cover.value = cover;
         }
 
-        // 重新请求相关视频
+        // 重新請求相關影片
         if (videoDetailCtr.plPlayerController.showRelatedVideo) {
           try {
             Get.find<RelatedController>(tag: heroTag)
@@ -523,7 +523,7 @@ class UgcIntroController extends CommonIntroController with ReloadMixin {
           } catch (_) {}
         }
 
-        // 重新请求评论
+        // 重新請求評論
         if (videoDetailCtr.showReply) {
           try {
             final replyCtr = Get.find<VideoReplyController>(tag: heroTag)
@@ -565,7 +565,7 @@ class UgcIntroController extends CommonIntroController with ReloadMixin {
     super.onClose();
   }
 
-  /// 播放上一个
+  /// 播放上一個
   @override
   bool prevPlay([bool skipPart = false]) {
     final List<BaseEpisodeItem> episodes = <BaseEpisodeItem>[];
@@ -600,7 +600,7 @@ class UgcIntroController extends CommonIntroController with ReloadMixin {
     int prevIndex = currentIndex - 1;
     final PlayRepeat playRepeat = videoDetailCtr.plPlayerController.playRepeat;
 
-    // 列表循环
+    // 列表循環
     if (prevIndex < 0) {
       if (isPart &&
           (videoDetailCtr.isPlayAll || videoDetail.ugcSeason != null)) {
@@ -630,7 +630,7 @@ class UgcIntroController extends CommonIntroController with ReloadMixin {
     }
   }
 
-  /// 列表循环或者顺序播放时，自动播放下一个
+  /// 列表循環或者順序播放時，自動播放下一個
   @override
   bool nextPlay([bool skipPart = false]) {
     try {
@@ -687,7 +687,7 @@ class UgcIntroController extends CommonIntroController with ReloadMixin {
         videoDetailCtr.getMediaList();
       }
 
-      // 列表循环
+      // 列表循環
       if (nextIndex >= episodes.length) {
         if (isPart &&
             (videoDetailCtr.isPlayAll || videoDetail.ugcSeason != null)) {
@@ -737,7 +737,7 @@ class UgcIntroController extends CommonIntroController with ReloadMixin {
     if (relatedCtr.loadingState.value case Success(:final response)) {
       final firstItem = response?.firstOrNull;
       if (firstItem == null) {
-        SmartDialog.showToast('暂无相关视频，停止连播');
+        SmartDialog.showToast('暫無相關影片，停止連播');
         return false;
       }
       onChangeEpisode(
@@ -754,17 +754,17 @@ class UgcIntroController extends CommonIntroController with ReloadMixin {
     return false;
   }
 
-  // ai总结
+  // ai總結
   static Future<AiConclusionResult?> getAiConclusion(
     String bvid,
     int cid,
     int? mid,
   ) async {
     if (!Accounts.heartbeat.isLogin) {
-      SmartDialog.showToast("账号未登录");
+      SmartDialog.showToast("帳號未登入");
       return null;
     }
-    SmartDialog.showLoading(msg: '正在获取AI总结');
+    SmartDialog.showLoading(msg: '正在取得AI總結');
     final res = await VideoHttp.aiConclusion(
       bvid: bvid,
       cid: cid,
@@ -774,9 +774,9 @@ class UgcIntroController extends CommonIntroController with ReloadMixin {
     if (res case Success(:final response)) {
       return response.modelResult;
     } else if (res is Error && res.code == 1) {
-      SmartDialog.showToast("AI处理中，请稍后再试");
+      SmartDialog.showToast("AI處理中，請稍後再試");
     } else {
-      SmartDialog.showToast("当前视频暂不支持AI视频总结");
+      SmartDialog.showToast("目前影片暫不支援AI影片總結");
     }
     return null;
   }

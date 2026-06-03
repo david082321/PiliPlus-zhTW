@@ -6,7 +6,7 @@ abstract class BaseRcmdVideoItemModel extends BaseVideoItemModel {
   String? uri;
   String? rcmdReason;
 
-  // app推荐专属
+  // app推薦專屬
   int? param;
   String? pgcBadge;
 }

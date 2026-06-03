@@ -135,7 +135,7 @@ abstract class BaseVideoWebState<
     final count = controller.count;
     if (count == null) return null;
     return Text(
-      '共 $count 视频',
+      '共 $count 影片',
       style: const TextStyle(height: 1),
       strutStyle: const StrutStyle(leading: 0, height: 1),
     );
@@ -153,7 +153,7 @@ abstract class BaseVideoWebState<
     final backwardBtn = iconButton(
       size: size,
       iconSize: iconSize,
-      tooltip: canBackward ? '上一页' : null,
+      tooltip: canBackward ? '上一頁' : null,
       icon: const Icon(Icons.keyboard_arrow_left),
       onPressed: canBackward ? () => controller.jumpToPage(page - 1) : null,
     );
@@ -161,7 +161,7 @@ abstract class BaseVideoWebState<
     final forwardBtn = iconButton(
       size: size,
       iconSize: iconSize,
-      tooltip: canForward ? '下一页' : null,
+      tooltip: canForward ? '下一頁' : null,
       icon: const Icon(Icons.keyboard_arrow_right),
       onPressed: canForward ? () => controller.jumpToPage(page + 1) : null,
     );
@@ -206,7 +206,7 @@ abstract class BaseVideoWebState<
         initialValue: pageStr,
         onChanged: (value) => pageStr = value,
         decoration: const InputDecoration(
-          labelText: '页数',
+          labelText: '頁數',
           border: OutlineInputBorder(),
         ),
         inputFormatters: [FilteringTextInputFormatter.digitsOnly],

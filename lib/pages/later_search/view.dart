@@ -42,7 +42,7 @@ class _LaterSearchPageState
           mediaId: null,
           mid: controller.mid,
         ),
-        child: Text('复制', style: textStyle),
+        child: Text('複製', style: textStyle),
       ),
       TextButton(
         style: btnStyle,
@@ -53,7 +53,7 @@ class _LaterSearchPageState
           mediaId: null,
           mid: controller.mid,
         ),
-        child: Text('移动', style: textStyle),
+        child: Text('移動', style: textStyle),
       ),
     ];
   }
@@ -84,7 +84,7 @@ class _LaterSearchPageState
                 'oid': item.aid,
                 'sourceType': SourceType.watchLater,
                 'count': controller.count,
-                'favTitle': '稍后再看',
+                'favTitle': '稍後再看',
                 'mediaId': controller.mid,
                 'desc': false,
                 'isContinuePlaying': index != 0,

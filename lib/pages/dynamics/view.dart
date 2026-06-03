@@ -35,7 +35,7 @@ class _DynamicsPageState extends CommonPageState<DynamicsPage>
       height: 34,
       margin: EdgeInsets.only(left: !isRight ? 16 : 0, right: isRight ? 16 : 0),
       child: IconButton(
-        tooltip: '发布动态',
+        tooltip: '發布動態',
         style: ButtonStyle(
           padding: const WidgetStatePropertyAll(EdgeInsets.zero),
           backgroundColor: WidgetStatePropertyAll(

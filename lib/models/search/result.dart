@@ -90,7 +90,7 @@ class SearchVideoItemModel extends HorizontalVideoModel {
     stat = SearchStat.fromJson(json);
     switch (json['type']) {
       case 'ketang':
-        badge = '课堂';
+        badge = '課堂';
         isPugv = true;
       case 'live_room':
         badge = '直播';
@@ -105,9 +105,9 @@ class SearchVideoItemModel extends HorizontalVideoModel {
 }
 
 class SearchStat extends BaseStat {
-  // 收藏数
+  // 收藏數
   int? favorite;
-  // 评论数
+  // 評論數
   int? reply;
 
   SearchStat.fromJson(Map<String, dynamic> json) {

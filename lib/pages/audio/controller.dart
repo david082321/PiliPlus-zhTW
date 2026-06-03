@@ -402,7 +402,7 @@ class AudioController extends GetxController
   @override
   Future<void> actionLikeVideo() async {
     if (!isLogin) {
-      SmartDialog.showToast('账号未登录');
+      SmartDialog.showToast('帳號未登入');
       return;
     }
     final newVal = !hasLike.value;
@@ -431,7 +431,7 @@ class AudioController extends GetxController
   @override
   Future<void> actionTriple() async {
     if (!isLogin) {
-      SmartDialog.showToast('账号未登录');
+      SmartDialog.showToast('帳號未登入');
       return;
     }
     final res = await AudioGrpc.audioTripleLike(
@@ -453,9 +453,9 @@ class AudioController extends GetxController
       }
       hasFav.value = true;
       if (!hasCoin) {
-        SmartDialog.showToast('投币失败');
+        SmartDialog.showToast('投幣失敗');
       } else {
-        SmartDialog.showToast('三连成功');
+        SmartDialog.showToast('三連成功');
       }
     } else {
       res.toast();
@@ -500,7 +500,7 @@ class AudioController extends GetxController
   @override
   void showFavBottomSheet(BuildContext context, {bool isLongPress = false}) {
     if (!isLogin) {
-      SmartDialog.showToast('账号未登录');
+      SmartDialog.showToast('帳號未登入');
       return;
     }
     if (enableQuickFav) {
@@ -536,7 +536,7 @@ class AudioController extends GetxController
             ListTile(
               dense: true,
               title: const Text(
-                '复制链接',
+                '複製連結',
                 style: TextStyle(fontSize: 14),
               ),
               onTap: () {
@@ -547,7 +547,7 @@ class AudioController extends GetxController
             ListTile(
               dense: true,
               title: const Text(
-                '其它app打开',
+                '其它app打開',
                 style: TextStyle(fontSize: 14),
               ),
               onTap: () {
@@ -559,7 +559,7 @@ class AudioController extends GetxController
               ListTile(
                 dense: true,
                 title: const Text(
-                  '分享视频',
+                  '分享影片',
                   style: TextStyle(fontSize: 14),
                 ),
                 onTap: () {
@@ -579,7 +579,7 @@ class AudioController extends GetxController
             ListTile(
               dense: true,
               title: const Text(
-                '分享至动态',
+                '分享至動態',
                 style: TextStyle(fontSize: 14),
               ),
               onTap: () {

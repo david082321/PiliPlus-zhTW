@@ -69,7 +69,7 @@ abstract final class DynamicsHttp {
         return Error('$e\n\n$s');
       }
     } else {
-      return Error(code == 4101132 ? '没有数据' : res.data['message']);
+      return Error(code == 4101132 ? '沒有資料' : res.data['message']);
     }
   }
 
@@ -104,7 +104,7 @@ abstract final class DynamicsHttp {
     }
   }
 
-  // 动态点赞
+  // 動態按讚
   // static Future likeDynamic({
   //   required String? dynamicId,
   //   required int? up,
@@ -127,7 +127,7 @@ abstract final class DynamicsHttp {
   //   }
   // }
 
-  // 动态点赞
+  // 動態按讚
   static Future<LoadingState<void>> thumbDynamic({
     required String? dynamicId,
     required int? up,
@@ -377,7 +377,7 @@ abstract final class DynamicsHttp {
     if (res.data['code'] == 0) {
       final voteInfo = VoteInfo.fromSeparatedJson(res.data['data']);
       return voteInfo.voteId == null
-          ? const Error('无效的投票id')
+          ? const Error('無效的投票id')
           : Success(voteInfo);
     } else {
       return Error(res.data['message']);

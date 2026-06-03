@@ -47,7 +47,7 @@ extension ThreeDotItemTypeExt on ThreeDotItemType {
       case ThreeDotItemType.THREE_DOT_ITEM_TYPE_READ_ALL:
         showConfirmDialog(
           context: context,
-          title: const Text('一键已读'),
+          title: const Text('一鍵已讀'),
           content: const Text('是否清除全部新消息提醒？'),
           onConfirm: controller.onClearUnread,
         );
@@ -55,7 +55,7 @@ extension ThreeDotItemTypeExt on ThreeDotItemType {
         showConfirmDialog(
           context: context,
           title: const Text('清空列表'),
-          content: const Text('清空后所有消息将被删除，无法恢复'),
+          content: const Text('清空後所有消息將被刪除，無法復原'),
           onConfirm: controller.onDeleteList,
         );
       case ThreeDotItemType.THREE_DOT_ITEM_TYPE_MSG_SETTING:

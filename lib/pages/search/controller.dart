@@ -74,7 +74,7 @@ class BaseSearchController extends GetxController {
     }
   }
 
-  // 获取热搜关键词
+  // 取得熱搜關鍵字
   Future<void> queryTrendingList() async {
     trendingState.value = await SearchHttp.searchTrending(limit: 10);
   }
@@ -162,7 +162,7 @@ class SSearchController extends GetxController
     }
   }
 
-  // 搜索
+  // 搜尋
   Future<void> submit() async {
     if (controller.text.isEmpty) {
       if (hintText.isNullOrEmpty) {
@@ -231,7 +231,7 @@ class SSearchController extends GetxController
   void onClearHistory() {
     showConfirmDialog(
       context: Get.context!,
-      title: const Text('确定清空搜索历史？'),
+      title: const Text('確定清空搜尋歷史？'),
       onConfirm: () {
         historyList.clear();
         GStorage.historyWord.delete('cacheList');

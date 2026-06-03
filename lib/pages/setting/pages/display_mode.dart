@@ -27,7 +27,7 @@ class _SetDisplayModeState extends State<SetDisplayMode> {
     init();
   }
 
-  // 获取所有的mode
+  // 取得所有的mode
   Future<void> fetchAll() async {
     preferred = await FlutterDisplayMode.preferred;
     active = await FlutterDisplayMode.active;
@@ -37,7 +37,7 @@ class _SetDisplayModeState extends State<SetDisplayMode> {
     }
   }
 
-  // 初始化mode/手动设置
+  // 初始化mode/手動設定
   Future<void> init() async {
     try {
       modes = await FlutterDisplayMode.supported;
@@ -61,7 +61,7 @@ class _SetDisplayModeState extends State<SetDisplayMode> {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      appBar: AppBar(title: const Text('屏幕帧率设置')),
+      appBar: AppBar(title: const Text('螢幕幀率設定')),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -70,7 +70,7 @@ class _SetDisplayModeState extends State<SetDisplayMode> {
                 MediaQuery.viewPaddingOf(context).copyWith(top: 0, bottom: 0) +
                 const EdgeInsets.only(left: 25, top: 10, bottom: 5),
             child: Text(
-              '没有生效？重启app试试',
+              '沒有生效？重啟app試試',
               style: TextStyle(color: Theme.of(context).colorScheme.outline),
             ),
           ),
@@ -94,8 +94,8 @@ class _SetDisplayModeState extends State<SetDisplayMode> {
                   return RadioListTile<DisplayMode>(
                     value: mode,
                     title: mode == DisplayMode.auto
-                        ? const Text('自动')
-                        : Text('$mode${mode == active ? '  [系统]' : ''}'),
+                        ? const Text('自動')
+                        : Text('$mode${mode == active ? '  [系統]' : ''}'),
                   );
                 },
               ),

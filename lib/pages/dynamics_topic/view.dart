@@ -61,11 +61,11 @@ class _DynTopicPageState extends State<DynTopicPage> with DynMixin {
               ),
             );
           } else {
-            SmartDialog.showToast('账号未登录');
+            SmartDialog.showToast('帳號未登入');
           }
         },
         icon: const Icon(CustomIcons.topic_tag, size: 20),
-        label: const Text('参与话题'),
+        label: const Text('參與話題'),
       ),
       body: refreshIndicator(
         onRefresh: _controller.onRefresh,
@@ -205,7 +205,7 @@ class _DynTopicPageState extends State<DynTopicPage> with DynMixin {
                         ),
                       ),
                       Text(
-                        ' 发起',
+                        ' 發起',
                         style: TextStyle(color: colorScheme.outline),
                       ),
                     ],
@@ -228,7 +228,7 @@ class _DynTopicPageState extends State<DynTopicPage> with DynMixin {
               Row(
                 children: [
                   Text(
-                    '${NumUtils.numFormat(response.topicItem!.view)}浏览 · ${NumUtils.numFormat(response.topicItem!.discuss)}讨论',
+                    '${NumUtils.numFormat(response.topicItem!.view)}瀏覽 · ${NumUtils.numFormat(response.topicItem!.discuss)}討論',
                     style: TextStyle(
                       fontSize: 13,
                       color: colorScheme.outline,
@@ -309,10 +309,10 @@ class _DynTopicPageState extends State<DynTopicPage> with DynMixin {
                   ),
                 ),
                 PopupMenuItem(
-                  child: const Text('举报'),
+                  child: const Text('檢舉'),
                   onTap: () {
                     if (!_controller.isLogin) {
-                      SmartDialog.showToast('账号未登录');
+                      SmartDialog.showToast('帳號未登入');
                       return;
                     }
                     PageUtils.inAppWebview(

@@ -20,7 +20,7 @@ abstract final class AppSign {
       ..sort((a, b) => a.key.compareTo(b.key));
     params['sign'] = md5
         .convert(utf8.encode(_makeQueryFromParametersDefault(sorted) + appsec))
-        .toString(); // 获取MD5哈希值
+        .toString(); // 取得MD5雜湊值
   }
 
   /// from [Uri]

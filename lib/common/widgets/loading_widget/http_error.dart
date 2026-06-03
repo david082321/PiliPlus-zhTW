@@ -32,7 +32,7 @@ class HttpError extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 5),
           child: SelectableText(
-            errMsg ?? '没有数据',
+            errMsg ?? '沒有資料',
             textAlign: TextAlign.center,
             style: theme.textTheme.titleSmall,
             scrollPhysics: const NeverScrollableScrollPhysics(),
@@ -47,7 +47,7 @@ class HttpError extends StatelessWidget {
               shadowColor: Colors.transparent,
             ),
             child: Text(
-              btnText ?? '点击重试',
+              btnText ?? '點擊重試',
               style: TextStyle(color: theme.colorScheme.primary),
             ),
           ),

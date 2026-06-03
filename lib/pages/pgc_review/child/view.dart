@@ -131,7 +131,7 @@ class _PgcReviewChildPageState extends State<PgcReviewChildPage>
               ListTile(
                 dense: true,
                 title: const Text(
-                  '编辑',
+                  '編輯',
                   style: TextStyle(fontSize: 14),
                 ),
                 onTap: () {
@@ -155,14 +155,14 @@ class _PgcReviewChildPageState extends State<PgcReviewChildPage>
               ListTile(
                 dense: true,
                 title: const Text(
-                  '删除',
+                  '刪除',
                   style: TextStyle(fontSize: 14),
                 ),
                 onTap: () {
                   Get.back();
                   showConfirmDialog(
                     context: context,
-                    title: const Text('删除短评，同时删除评分？'),
+                    title: const Text('刪除短評，同時刪除評分？'),
                     onConfirm: () => _controller.onDel(index, item.reviewId!),
                   );
                 },
@@ -171,7 +171,7 @@ class _PgcReviewChildPageState extends State<PgcReviewChildPage>
             ListTile(
               dense: true,
               title: const Text(
-                '举报',
+                '檢舉',
                 style: TextStyle(fontSize: 14),
               ),
               onTap: () => Get
@@ -396,7 +396,7 @@ class _PgcReviewChildPageState extends State<PgcReviewChildPage>
               return count == null
                   ? const SizedBox.shrink()
                   : Text(
-                      '${NumUtils.numFormat(count)}条点评',
+                      '${NumUtils.numFormat(count)}條評論',
                       style: const TextStyle(fontSize: 13),
                     );
             },

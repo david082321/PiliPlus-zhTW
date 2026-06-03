@@ -86,7 +86,7 @@ class PgcController
     timelineState.value = Success(list1 ?? list2);
   }
 
-  // 我的订阅
+  // 我的訂閱
   Future<void> queryPgcFollow([bool isRefresh = true]) async {
     if (!accountService.isLogin.value ||
         followLoading ||

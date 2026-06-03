@@ -6,7 +6,7 @@ import 'package:PiliPlus/utils/page_utils.dart';
 import 'package:PiliPlus/utils/platform_utils.dart';
 import 'package:flutter/material.dart';
 
-// 视频卡片 - 垂直布局
+// 影片卡片 - 垂直布局
 class LiveCardVApp extends StatelessWidget {
   final CardLiveItem item;
   final bool showFirstFrame;

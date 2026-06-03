@@ -81,7 +81,7 @@ class _MemberHomeState extends State<MemberHome>
                   if (res.archive?.item?.isNotEmpty == true) ...[
                     _header(
                       color,
-                      title: '视频',
+                      title: '影片',
                       param: 'contribute',
                       param1: 'video',
                       count: res.archive!.count!,
@@ -124,7 +124,7 @@ class _MemberHomeState extends State<MemberHome>
                   if (res.coinArchive?.item?.isNotEmpty == true) ...[
                     _header(
                       color,
-                      title: '最近投币的视频',
+                      title: '最近投幣的影片',
                       param: 'coinArchive',
                       count: res.coinArchive!.count!,
                       visible: isOwner ? setting.coinsVideo == 1 : null,
@@ -150,7 +150,7 @@ class _MemberHomeState extends State<MemberHome>
                   if (res.likeArchive?.item?.isNotEmpty == true) ...[
                     _header(
                       color,
-                      title: '最近点赞的视频',
+                      title: '最近按讚的影片',
                       param: 'likeArchive',
                       count: res.likeArchive!.count!,
                       visible: isOwner ? setting.likesVideo == 1 : null,
@@ -176,7 +176,7 @@ class _MemberHomeState extends State<MemberHome>
                   if (res.article?.item?.isNotEmpty == true) ...[
                     _header(
                       color,
-                      title: '图文',
+                      title: '圖文',
                       param: 'contribute',
                       param1: 'opus',
                       count: res.article!.count!,
@@ -193,7 +193,7 @@ class _MemberHomeState extends State<MemberHome>
                   if (res.audios?.item?.isNotEmpty == true) ...[
                     _header(
                       color,
-                      title: '音频',
+                      title: '音訊',
                       param: 'contribute',
                       param1: 'audio',
                       count: res.audios!.count!,
@@ -211,7 +211,7 @@ class _MemberHomeState extends State<MemberHome>
                   if (res.comic?.item?.isNotEmpty == true) ...[
                     _header(
                       color,
-                      title: '漫画',
+                      title: '漫畫',
                       param: 'contribute',
                       param1: 'comic',
                       count: res.comic!.count!,

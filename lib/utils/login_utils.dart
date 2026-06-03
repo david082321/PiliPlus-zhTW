@@ -60,16 +60,16 @@ abstract final class LoginUtils {
           accountService.isLogin.value = true;
         }
 
-        SmartDialog.showToast('main登录成功');
+        SmartDialog.showToast('main登入成功');
         if (response != Pref.userInfoCache) {
           await GStorage.userInfo.put('userInfoCache', response);
         }
       }
     } else {
-      // 获取用户信息失败
+      // 取得使用者資訊失敗
       await Accounts.deleteAll({account});
       SmartDialog.showNotify(
-        msg: '登录失败，请检查cookie是否正确，${res.toString()}',
+        msg: '登入失敗，請檢查cookie是否正確，${res.toString()}',
         notifyType: NotifyType.warning,
       );
     }

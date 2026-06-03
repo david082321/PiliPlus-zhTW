@@ -1,4 +1,4 @@
-// 内容
+// 內容
 import 'package:PiliPlus/common/widgets/custom_icon.dart';
 import 'package:PiliPlus/common/widgets/flutter/text/text.dart' as custom_text;
 import 'package:PiliPlus/common/widgets/image_grid/image_grid_view.dart';
@@ -111,7 +111,7 @@ Widget _contextMenuBuilder(EditableTextState state, String text) {
   return AdaptiveTextSelectionToolbar.buttonItems(
     buttonItems: state.contextMenuButtonItems
       ..add(
-        ContextMenuButtonItem(label: '文本', onPressed: () => _onCopyText(text)),
+        ContextMenuButtonItem(label: '文字', onPressed: () => _onCopyText(text)),
       ),
     anchors: state.contextMenuAnchors,
   );
