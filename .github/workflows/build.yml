@@ -68,7 +68,6 @@ jobs:
             - name: Apply Patch
               shell: pwsh
               run: lib/scripts/patch.ps1 android
-              continue-on-error: true
 
             - name: Use default Android debug signing
               run: |
